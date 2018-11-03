@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++11 -Wall  -g3 -O0 -fno-inline  -pthread  -static CMakeFiles/SFA.dir/src/main/main.cpp.o CMakeFiles/SFA.dir/src/parser/InitNetlist.cpp.o CMakeFiles/SFA.dir/src/db/Net.cpp.o CMakeFiles/SFA.dir/src/db/Netlist.cpp.o  -o ../../bin/SFA -rdynamic 

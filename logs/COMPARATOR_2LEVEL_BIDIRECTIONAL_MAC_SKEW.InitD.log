@@ -1,0 +1,377 @@
+Done!
+Net 0, gnd 
+Net 1, fine_boost 
+Net 2, fine 
+Net 3, vdd 
+Net 4, xi3/net8 
+Net 5, xi3/net5 
+Net 6, xi3/net6 
+Net 7, xi3/net013 
+Net 8, xi3/xi1/net17 
+Net 9, xi3/xi1/net25 
+Net 10, net073 
+Net 11, clk 
+Net 12, clkb 
+Net 13, net066 
+Net 14, net065 
+Net 15, vxn 
+Net 16, vxp 
+Net 17, flipb 
+Net 18, flip 
+Net 19, outm 
+Net 20, intern 
+Net 21, net05 
+Net 22, clkn 
+Net 23, _net0 
+Net 24, vxn2 
+Net 25, _net1 
+Net 26, vmidb 
+Net 27, interp 
+Net 28, vxp2 
+Net 29, vmid 
+Net 30, outp 
+Net 31, net04 
+Net 32, net027 
+Instance 0, xi3/xm5 
+Pin 0, from  Instance xi3/xm5 to net 4:xi3/net8 
+Pin 1, from  Instance xi3/xm5 to net 5:xi3/net5 
+Pin 2, from  Instance xi3/xm5 to net 3:vdd 
+Pin 3, from  Instance xi3/xm5 to net 3:vdd 
+Instance 1, xi3/xm4 
+Pin 4, from  Instance xi3/xm4 to net 1:fine_boost 
+Pin 5, from  Instance xi3/xm4 to net 6:xi3/net6 
+Pin 6, from  Instance xi3/xm4 to net 4:xi3/net8 
+Pin 7, from  Instance xi3/xm4 to net 3:vdd 
+Instance 2, xi3/xm1 
+Pin 8, from  Instance xi3/xm1 to net 5:xi3/net5 
+Pin 9, from  Instance xi3/xm1 to net 6:xi3/net6 
+Pin 10, from  Instance xi3/xm1 to net 4:xi3/net8 
+Pin 11, from  Instance xi3/xm1 to net 3:vdd 
+Instance 3, xi3/xm6 
+Pin 12, from  Instance xi3/xm6 to net 1:fine_boost 
+Pin 13, from  Instance xi3/xm6 to net 6:xi3/net6 
+Pin 14, from  Instance xi3/xm6 to net 2:fine 
+Pin 15, from  Instance xi3/xm6 to net 0:gnd 
+Instance 4, xi3/xm2 
+Pin 16, from  Instance xi3/xm2 to net 5:xi3/net5 
+Pin 17, from  Instance xi3/xm2 to net 6:xi3/net6 
+Pin 18, from  Instance xi3/xm2 to net 7:xi3/net013 
+Pin 19, from  Instance xi3/xm2 to net 0:gnd 
+Instance 5, xi3/xi1/m0 
+Pin 20, from  Instance xi3/xi1/m0 to net 7:xi3/net013 
+Pin 21, from  Instance xi3/xi1/m0 to net 0:gnd 
+Pin 22, from  Instance xi3/xi1/m0 to net 0:gnd 
+Pin 23, from  Instance xi3/xi1/m0 to net 0:gnd 
+Instance 6, xi3/xi1/m1 
+Pin 24, from  Instance xi3/xi1/m1 to net 7:xi3/net013 
+Pin 25, from  Instance xi3/xi1/m1 to net 6:xi3/net6 
+Pin 26, from  Instance xi3/xi1/m1 to net 0:gnd 
+Pin 27, from  Instance xi3/xi1/m1 to net 0:gnd 
+Instance 7, xi3/xi1/m2 
+Pin 28, from  Instance xi3/xi1/m2 to net 7:xi3/net013 
+Pin 29, from  Instance xi3/xi1/m2 to net 6:xi3/net6 
+Pin 30, from  Instance xi3/xi1/m2 to net 0:gnd 
+Pin 31, from  Instance xi3/xi1/m2 to net 0:gnd 
+Instance 8, xi3/xi1/m3 
+Pin 32, from  Instance xi3/xi1/m3 to net 7:xi3/net013 
+Pin 33, from  Instance xi3/xi1/m3 to net 0:gnd 
+Pin 34, from  Instance xi3/xi1/m3 to net 0:gnd 
+Pin 35, from  Instance xi3/xi1/m3 to net 0:gnd 
+Instance 9, xi3/xi1/m4 
+Pin 36, from  Instance xi3/xi1/m4 to net 7:xi3/net013 
+Pin 37, from  Instance xi3/xi1/m4 to net 6:xi3/net6 
+Pin 38, from  Instance xi3/xi1/m4 to net 8:xi3/xi1/net17 
+Pin 39, from  Instance xi3/xi1/m4 to net 3:vdd 
+Instance 10, xi3/xi1/m5 
+Pin 40, from  Instance xi3/xi1/m5 to net 9:xi3/xi1/net25 
+Pin 41, from  Instance xi3/xi1/m5 to net 0:gnd 
+Pin 42, from  Instance xi3/xi1/m5 to net 3:vdd 
+Pin 43, from  Instance xi3/xi1/m5 to net 3:vdd 
+Instance 11, xi3/xi1/m6 
+Pin 44, from  Instance xi3/xi1/m6 to net 7:xi3/net013 
+Pin 45, from  Instance xi3/xi1/m6 to net 6:xi3/net6 
+Pin 46, from  Instance xi3/xi1/m6 to net 9:xi3/xi1/net25 
+Pin 47, from  Instance xi3/xi1/m6 to net 3:vdd 
+Instance 12, xi3/xi1/m7 
+Pin 48, from  Instance xi3/xi1/m7 to net 8:xi3/xi1/net17 
+Pin 49, from  Instance xi3/xi1/m7 to net 0:gnd 
+Pin 50, from  Instance xi3/xi1/m7 to net 3:vdd 
+Pin 51, from  Instance xi3/xi1/m7 to net 3:vdd 
+Instance 13, xi3/xi2/m0 
+Pin 52, from  Instance xi3/xi2/m0 to net 6:xi3/net6 
+Pin 53, from  Instance xi3/xi2/m0 to net 2:fine 
+Pin 54, from  Instance xi3/xi2/m0 to net 0:gnd 
+Pin 55, from  Instance xi3/xi2/m0 to net 0:gnd 
+Instance 14, xi3/xi2/m1 
+Pin 56, from  Instance xi3/xi2/m1 to net 6:xi3/net6 
+Pin 57, from  Instance xi3/xi2/m1 to net 2:fine 
+Pin 58, from  Instance xi3/xi2/m1 to net 3:vdd 
+Pin 59, from  Instance xi3/xi2/m1 to net 3:vdd 
+Instance 15, xi3/xc2 
+Pin 60, from  Instance xi3/xc2 to net 7:xi3/net013 
+Pin 61, from  Instance xi3/xc2 to net 4:xi3/net8 
+Pin 62, from  Instance xi3/xc2 to net 3:vdd 
+Instance 16, xi3/xc3 
+Pin 63, from  Instance xi3/xc3 to net 7:xi3/net013 
+Pin 64, from  Instance xi3/xc3 to net 4:xi3/net8 
+Pin 65, from  Instance xi3/xc3 to net 3:vdd 
+Instance 17, xi4/m0 
+Pin 66, from  Instance xi4/m0 to net 10:net073 
+Pin 67, from  Instance xi4/m0 to net 0:gnd 
+Pin 68, from  Instance xi4/m0 to net 0:gnd 
+Pin 69, from  Instance xi4/m0 to net 0:gnd 
+Instance 18, xi4/m1 
+Pin 70, from  Instance xi4/m1 to net 10:net073 
+Pin 71, from  Instance xi4/m1 to net 0:gnd 
+Pin 72, from  Instance xi4/m1 to net 3:vdd 
+Pin 73, from  Instance xi4/m1 to net 3:vdd 
+Instance 19, xi0/m0 
+Pin 74, from  Instance xi0/m0 to net 12:clkb 
+Pin 75, from  Instance xi0/m0 to net 11:clk 
+Pin 76, from  Instance xi0/m0 to net 0:gnd 
+Pin 77, from  Instance xi0/m0 to net 0:gnd 
+Instance 20, xi0/m1 
+Pin 78, from  Instance xi0/m1 to net 12:clkb 
+Pin 79, from  Instance xi0/m1 to net 11:clk 
+Pin 80, from  Instance xi0/m1 to net 3:vdd 
+Pin 81, from  Instance xi0/m1 to net 3:vdd 
+Instance 21, xm0 
+Pin 82, from  Instance xm0 to net 0:gnd 
+Pin 83, from  Instance xm0 to net 13:net066 
+Pin 84, from  Instance xm0 to net 0:gnd 
+Pin 85, from  Instance xm0 to net 0:gnd 
+Instance 22, xm1 
+Pin 86, from  Instance xm1 to net 0:gnd 
+Pin 87, from  Instance xm1 to net 14:net065 
+Pin 88, from  Instance xm1 to net 0:gnd 
+Pin 89, from  Instance xm1 to net 0:gnd 
+Instance 23, xm56 
+Pin 90, from  Instance xm56 to net 0:gnd 
+Pin 91, from  Instance xm56 to net 0:gnd 
+Pin 92, from  Instance xm56 to net 0:gnd 
+Pin 93, from  Instance xm56 to net 0:gnd 
+Instance 24, xm52 
+Pin 94, from  Instance xm52 to net 0:gnd 
+Pin 95, from  Instance xm52 to net 0:gnd 
+Pin 96, from  Instance xm52 to net 0:gnd 
+Pin 97, from  Instance xm52 to net 0:gnd 
+Instance 25, xm51 
+Pin 98, from  Instance xm51 to net 0:gnd 
+Pin 99, from  Instance xm51 to net 0:gnd 
+Pin 100, from  Instance xm51 to net 0:gnd 
+Pin 101, from  Instance xm51 to net 0:gnd 
+Instance 26, xm50 
+Pin 102, from  Instance xm50 to net 0:gnd 
+Pin 103, from  Instance xm50 to net 0:gnd 
+Pin 104, from  Instance xm50 to net 0:gnd 
+Pin 105, from  Instance xm50 to net 0:gnd 
+Instance 27, xm12 
+Pin 106, from  Instance xm12 to net 15:vxn 
+Pin 107, from  Instance xm12 to net 1:fine_boost 
+Pin 108, from  Instance xm12 to net 14:net065 
+Pin 109, from  Instance xm12 to net 0:gnd 
+Instance 28, xm10 
+Pin 110, from  Instance xm10 to net 16:vxp 
+Pin 111, from  Instance xm10 to net 1:fine_boost 
+Pin 112, from  Instance xm10 to net 13:net066 
+Pin 113, from  Instance xm10 to net 0:gnd 
+Instance 29, xm31 
+Pin 114, from  Instance xm31 to net 17:flipb 
+Pin 115, from  Instance xm31 to net 18:flip 
+Pin 116, from  Instance xm31 to net 0:gnd 
+Pin 117, from  Instance xm31 to net 0:gnd 
+Instance 30, xm16 
+Pin 118, from  Instance xm16 to net 19:outm 
+Pin 119, from  Instance xm16 to net 20:intern 
+Pin 120, from  Instance xm16 to net 0:gnd 
+Pin 121, from  Instance xm16 to net 0:gnd 
+Instance 31, xm21 
+Pin 122, from  Instance xm21 to net 18:flip 
+Pin 123, from  Instance xm21 to net 12:clkb 
+Pin 124, from  Instance xm21 to net 0:gnd 
+Pin 125, from  Instance xm21 to net 0:gnd 
+Instance 32, xm15 
+Pin 126, from  Instance xm15 to net 21:net05 
+Pin 127, from  Instance xm15 to net 22:clkn 
+Pin 128, from  Instance xm15 to net 0:gnd 
+Pin 129, from  Instance xm15 to net 0:gnd 
+Instance 33, xm14 
+Pin 130, from  Instance xm14 to net 15:vxn 
+Pin 131, from  Instance xm14 to net 23:_net0 
+Pin 132, from  Instance xm14 to net 21:net05 
+Pin 133, from  Instance xm14 to net 0:gnd 
+Instance 34, xm32 
+Pin 134, from  Instance xm32 to net 22:clkn 
+Pin 135, from  Instance xm32 to net 18:flip 
+Pin 136, from  Instance xm32 to net 0:gnd 
+Pin 137, from  Instance xm32 to net 0:gnd 
+Instance 35, xm37 
+Pin 138, from  Instance xm37 to net 24:vxn2 
+Pin 139, from  Instance xm37 to net 17:flipb 
+Pin 140, from  Instance xm37 to net 0:gnd 
+Pin 141, from  Instance xm37 to net 0:gnd 
+Instance 36, xm13 
+Pin 142, from  Instance xm13 to net 16:vxp 
+Pin 143, from  Instance xm13 to net 25:_net1 
+Pin 144, from  Instance xm13 to net 21:net05 
+Pin 145, from  Instance xm13 to net 0:gnd 
+Instance 37, xm38 
+Pin 146, from  Instance xm38 to net 26:vmidb 
+Pin 147, from  Instance xm38 to net 24:vxn2 
+Pin 148, from  Instance xm38 to net 0:gnd 
+Pin 149, from  Instance xm38 to net 0:gnd 
+Instance 38, xm43 
+Pin 150, from  Instance xm43 to net 20:intern 
+Pin 151, from  Instance xm43 to net 27:interp 
+Pin 152, from  Instance xm43 to net 26:vmidb 
+Pin 153, from  Instance xm43 to net 0:gnd 
+Instance 39, xm41 
+Pin 154, from  Instance xm41 to net 28:vxp2 
+Pin 155, from  Instance xm41 to net 17:flipb 
+Pin 156, from  Instance xm41 to net 0:gnd 
+Pin 157, from  Instance xm41 to net 0:gnd 
+Instance 40, xm42 
+Pin 158, from  Instance xm42 to net 27:interp 
+Pin 159, from  Instance xm42 to net 20:intern 
+Pin 160, from  Instance xm42 to net 29:vmid 
+Pin 161, from  Instance xm42 to net 0:gnd 
+Instance 41, xm39 
+Pin 162, from  Instance xm39 to net 29:vmid 
+Pin 163, from  Instance xm39 to net 28:vxp2 
+Pin 164, from  Instance xm39 to net 0:gnd 
+Pin 165, from  Instance xm39 to net 0:gnd 
+Instance 42, xm33 
+Pin 166, from  Instance xm33 to net 11:clk 
+Pin 167, from  Instance xm33 to net 17:flipb 
+Pin 168, from  Instance xm33 to net 22:clkn 
+Pin 169, from  Instance xm33 to net 0:gnd 
+Instance 43, xm6 
+Pin 170, from  Instance xm6 to net 30:outp 
+Pin 171, from  Instance xm6 to net 27:interp 
+Pin 172, from  Instance xm6 to net 0:gnd 
+Pin 173, from  Instance xm6 to net 0:gnd 
+Instance 44, xm62 
+Pin 174, from  Instance xm62 to net 3:vdd 
+Pin 175, from  Instance xm62 to net 11:clk 
+Pin 176, from  Instance xm62 to net 16:vxp 
+Pin 177, from  Instance xm62 to net 3:vdd 
+Instance 45, xm61 
+Pin 178, from  Instance xm61 to net 3:vdd 
+Pin 179, from  Instance xm61 to net 11:clk 
+Pin 180, from  Instance xm61 to net 15:vxn 
+Pin 181, from  Instance xm61 to net 3:vdd 
+Instance 46, xm58 
+Pin 182, from  Instance xm58 to net 0:gnd 
+Pin 183, from  Instance xm58 to net 0:gnd 
+Pin 184, from  Instance xm58 to net 0:gnd 
+Pin 185, from  Instance xm58 to net 3:vdd 
+Instance 47, xm57 
+Pin 186, from  Instance xm57 to net 0:gnd 
+Pin 187, from  Instance xm57 to net 0:gnd 
+Pin 188, from  Instance xm57 to net 0:gnd 
+Pin 189, from  Instance xm57 to net 3:vdd 
+Instance 48, xm55 
+Pin 190, from  Instance xm55 to net 0:gnd 
+Pin 191, from  Instance xm55 to net 0:gnd 
+Pin 192, from  Instance xm55 to net 0:gnd 
+Pin 193, from  Instance xm55 to net 3:vdd 
+Instance 49, xm54 
+Pin 194, from  Instance xm54 to net 0:gnd 
+Pin 195, from  Instance xm54 to net 0:gnd 
+Pin 196, from  Instance xm54 to net 0:gnd 
+Pin 197, from  Instance xm54 to net 3:vdd 
+Instance 50, xm53 
+Pin 198, from  Instance xm53 to net 0:gnd 
+Pin 199, from  Instance xm53 to net 0:gnd 
+Pin 200, from  Instance xm53 to net 0:gnd 
+Pin 201, from  Instance xm53 to net 3:vdd 
+Instance 51, xm17 
+Pin 202, from  Instance xm17 to net 16:vxp 
+Pin 203, from  Instance xm17 to net 25:_net1 
+Pin 204, from  Instance xm17 to net 31:net04 
+Pin 205, from  Instance xm17 to net 3:vdd 
+Instance 52, xm30 
+Pin 206, from  Instance xm30 to net 17:flipb 
+Pin 207, from  Instance xm30 to net 11:clk 
+Pin 208, from  Instance xm30 to net 3:vdd 
+Pin 209, from  Instance xm30 to net 3:vdd 
+Instance 53, xm28 
+Pin 210, from  Instance xm28 to net 18:flip 
+Pin 211, from  Instance xm28 to net 15:vxn 
+Pin 212, from  Instance xm28 to net 32:net027 
+Pin 213, from  Instance xm28 to net 3:vdd 
+Instance 54, xm20 
+Pin 214, from  Instance xm20 to net 32:net027 
+Pin 215, from  Instance xm20 to net 12:clkb 
+Pin 216, from  Instance xm20 to net 3:vdd 
+Pin 217, from  Instance xm20 to net 3:vdd 
+Instance 55, xm2 
+Pin 218, from  Instance xm2 to net 19:outm 
+Pin 219, from  Instance xm2 to net 20:intern 
+Pin 220, from  Instance xm2 to net 3:vdd 
+Pin 221, from  Instance xm2 to net 3:vdd 
+Instance 56, xm29 
+Pin 222, from  Instance xm29 to net 18:flip 
+Pin 223, from  Instance xm29 to net 16:vxp 
+Pin 224, from  Instance xm29 to net 32:net027 
+Pin 225, from  Instance xm29 to net 3:vdd 
+Instance 57, xm36 
+Pin 226, from  Instance xm36 to net 24:vxn2 
+Pin 227, from  Instance xm36 to net 17:flipb 
+Pin 228, from  Instance xm36 to net 15:vxn 
+Pin 229, from  Instance xm36 to net 3:vdd 
+Instance 58, xm19 
+Pin 230, from  Instance xm19 to net 31:net04 
+Pin 231, from  Instance xm19 to net 17:flipb 
+Pin 232, from  Instance xm19 to net 3:vdd 
+Pin 233, from  Instance xm19 to net 3:vdd 
+Instance 59, xm18 
+Pin 234, from  Instance xm18 to net 15:vxn 
+Pin 235, from  Instance xm18 to net 23:_net0 
+Pin 236, from  Instance xm18 to net 31:net04 
+Pin 237, from  Instance xm18 to net 3:vdd 
+Instance 60, xm34 
+Pin 238, from  Instance xm34 to net 11:clk 
+Pin 239, from  Instance xm34 to net 18:flip 
+Pin 240, from  Instance xm34 to net 22:clkn 
+Pin 241, from  Instance xm34 to net 3:vdd 
+Instance 61, xm40 
+Pin 242, from  Instance xm40 to net 28:vxp2 
+Pin 243, from  Instance xm40 to net 17:flipb 
+Pin 244, from  Instance xm40 to net 16:vxp 
+Pin 245, from  Instance xm40 to net 3:vdd 
+Instance 62, xm47 
+Pin 246, from  Instance xm47 to net 20:intern 
+Pin 247, from  Instance xm47 to net 24:vxn2 
+Pin 248, from  Instance xm47 to net 3:vdd 
+Pin 249, from  Instance xm47 to net 3:vdd 
+Instance 63, xm48 
+Pin 250, from  Instance xm48 to net 20:intern 
+Pin 251, from  Instance xm48 to net 27:interp 
+Pin 252, from  Instance xm48 to net 3:vdd 
+Pin 253, from  Instance xm48 to net 3:vdd 
+Instance 64, xm45 
+Pin 254, from  Instance xm45 to net 26:vmidb 
+Pin 255, from  Instance xm45 to net 24:vxn2 
+Pin 256, from  Instance xm45 to net 3:vdd 
+Pin 257, from  Instance xm45 to net 3:vdd 
+Instance 65, xm49 
+Pin 258, from  Instance xm49 to net 27:interp 
+Pin 259, from  Instance xm49 to net 20:intern 
+Pin 260, from  Instance xm49 to net 3:vdd 
+Pin 261, from  Instance xm49 to net 3:vdd 
+Instance 66, xm44 
+Pin 262, from  Instance xm44 to net 29:vmid 
+Pin 263, from  Instance xm44 to net 28:vxp2 
+Pin 264, from  Instance xm44 to net 3:vdd 
+Pin 265, from  Instance xm44 to net 3:vdd 
+Instance 67, xm9 
+Pin 266, from  Instance xm9 to net 30:outp 
+Pin 267, from  Instance xm9 to net 27:interp 
+Pin 268, from  Instance xm9 to net 3:vdd 
+Pin 269, from  Instance xm9 to net 3:vdd 
+Instance 68, xm46 
+Pin 270, from  Instance xm46 to net 27:interp 
+Pin 271, from  Instance xm46 to net 28:vxp2 
+Pin 272, from  Instance xm46 to net 3:vdd 
+Pin 273, from  Instance xm46 to net 3:vdd 

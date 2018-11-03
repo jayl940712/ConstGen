@@ -1,0 +1,57 @@
+Done!
+Net 0, vdm 
+Net 1, up 
+Net 2, net38 
+Net 3, vdd 
+Net 4, iout 
+Net 5, upb 
+Net 6, dnb 
+Net 7, net37 
+Net 8, vss 
+Net 9, dn 
+Net 10, net41 
+Net 11, vbn_cm 
+Net 12, vbn_cs 
+Net 13, net40 
+Net 14, vbp_cm 
+Net 15, vbp_cs 
+Instance 0, xm41 
+Pin 0, from  Instance xm41 to net 0:vdm 
+Pin 1, from  Instance xm41 to net 1:up 
+Pin 2, from  Instance xm41 to net 2:net38 
+Pin 3, from  Instance xm41 to net 3:vdd 
+Instance 1, xm39 
+Pin 4, from  Instance xm39 to net 4:iout 
+Pin 5, from  Instance xm39 to net 5:upb 
+Pin 6, from  Instance xm39 to net 2:net38 
+Pin 7, from  Instance xm39 to net 3:vdd 
+Instance 2, xm3 
+Pin 8, from  Instance xm3 to net 0:vdm 
+Pin 9, from  Instance xm3 to net 6:dnb 
+Pin 10, from  Instance xm3 to net 7:net37 
+Pin 11, from  Instance xm3 to net 8:vss 
+Instance 3, xm4 
+Pin 12, from  Instance xm4 to net 4:iout 
+Pin 13, from  Instance xm4 to net 9:dn 
+Pin 14, from  Instance xm4 to net 7:net37 
+Pin 15, from  Instance xm4 to net 8:vss 
+Instance 4, xm10 
+Pin 16, from  Instance xm10 to net 10:net41 
+Pin 17, from  Instance xm10 to net 11:vbn_cm 
+Pin 18, from  Instance xm10 to net 8:vss 
+Pin 19, from  Instance xm10 to net 8:vss 
+Instance 5, xm9 
+Pin 20, from  Instance xm9 to net 7:net37 
+Pin 21, from  Instance xm9 to net 12:vbn_cs 
+Pin 22, from  Instance xm9 to net 10:net41 
+Pin 23, from  Instance xm9 to net 8:vss 
+Instance 6, xm13 
+Pin 24, from  Instance xm13 to net 13:net40 
+Pin 25, from  Instance xm13 to net 14:vbp_cm 
+Pin 26, from  Instance xm13 to net 3:vdd 
+Pin 27, from  Instance xm13 to net 3:vdd 
+Instance 7, xm36 
+Pin 28, from  Instance xm36 to net 2:net38 
+Pin 29, from  Instance xm36 to net 15:vbp_cs 
+Pin 30, from  Instance xm36 to net 13:net40 
+Pin 31, from  Instance xm36 to net 3:vdd 

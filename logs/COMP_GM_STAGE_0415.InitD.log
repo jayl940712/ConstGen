@@ -1,0 +1,383 @@
+Done!
+Net 0, net89 
+Net 1, valid_vco_d 
+Net 2, vcc_gm 
+Net 3, net073 
+Net 4, valid_vco_b 
+Net 5, cco_icalm 
+Net 6, cco_icalp 
+Net 7, ictrp 
+Net 8, net78 
+Net 9, vbp 
+Net 10, ictrm 
+Net 11, net070 
+Net 12, vcc_comp 
+Net 13, net019 
+Net 14, outm 
+Net 15, net054 
+Net 16, net83 
+Net 17, calm 
+Net 18, inp 
+Net 19, net042 
+Net 20, inm 
+Net 21, net030 
+Net 22, outp 
+Net 23, net90 
+Net 24, calp 
+Net 25, pre_charge 
+Net 26, gnd 
+Net 27, clkb 
+Net 28, net036 
+Net 29, valid_vco 
+Net 30, clk 
+Net 31, net089 
+Net 32, net059 
+Net 33, vbn 
+Net 34, vcm 
+Net 35, xi0/net5 
+Instance 0, xm91 
+Pin 0, from  Instance xm91 to net 0:net89 
+Pin 1, from  Instance xm91 to net 1:valid_vco_d 
+Pin 2, from  Instance xm91 to net 2:vcc_gm 
+Pin 3, from  Instance xm91 to net 2:vcc_gm 
+Instance 1, xm89 
+Pin 4, from  Instance xm89 to net 3:net073 
+Pin 5, from  Instance xm89 to net 4:valid_vco_b 
+Pin 6, from  Instance xm89 to net 5:cco_icalm 
+Pin 7, from  Instance xm89 to net 2:vcc_gm 
+Instance 2, xm90 
+Pin 8, from  Instance xm90 to net 3:net073 
+Pin 9, from  Instance xm90 to net 1:valid_vco_d 
+Pin 10, from  Instance xm90 to net 2:vcc_gm 
+Pin 11, from  Instance xm90 to net 2:vcc_gm 
+Instance 3, xm92 
+Pin 12, from  Instance xm92 to net 0:net89 
+Pin 13, from  Instance xm92 to net 4:valid_vco_b 
+Pin 14, from  Instance xm92 to net 6:cco_icalp 
+Pin 15, from  Instance xm92 to net 2:vcc_gm 
+Instance 4, xm87 
+Pin 16, from  Instance xm87 to net 7:ictrp 
+Pin 17, from  Instance xm87 to net 0:net89 
+Pin 18, from  Instance xm87 to net 2:vcc_gm 
+Pin 19, from  Instance xm87 to net 2:vcc_gm 
+Instance 5, xm7 
+Pin 20, from  Instance xm7 to net 8:net78 
+Pin 21, from  Instance xm7 to net 4:valid_vco_b 
+Pin 22, from  Instance xm7 to net 9:vbp 
+Pin 23, from  Instance xm7 to net 2:vcc_gm 
+Instance 6, xm4 
+Pin 24, from  Instance xm4 to net 8:net78 
+Pin 25, from  Instance xm4 to net 1:valid_vco_d 
+Pin 26, from  Instance xm4 to net 2:vcc_gm 
+Pin 27, from  Instance xm4 to net 2:vcc_gm 
+Instance 7, xm88 
+Pin 28, from  Instance xm88 to net 10:ictrm 
+Pin 29, from  Instance xm88 to net 3:net073 
+Pin 30, from  Instance xm88 to net 2:vcc_gm 
+Pin 31, from  Instance xm88 to net 2:vcc_gm 
+Instance 8, xm45 
+Pin 32, from  Instance xm45 to net 11:net070 
+Pin 33, from  Instance xm45 to net 11:net070 
+Pin 34, from  Instance xm45 to net 11:net070 
+Pin 35, from  Instance xm45 to net 11:net070 
+Instance 9, xm86 
+Pin 36, from  Instance xm86 to net 12:vcc_comp 
+Pin 37, from  Instance xm86 to net 12:vcc_comp 
+Pin 38, from  Instance xm86 to net 12:vcc_comp 
+Pin 39, from  Instance xm86 to net 12:vcc_comp 
+Instance 10, xm64 
+Pin 40, from  Instance xm64 to net 10:ictrm 
+Pin 41, from  Instance xm64 to net 4:valid_vco_b 
+Pin 42, from  Instance xm64 to net 13:net019 
+Pin 43, from  Instance xm64 to net 12:vcc_comp 
+Instance 11, xm82 
+Pin 44, from  Instance xm82 to net 14:outm 
+Pin 45, from  Instance xm82 to net 15:net054 
+Pin 46, from  Instance xm82 to net 12:vcc_comp 
+Pin 47, from  Instance xm82 to net 12:vcc_comp 
+Instance 12, xm17 
+Pin 48, from  Instance xm17 to net 16:net83 
+Pin 49, from  Instance xm17 to net 1:valid_vco_d 
+Pin 50, from  Instance xm17 to net 13:net019 
+Pin 51, from  Instance xm17 to net 12:vcc_comp 
+Instance 13, xm81 
+Pin 52, from  Instance xm81 to net 15:net054 
+Pin 53, from  Instance xm81 to net 17:calm 
+Pin 54, from  Instance xm81 to net 15:net054 
+Pin 55, from  Instance xm81 to net 15:net054 
+Instance 14, xm11 
+Pin 56, from  Instance xm11 to net 13:net019 
+Pin 57, from  Instance xm11 to net 18:inp 
+Pin 58, from  Instance xm11 to net 11:net070 
+Pin 59, from  Instance xm11 to net 11:net070 
+Instance 15, xm55 
+Pin 60, from  Instance xm55 to net 19:net042 
+Pin 61, from  Instance xm55 to net 20:inm 
+Pin 62, from  Instance xm55 to net 11:net070 
+Pin 63, from  Instance xm55 to net 11:net070 
+Instance 16, xm2 
+Pin 64, from  Instance xm2 to net 21:net030 
+Pin 65, from  Instance xm2 to net 15:net054 
+Pin 66, from  Instance xm2 to net 16:net83 
+Pin 67, from  Instance xm2 to net 12:vcc_comp 
+Instance 17, xm6 
+Pin 68, from  Instance xm6 to net 22:outp 
+Pin 69, from  Instance xm6 to net 21:net030 
+Pin 70, from  Instance xm6 to net 12:vcc_comp 
+Pin 71, from  Instance xm6 to net 12:vcc_comp 
+Instance 18, xm76 
+Pin 72, from  Instance xm76 to net 7:ictrp 
+Pin 73, from  Instance xm76 to net 4:valid_vco_b 
+Pin 74, from  Instance xm76 to net 19:net042 
+Pin 75, from  Instance xm76 to net 12:vcc_comp 
+Instance 19, xm78 
+Pin 76, from  Instance xm78 to net 15:net054 
+Pin 77, from  Instance xm78 to net 21:net030 
+Pin 78, from  Instance xm78 to net 23:net90 
+Pin 79, from  Instance xm78 to net 12:vcc_comp 
+Instance 20, xm73 
+Pin 80, from  Instance xm73 to net 23:net90 
+Pin 81, from  Instance xm73 to net 1:valid_vco_d 
+Pin 82, from  Instance xm73 to net 19:net042 
+Pin 83, from  Instance xm73 to net 12:vcc_comp 
+Instance 21, xm13 
+Pin 84, from  Instance xm13 to net 21:net030 
+Pin 85, from  Instance xm13 to net 24:calp 
+Pin 86, from  Instance xm13 to net 21:net030 
+Pin 87, from  Instance xm13 to net 21:net030 
+Instance 22, xm44 
+Pin 88, from  Instance xm44 to net 7:ictrp 
+Pin 89, from  Instance xm44 to net 4:valid_vco_b 
+Pin 90, from  Instance xm44 to net 25:pre_charge 
+Pin 91, from  Instance xm44 to net 26:gnd 
+Instance 23, xm43 
+Pin 92, from  Instance xm43 to net 10:ictrm 
+Pin 93, from  Instance xm43 to net 4:valid_vco_b 
+Pin 94, from  Instance xm43 to net 25:pre_charge 
+Pin 95, from  Instance xm43 to net 26:gnd 
+Instance 24, xm63 
+Pin 96, from  Instance xm63 to net 10:ictrm 
+Pin 97, from  Instance xm63 to net 1:valid_vco_d 
+Pin 98, from  Instance xm63 to net 13:net019 
+Pin 99, from  Instance xm63 to net 26:gnd 
+Instance 25, xm83 
+Pin 100, from  Instance xm83 to net 14:outm 
+Pin 101, from  Instance xm83 to net 15:net054 
+Pin 102, from  Instance xm83 to net 26:gnd 
+Pin 103, from  Instance xm83 to net 26:gnd 
+Instance 26, xm19 
+Pin 104, from  Instance xm19 to net 16:net83 
+Pin 105, from  Instance xm19 to net 4:valid_vco_b 
+Pin 106, from  Instance xm19 to net 13:net019 
+Pin 107, from  Instance xm19 to net 26:gnd 
+Instance 27, xm80 
+Pin 108, from  Instance xm80 to net 15:net054 
+Pin 109, from  Instance xm80 to net 27:clkb 
+Pin 110, from  Instance xm80 to net 26:gnd 
+Pin 111, from  Instance xm80 to net 26:gnd 
+Instance 28, xm74 
+Pin 112, from  Instance xm74 to net 23:net90 
+Pin 113, from  Instance xm74 to net 4:valid_vco_b 
+Pin 114, from  Instance xm74 to net 19:net042 
+Pin 115, from  Instance xm74 to net 26:gnd 
+Instance 29, xm26 
+Pin 116, from  Instance xm26 to net 16:net83 
+Pin 117, from  Instance xm26 to net 27:clkb 
+Pin 118, from  Instance xm26 to net 26:gnd 
+Pin 119, from  Instance xm26 to net 26:gnd 
+Instance 30, xm75 
+Pin 120, from  Instance xm75 to net 23:net90 
+Pin 121, from  Instance xm75 to net 27:clkb 
+Pin 122, from  Instance xm75 to net 26:gnd 
+Pin 123, from  Instance xm75 to net 26:gnd 
+Instance 31, xm77 
+Pin 124, from  Instance xm77 to net 7:ictrp 
+Pin 125, from  Instance xm77 to net 1:valid_vco_d 
+Pin 126, from  Instance xm77 to net 19:net042 
+Pin 127, from  Instance xm77 to net 26:gnd 
+Instance 32, xm21 
+Pin 128, from  Instance xm21 to net 22:outp 
+Pin 129, from  Instance xm21 to net 21:net030 
+Pin 130, from  Instance xm21 to net 26:gnd 
+Pin 131, from  Instance xm21 to net 26:gnd 
+Instance 33, xm79 
+Pin 132, from  Instance xm79 to net 15:net054 
+Pin 133, from  Instance xm79 to net 21:net030 
+Pin 134, from  Instance xm79 to net 26:gnd 
+Pin 135, from  Instance xm79 to net 26:gnd 
+Instance 34, xm23 
+Pin 136, from  Instance xm23 to net 21:net030 
+Pin 137, from  Instance xm23 to net 27:clkb 
+Pin 138, from  Instance xm23 to net 26:gnd 
+Pin 139, from  Instance xm23 to net 26:gnd 
+Instance 35, xm18 
+Pin 140, from  Instance xm18 to net 21:net030 
+Pin 141, from  Instance xm18 to net 15:net054 
+Pin 142, from  Instance xm18 to net 26:gnd 
+Pin 143, from  Instance xm18 to net 26:gnd 
+Instance 36, xm57 
+Pin 144, from  Instance xm57 to net 2:vcc_gm 
+Pin 145, from  Instance xm57 to net 9:vbp 
+Pin 146, from  Instance xm57 to net 2:vcc_gm 
+Pin 147, from  Instance xm57 to net 2:vcc_gm 
+Instance 37, xm56 
+Pin 148, from  Instance xm56 to net 2:vcc_gm 
+Pin 149, from  Instance xm56 to net 9:vbp 
+Pin 150, from  Instance xm56 to net 2:vcc_gm 
+Pin 151, from  Instance xm56 to net 2:vcc_gm 
+Instance 38, xm52 
+Pin 152, from  Instance xm52 to net 11:net070 
+Pin 153, from  Instance xm52 to net 27:clkb 
+Pin 154, from  Instance xm52 to net 28:net036 
+Pin 155, from  Instance xm52 to net 28:net036 
+Instance 39, xm51 
+Pin 156, from  Instance xm51 to net 28:net036 
+Pin 157, from  Instance xm51 to net 9:vbp 
+Pin 158, from  Instance xm51 to net 12:vcc_comp 
+Pin 159, from  Instance xm51 to net 2:vcc_gm 
+Instance 40, xm0 
+Pin 160, from  Instance xm0 to net 11:net070 
+Pin 161, from  Instance xm0 to net 8:net78 
+Pin 162, from  Instance xm0 to net 2:vcc_gm 
+Pin 163, from  Instance xm0 to net 2:vcc_gm 
+Instance 41, xi4<1>/m0 
+Pin 164, from  Instance xi4<1>/m0 to net 4:valid_vco_b 
+Pin 165, from  Instance xi4<1>/m0 to net 29:valid_vco 
+Pin 166, from  Instance xi4<1>/m0 to net 26:gnd 
+Pin 167, from  Instance xi4<1>/m0 to net 26:gnd 
+Instance 42, xi4<1>/m1 
+Pin 168, from  Instance xi4<1>/m1 to net 4:valid_vco_b 
+Pin 169, from  Instance xi4<1>/m1 to net 29:valid_vco 
+Pin 170, from  Instance xi4<1>/m1 to net 12:vcc_comp 
+Pin 171, from  Instance xi4<1>/m1 to net 12:vcc_comp 
+Instance 43, xi4<0>/m0 
+Pin 172, from  Instance xi4<0>/m0 to net 4:valid_vco_b 
+Pin 173, from  Instance xi4<0>/m0 to net 29:valid_vco 
+Pin 174, from  Instance xi4<0>/m0 to net 26:gnd 
+Pin 175, from  Instance xi4<0>/m0 to net 26:gnd 
+Instance 44, xi4<0>/m1 
+Pin 176, from  Instance xi4<0>/m1 to net 4:valid_vco_b 
+Pin 177, from  Instance xi4<0>/m1 to net 29:valid_vco 
+Pin 178, from  Instance xi4<0>/m1 to net 12:vcc_comp 
+Pin 179, from  Instance xi4<0>/m1 to net 12:vcc_comp 
+Instance 45, xi5<1>/m0 
+Pin 180, from  Instance xi5<1>/m0 to net 1:valid_vco_d 
+Pin 181, from  Instance xi5<1>/m0 to net 4:valid_vco_b 
+Pin 182, from  Instance xi5<1>/m0 to net 26:gnd 
+Pin 183, from  Instance xi5<1>/m0 to net 26:gnd 
+Instance 46, xi5<1>/m1 
+Pin 184, from  Instance xi5<1>/m1 to net 1:valid_vco_d 
+Pin 185, from  Instance xi5<1>/m1 to net 4:valid_vco_b 
+Pin 186, from  Instance xi5<1>/m1 to net 12:vcc_comp 
+Pin 187, from  Instance xi5<1>/m1 to net 12:vcc_comp 
+Instance 47, xi5<0>/m0 
+Pin 188, from  Instance xi5<0>/m0 to net 1:valid_vco_d 
+Pin 189, from  Instance xi5<0>/m0 to net 4:valid_vco_b 
+Pin 190, from  Instance xi5<0>/m0 to net 26:gnd 
+Pin 191, from  Instance xi5<0>/m0 to net 26:gnd 
+Instance 48, xi5<0>/m1 
+Pin 192, from  Instance xi5<0>/m1 to net 1:valid_vco_d 
+Pin 193, from  Instance xi5<0>/m1 to net 4:valid_vco_b 
+Pin 194, from  Instance xi5<0>/m1 to net 12:vcc_comp 
+Pin 195, from  Instance xi5<0>/m1 to net 12:vcc_comp 
+Instance 49, xi6<1>/m0 
+Pin 196, from  Instance xi6<1>/m0 to net 27:clkb 
+Pin 197, from  Instance xi6<1>/m0 to net 30:clk 
+Pin 198, from  Instance xi6<1>/m0 to net 26:gnd 
+Pin 199, from  Instance xi6<1>/m0 to net 26:gnd 
+Instance 50, xi6<1>/m1 
+Pin 200, from  Instance xi6<1>/m1 to net 27:clkb 
+Pin 201, from  Instance xi6<1>/m1 to net 30:clk 
+Pin 202, from  Instance xi6<1>/m1 to net 12:vcc_comp 
+Pin 203, from  Instance xi6<1>/m1 to net 12:vcc_comp 
+Instance 51, xi6<0>/m0 
+Pin 204, from  Instance xi6<0>/m0 to net 27:clkb 
+Pin 205, from  Instance xi6<0>/m0 to net 30:clk 
+Pin 206, from  Instance xi6<0>/m0 to net 26:gnd 
+Pin 207, from  Instance xi6<0>/m0 to net 26:gnd 
+Instance 52, xi6<0>/m1 
+Pin 208, from  Instance xi6<0>/m1 to net 27:clkb 
+Pin 209, from  Instance xi6<0>/m1 to net 30:clk 
+Pin 210, from  Instance xi6<0>/m1 to net 12:vcc_comp 
+Pin 211, from  Instance xi6<0>/m1 to net 12:vcc_comp 
+Instance 53, xm38 
+Pin 212, from  Instance xm38 to net 10:ictrm 
+Pin 213, from  Instance xm38 to net 31:net089 
+Pin 214, from  Instance xm38 to net 26:gnd 
+Pin 215, from  Instance xm38 to net 26:gnd 
+Instance 54, xm33 
+Pin 216, from  Instance xm33 to net 7:ictrp 
+Pin 217, from  Instance xm33 to net 32:net059 
+Pin 218, from  Instance xm33 to net 26:gnd 
+Pin 219, from  Instance xm33 to net 26:gnd 
+Instance 55, d2 
+Pin 220, from  Instance d2 to net 26:gnd 
+Pin 221, from  Instance d2 to net 2:vcc_gm 
+Instance 56, d0 
+Pin 222, from  Instance d0 to net 26:gnd 
+Pin 223, from  Instance d0 to net 2:vcc_gm 
+Instance 57, xm9 
+Pin 224, from  Instance xm9 to net 31:net089 
+Pin 225, from  Instance xm9 to net 1:valid_vco_d 
+Pin 226, from  Instance xm9 to net 33:vbn 
+Pin 227, from  Instance xm9 to net 26:gnd 
+Instance 58, xm8 
+Pin 228, from  Instance xm8 to net 32:net059 
+Pin 229, from  Instance xm8 to net 1:valid_vco_d 
+Pin 230, from  Instance xm8 to net 33:vbn 
+Pin 231, from  Instance xm8 to net 26:gnd 
+Instance 59, xm5 
+Pin 232, from  Instance xm5 to net 32:net059 
+Pin 233, from  Instance xm5 to net 4:valid_vco_b 
+Pin 234, from  Instance xm5 to net 26:gnd 
+Pin 235, from  Instance xm5 to net 26:gnd 
+Instance 60, xm10 
+Pin 236, from  Instance xm10 to net 31:net089 
+Pin 237, from  Instance xm10 to net 4:valid_vco_b 
+Pin 238, from  Instance xm10 to net 26:gnd 
+Pin 239, from  Instance xm10 to net 26:gnd 
+Instance 61, xm12 
+Pin 240, from  Instance xm12 to net 26:gnd 
+Pin 241, from  Instance xm12 to net 33:vbn 
+Pin 242, from  Instance xm12 to net 26:gnd 
+Pin 243, from  Instance xm12 to net 26:gnd 
+Instance 62, xm3 
+Pin 244, from  Instance xm3 to net 26:gnd 
+Pin 245, from  Instance xm3 to net 33:vbn 
+Pin 246, from  Instance xm3 to net 26:gnd 
+Pin 247, from  Instance xm3 to net 26:gnd 
+Instance 63, xm1 
+Pin 248, from  Instance xm1 to net 26:gnd 
+Pin 249, from  Instance xm1 to net 33:vbn 
+Pin 250, from  Instance xm1 to net 26:gnd 
+Pin 251, from  Instance xm1 to net 26:gnd 
+Instance 64, xi0/xm4 
+Pin 252, from  Instance xi0/xm4 to net 26:gnd 
+Pin 253, from  Instance xi0/xm4 to net 33:vbn 
+Pin 254, from  Instance xi0/xm4 to net 26:gnd 
+Pin 255, from  Instance xi0/xm4 to net 26:gnd 
+Instance 65, xi0/xm0 
+Pin 256, from  Instance xi0/xm0 to net 33:vbn 
+Pin 257, from  Instance xi0/xm0 to net 33:vbn 
+Pin 258, from  Instance xi0/xm0 to net 26:gnd 
+Pin 259, from  Instance xi0/xm0 to net 26:gnd 
+Instance 66, xi0/xm1 
+Pin 260, from  Instance xi0/xm1 to net 9:vbp 
+Pin 261, from  Instance xi0/xm1 to net 34:vcm 
+Pin 262, from  Instance xi0/xm1 to net 35:xi0/net5 
+Pin 263, from  Instance xi0/xm1 to net 35:xi0/net5 
+Instance 67, xi0/xm5 
+Pin 264, from  Instance xi0/xm5 to net 9:vbp 
+Pin 265, from  Instance xi0/xm5 to net 9:vbp 
+Pin 266, from  Instance xi0/xm5 to net 9:vbp 
+Pin 267, from  Instance xi0/xm5 to net 35:xi0/net5 
+Instance 68, xi0/xm8 
+Pin 268, from  Instance xi0/xm8 to net 35:xi0/net5 
+Pin 269, from  Instance xi0/xm8 to net 9:vbp 
+Pin 270, from  Instance xi0/xm8 to net 2:vcc_gm 
+Pin 271, from  Instance xi0/xm8 to net 2:vcc_gm 
+Instance 69, xi0/xm3 
+Pin 272, from  Instance xi0/xm3 to net 2:vcc_gm 
+Pin 273, from  Instance xi0/xm3 to net 9:vbp 
+Pin 274, from  Instance xi0/xm3 to net 2:vcc_gm 
+Pin 275, from  Instance xi0/xm3 to net 2:vcc_gm 

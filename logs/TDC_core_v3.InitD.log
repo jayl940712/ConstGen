@@ -1,0 +1,980 @@
+Done!
+Net 0, ph_gro<15> 
+Net 1, net132<0> 
+Net 2, vdd 
+Net 3, vss 
+Net 4, ph_gro<14> 
+Net 5, net132<1> 
+Net 6, ph_gro<13> 
+Net 7, net132<2> 
+Net 8, ph_gro<12> 
+Net 9, net132<3> 
+Net 10, ph_gro<11> 
+Net 11, net132<4> 
+Net 12, ph_gro<10> 
+Net 13, net132<5> 
+Net 14, ph_gro<9> 
+Net 15, net132<6> 
+Net 16, ph_gro<8> 
+Net 17, net132<7> 
+Net 18, ph_gro<7> 
+Net 19, net132<8> 
+Net 20, ph_gro<6> 
+Net 21, net132<9> 
+Net 22, ph_gro<5> 
+Net 23, net132<10> 
+Net 24, ph_gro<4> 
+Net 25, net132<11> 
+Net 26, ph_gro<3> 
+Net 27, net132<12> 
+Net 28, ph_gro<2> 
+Net 29, net132<13> 
+Net 30, ph_gro<1> 
+Net 31, net132<14> 
+Net 32, en 
+Net 33, enb 
+Net 34, xi13/net14 
+Net 35, xi13/net13 
+Net 36, xi12/net14 
+Net 37, xi12/net13 
+Net 38, xi11/net14 
+Net 39, xi11/net13 
+Net 40, xi10/net14 
+Net 41, xi10/net13 
+Net 42, xi9/net14 
+Net 43, xi9/net13 
+Net 44, xi7/net14 
+Net 45, xi7/net13 
+Net 46, xi6/net14 
+Net 47, xi6/net13 
+Net 48, xi5/net14 
+Net 49, xi5/net13 
+Net 50, xi4/net14 
+Net 51, xi4/net13 
+Net 52, xi3/net14 
+Net 53, xi3/net13 
+Net 54, xi2/net14 
+Net 55, xi2/net13 
+Net 56, xi1/net14 
+Net 57, xi1/net13 
+Net 58, xi0/net14 
+Net 59, xi0/net13 
+Net 60, xi17/net14 
+Net 61, xi17/net13 
+Net 62, xi16/net14 
+Net 63, xi16/net13 
+Net 64, ph<15> 
+Net 65, ph<14> 
+Net 66, ph<13> 
+Net 67, ph<12> 
+Net 68, ph<11> 
+Net 69, ph<10> 
+Net 70, ph<9> 
+Net 71, ph<8> 
+Net 72, ph<7> 
+Net 73, ph<6> 
+Net 74, ph<5> 
+Net 75, ph<4> 
+Net 76, ph<3> 
+Net 77, ph<2> 
+Net 78, ph<1> 
+Instance 0, xi8<1>/m0 
+Pin 0, from  Instance xi8<1>/m0 to net 1:net132<0> 
+Pin 1, from  Instance xi8<1>/m0 to net 0:ph_gro<15> 
+Pin 2, from  Instance xi8<1>/m0 to net 3:vss 
+Pin 3, from  Instance xi8<1>/m0 to net 3:vss 
+Instance 1, xi8<1>/m1 
+Pin 4, from  Instance xi8<1>/m1 to net 1:net132<0> 
+Pin 5, from  Instance xi8<1>/m1 to net 0:ph_gro<15> 
+Pin 6, from  Instance xi8<1>/m1 to net 2:vdd 
+Pin 7, from  Instance xi8<1>/m1 to net 2:vdd 
+Instance 2, xi8<2>/m0 
+Pin 8, from  Instance xi8<2>/m0 to net 5:net132<1> 
+Pin 9, from  Instance xi8<2>/m0 to net 4:ph_gro<14> 
+Pin 10, from  Instance xi8<2>/m0 to net 3:vss 
+Pin 11, from  Instance xi8<2>/m0 to net 3:vss 
+Instance 3, xi8<2>/m1 
+Pin 12, from  Instance xi8<2>/m1 to net 5:net132<1> 
+Pin 13, from  Instance xi8<2>/m1 to net 4:ph_gro<14> 
+Pin 14, from  Instance xi8<2>/m1 to net 2:vdd 
+Pin 15, from  Instance xi8<2>/m1 to net 2:vdd 
+Instance 4, xi8<3>/m0 
+Pin 16, from  Instance xi8<3>/m0 to net 7:net132<2> 
+Pin 17, from  Instance xi8<3>/m0 to net 6:ph_gro<13> 
+Pin 18, from  Instance xi8<3>/m0 to net 3:vss 
+Pin 19, from  Instance xi8<3>/m0 to net 3:vss 
+Instance 5, xi8<3>/m1 
+Pin 20, from  Instance xi8<3>/m1 to net 7:net132<2> 
+Pin 21, from  Instance xi8<3>/m1 to net 6:ph_gro<13> 
+Pin 22, from  Instance xi8<3>/m1 to net 2:vdd 
+Pin 23, from  Instance xi8<3>/m1 to net 2:vdd 
+Instance 6, xi8<4>/m0 
+Pin 24, from  Instance xi8<4>/m0 to net 9:net132<3> 
+Pin 25, from  Instance xi8<4>/m0 to net 8:ph_gro<12> 
+Pin 26, from  Instance xi8<4>/m0 to net 3:vss 
+Pin 27, from  Instance xi8<4>/m0 to net 3:vss 
+Instance 7, xi8<4>/m1 
+Pin 28, from  Instance xi8<4>/m1 to net 9:net132<3> 
+Pin 29, from  Instance xi8<4>/m1 to net 8:ph_gro<12> 
+Pin 30, from  Instance xi8<4>/m1 to net 2:vdd 
+Pin 31, from  Instance xi8<4>/m1 to net 2:vdd 
+Instance 8, xi8<5>/m0 
+Pin 32, from  Instance xi8<5>/m0 to net 11:net132<4> 
+Pin 33, from  Instance xi8<5>/m0 to net 10:ph_gro<11> 
+Pin 34, from  Instance xi8<5>/m0 to net 3:vss 
+Pin 35, from  Instance xi8<5>/m0 to net 3:vss 
+Instance 9, xi8<5>/m1 
+Pin 36, from  Instance xi8<5>/m1 to net 11:net132<4> 
+Pin 37, from  Instance xi8<5>/m1 to net 10:ph_gro<11> 
+Pin 38, from  Instance xi8<5>/m1 to net 2:vdd 
+Pin 39, from  Instance xi8<5>/m1 to net 2:vdd 
+Instance 10, xi8<6>/m0 
+Pin 40, from  Instance xi8<6>/m0 to net 13:net132<5> 
+Pin 41, from  Instance xi8<6>/m0 to net 12:ph_gro<10> 
+Pin 42, from  Instance xi8<6>/m0 to net 3:vss 
+Pin 43, from  Instance xi8<6>/m0 to net 3:vss 
+Instance 11, xi8<6>/m1 
+Pin 44, from  Instance xi8<6>/m1 to net 13:net132<5> 
+Pin 45, from  Instance xi8<6>/m1 to net 12:ph_gro<10> 
+Pin 46, from  Instance xi8<6>/m1 to net 2:vdd 
+Pin 47, from  Instance xi8<6>/m1 to net 2:vdd 
+Instance 12, xi8<7>/m0 
+Pin 48, from  Instance xi8<7>/m0 to net 15:net132<6> 
+Pin 49, from  Instance xi8<7>/m0 to net 14:ph_gro<9> 
+Pin 50, from  Instance xi8<7>/m0 to net 3:vss 
+Pin 51, from  Instance xi8<7>/m0 to net 3:vss 
+Instance 13, xi8<7>/m1 
+Pin 52, from  Instance xi8<7>/m1 to net 15:net132<6> 
+Pin 53, from  Instance xi8<7>/m1 to net 14:ph_gro<9> 
+Pin 54, from  Instance xi8<7>/m1 to net 2:vdd 
+Pin 55, from  Instance xi8<7>/m1 to net 2:vdd 
+Instance 14, xi8<8>/m0 
+Pin 56, from  Instance xi8<8>/m0 to net 17:net132<7> 
+Pin 57, from  Instance xi8<8>/m0 to net 16:ph_gro<8> 
+Pin 58, from  Instance xi8<8>/m0 to net 3:vss 
+Pin 59, from  Instance xi8<8>/m0 to net 3:vss 
+Instance 15, xi8<8>/m1 
+Pin 60, from  Instance xi8<8>/m1 to net 17:net132<7> 
+Pin 61, from  Instance xi8<8>/m1 to net 16:ph_gro<8> 
+Pin 62, from  Instance xi8<8>/m1 to net 2:vdd 
+Pin 63, from  Instance xi8<8>/m1 to net 2:vdd 
+Instance 16, xi8<9>/m0 
+Pin 64, from  Instance xi8<9>/m0 to net 19:net132<8> 
+Pin 65, from  Instance xi8<9>/m0 to net 18:ph_gro<7> 
+Pin 66, from  Instance xi8<9>/m0 to net 3:vss 
+Pin 67, from  Instance xi8<9>/m0 to net 3:vss 
+Instance 17, xi8<9>/m1 
+Pin 68, from  Instance xi8<9>/m1 to net 19:net132<8> 
+Pin 69, from  Instance xi8<9>/m1 to net 18:ph_gro<7> 
+Pin 70, from  Instance xi8<9>/m1 to net 2:vdd 
+Pin 71, from  Instance xi8<9>/m1 to net 2:vdd 
+Instance 18, xi8<10>/m0 
+Pin 72, from  Instance xi8<10>/m0 to net 21:net132<9> 
+Pin 73, from  Instance xi8<10>/m0 to net 20:ph_gro<6> 
+Pin 74, from  Instance xi8<10>/m0 to net 3:vss 
+Pin 75, from  Instance xi8<10>/m0 to net 3:vss 
+Instance 19, xi8<10>/m1 
+Pin 76, from  Instance xi8<10>/m1 to net 21:net132<9> 
+Pin 77, from  Instance xi8<10>/m1 to net 20:ph_gro<6> 
+Pin 78, from  Instance xi8<10>/m1 to net 2:vdd 
+Pin 79, from  Instance xi8<10>/m1 to net 2:vdd 
+Instance 20, xi8<11>/m0 
+Pin 80, from  Instance xi8<11>/m0 to net 23:net132<10> 
+Pin 81, from  Instance xi8<11>/m0 to net 22:ph_gro<5> 
+Pin 82, from  Instance xi8<11>/m0 to net 3:vss 
+Pin 83, from  Instance xi8<11>/m0 to net 3:vss 
+Instance 21, xi8<11>/m1 
+Pin 84, from  Instance xi8<11>/m1 to net 23:net132<10> 
+Pin 85, from  Instance xi8<11>/m1 to net 22:ph_gro<5> 
+Pin 86, from  Instance xi8<11>/m1 to net 2:vdd 
+Pin 87, from  Instance xi8<11>/m1 to net 2:vdd 
+Instance 22, xi8<12>/m0 
+Pin 88, from  Instance xi8<12>/m0 to net 25:net132<11> 
+Pin 89, from  Instance xi8<12>/m0 to net 24:ph_gro<4> 
+Pin 90, from  Instance xi8<12>/m0 to net 3:vss 
+Pin 91, from  Instance xi8<12>/m0 to net 3:vss 
+Instance 23, xi8<12>/m1 
+Pin 92, from  Instance xi8<12>/m1 to net 25:net132<11> 
+Pin 93, from  Instance xi8<12>/m1 to net 24:ph_gro<4> 
+Pin 94, from  Instance xi8<12>/m1 to net 2:vdd 
+Pin 95, from  Instance xi8<12>/m1 to net 2:vdd 
+Instance 24, xi8<13>/m0 
+Pin 96, from  Instance xi8<13>/m0 to net 27:net132<12> 
+Pin 97, from  Instance xi8<13>/m0 to net 26:ph_gro<3> 
+Pin 98, from  Instance xi8<13>/m0 to net 3:vss 
+Pin 99, from  Instance xi8<13>/m0 to net 3:vss 
+Instance 25, xi8<13>/m1 
+Pin 100, from  Instance xi8<13>/m1 to net 27:net132<12> 
+Pin 101, from  Instance xi8<13>/m1 to net 26:ph_gro<3> 
+Pin 102, from  Instance xi8<13>/m1 to net 2:vdd 
+Pin 103, from  Instance xi8<13>/m1 to net 2:vdd 
+Instance 26, xi8<14>/m0 
+Pin 104, from  Instance xi8<14>/m0 to net 29:net132<13> 
+Pin 105, from  Instance xi8<14>/m0 to net 28:ph_gro<2> 
+Pin 106, from  Instance xi8<14>/m0 to net 3:vss 
+Pin 107, from  Instance xi8<14>/m0 to net 3:vss 
+Instance 27, xi8<14>/m1 
+Pin 108, from  Instance xi8<14>/m1 to net 29:net132<13> 
+Pin 109, from  Instance xi8<14>/m1 to net 28:ph_gro<2> 
+Pin 110, from  Instance xi8<14>/m1 to net 2:vdd 
+Pin 111, from  Instance xi8<14>/m1 to net 2:vdd 
+Instance 28, xi8<15>/m0 
+Pin 112, from  Instance xi8<15>/m0 to net 31:net132<14> 
+Pin 113, from  Instance xi8<15>/m0 to net 30:ph_gro<1> 
+Pin 114, from  Instance xi8<15>/m0 to net 3:vss 
+Pin 115, from  Instance xi8<15>/m0 to net 3:vss 
+Instance 29, xi8<15>/m1 
+Pin 116, from  Instance xi8<15>/m1 to net 31:net132<14> 
+Pin 117, from  Instance xi8<15>/m1 to net 30:ph_gro<1> 
+Pin 118, from  Instance xi8<15>/m1 to net 2:vdd 
+Pin 119, from  Instance xi8<15>/m1 to net 2:vdd 
+Instance 30, xi13/m0 
+Pin 120, from  Instance xi13/m0 to net 34:xi13/net14 
+Pin 121, from  Instance xi13/m0 to net 33:enb 
+Pin 122, from  Instance xi13/m0 to net 2:vdd 
+Pin 123, from  Instance xi13/m0 to net 2:vdd 
+Instance 31, xi13/m1 
+Pin 124, from  Instance xi13/m1 to net 12:ph_gro<10> 
+Pin 125, from  Instance xi13/m1 to net 14:ph_gro<9> 
+Pin 126, from  Instance xi13/m1 to net 34:xi13/net14 
+Pin 127, from  Instance xi13/m1 to net 2:vdd 
+Instance 32, xi13/m2 
+Pin 128, from  Instance xi13/m2 to net 35:xi13/net13 
+Pin 129, from  Instance xi13/m2 to net 32:en 
+Pin 130, from  Instance xi13/m2 to net 3:vss 
+Pin 131, from  Instance xi13/m2 to net 3:vss 
+Instance 33, xi13/m3 
+Pin 132, from  Instance xi13/m3 to net 12:ph_gro<10> 
+Pin 133, from  Instance xi13/m3 to net 14:ph_gro<9> 
+Pin 134, from  Instance xi13/m3 to net 35:xi13/net13 
+Pin 135, from  Instance xi13/m3 to net 3:vss 
+Instance 34, xi12/m0 
+Pin 136, from  Instance xi12/m0 to net 36:xi12/net14 
+Pin 137, from  Instance xi12/m0 to net 33:enb 
+Pin 138, from  Instance xi12/m0 to net 2:vdd 
+Pin 139, from  Instance xi12/m0 to net 2:vdd 
+Instance 35, xi12/m1 
+Pin 140, from  Instance xi12/m1 to net 14:ph_gro<9> 
+Pin 141, from  Instance xi12/m1 to net 16:ph_gro<8> 
+Pin 142, from  Instance xi12/m1 to net 36:xi12/net14 
+Pin 143, from  Instance xi12/m1 to net 2:vdd 
+Instance 36, xi12/m2 
+Pin 144, from  Instance xi12/m2 to net 37:xi12/net13 
+Pin 145, from  Instance xi12/m2 to net 32:en 
+Pin 146, from  Instance xi12/m2 to net 3:vss 
+Pin 147, from  Instance xi12/m2 to net 3:vss 
+Instance 37, xi12/m3 
+Pin 148, from  Instance xi12/m3 to net 14:ph_gro<9> 
+Pin 149, from  Instance xi12/m3 to net 16:ph_gro<8> 
+Pin 150, from  Instance xi12/m3 to net 37:xi12/net13 
+Pin 151, from  Instance xi12/m3 to net 3:vss 
+Instance 38, xi11/m0 
+Pin 152, from  Instance xi11/m0 to net 38:xi11/net14 
+Pin 153, from  Instance xi11/m0 to net 33:enb 
+Pin 154, from  Instance xi11/m0 to net 2:vdd 
+Pin 155, from  Instance xi11/m0 to net 2:vdd 
+Instance 39, xi11/m1 
+Pin 156, from  Instance xi11/m1 to net 4:ph_gro<14> 
+Pin 157, from  Instance xi11/m1 to net 6:ph_gro<13> 
+Pin 158, from  Instance xi11/m1 to net 38:xi11/net14 
+Pin 159, from  Instance xi11/m1 to net 2:vdd 
+Instance 40, xi11/m2 
+Pin 160, from  Instance xi11/m2 to net 39:xi11/net13 
+Pin 161, from  Instance xi11/m2 to net 32:en 
+Pin 162, from  Instance xi11/m2 to net 3:vss 
+Pin 163, from  Instance xi11/m2 to net 3:vss 
+Instance 41, xi11/m3 
+Pin 164, from  Instance xi11/m3 to net 4:ph_gro<14> 
+Pin 165, from  Instance xi11/m3 to net 6:ph_gro<13> 
+Pin 166, from  Instance xi11/m3 to net 39:xi11/net13 
+Pin 167, from  Instance xi11/m3 to net 3:vss 
+Instance 42, xi10/m0 
+Pin 168, from  Instance xi10/m0 to net 40:xi10/net14 
+Pin 169, from  Instance xi10/m0 to net 33:enb 
+Pin 170, from  Instance xi10/m0 to net 2:vdd 
+Pin 171, from  Instance xi10/m0 to net 2:vdd 
+Instance 43, xi10/m1 
+Pin 172, from  Instance xi10/m1 to net 6:ph_gro<13> 
+Pin 173, from  Instance xi10/m1 to net 8:ph_gro<12> 
+Pin 174, from  Instance xi10/m1 to net 40:xi10/net14 
+Pin 175, from  Instance xi10/m1 to net 2:vdd 
+Instance 44, xi10/m2 
+Pin 176, from  Instance xi10/m2 to net 41:xi10/net13 
+Pin 177, from  Instance xi10/m2 to net 32:en 
+Pin 178, from  Instance xi10/m2 to net 3:vss 
+Pin 179, from  Instance xi10/m2 to net 3:vss 
+Instance 45, xi10/m3 
+Pin 180, from  Instance xi10/m3 to net 6:ph_gro<13> 
+Pin 181, from  Instance xi10/m3 to net 8:ph_gro<12> 
+Pin 182, from  Instance xi10/m3 to net 41:xi10/net13 
+Pin 183, from  Instance xi10/m3 to net 3:vss 
+Instance 46, xi9/m0 
+Pin 184, from  Instance xi9/m0 to net 42:xi9/net14 
+Pin 185, from  Instance xi9/m0 to net 33:enb 
+Pin 186, from  Instance xi9/m0 to net 2:vdd 
+Pin 187, from  Instance xi9/m0 to net 2:vdd 
+Instance 47, xi9/m1 
+Pin 188, from  Instance xi9/m1 to net 0:ph_gro<15> 
+Pin 189, from  Instance xi9/m1 to net 4:ph_gro<14> 
+Pin 190, from  Instance xi9/m1 to net 42:xi9/net14 
+Pin 191, from  Instance xi9/m1 to net 2:vdd 
+Instance 48, xi9/m2 
+Pin 192, from  Instance xi9/m2 to net 43:xi9/net13 
+Pin 193, from  Instance xi9/m2 to net 32:en 
+Pin 194, from  Instance xi9/m2 to net 3:vss 
+Pin 195, from  Instance xi9/m2 to net 3:vss 
+Instance 49, xi9/m3 
+Pin 196, from  Instance xi9/m3 to net 0:ph_gro<15> 
+Pin 197, from  Instance xi9/m3 to net 4:ph_gro<14> 
+Pin 198, from  Instance xi9/m3 to net 43:xi9/net13 
+Pin 199, from  Instance xi9/m3 to net 3:vss 
+Instance 50, xi7/m0 
+Pin 200, from  Instance xi7/m0 to net 44:xi7/net14 
+Pin 201, from  Instance xi7/m0 to net 33:enb 
+Pin 202, from  Instance xi7/m0 to net 2:vdd 
+Pin 203, from  Instance xi7/m0 to net 2:vdd 
+Instance 51, xi7/m1 
+Pin 204, from  Instance xi7/m1 to net 10:ph_gro<11> 
+Pin 205, from  Instance xi7/m1 to net 12:ph_gro<10> 
+Pin 206, from  Instance xi7/m1 to net 44:xi7/net14 
+Pin 207, from  Instance xi7/m1 to net 2:vdd 
+Instance 52, xi7/m2 
+Pin 208, from  Instance xi7/m2 to net 45:xi7/net13 
+Pin 209, from  Instance xi7/m2 to net 32:en 
+Pin 210, from  Instance xi7/m2 to net 3:vss 
+Pin 211, from  Instance xi7/m2 to net 3:vss 
+Instance 53, xi7/m3 
+Pin 212, from  Instance xi7/m3 to net 10:ph_gro<11> 
+Pin 213, from  Instance xi7/m3 to net 12:ph_gro<10> 
+Pin 214, from  Instance xi7/m3 to net 45:xi7/net13 
+Pin 215, from  Instance xi7/m3 to net 3:vss 
+Instance 54, xi6/m0 
+Pin 216, from  Instance xi6/m0 to net 46:xi6/net14 
+Pin 217, from  Instance xi6/m0 to net 33:enb 
+Pin 218, from  Instance xi6/m0 to net 2:vdd 
+Pin 219, from  Instance xi6/m0 to net 2:vdd 
+Instance 55, xi6/m1 
+Pin 220, from  Instance xi6/m1 to net 8:ph_gro<12> 
+Pin 221, from  Instance xi6/m1 to net 10:ph_gro<11> 
+Pin 222, from  Instance xi6/m1 to net 46:xi6/net14 
+Pin 223, from  Instance xi6/m1 to net 2:vdd 
+Instance 56, xi6/m2 
+Pin 224, from  Instance xi6/m2 to net 47:xi6/net13 
+Pin 225, from  Instance xi6/m2 to net 32:en 
+Pin 226, from  Instance xi6/m2 to net 3:vss 
+Pin 227, from  Instance xi6/m2 to net 3:vss 
+Instance 57, xi6/m3 
+Pin 228, from  Instance xi6/m3 to net 8:ph_gro<12> 
+Pin 229, from  Instance xi6/m3 to net 10:ph_gro<11> 
+Pin 230, from  Instance xi6/m3 to net 47:xi6/net13 
+Pin 231, from  Instance xi6/m3 to net 3:vss 
+Instance 58, xi5/m0 
+Pin 232, from  Instance xi5/m0 to net 48:xi5/net14 
+Pin 233, from  Instance xi5/m0 to net 33:enb 
+Pin 234, from  Instance xi5/m0 to net 2:vdd 
+Pin 235, from  Instance xi5/m0 to net 2:vdd 
+Instance 59, xi5/m1 
+Pin 236, from  Instance xi5/m1 to net 20:ph_gro<6> 
+Pin 237, from  Instance xi5/m1 to net 22:ph_gro<5> 
+Pin 238, from  Instance xi5/m1 to net 48:xi5/net14 
+Pin 239, from  Instance xi5/m1 to net 2:vdd 
+Instance 60, xi5/m2 
+Pin 240, from  Instance xi5/m2 to net 49:xi5/net13 
+Pin 241, from  Instance xi5/m2 to net 32:en 
+Pin 242, from  Instance xi5/m2 to net 3:vss 
+Pin 243, from  Instance xi5/m2 to net 3:vss 
+Instance 61, xi5/m3 
+Pin 244, from  Instance xi5/m3 to net 20:ph_gro<6> 
+Pin 245, from  Instance xi5/m3 to net 22:ph_gro<5> 
+Pin 246, from  Instance xi5/m3 to net 49:xi5/net13 
+Pin 247, from  Instance xi5/m3 to net 3:vss 
+Instance 62, xi4/m0 
+Pin 248, from  Instance xi4/m0 to net 50:xi4/net14 
+Pin 249, from  Instance xi4/m0 to net 33:enb 
+Pin 250, from  Instance xi4/m0 to net 2:vdd 
+Pin 251, from  Instance xi4/m0 to net 2:vdd 
+Instance 63, xi4/m1 
+Pin 252, from  Instance xi4/m1 to net 22:ph_gro<5> 
+Pin 253, from  Instance xi4/m1 to net 24:ph_gro<4> 
+Pin 254, from  Instance xi4/m1 to net 50:xi4/net14 
+Pin 255, from  Instance xi4/m1 to net 2:vdd 
+Instance 64, xi4/m2 
+Pin 256, from  Instance xi4/m2 to net 51:xi4/net13 
+Pin 257, from  Instance xi4/m2 to net 32:en 
+Pin 258, from  Instance xi4/m2 to net 3:vss 
+Pin 259, from  Instance xi4/m2 to net 3:vss 
+Instance 65, xi4/m3 
+Pin 260, from  Instance xi4/m3 to net 22:ph_gro<5> 
+Pin 261, from  Instance xi4/m3 to net 24:ph_gro<4> 
+Pin 262, from  Instance xi4/m3 to net 51:xi4/net13 
+Pin 263, from  Instance xi4/m3 to net 3:vss 
+Instance 66, xi3/m0 
+Pin 264, from  Instance xi3/m0 to net 52:xi3/net14 
+Pin 265, from  Instance xi3/m0 to net 33:enb 
+Pin 266, from  Instance xi3/m0 to net 2:vdd 
+Pin 267, from  Instance xi3/m0 to net 2:vdd 
+Instance 67, xi3/m1 
+Pin 268, from  Instance xi3/m1 to net 18:ph_gro<7> 
+Pin 269, from  Instance xi3/m1 to net 20:ph_gro<6> 
+Pin 270, from  Instance xi3/m1 to net 52:xi3/net14 
+Pin 271, from  Instance xi3/m1 to net 2:vdd 
+Instance 68, xi3/m2 
+Pin 272, from  Instance xi3/m2 to net 53:xi3/net13 
+Pin 273, from  Instance xi3/m2 to net 32:en 
+Pin 274, from  Instance xi3/m2 to net 3:vss 
+Pin 275, from  Instance xi3/m2 to net 3:vss 
+Instance 69, xi3/m3 
+Pin 276, from  Instance xi3/m3 to net 18:ph_gro<7> 
+Pin 277, from  Instance xi3/m3 to net 20:ph_gro<6> 
+Pin 278, from  Instance xi3/m3 to net 53:xi3/net13 
+Pin 279, from  Instance xi3/m3 to net 3:vss 
+Instance 70, xi2/m0 
+Pin 280, from  Instance xi2/m0 to net 54:xi2/net14 
+Pin 281, from  Instance xi2/m0 to net 33:enb 
+Pin 282, from  Instance xi2/m0 to net 2:vdd 
+Pin 283, from  Instance xi2/m0 to net 2:vdd 
+Instance 71, xi2/m1 
+Pin 284, from  Instance xi2/m1 to net 16:ph_gro<8> 
+Pin 285, from  Instance xi2/m1 to net 18:ph_gro<7> 
+Pin 286, from  Instance xi2/m1 to net 54:xi2/net14 
+Pin 287, from  Instance xi2/m1 to net 2:vdd 
+Instance 72, xi2/m2 
+Pin 288, from  Instance xi2/m2 to net 55:xi2/net13 
+Pin 289, from  Instance xi2/m2 to net 32:en 
+Pin 290, from  Instance xi2/m2 to net 3:vss 
+Pin 291, from  Instance xi2/m2 to net 3:vss 
+Instance 73, xi2/m3 
+Pin 292, from  Instance xi2/m3 to net 16:ph_gro<8> 
+Pin 293, from  Instance xi2/m3 to net 18:ph_gro<7> 
+Pin 294, from  Instance xi2/m3 to net 55:xi2/net13 
+Pin 295, from  Instance xi2/m3 to net 3:vss 
+Instance 74, xi1/m0 
+Pin 296, from  Instance xi1/m0 to net 56:xi1/net14 
+Pin 297, from  Instance xi1/m0 to net 33:enb 
+Pin 298, from  Instance xi1/m0 to net 2:vdd 
+Pin 299, from  Instance xi1/m0 to net 2:vdd 
+Instance 75, xi1/m1 
+Pin 300, from  Instance xi1/m1 to net 26:ph_gro<3> 
+Pin 301, from  Instance xi1/m1 to net 28:ph_gro<2> 
+Pin 302, from  Instance xi1/m1 to net 56:xi1/net14 
+Pin 303, from  Instance xi1/m1 to net 2:vdd 
+Instance 76, xi1/m2 
+Pin 304, from  Instance xi1/m2 to net 57:xi1/net13 
+Pin 305, from  Instance xi1/m2 to net 32:en 
+Pin 306, from  Instance xi1/m2 to net 3:vss 
+Pin 307, from  Instance xi1/m2 to net 3:vss 
+Instance 77, xi1/m3 
+Pin 308, from  Instance xi1/m3 to net 26:ph_gro<3> 
+Pin 309, from  Instance xi1/m3 to net 28:ph_gro<2> 
+Pin 310, from  Instance xi1/m3 to net 57:xi1/net13 
+Pin 311, from  Instance xi1/m3 to net 3:vss 
+Instance 78, xi0/m0 
+Pin 312, from  Instance xi0/m0 to net 58:xi0/net14 
+Pin 313, from  Instance xi0/m0 to net 33:enb 
+Pin 314, from  Instance xi0/m0 to net 2:vdd 
+Pin 315, from  Instance xi0/m0 to net 2:vdd 
+Instance 79, xi0/m1 
+Pin 316, from  Instance xi0/m1 to net 24:ph_gro<4> 
+Pin 317, from  Instance xi0/m1 to net 26:ph_gro<3> 
+Pin 318, from  Instance xi0/m1 to net 58:xi0/net14 
+Pin 319, from  Instance xi0/m1 to net 2:vdd 
+Instance 80, xi0/m2 
+Pin 320, from  Instance xi0/m2 to net 59:xi0/net13 
+Pin 321, from  Instance xi0/m2 to net 32:en 
+Pin 322, from  Instance xi0/m2 to net 3:vss 
+Pin 323, from  Instance xi0/m2 to net 3:vss 
+Instance 81, xi0/m3 
+Pin 324, from  Instance xi0/m3 to net 24:ph_gro<4> 
+Pin 325, from  Instance xi0/m3 to net 26:ph_gro<3> 
+Pin 326, from  Instance xi0/m3 to net 59:xi0/net13 
+Pin 327, from  Instance xi0/m3 to net 3:vss 
+Instance 82, xi17/m0 
+Pin 328, from  Instance xi17/m0 to net 60:xi17/net14 
+Pin 329, from  Instance xi17/m0 to net 33:enb 
+Pin 330, from  Instance xi17/m0 to net 2:vdd 
+Pin 331, from  Instance xi17/m0 to net 2:vdd 
+Instance 83, xi17/m1 
+Pin 332, from  Instance xi17/m1 to net 28:ph_gro<2> 
+Pin 333, from  Instance xi17/m1 to net 30:ph_gro<1> 
+Pin 334, from  Instance xi17/m1 to net 60:xi17/net14 
+Pin 335, from  Instance xi17/m1 to net 2:vdd 
+Instance 84, xi17/m2 
+Pin 336, from  Instance xi17/m2 to net 61:xi17/net13 
+Pin 337, from  Instance xi17/m2 to net 32:en 
+Pin 338, from  Instance xi17/m2 to net 3:vss 
+Pin 339, from  Instance xi17/m2 to net 3:vss 
+Instance 85, xi17/m3 
+Pin 340, from  Instance xi17/m3 to net 28:ph_gro<2> 
+Pin 341, from  Instance xi17/m3 to net 30:ph_gro<1> 
+Pin 342, from  Instance xi17/m3 to net 61:xi17/net13 
+Pin 343, from  Instance xi17/m3 to net 3:vss 
+Instance 86, xi16/m0 
+Pin 344, from  Instance xi16/m0 to net 62:xi16/net14 
+Pin 345, from  Instance xi16/m0 to net 33:enb 
+Pin 346, from  Instance xi16/m0 to net 2:vdd 
+Pin 347, from  Instance xi16/m0 to net 2:vdd 
+Instance 87, xi16/m1 
+Pin 348, from  Instance xi16/m1 to net 30:ph_gro<1> 
+Pin 349, from  Instance xi16/m1 to net 0:ph_gro<15> 
+Pin 350, from  Instance xi16/m1 to net 62:xi16/net14 
+Pin 351, from  Instance xi16/m1 to net 2:vdd 
+Instance 88, xi16/m2 
+Pin 352, from  Instance xi16/m2 to net 63:xi16/net13 
+Pin 353, from  Instance xi16/m2 to net 32:en 
+Pin 354, from  Instance xi16/m2 to net 3:vss 
+Pin 355, from  Instance xi16/m2 to net 3:vss 
+Instance 89, xi16/m3 
+Pin 356, from  Instance xi16/m3 to net 30:ph_gro<1> 
+Pin 357, from  Instance xi16/m3 to net 0:ph_gro<15> 
+Pin 358, from  Instance xi16/m3 to net 63:xi16/net13 
+Pin 359, from  Instance xi16/m3 to net 3:vss 
+Instance 90, xi14<1>/m0 
+Pin 360, from  Instance xi14<1>/m0 to net 64:ph<15> 
+Pin 361, from  Instance xi14<1>/m0 to net 1:net132<0> 
+Pin 362, from  Instance xi14<1>/m0 to net 3:vss 
+Pin 363, from  Instance xi14<1>/m0 to net 3:vss 
+Instance 91, xi14<1>/m1 
+Pin 364, from  Instance xi14<1>/m1 to net 64:ph<15> 
+Pin 365, from  Instance xi14<1>/m1 to net 1:net132<0> 
+Pin 366, from  Instance xi14<1>/m1 to net 3:vss 
+Pin 367, from  Instance xi14<1>/m1 to net 3:vss 
+Instance 92, xi14<1>/m2 
+Pin 368, from  Instance xi14<1>/m2 to net 64:ph<15> 
+Pin 369, from  Instance xi14<1>/m2 to net 1:net132<0> 
+Pin 370, from  Instance xi14<1>/m2 to net 3:vss 
+Pin 371, from  Instance xi14<1>/m2 to net 3:vss 
+Instance 93, xi14<1>/m3 
+Pin 372, from  Instance xi14<1>/m3 to net 64:ph<15> 
+Pin 373, from  Instance xi14<1>/m3 to net 1:net132<0> 
+Pin 374, from  Instance xi14<1>/m3 to net 2:vdd 
+Pin 375, from  Instance xi14<1>/m3 to net 2:vdd 
+Instance 94, xi14<1>/m4 
+Pin 376, from  Instance xi14<1>/m4 to net 64:ph<15> 
+Pin 377, from  Instance xi14<1>/m4 to net 1:net132<0> 
+Pin 378, from  Instance xi14<1>/m4 to net 2:vdd 
+Pin 379, from  Instance xi14<1>/m4 to net 2:vdd 
+Instance 95, xi14<1>/m5 
+Pin 380, from  Instance xi14<1>/m5 to net 64:ph<15> 
+Pin 381, from  Instance xi14<1>/m5 to net 1:net132<0> 
+Pin 382, from  Instance xi14<1>/m5 to net 2:vdd 
+Pin 383, from  Instance xi14<1>/m5 to net 2:vdd 
+Instance 96, xi14<2>/m0 
+Pin 384, from  Instance xi14<2>/m0 to net 65:ph<14> 
+Pin 385, from  Instance xi14<2>/m0 to net 5:net132<1> 
+Pin 386, from  Instance xi14<2>/m0 to net 3:vss 
+Pin 387, from  Instance xi14<2>/m0 to net 3:vss 
+Instance 97, xi14<2>/m1 
+Pin 388, from  Instance xi14<2>/m1 to net 65:ph<14> 
+Pin 389, from  Instance xi14<2>/m1 to net 5:net132<1> 
+Pin 390, from  Instance xi14<2>/m1 to net 3:vss 
+Pin 391, from  Instance xi14<2>/m1 to net 3:vss 
+Instance 98, xi14<2>/m2 
+Pin 392, from  Instance xi14<2>/m2 to net 65:ph<14> 
+Pin 393, from  Instance xi14<2>/m2 to net 5:net132<1> 
+Pin 394, from  Instance xi14<2>/m2 to net 3:vss 
+Pin 395, from  Instance xi14<2>/m2 to net 3:vss 
+Instance 99, xi14<2>/m3 
+Pin 396, from  Instance xi14<2>/m3 to net 65:ph<14> 
+Pin 397, from  Instance xi14<2>/m3 to net 5:net132<1> 
+Pin 398, from  Instance xi14<2>/m3 to net 2:vdd 
+Pin 399, from  Instance xi14<2>/m3 to net 2:vdd 
+Instance 100, xi14<2>/m4 
+Pin 400, from  Instance xi14<2>/m4 to net 65:ph<14> 
+Pin 401, from  Instance xi14<2>/m4 to net 5:net132<1> 
+Pin 402, from  Instance xi14<2>/m4 to net 2:vdd 
+Pin 403, from  Instance xi14<2>/m4 to net 2:vdd 
+Instance 101, xi14<2>/m5 
+Pin 404, from  Instance xi14<2>/m5 to net 65:ph<14> 
+Pin 405, from  Instance xi14<2>/m5 to net 5:net132<1> 
+Pin 406, from  Instance xi14<2>/m5 to net 2:vdd 
+Pin 407, from  Instance xi14<2>/m5 to net 2:vdd 
+Instance 102, xi14<3>/m0 
+Pin 408, from  Instance xi14<3>/m0 to net 66:ph<13> 
+Pin 409, from  Instance xi14<3>/m0 to net 7:net132<2> 
+Pin 410, from  Instance xi14<3>/m0 to net 3:vss 
+Pin 411, from  Instance xi14<3>/m0 to net 3:vss 
+Instance 103, xi14<3>/m1 
+Pin 412, from  Instance xi14<3>/m1 to net 66:ph<13> 
+Pin 413, from  Instance xi14<3>/m1 to net 7:net132<2> 
+Pin 414, from  Instance xi14<3>/m1 to net 3:vss 
+Pin 415, from  Instance xi14<3>/m1 to net 3:vss 
+Instance 104, xi14<3>/m2 
+Pin 416, from  Instance xi14<3>/m2 to net 66:ph<13> 
+Pin 417, from  Instance xi14<3>/m2 to net 7:net132<2> 
+Pin 418, from  Instance xi14<3>/m2 to net 3:vss 
+Pin 419, from  Instance xi14<3>/m2 to net 3:vss 
+Instance 105, xi14<3>/m3 
+Pin 420, from  Instance xi14<3>/m3 to net 66:ph<13> 
+Pin 421, from  Instance xi14<3>/m3 to net 7:net132<2> 
+Pin 422, from  Instance xi14<3>/m3 to net 2:vdd 
+Pin 423, from  Instance xi14<3>/m3 to net 2:vdd 
+Instance 106, xi14<3>/m4 
+Pin 424, from  Instance xi14<3>/m4 to net 66:ph<13> 
+Pin 425, from  Instance xi14<3>/m4 to net 7:net132<2> 
+Pin 426, from  Instance xi14<3>/m4 to net 2:vdd 
+Pin 427, from  Instance xi14<3>/m4 to net 2:vdd 
+Instance 107, xi14<3>/m5 
+Pin 428, from  Instance xi14<3>/m5 to net 66:ph<13> 
+Pin 429, from  Instance xi14<3>/m5 to net 7:net132<2> 
+Pin 430, from  Instance xi14<3>/m5 to net 2:vdd 
+Pin 431, from  Instance xi14<3>/m5 to net 2:vdd 
+Instance 108, xi14<4>/m0 
+Pin 432, from  Instance xi14<4>/m0 to net 67:ph<12> 
+Pin 433, from  Instance xi14<4>/m0 to net 9:net132<3> 
+Pin 434, from  Instance xi14<4>/m0 to net 3:vss 
+Pin 435, from  Instance xi14<4>/m0 to net 3:vss 
+Instance 109, xi14<4>/m1 
+Pin 436, from  Instance xi14<4>/m1 to net 67:ph<12> 
+Pin 437, from  Instance xi14<4>/m1 to net 9:net132<3> 
+Pin 438, from  Instance xi14<4>/m1 to net 3:vss 
+Pin 439, from  Instance xi14<4>/m1 to net 3:vss 
+Instance 110, xi14<4>/m2 
+Pin 440, from  Instance xi14<4>/m2 to net 67:ph<12> 
+Pin 441, from  Instance xi14<4>/m2 to net 9:net132<3> 
+Pin 442, from  Instance xi14<4>/m2 to net 3:vss 
+Pin 443, from  Instance xi14<4>/m2 to net 3:vss 
+Instance 111, xi14<4>/m3 
+Pin 444, from  Instance xi14<4>/m3 to net 67:ph<12> 
+Pin 445, from  Instance xi14<4>/m3 to net 9:net132<3> 
+Pin 446, from  Instance xi14<4>/m3 to net 2:vdd 
+Pin 447, from  Instance xi14<4>/m3 to net 2:vdd 
+Instance 112, xi14<4>/m4 
+Pin 448, from  Instance xi14<4>/m4 to net 67:ph<12> 
+Pin 449, from  Instance xi14<4>/m4 to net 9:net132<3> 
+Pin 450, from  Instance xi14<4>/m4 to net 2:vdd 
+Pin 451, from  Instance xi14<4>/m4 to net 2:vdd 
+Instance 113, xi14<4>/m5 
+Pin 452, from  Instance xi14<4>/m5 to net 67:ph<12> 
+Pin 453, from  Instance xi14<4>/m5 to net 9:net132<3> 
+Pin 454, from  Instance xi14<4>/m5 to net 2:vdd 
+Pin 455, from  Instance xi14<4>/m5 to net 2:vdd 
+Instance 114, xi14<5>/m0 
+Pin 456, from  Instance xi14<5>/m0 to net 68:ph<11> 
+Pin 457, from  Instance xi14<5>/m0 to net 11:net132<4> 
+Pin 458, from  Instance xi14<5>/m0 to net 3:vss 
+Pin 459, from  Instance xi14<5>/m0 to net 3:vss 
+Instance 115, xi14<5>/m1 
+Pin 460, from  Instance xi14<5>/m1 to net 68:ph<11> 
+Pin 461, from  Instance xi14<5>/m1 to net 11:net132<4> 
+Pin 462, from  Instance xi14<5>/m1 to net 3:vss 
+Pin 463, from  Instance xi14<5>/m1 to net 3:vss 
+Instance 116, xi14<5>/m2 
+Pin 464, from  Instance xi14<5>/m2 to net 68:ph<11> 
+Pin 465, from  Instance xi14<5>/m2 to net 11:net132<4> 
+Pin 466, from  Instance xi14<5>/m2 to net 3:vss 
+Pin 467, from  Instance xi14<5>/m2 to net 3:vss 
+Instance 117, xi14<5>/m3 
+Pin 468, from  Instance xi14<5>/m3 to net 68:ph<11> 
+Pin 469, from  Instance xi14<5>/m3 to net 11:net132<4> 
+Pin 470, from  Instance xi14<5>/m3 to net 2:vdd 
+Pin 471, from  Instance xi14<5>/m3 to net 2:vdd 
+Instance 118, xi14<5>/m4 
+Pin 472, from  Instance xi14<5>/m4 to net 68:ph<11> 
+Pin 473, from  Instance xi14<5>/m4 to net 11:net132<4> 
+Pin 474, from  Instance xi14<5>/m4 to net 2:vdd 
+Pin 475, from  Instance xi14<5>/m4 to net 2:vdd 
+Instance 119, xi14<5>/m5 
+Pin 476, from  Instance xi14<5>/m5 to net 68:ph<11> 
+Pin 477, from  Instance xi14<5>/m5 to net 11:net132<4> 
+Pin 478, from  Instance xi14<5>/m5 to net 2:vdd 
+Pin 479, from  Instance xi14<5>/m5 to net 2:vdd 
+Instance 120, xi14<6>/m0 
+Pin 480, from  Instance xi14<6>/m0 to net 69:ph<10> 
+Pin 481, from  Instance xi14<6>/m0 to net 13:net132<5> 
+Pin 482, from  Instance xi14<6>/m0 to net 3:vss 
+Pin 483, from  Instance xi14<6>/m0 to net 3:vss 
+Instance 121, xi14<6>/m1 
+Pin 484, from  Instance xi14<6>/m1 to net 69:ph<10> 
+Pin 485, from  Instance xi14<6>/m1 to net 13:net132<5> 
+Pin 486, from  Instance xi14<6>/m1 to net 3:vss 
+Pin 487, from  Instance xi14<6>/m1 to net 3:vss 
+Instance 122, xi14<6>/m2 
+Pin 488, from  Instance xi14<6>/m2 to net 69:ph<10> 
+Pin 489, from  Instance xi14<6>/m2 to net 13:net132<5> 
+Pin 490, from  Instance xi14<6>/m2 to net 3:vss 
+Pin 491, from  Instance xi14<6>/m2 to net 3:vss 
+Instance 123, xi14<6>/m3 
+Pin 492, from  Instance xi14<6>/m3 to net 69:ph<10> 
+Pin 493, from  Instance xi14<6>/m3 to net 13:net132<5> 
+Pin 494, from  Instance xi14<6>/m3 to net 2:vdd 
+Pin 495, from  Instance xi14<6>/m3 to net 2:vdd 
+Instance 124, xi14<6>/m4 
+Pin 496, from  Instance xi14<6>/m4 to net 69:ph<10> 
+Pin 497, from  Instance xi14<6>/m4 to net 13:net132<5> 
+Pin 498, from  Instance xi14<6>/m4 to net 2:vdd 
+Pin 499, from  Instance xi14<6>/m4 to net 2:vdd 
+Instance 125, xi14<6>/m5 
+Pin 500, from  Instance xi14<6>/m5 to net 69:ph<10> 
+Pin 501, from  Instance xi14<6>/m5 to net 13:net132<5> 
+Pin 502, from  Instance xi14<6>/m5 to net 2:vdd 
+Pin 503, from  Instance xi14<6>/m5 to net 2:vdd 
+Instance 126, xi14<7>/m0 
+Pin 504, from  Instance xi14<7>/m0 to net 70:ph<9> 
+Pin 505, from  Instance xi14<7>/m0 to net 15:net132<6> 
+Pin 506, from  Instance xi14<7>/m0 to net 3:vss 
+Pin 507, from  Instance xi14<7>/m0 to net 3:vss 
+Instance 127, xi14<7>/m1 
+Pin 508, from  Instance xi14<7>/m1 to net 70:ph<9> 
+Pin 509, from  Instance xi14<7>/m1 to net 15:net132<6> 
+Pin 510, from  Instance xi14<7>/m1 to net 3:vss 
+Pin 511, from  Instance xi14<7>/m1 to net 3:vss 
+Instance 128, xi14<7>/m2 
+Pin 512, from  Instance xi14<7>/m2 to net 70:ph<9> 
+Pin 513, from  Instance xi14<7>/m2 to net 15:net132<6> 
+Pin 514, from  Instance xi14<7>/m2 to net 3:vss 
+Pin 515, from  Instance xi14<7>/m2 to net 3:vss 
+Instance 129, xi14<7>/m3 
+Pin 516, from  Instance xi14<7>/m3 to net 70:ph<9> 
+Pin 517, from  Instance xi14<7>/m3 to net 15:net132<6> 
+Pin 518, from  Instance xi14<7>/m3 to net 2:vdd 
+Pin 519, from  Instance xi14<7>/m3 to net 2:vdd 
+Instance 130, xi14<7>/m4 
+Pin 520, from  Instance xi14<7>/m4 to net 70:ph<9> 
+Pin 521, from  Instance xi14<7>/m4 to net 15:net132<6> 
+Pin 522, from  Instance xi14<7>/m4 to net 2:vdd 
+Pin 523, from  Instance xi14<7>/m4 to net 2:vdd 
+Instance 131, xi14<7>/m5 
+Pin 524, from  Instance xi14<7>/m5 to net 70:ph<9> 
+Pin 525, from  Instance xi14<7>/m5 to net 15:net132<6> 
+Pin 526, from  Instance xi14<7>/m5 to net 2:vdd 
+Pin 527, from  Instance xi14<7>/m5 to net 2:vdd 
+Instance 132, xi14<8>/m0 
+Pin 528, from  Instance xi14<8>/m0 to net 71:ph<8> 
+Pin 529, from  Instance xi14<8>/m0 to net 17:net132<7> 
+Pin 530, from  Instance xi14<8>/m0 to net 3:vss 
+Pin 531, from  Instance xi14<8>/m0 to net 3:vss 
+Instance 133, xi14<8>/m1 
+Pin 532, from  Instance xi14<8>/m1 to net 71:ph<8> 
+Pin 533, from  Instance xi14<8>/m1 to net 17:net132<7> 
+Pin 534, from  Instance xi14<8>/m1 to net 3:vss 
+Pin 535, from  Instance xi14<8>/m1 to net 3:vss 
+Instance 134, xi14<8>/m2 
+Pin 536, from  Instance xi14<8>/m2 to net 71:ph<8> 
+Pin 537, from  Instance xi14<8>/m2 to net 17:net132<7> 
+Pin 538, from  Instance xi14<8>/m2 to net 3:vss 
+Pin 539, from  Instance xi14<8>/m2 to net 3:vss 
+Instance 135, xi14<8>/m3 
+Pin 540, from  Instance xi14<8>/m3 to net 71:ph<8> 
+Pin 541, from  Instance xi14<8>/m3 to net 17:net132<7> 
+Pin 542, from  Instance xi14<8>/m3 to net 2:vdd 
+Pin 543, from  Instance xi14<8>/m3 to net 2:vdd 
+Instance 136, xi14<8>/m4 
+Pin 544, from  Instance xi14<8>/m4 to net 71:ph<8> 
+Pin 545, from  Instance xi14<8>/m4 to net 17:net132<7> 
+Pin 546, from  Instance xi14<8>/m4 to net 2:vdd 
+Pin 547, from  Instance xi14<8>/m4 to net 2:vdd 
+Instance 137, xi14<8>/m5 
+Pin 548, from  Instance xi14<8>/m5 to net 71:ph<8> 
+Pin 549, from  Instance xi14<8>/m5 to net 17:net132<7> 
+Pin 550, from  Instance xi14<8>/m5 to net 2:vdd 
+Pin 551, from  Instance xi14<8>/m5 to net 2:vdd 
+Instance 138, xi14<9>/m0 
+Pin 552, from  Instance xi14<9>/m0 to net 72:ph<7> 
+Pin 553, from  Instance xi14<9>/m0 to net 19:net132<8> 
+Pin 554, from  Instance xi14<9>/m0 to net 3:vss 
+Pin 555, from  Instance xi14<9>/m0 to net 3:vss 
+Instance 139, xi14<9>/m1 
+Pin 556, from  Instance xi14<9>/m1 to net 72:ph<7> 
+Pin 557, from  Instance xi14<9>/m1 to net 19:net132<8> 
+Pin 558, from  Instance xi14<9>/m1 to net 3:vss 
+Pin 559, from  Instance xi14<9>/m1 to net 3:vss 
+Instance 140, xi14<9>/m2 
+Pin 560, from  Instance xi14<9>/m2 to net 72:ph<7> 
+Pin 561, from  Instance xi14<9>/m2 to net 19:net132<8> 
+Pin 562, from  Instance xi14<9>/m2 to net 3:vss 
+Pin 563, from  Instance xi14<9>/m2 to net 3:vss 
+Instance 141, xi14<9>/m3 
+Pin 564, from  Instance xi14<9>/m3 to net 72:ph<7> 
+Pin 565, from  Instance xi14<9>/m3 to net 19:net132<8> 
+Pin 566, from  Instance xi14<9>/m3 to net 2:vdd 
+Pin 567, from  Instance xi14<9>/m3 to net 2:vdd 
+Instance 142, xi14<9>/m4 
+Pin 568, from  Instance xi14<9>/m4 to net 72:ph<7> 
+Pin 569, from  Instance xi14<9>/m4 to net 19:net132<8> 
+Pin 570, from  Instance xi14<9>/m4 to net 2:vdd 
+Pin 571, from  Instance xi14<9>/m4 to net 2:vdd 
+Instance 143, xi14<9>/m5 
+Pin 572, from  Instance xi14<9>/m5 to net 72:ph<7> 
+Pin 573, from  Instance xi14<9>/m5 to net 19:net132<8> 
+Pin 574, from  Instance xi14<9>/m5 to net 2:vdd 
+Pin 575, from  Instance xi14<9>/m5 to net 2:vdd 
+Instance 144, xi14<10>/m0 
+Pin 576, from  Instance xi14<10>/m0 to net 73:ph<6> 
+Pin 577, from  Instance xi14<10>/m0 to net 21:net132<9> 
+Pin 578, from  Instance xi14<10>/m0 to net 3:vss 
+Pin 579, from  Instance xi14<10>/m0 to net 3:vss 
+Instance 145, xi14<10>/m1 
+Pin 580, from  Instance xi14<10>/m1 to net 73:ph<6> 
+Pin 581, from  Instance xi14<10>/m1 to net 21:net132<9> 
+Pin 582, from  Instance xi14<10>/m1 to net 3:vss 
+Pin 583, from  Instance xi14<10>/m1 to net 3:vss 
+Instance 146, xi14<10>/m2 
+Pin 584, from  Instance xi14<10>/m2 to net 73:ph<6> 
+Pin 585, from  Instance xi14<10>/m2 to net 21:net132<9> 
+Pin 586, from  Instance xi14<10>/m2 to net 3:vss 
+Pin 587, from  Instance xi14<10>/m2 to net 3:vss 
+Instance 147, xi14<10>/m3 
+Pin 588, from  Instance xi14<10>/m3 to net 73:ph<6> 
+Pin 589, from  Instance xi14<10>/m3 to net 21:net132<9> 
+Pin 590, from  Instance xi14<10>/m3 to net 2:vdd 
+Pin 591, from  Instance xi14<10>/m3 to net 2:vdd 
+Instance 148, xi14<10>/m4 
+Pin 592, from  Instance xi14<10>/m4 to net 73:ph<6> 
+Pin 593, from  Instance xi14<10>/m4 to net 21:net132<9> 
+Pin 594, from  Instance xi14<10>/m4 to net 2:vdd 
+Pin 595, from  Instance xi14<10>/m4 to net 2:vdd 
+Instance 149, xi14<10>/m5 
+Pin 596, from  Instance xi14<10>/m5 to net 73:ph<6> 
+Pin 597, from  Instance xi14<10>/m5 to net 21:net132<9> 
+Pin 598, from  Instance xi14<10>/m5 to net 2:vdd 
+Pin 599, from  Instance xi14<10>/m5 to net 2:vdd 
+Instance 150, xi14<11>/m0 
+Pin 600, from  Instance xi14<11>/m0 to net 74:ph<5> 
+Pin 601, from  Instance xi14<11>/m0 to net 23:net132<10> 
+Pin 602, from  Instance xi14<11>/m0 to net 3:vss 
+Pin 603, from  Instance xi14<11>/m0 to net 3:vss 
+Instance 151, xi14<11>/m1 
+Pin 604, from  Instance xi14<11>/m1 to net 74:ph<5> 
+Pin 605, from  Instance xi14<11>/m1 to net 23:net132<10> 
+Pin 606, from  Instance xi14<11>/m1 to net 3:vss 
+Pin 607, from  Instance xi14<11>/m1 to net 3:vss 
+Instance 152, xi14<11>/m2 
+Pin 608, from  Instance xi14<11>/m2 to net 74:ph<5> 
+Pin 609, from  Instance xi14<11>/m2 to net 23:net132<10> 
+Pin 610, from  Instance xi14<11>/m2 to net 3:vss 
+Pin 611, from  Instance xi14<11>/m2 to net 3:vss 
+Instance 153, xi14<11>/m3 
+Pin 612, from  Instance xi14<11>/m3 to net 74:ph<5> 
+Pin 613, from  Instance xi14<11>/m3 to net 23:net132<10> 
+Pin 614, from  Instance xi14<11>/m3 to net 2:vdd 
+Pin 615, from  Instance xi14<11>/m3 to net 2:vdd 
+Instance 154, xi14<11>/m4 
+Pin 616, from  Instance xi14<11>/m4 to net 74:ph<5> 
+Pin 617, from  Instance xi14<11>/m4 to net 23:net132<10> 
+Pin 618, from  Instance xi14<11>/m4 to net 2:vdd 
+Pin 619, from  Instance xi14<11>/m4 to net 2:vdd 
+Instance 155, xi14<11>/m5 
+Pin 620, from  Instance xi14<11>/m5 to net 74:ph<5> 
+Pin 621, from  Instance xi14<11>/m5 to net 23:net132<10> 
+Pin 622, from  Instance xi14<11>/m5 to net 2:vdd 
+Pin 623, from  Instance xi14<11>/m5 to net 2:vdd 
+Instance 156, xi14<12>/m0 
+Pin 624, from  Instance xi14<12>/m0 to net 75:ph<4> 
+Pin 625, from  Instance xi14<12>/m0 to net 25:net132<11> 
+Pin 626, from  Instance xi14<12>/m0 to net 3:vss 
+Pin 627, from  Instance xi14<12>/m0 to net 3:vss 
+Instance 157, xi14<12>/m1 
+Pin 628, from  Instance xi14<12>/m1 to net 75:ph<4> 
+Pin 629, from  Instance xi14<12>/m1 to net 25:net132<11> 
+Pin 630, from  Instance xi14<12>/m1 to net 3:vss 
+Pin 631, from  Instance xi14<12>/m1 to net 3:vss 
+Instance 158, xi14<12>/m2 
+Pin 632, from  Instance xi14<12>/m2 to net 75:ph<4> 
+Pin 633, from  Instance xi14<12>/m2 to net 25:net132<11> 
+Pin 634, from  Instance xi14<12>/m2 to net 3:vss 
+Pin 635, from  Instance xi14<12>/m2 to net 3:vss 
+Instance 159, xi14<12>/m3 
+Pin 636, from  Instance xi14<12>/m3 to net 75:ph<4> 
+Pin 637, from  Instance xi14<12>/m3 to net 25:net132<11> 
+Pin 638, from  Instance xi14<12>/m3 to net 2:vdd 
+Pin 639, from  Instance xi14<12>/m3 to net 2:vdd 
+Instance 160, xi14<12>/m4 
+Pin 640, from  Instance xi14<12>/m4 to net 75:ph<4> 
+Pin 641, from  Instance xi14<12>/m4 to net 25:net132<11> 
+Pin 642, from  Instance xi14<12>/m4 to net 2:vdd 
+Pin 643, from  Instance xi14<12>/m4 to net 2:vdd 
+Instance 161, xi14<12>/m5 
+Pin 644, from  Instance xi14<12>/m5 to net 75:ph<4> 
+Pin 645, from  Instance xi14<12>/m5 to net 25:net132<11> 
+Pin 646, from  Instance xi14<12>/m5 to net 2:vdd 
+Pin 647, from  Instance xi14<12>/m5 to net 2:vdd 
+Instance 162, xi14<13>/m0 
+Pin 648, from  Instance xi14<13>/m0 to net 76:ph<3> 
+Pin 649, from  Instance xi14<13>/m0 to net 27:net132<12> 
+Pin 650, from  Instance xi14<13>/m0 to net 3:vss 
+Pin 651, from  Instance xi14<13>/m0 to net 3:vss 
+Instance 163, xi14<13>/m1 
+Pin 652, from  Instance xi14<13>/m1 to net 76:ph<3> 
+Pin 653, from  Instance xi14<13>/m1 to net 27:net132<12> 
+Pin 654, from  Instance xi14<13>/m1 to net 3:vss 
+Pin 655, from  Instance xi14<13>/m1 to net 3:vss 
+Instance 164, xi14<13>/m2 
+Pin 656, from  Instance xi14<13>/m2 to net 76:ph<3> 
+Pin 657, from  Instance xi14<13>/m2 to net 27:net132<12> 
+Pin 658, from  Instance xi14<13>/m2 to net 3:vss 
+Pin 659, from  Instance xi14<13>/m2 to net 3:vss 
+Instance 165, xi14<13>/m3 
+Pin 660, from  Instance xi14<13>/m3 to net 76:ph<3> 
+Pin 661, from  Instance xi14<13>/m3 to net 27:net132<12> 
+Pin 662, from  Instance xi14<13>/m3 to net 2:vdd 
+Pin 663, from  Instance xi14<13>/m3 to net 2:vdd 
+Instance 166, xi14<13>/m4 
+Pin 664, from  Instance xi14<13>/m4 to net 76:ph<3> 
+Pin 665, from  Instance xi14<13>/m4 to net 27:net132<12> 
+Pin 666, from  Instance xi14<13>/m4 to net 2:vdd 
+Pin 667, from  Instance xi14<13>/m4 to net 2:vdd 
+Instance 167, xi14<13>/m5 
+Pin 668, from  Instance xi14<13>/m5 to net 76:ph<3> 
+Pin 669, from  Instance xi14<13>/m5 to net 27:net132<12> 
+Pin 670, from  Instance xi14<13>/m5 to net 2:vdd 
+Pin 671, from  Instance xi14<13>/m5 to net 2:vdd 
+Instance 168, xi14<14>/m0 
+Pin 672, from  Instance xi14<14>/m0 to net 77:ph<2> 
+Pin 673, from  Instance xi14<14>/m0 to net 29:net132<13> 
+Pin 674, from  Instance xi14<14>/m0 to net 3:vss 
+Pin 675, from  Instance xi14<14>/m0 to net 3:vss 
+Instance 169, xi14<14>/m1 
+Pin 676, from  Instance xi14<14>/m1 to net 77:ph<2> 
+Pin 677, from  Instance xi14<14>/m1 to net 29:net132<13> 
+Pin 678, from  Instance xi14<14>/m1 to net 3:vss 
+Pin 679, from  Instance xi14<14>/m1 to net 3:vss 
+Instance 170, xi14<14>/m2 
+Pin 680, from  Instance xi14<14>/m2 to net 77:ph<2> 
+Pin 681, from  Instance xi14<14>/m2 to net 29:net132<13> 
+Pin 682, from  Instance xi14<14>/m2 to net 3:vss 
+Pin 683, from  Instance xi14<14>/m2 to net 3:vss 
+Instance 171, xi14<14>/m3 
+Pin 684, from  Instance xi14<14>/m3 to net 77:ph<2> 
+Pin 685, from  Instance xi14<14>/m3 to net 29:net132<13> 
+Pin 686, from  Instance xi14<14>/m3 to net 2:vdd 
+Pin 687, from  Instance xi14<14>/m3 to net 2:vdd 
+Instance 172, xi14<14>/m4 
+Pin 688, from  Instance xi14<14>/m4 to net 77:ph<2> 
+Pin 689, from  Instance xi14<14>/m4 to net 29:net132<13> 
+Pin 690, from  Instance xi14<14>/m4 to net 2:vdd 
+Pin 691, from  Instance xi14<14>/m4 to net 2:vdd 
+Instance 173, xi14<14>/m5 
+Pin 692, from  Instance xi14<14>/m5 to net 77:ph<2> 
+Pin 693, from  Instance xi14<14>/m5 to net 29:net132<13> 
+Pin 694, from  Instance xi14<14>/m5 to net 2:vdd 
+Pin 695, from  Instance xi14<14>/m5 to net 2:vdd 
+Instance 174, xi14<15>/m0 
+Pin 696, from  Instance xi14<15>/m0 to net 78:ph<1> 
+Pin 697, from  Instance xi14<15>/m0 to net 31:net132<14> 
+Pin 698, from  Instance xi14<15>/m0 to net 3:vss 
+Pin 699, from  Instance xi14<15>/m0 to net 3:vss 
+Instance 175, xi14<15>/m1 
+Pin 700, from  Instance xi14<15>/m1 to net 78:ph<1> 
+Pin 701, from  Instance xi14<15>/m1 to net 31:net132<14> 
+Pin 702, from  Instance xi14<15>/m1 to net 3:vss 
+Pin 703, from  Instance xi14<15>/m1 to net 3:vss 
+Instance 176, xi14<15>/m2 
+Pin 704, from  Instance xi14<15>/m2 to net 78:ph<1> 
+Pin 705, from  Instance xi14<15>/m2 to net 31:net132<14> 
+Pin 706, from  Instance xi14<15>/m2 to net 3:vss 
+Pin 707, from  Instance xi14<15>/m2 to net 3:vss 
+Instance 177, xi14<15>/m3 
+Pin 708, from  Instance xi14<15>/m3 to net 78:ph<1> 
+Pin 709, from  Instance xi14<15>/m3 to net 31:net132<14> 
+Pin 710, from  Instance xi14<15>/m3 to net 2:vdd 
+Pin 711, from  Instance xi14<15>/m3 to net 2:vdd 
+Instance 178, xi14<15>/m4 
+Pin 712, from  Instance xi14<15>/m4 to net 78:ph<1> 
+Pin 713, from  Instance xi14<15>/m4 to net 31:net132<14> 
+Pin 714, from  Instance xi14<15>/m4 to net 2:vdd 
+Pin 715, from  Instance xi14<15>/m4 to net 2:vdd 
+Instance 179, xi14<15>/m5 
+Pin 716, from  Instance xi14<15>/m5 to net 78:ph<1> 
+Pin 717, from  Instance xi14<15>/m5 to net 31:net132<14> 
+Pin 718, from  Instance xi14<15>/m5 to net 2:vdd 
+Pin 719, from  Instance xi14<15>/m5 to net 2:vdd 

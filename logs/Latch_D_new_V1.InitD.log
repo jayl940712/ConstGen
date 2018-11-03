@@ -1,0 +1,159 @@
+Done!
+Net 0, net015 
+Net 1, net021 
+Net 2, dvdd 
+Net 3, qb 
+Net 4, rst 
+Net 5, q 
+Net 6, sc 
+Net 7, dvss 
+Net 8, net037 
+Net 9, net022 
+Net 10, net027 
+Net 11, net032 
+Net 12, net030 
+Net 13, net028 
+Net 14, d 
+Net 15, db 
+Net 16, net034 
+Net 17, qbn 
+Instance 0, m2 
+Pin 0, from  Instance m2 to net 0:net015 
+Pin 1, from  Instance m2 to net 1:net021 
+Pin 2, from  Instance m2 to net 2:dvdd 
+Pin 3, from  Instance m2 to net 2:dvdd 
+Instance 1, m10 
+Pin 4, from  Instance m10 to net 3:qb 
+Pin 5, from  Instance m10 to net 1:net021 
+Pin 6, from  Instance m10 to net 2:dvdd 
+Pin 7, from  Instance m10 to net 2:dvdd 
+Instance 2, m7 
+Pin 8, from  Instance m7 to net 1:net021 
+Pin 9, from  Instance m7 to net 4:rst 
+Pin 10, from  Instance m7 to net 2:dvdd 
+Pin 11, from  Instance m7 to net 2:dvdd 
+Instance 3, m13 
+Pin 12, from  Instance m13 to net 5:q 
+Pin 13, from  Instance m13 to net 0:net015 
+Pin 14, from  Instance m13 to net 2:dvdd 
+Pin 15, from  Instance m13 to net 2:dvdd 
+Instance 4, m1 
+Pin 16, from  Instance m1 to net 1:net021 
+Pin 17, from  Instance m1 to net 0:net015 
+Pin 18, from  Instance m1 to net 2:dvdd 
+Pin 19, from  Instance m1 to net 2:dvdd 
+Instance 5, m6 
+Pin 20, from  Instance m6 to net 0:net015 
+Pin 21, from  Instance m6 to net 4:rst 
+Pin 22, from  Instance m6 to net 2:dvdd 
+Pin 23, from  Instance m6 to net 2:dvdd 
+Instance 6, xi24/m1 
+Pin 24, from  Instance xi24/m1 to net 8:net037 
+Pin 25, from  Instance xi24/m1 to net 6:sc 
+Pin 26, from  Instance xi24/m1 to net 7:dvss 
+Pin 27, from  Instance xi24/m1 to net 7:dvss 
+Instance 7, xi24/m0 
+Pin 28, from  Instance xi24/m0 to net 8:net037 
+Pin 29, from  Instance xi24/m0 to net 6:sc 
+Pin 30, from  Instance xi24/m0 to net 2:dvdd 
+Pin 31, from  Instance xi24/m0 to net 2:dvdd 
+Instance 8, xi16/m1 
+Pin 32, from  Instance xi16/m1 to net 9:net022 
+Pin 33, from  Instance xi16/m1 to net 6:sc 
+Pin 34, from  Instance xi16/m1 to net 7:dvss 
+Pin 35, from  Instance xi16/m1 to net 7:dvss 
+Instance 9, xi16/m0 
+Pin 36, from  Instance xi16/m0 to net 9:net022 
+Pin 37, from  Instance xi16/m0 to net 6:sc 
+Pin 38, from  Instance xi16/m0 to net 2:dvdd 
+Pin 39, from  Instance xi16/m0 to net 2:dvdd 
+Instance 10, xi23/m1 
+Pin 40, from  Instance xi23/m1 to net 10:net027 
+Pin 41, from  Instance xi23/m1 to net 8:net037 
+Pin 42, from  Instance xi23/m1 to net 7:dvss 
+Pin 43, from  Instance xi23/m1 to net 7:dvss 
+Instance 11, xi23/m0 
+Pin 44, from  Instance xi23/m0 to net 10:net027 
+Pin 45, from  Instance xi23/m0 to net 8:net037 
+Pin 46, from  Instance xi23/m0 to net 2:dvdd 
+Pin 47, from  Instance xi23/m0 to net 2:dvdd 
+Instance 12, xi18/m1 
+Pin 48, from  Instance xi18/m1 to net 11:net032 
+Pin 49, from  Instance xi18/m1 to net 9:net022 
+Pin 50, from  Instance xi18/m1 to net 7:dvss 
+Pin 51, from  Instance xi18/m1 to net 7:dvss 
+Instance 13, xi18/m0 
+Pin 52, from  Instance xi18/m0 to net 11:net032 
+Pin 53, from  Instance xi18/m0 to net 9:net022 
+Pin 54, from  Instance xi18/m0 to net 2:dvdd 
+Pin 55, from  Instance xi18/m0 to net 2:dvdd 
+Instance 14, m3 
+Pin 56, from  Instance m3 to net 1:net021 
+Pin 57, from  Instance m3 to net 6:sc 
+Pin 58, from  Instance m3 to net 12:net030 
+Pin 59, from  Instance m3 to net 7:dvss 
+Instance 15, m4 
+Pin 60, from  Instance m4 to net 13:net028 
+Pin 61, from  Instance m4 to net 14:d 
+Pin 62, from  Instance m4 to net 7:dvss 
+Pin 63, from  Instance m4 to net 7:dvss 
+Instance 16, m5 
+Pin 64, from  Instance m5 to net 0:net015 
+Pin 65, from  Instance m5 to net 6:sc 
+Pin 66, from  Instance m5 to net 13:net028 
+Pin 67, from  Instance m5 to net 7:dvss 
+Instance 17, m0 
+Pin 68, from  Instance m0 to net 12:net030 
+Pin 69, from  Instance m0 to net 15:db 
+Pin 70, from  Instance m0 to net 7:dvss 
+Pin 71, from  Instance m0 to net 7:dvss 
+Instance 18, m12 
+Pin 72, from  Instance m12 to net 5:q 
+Pin 73, from  Instance m12 to net 0:net015 
+Pin 74, from  Instance m12 to net 7:dvss 
+Pin 75, from  Instance m12 to net 7:dvss 
+Instance 19, m9 
+Pin 76, from  Instance m9 to net 3:qb 
+Pin 77, from  Instance m9 to net 1:net021 
+Pin 78, from  Instance m9 to net 7:dvss 
+Pin 79, from  Instance m9 to net 7:dvss 
+Instance 20, xi20/m1 
+Pin 80, from  Instance xi20/m1 to net 16:net034 
+Pin 81, from  Instance xi20/m1 to net 3:qb 
+Pin 82, from  Instance xi20/m1 to net 7:dvss 
+Pin 83, from  Instance xi20/m1 to net 7:dvss 
+Instance 21, xi20/m0 
+Pin 84, from  Instance xi20/m0 to net 16:net034 
+Pin 85, from  Instance xi20/m0 to net 3:qb 
+Pin 86, from  Instance xi20/m0 to net 2:dvdd 
+Pin 87, from  Instance xi20/m0 to net 2:dvdd 
+Instance 22, xi25/m1 
+Pin 88, from  Instance xi25/m1 to net 17:qbn 
+Pin 89, from  Instance xi25/m1 to net 5:q 
+Pin 90, from  Instance xi25/m1 to net 7:dvss 
+Pin 91, from  Instance xi25/m1 to net 7:dvss 
+Instance 23, xi25/m0 
+Pin 92, from  Instance xi25/m0 to net 17:qbn 
+Pin 93, from  Instance xi25/m0 to net 5:q 
+Pin 94, from  Instance xi25/m0 to net 2:dvdd 
+Pin 95, from  Instance xi25/m0 to net 2:dvdd 
+Instance 24, xi11/m11 
+Pin 96, from  Instance xi11/m11 to net 1:net021 
+Pin 97, from  Instance xi11/m11 to net 11:net032 
+Pin 98, from  Instance xi11/m11 to net 16:net034 
+Pin 99, from  Instance xi11/m11 to net 2:dvdd 
+Instance 25, xi11/m9 
+Pin 100, from  Instance xi11/m9 to net 16:net034 
+Pin 101, from  Instance xi11/m9 to net 9:net022 
+Pin 102, from  Instance xi11/m9 to net 1:net021 
+Pin 103, from  Instance xi11/m9 to net 7:dvss 
+Instance 26, xi26/m11 
+Pin 104, from  Instance xi26/m11 to net 0:net015 
+Pin 105, from  Instance xi26/m11 to net 10:net027 
+Pin 106, from  Instance xi26/m11 to net 17:qbn 
+Pin 107, from  Instance xi26/m11 to net 2:dvdd 
+Instance 27, xi26/m9 
+Pin 108, from  Instance xi26/m9 to net 17:qbn 
+Pin 109, from  Instance xi26/m9 to net 8:net037 
+Pin 110, from  Instance xi26/m9 to net 0:net015 
+Pin 111, from  Instance xi26/m9 to net 7:dvss 

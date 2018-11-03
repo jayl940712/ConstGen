@@ -1,0 +1,8 @@
+#ifndef __NAMESPACE_H__
+#define __NAMESPACE_H__
+
+#define PROJECT_NAMESPACE SFA
+#define PROJECT_NAMESPACE_BEGIN namespace PROJECT_NAMESPACE {
+#define PROJECT_NAMESPACE_END }
+
+#endif
