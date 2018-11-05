@@ -35,6 +35,13 @@ public:
     void                            init(InitDataObject &obj);
     void                            print_all();
 
+    std::vector<IndexType>          pinInstanceId(IndexType pinId);
+    std::vector<IndexType>          pinInstanceId(IndexType pinId, InstanceType type);
+    std::vector<IndexType>          pinMosfetId(IndexType pinId);
+    std::vector<IndexType>          netMosfetId(IndexType netId, PinType pinType, MosType mosType);
+    IndexType                       instanceNetId(IndexType instanceId, PinType pinType);
+    MosType                         mosType(IndexType mosId);
+    
     // Getters
     Pin &                           pin(IndexType id)                   {return _pinArray.at(id); }
     Net &                           net(IndexType id)                   {return _netArray.at(id); }

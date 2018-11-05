@@ -11,9 +11,10 @@ include_directories (
 )
 
 file (GLOB SOURCES
-    src/parser/*.h    src/parser/*.cpp
-    src/global/*.h    src/global/*.cpp
-    src/db/*.h        src/db/*.cpp
+    src/parser/*.h      src/parser/*.cpp
+    src/global/*.h      src/global/*.cpp
+    src/db/*.h          src/db/*.cpp
+    src/sym_detect/*.h  src/sym_detect/*.cpp
 )
 
 file (GLOB PROJECT_SOURCES

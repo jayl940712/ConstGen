@@ -60,6 +60,14 @@ global/global.h
 db/Netlist.h
 ../../src/parser/db/Netlist.h
 
+../../src/sym_detect/SymDetect.h
+db/Netlist.h
+../../src/sym_detect/db/Netlist.h
+vector
+-
+utility
+-
+
 /home/unga/jayliu/SFA/src/db/Net.cpp
 db/Net.h
 /home/unga/jayliu/SFA/src/db/db/Net.h
@@ -69,14 +77,22 @@ db/Netlist.h
 /home/unga/jayliu/SFA/src/db/db/Netlist.h
 cstdio
 -
+vector
+-
+algorithm
+-
 
 /home/unga/jayliu/SFA/src/main/main.cpp
 string
 -
 iostream
 -
+vector
+-
 parser/InitNetlist.h
 /home/unga/jayliu/SFA/src/main/parser/InitNetlist.h
+sym_detect/SymDetect.h
+/home/unga/jayliu/SFA/src/main/sym_detect/SymDetect.h
 
 /home/unga/jayliu/SFA/src/parser/InitNetlist.cpp
 cstdio
@@ -89,4 +105,10 @@ InitNetlist.h
 /home/unga/jayliu/SFA/src/parser/InitNetlist.h
 db/Netlist.h
 /home/unga/jayliu/SFA/src/parser/db/Netlist.h
+
+/home/unga/jayliu/SFA/src/sym_detect/SymDetect.cpp
+sym_detect/SymDetect.h
+/home/unga/jayliu/SFA/src/sym_detect/sym_detect/SymDetect.h
+db/Netlist.h
+/home/unga/jayliu/SFA/src/sym_detect/db/Netlist.h
 

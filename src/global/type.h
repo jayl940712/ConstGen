@@ -47,6 +47,14 @@ enum class PinType : Byte
     OTHER
 };    
 
+enum class MosType: Byte
+{
+    DIFF,
+    DIODE,
+    CAP,
+    DUMMY
+};
+
 PROJECT_NAMESPACE_END
 
 #endif

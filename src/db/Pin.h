@@ -18,6 +18,7 @@ public:
     IndexType                       id() const          {return _id; }
     IndexType                       instanceId() const  {return _instanceId; }
     IndexType                       netId() const       {return _netId; }
+    PinType                         type() const        {return _type; }
 
     // Setters
     

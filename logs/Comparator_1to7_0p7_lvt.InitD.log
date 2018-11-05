@@ -181,7 +181,7 @@ Pin 124, from  Instance m2 to net 7:vout2p
 Pin 125, from  Instance m2 to net 9:vss 
 Pin 126, from  Instance m2 to net 7:vout2p 
 Pin 127, from  Instance m2 to net 7:vout2p 
-Instance 32, m3 
+Instance 32, m3 118
 Pin 128, from  Instance m3 to net 7:vout2p 
 Pin 129, from  Instance m3 to net 21:caln 
 Pin 130, from  Instance m3 to net 7:vout2p 

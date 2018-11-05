@@ -24,7 +24,7 @@ public:
     void                        addPinId(IndexType pinId)   { _pinIdArray.push_back(pinId); } 
 
     NetType                     netType(); 
-
+    
 private:
     std::string                 _name;
     IndexType                   _id;

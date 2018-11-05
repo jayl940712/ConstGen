@@ -25,6 +25,7 @@ CMakeFiles/SFA.dir/src/main/main.cpp.o
  ../../src/global/namespace.h
  ../../src/global/type.h
  ../../src/parser/InitNetlist.h
+ ../../src/sym_detect/SymDetect.h
  /home/unga/jayliu/SFA/src/main/main.cpp
 CMakeFiles/SFA.dir/src/parser/InitNetlist.cpp.o
  ../../src/db/Instance.h
@@ -36,3 +37,13 @@ CMakeFiles/SFA.dir/src/parser/InitNetlist.cpp.o
  ../../src/global/type.h
  /home/unga/jayliu/SFA/src/parser/InitNetlist.cpp
  /home/unga/jayliu/SFA/src/parser/InitNetlist.h
+CMakeFiles/SFA.dir/src/sym_detect/SymDetect.cpp.o
+ ../../src/db/Instance.h
+ ../../src/db/Net.h
+ ../../src/db/Netlist.h
+ ../../src/db/Pin.h
+ ../../src/global/global.h
+ ../../src/global/namespace.h
+ ../../src/global/type.h
+ ../../src/sym_detect/SymDetect.h
+ /home/unga/jayliu/SFA/src/sym_detect/SymDetect.cpp
