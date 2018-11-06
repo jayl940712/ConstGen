@@ -21,6 +21,11 @@
 },
 {
   "directory": "/home/unga/jayliu/SFA/build/debug",
+  "command": "/usr/bin/c++    -I/home/unga/jayliu/SFA/src -I/home/unga/jayliu/SFA/unittest  -std=c++11 -Wall  -g3 -O0 -fno-inline   -o CMakeFiles/SFA.dir/src/db/Pin.cpp.o -c /home/unga/jayliu/SFA/src/db/Pin.cpp",
+  "file": "/home/unga/jayliu/SFA/src/db/Pin.cpp"
+},
+{
+  "directory": "/home/unga/jayliu/SFA/build/debug",
   "command": "/usr/bin/c++    -I/home/unga/jayliu/SFA/src -I/home/unga/jayliu/SFA/unittest  -std=c++11 -Wall  -g3 -O0 -fno-inline   -o CMakeFiles/SFA.dir/src/sym_detect/SymDetect.cpp.o -c /home/unga/jayliu/SFA/src/sym_detect/SymDetect.cpp",
   "file": "/home/unga/jayliu/SFA/src/sym_detect/SymDetect.cpp"
 }

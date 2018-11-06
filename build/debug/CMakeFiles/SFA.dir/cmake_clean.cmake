@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/SFA.dir/src/parser/InitNetlist.cpp.o"
   "CMakeFiles/SFA.dir/src/db/Net.cpp.o"
   "CMakeFiles/SFA.dir/src/db/Netlist.cpp.o"
+  "CMakeFiles/SFA.dir/src/db/Pin.cpp.o"
   "CMakeFiles/SFA.dir/src/sym_detect/SymDetect.cpp.o"
   "../../bin/SFA.pdb"
   "../../bin/SFA"

@@ -16,6 +16,12 @@ CMakeFiles/SFA.dir/src/db/Netlist.cpp.o
  ../../src/global/namespace.h
  ../../src/global/type.h
  /home/unga/jayliu/SFA/src/db/Netlist.cpp
+CMakeFiles/SFA.dir/src/db/Pin.cpp.o
+ ../../src/db/Pin.h
+ ../../src/global/global.h
+ ../../src/global/namespace.h
+ ../../src/global/type.h
+ /home/unga/jayliu/SFA/src/db/Pin.cpp
 CMakeFiles/SFA.dir/src/main/main.cpp.o
  ../../src/db/Instance.h
  ../../src/db/Net.h

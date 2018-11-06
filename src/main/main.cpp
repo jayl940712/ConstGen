@@ -22,7 +22,7 @@ int main(int argc, char* argv[])
     for (SymDetect::diffPair pair : diffPair)
     {
         std::cout << netlist.instance(pair.diff.first).name() << " " << netlist.instance(pair.diff.second).name() << std::endl;
-        std::cout << netlist.net(netlist.instanceNetId(pair.diff.first, PinType::SOURCE)).name() << " " << netlist.net(netlist.instanceNetId(pair.diff.first, PinType::DRAIN)).name() << std::endl;
+        std::vector<std::pair<IndexType, IndexType>> symGroup = symDetect.symGroup(pair.diff);
     }
     return 0; 
 }

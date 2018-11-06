@@ -22,6 +22,8 @@ public:
 
     // Setters
     
+    static PinType                  otherPinType(PinType type);
+
 private:
     IndexType                       _id;
     IndexType                       _instanceId;

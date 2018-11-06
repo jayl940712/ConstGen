@@ -82,6 +82,10 @@ vector
 algorithm
 -
 
+/home/unga/jayliu/SFA/src/db/Pin.cpp
+db/Pin.h
+/home/unga/jayliu/SFA/src/db/db/Pin.h
+
 /home/unga/jayliu/SFA/src/main/main.cpp
 string
 -
@@ -111,4 +115,10 @@ sym_detect/SymDetect.h
 /home/unga/jayliu/SFA/src/sym_detect/sym_detect/SymDetect.h
 db/Netlist.h
 /home/unga/jayliu/SFA/src/sym_detect/db/Netlist.h
+db/Pin.h
+/home/unga/jayliu/SFA/src/sym_detect/db/Pin.h
+iostream
+-
+stack
+-
 

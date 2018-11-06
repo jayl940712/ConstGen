@@ -180,6 +180,33 @@ src/db/Netlist.cpp.s:
 	$(MAKE) -f CMakeFiles/SFA.dir/build.make CMakeFiles/SFA.dir/src/db/Netlist.cpp.s
 .PHONY : src/db/Netlist.cpp.s
 
+src/db/Pin.o: src/db/Pin.cpp.o
+
+.PHONY : src/db/Pin.o
+
+# target to build an object file
+src/db/Pin.cpp.o:
+	$(MAKE) -f CMakeFiles/SFA.dir/build.make CMakeFiles/SFA.dir/src/db/Pin.cpp.o
+.PHONY : src/db/Pin.cpp.o
+
+src/db/Pin.i: src/db/Pin.cpp.i
+
+.PHONY : src/db/Pin.i
+
+# target to preprocess a source file
+src/db/Pin.cpp.i:
+	$(MAKE) -f CMakeFiles/SFA.dir/build.make CMakeFiles/SFA.dir/src/db/Pin.cpp.i
+.PHONY : src/db/Pin.cpp.i
+
+src/db/Pin.s: src/db/Pin.cpp.s
+
+.PHONY : src/db/Pin.s
+
+# target to generate assembly for a file
+src/db/Pin.cpp.s:
+	$(MAKE) -f CMakeFiles/SFA.dir/build.make CMakeFiles/SFA.dir/src/db/Pin.cpp.s
+.PHONY : src/db/Pin.cpp.s
+
 src/main/main.o: src/main/main.cpp.o
 
 .PHONY : src/main/main.o
@@ -276,6 +303,9 @@ help:
 	@echo "... src/db/Netlist.o"
 	@echo "... src/db/Netlist.i"
 	@echo "... src/db/Netlist.s"
+	@echo "... src/db/Pin.o"
+	@echo "... src/db/Pin.i"
+	@echo "... src/db/Pin.s"
 	@echo "... src/main/main.o"
 	@echo "... src/main/main.i"
 	@echo "... src/main/main.s"

@@ -16,6 +16,12 @@ CMakeFiles/SFA.dir/src/db/Netlist.cpp.o: ../../src/global/namespace.h
 CMakeFiles/SFA.dir/src/db/Netlist.cpp.o: ../../src/global/type.h
 CMakeFiles/SFA.dir/src/db/Netlist.cpp.o: ../../src/db/Netlist.cpp
 
+CMakeFiles/SFA.dir/src/db/Pin.cpp.o: ../../src/db/Pin.h
+CMakeFiles/SFA.dir/src/db/Pin.cpp.o: ../../src/global/global.h
+CMakeFiles/SFA.dir/src/db/Pin.cpp.o: ../../src/global/namespace.h
+CMakeFiles/SFA.dir/src/db/Pin.cpp.o: ../../src/global/type.h
+CMakeFiles/SFA.dir/src/db/Pin.cpp.o: ../../src/db/Pin.cpp
+
 CMakeFiles/SFA.dir/src/main/main.cpp.o: ../../src/db/Instance.h
 CMakeFiles/SFA.dir/src/main/main.cpp.o: ../../src/db/Net.h
 CMakeFiles/SFA.dir/src/main/main.cpp.o: ../../src/db/Netlist.h
