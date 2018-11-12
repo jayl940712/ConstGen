@@ -13,7 +13,7 @@ void Netlist::init(InitDataObject &obj)
     {
         if (instance.type == InstanceType::PMOS || instance.type == InstanceType::NMOS)
         {
-            Instance inst(instance.name, instance.type, _instanceArray.size(), instance.width, instance.length);
+            Instance inst(instance.name, instance.type, _instanceArray.size());
             inst.addPinId(_pinArray.size());
             _netArray[instance.netIdArray.at(0)].addPinId(_pinArray.size());
             _pinArray.push_back(Pin(_pinArray.size(), inst.id(), instance.netIdArray.at(0), PinType::DRAIN));    
@@ -30,7 +30,7 @@ void Netlist::init(InitDataObject &obj)
         }
        else if (instance.type == InstanceType::RES || instance.type == InstanceType::CAP)
         {
-            Instance inst(instance.name, instance.type, _instanceArray.size(), instance.width, instance.length);
+            Instance inst(instance.name, instance.type, _instanceArray.size());
             inst.addPinId(_pinArray.size());
             _netArray[instance.netIdArray.at(0)].addPinId(_pinArray.size());
             _pinArray.push_back(Pin(_pinArray.size(), inst.id(), instance.netIdArray.at(0), PinType::THIS));
@@ -86,12 +86,41 @@ std::vector<IndexType> Netlist::pinInstanceId(IndexType pinId)
     return inst;
 }
 
-std::vector<IndexType> Netlist::pinInstanceId(IndexType pinId, InstanceType type, PinType inputPinType)
+std::vector<IndexType> Netlist::pinMosfetId(IndexType pinId)
+{
+    std::vector<IndexType> inst = pinInstanceId(pinId);
+    std::vector<IndexType> mos;
+    for(IndexType instance : inst)
+        if(_instanceArray[instance].type() == InstanceType::NMOS || _instanceArray[instance].type() == InstanceType::PMOS)
+            mos.push_back(instance);
+    return mos;
+}
+
+std::vector<IndexType> Netlist::pinMosPinId(IndexType pinId)
+{
+    std::vector<IndexType> pin;
+    std::vector<IndexType> inst;
+    Net net = _netArray[_pinArray[pinId].netId()];
+    for(IndexType tempPinId : net.pinIdArray())
+    {
+        IndexType instId = _pinArray[tempPinId].instanceId();
+        if(instId == _pinArray[pinId].instanceId())
+            continue;
+        if(std::find(inst.begin(), inst.end(), instId) != inst.end())
+            continue;
+        inst.push_back(instId);
+        if(_instanceArray[instId].type() == InstanceType::NMOS || _instanceArray[instId].type() == InstanceType::PMOS)
+            pin.push_back(tempPinId); 
+    }
+    return pin;
+}
+
+std::vector<IndexType> Netlist::pinInstanceId(IndexType pinId, InstanceType type)
 {
     std::vector<IndexType> inst = pinInstanceId(pinId);
     std::vector<IndexType> result;
     for(IndexType instance : inst)
-        if(_instanceArray[instance].type() == type && instanceNetId(instance, inputPinType) == _pinArray[pinId].netId())
+        if(_instanceArray[instance].type() == type)
             result.push_back(instance);
     return result;
 }
@@ -133,9 +162,9 @@ MosType Netlist::mosType(IndexType mosId)
 
 IndexType Netlist::pinId(IndexType mosId, PinType pinType)
 {
-    std::vector<IndexType> pinArray = _instanceArray[mosId].pinIdArray();
+    std::vector<IndexType> pinArray = _netlist.instance(mosId).pinIdArray();
     for (IndexType pinId : pinArray)
-        if (_pinArray[pinId].type() == pinType)
+        if (_netlist.pin(pinId).type() == pinType)
             return pinId;
     return INDEX_TYPE_MAX;
 }   

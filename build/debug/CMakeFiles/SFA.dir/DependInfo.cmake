@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/unga/jayliu/SFA/src/db/Pin.cpp" "/home/unga/jayliu/SFA/build/debug/CMakeFiles/SFA.dir/src/db/Pin.cpp.o"
   "/home/unga/jayliu/SFA/src/main/main.cpp" "/home/unga/jayliu/SFA/build/debug/CMakeFiles/SFA.dir/src/main/main.cpp.o"
   "/home/unga/jayliu/SFA/src/parser/InitNetlist.cpp" "/home/unga/jayliu/SFA/build/debug/CMakeFiles/SFA.dir/src/parser/InitNetlist.cpp.o"
+  "/home/unga/jayliu/SFA/src/sym_detect/Pattern.cpp" "/home/unga/jayliu/SFA/build/debug/CMakeFiles/SFA.dir/src/sym_detect/Pattern.cpp.o"
   "/home/unga/jayliu/SFA/src/sym_detect/SymDetect.cpp" "/home/unga/jayliu/SFA/build/debug/CMakeFiles/SFA.dir/src/sym_detect/SymDetect.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

@@ -22,7 +22,6 @@ public:
         InstanceType                type;
         std::vector<IndexType>      netIdArray;
         std::string                 name; 
-        RealType                    width,length;
     };
     struct InitDataObject
     {
@@ -37,7 +36,9 @@ public:
     void                            print_all();
 
     std::vector<IndexType>          pinInstanceId(IndexType pinId);
-    std::vector<IndexType>          pinInstanceId(IndexType pinId, InstanceType type, PinType inputPinType);
+    std::vector<IndexType>          pinInstanceId(IndexType pinId, InstanceType type);
+    std::vector<IndexType>          pinMosfetId(IndexType pinId);
+    std::vector<IndexType>          pinMosPinId(IndexType pinId); 
     std::vector<IndexType>          netMosfetId(IndexType netId, PinType pinType, MosType mosType);
     IndexType                       instanceNetId(IndexType instanceId, PinType pinType);
     MosType                         mosType(IndexType mosId);
@@ -52,9 +53,9 @@ public:
     IndexType                       numInstance() const                 {return _instanceArray.size(); }
 
     // Setters
-    void                            addPin(Pin & pin)                   { _pinArray.push_back(pin); }
-    void                            addNet(Net & net)                   { _netArray.push_back(net); }
-    void                            addInstance(Instance & inst)        { _instanceArray.push_back(inst); }
+    void                            addPin(Pin & pin)             { _pinArray.push_back(pin); }
+    void                            addNet(Net & net)             { _netArray.push_back(net); }
+    void                            addInstance(Instance & inst)  { _instanceArray.push_back(inst); }
 
 private:    
     std::vector<Net>                _netArray;

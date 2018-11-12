@@ -55,6 +55,17 @@ enum class MosType: Byte
     DUMMY
 };
 
+enum class MosPattern: Byte
+{
+    DIFF_SOURCE,
+    DIFF_CASCODE,
+    CASCODE,
+    LOAD,
+    CROSS_CASCODE,
+    CROSS_LOAD,
+    INVALID
+};
+    
 PROJECT_NAMESPACE_END
 
 #endif

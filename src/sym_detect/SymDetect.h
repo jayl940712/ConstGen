@@ -2,6 +2,7 @@
 #define __SYMDETECT_H__
 
 #include "db/Netlist.h"
+#include "sym_detect/Pattern.h"
 #include <vector>
 #include <utility>
 
@@ -10,26 +11,17 @@ PROJECT_NAMESPACE_BEGIN
 class SymDetect
 {
 public:
-    struct diffPair
-    {
-        std::pair <IndexType, IndexType> diff;
-        std::vector<IndexType> bias;
-        InstanceType type;
-    };
-public:
     explicit SymDetect(Netlist & netlist)
-        : _netlist(netlist)
+        : _netlist(netlist), _pattern(Pattern(netlist))
     {}
-    
-    std::vector<diffPair>                           diffPairSearch();
+
+    std::vector<std::pair<IndexType, IndexType>>    diffPairSearch();
     std::vector<std::pair<IndexType, IndexType>>    symGroup(std::pair<IndexType, IndexType> diffPair);
 
 private:
     Netlist & _netlist;
-    
-    bool                                            validPair(IndexType mosId1, IndexType mosId2);
+    Pattern   _pattern;
     bool                                            endSearch(IndexType mosId, PinType pinType);
-    IndexType                                       pinId(IndexType mosId, PinType pinType);
 
 }; 
 

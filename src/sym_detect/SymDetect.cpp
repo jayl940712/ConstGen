@@ -6,41 +6,23 @@
 
 PROJECT_NAMESPACE_BEGIN
 
-std::vector<SymDetect::diffPair> SymDetect::diffPairSearch() 
+std::vector<std::pair<IndexType, IndexType>> SymDetect::diffPairSearch() 
 {
-    std::vector<SymDetect::diffPair> results;
+    std::vector<std::pair<IndexType, IndexType>> results;
     for (IndexType netId = 0; netId < _netlist.numNets(); netId++)
         if (_netlist.net(netId).netType() == NetType::SIGNAL)
         {
-            std::vector<IndexType> source, drain;
+            std::vector<IndexType> source;
             source = _netlist.netMosfetId(netId, PinType::SOURCE, MosType::DIFF);
-            drain = _netlist.netMosfetId(netId, PinType::DRAIN, MosType::DIFF);
-            if (drain.size() > 0 && source.size() == 2 && _netlist.instanceNetId(source[0], PinType::GATE) != _netlist.instanceNetId(source[1], PinType::GATE))
-            {
-                SymDetect::diffPair pair;
-                pair.bias = drain;
-                pair.diff = std::pair<IndexType, IndexType>(source[0],source[1]); 
-                results.push_back(pair);
-            }
+            std::cout << "Returned source devices." << std::endl;
+            if (source.size() < 2)
+                continue;
+            for (IndexType i = 0; i < source.size() - 1; i++)
+                for (IndexType j = i + 1; j < source.size(); j++)
+                    if (_pattern.pattern(std::pair<IndexType, IndexType> (source[i], source[j])) == MosPattern::DIFF_SOURCE)
+                        results.push_back(std::pair<IndexType, IndexType> (source[i], source[j]));
         }
     return results;
-}
-
-bool SymDetect::validPair(IndexType mosId1, IndexType mosId2)
-{
-    if (mosId1 == mosId2)
-        return false;
-    if (_netlist.instance(mosId1).type() != _netlist.instance(mosId2).type())
-        return false;
-    if (_netlist.mosType(mosId1) != MosType::DIFF && _netlist.mosType(mosId1) != MosType::DIODE)
-        return false;
-    if (_netlist.mosType(mosId2) != MosType::DIFF && _netlist.mosType(mosId2) != MosType::DIODE)
-        return false;
-    if (_netlist.instanceNetId(mosId1, PinType::GATE) == _netlist.instanceNetId(mosId2, PinType::GATE))
-        return true;
-    if (_netlist.instanceNetId(mosId1, PinType::GATE) == _netlist.instanceNetId(mosId2, PinType::DRAIN) && _netlist.instanceNetId(mosId1, PinType::DRAIN) == _netlist.instanceNetId(mosId2, PinType::GATE))
-        return true;
-    return false;
 }
 
 bool SymDetect::endSearch(IndexType mosId, PinType currentPinType)
@@ -52,41 +34,49 @@ bool SymDetect::endSearch(IndexType mosId, PinType currentPinType)
     return true;
 }
 
-IndexType SymDetect::pinId(IndexType mosId, PinType pinType)
-{
-    std::vector<IndexType> pinArray = _netlist.instance(mosId).pinIdArray();
-    for (IndexType pinId : pinArray)
-        if (_netlist.pin(pinId).type() == pinType)
-            return pinId;
-    return INDEX_TYPE_MAX;
-}
-
 std::vector<std::pair<IndexType, IndexType>> SymDetect::symGroup(std::pair<IndexType, IndexType> diffPair)
 {
+    bool begin = true;
     std::stack<std::pair<IndexType, IndexType>> DFS_pair;
     std::stack<PinType> DFS_pinType;
     std::vector<std::pair<IndexType, IndexType>> symResult;
     DFS_pair.push(diffPair);
     DFS_pinType.push(PinType::SOURCE);
+    std::vector<PinType> possiblePinType = {PinType::SOURCE, PinType::DRAIN};
+    std::vector<InstanceType> possibleMosType = {InstanceType::NMOS, InstanceType::PMOS};
     while (!DFS_pair.empty())
     {
         std::pair<IndexType, IndexType> currentPair = DFS_pair.top();
         PinType currentPinType = DFS_pinType.top();
+        MosPattern currentPattern = _pattern.pattern(currentPair);
         DFS_pair.pop();
         DFS_pinType.pop();
         symResult.push_back(currentPair);
+        std::cout << _netlist.instance(currentPair.first).name() << _netlist.instance(currentPair.second).name() << std::endl;
+        if (!begin && currentPattern == MosPattern::DIFF_SOURCE)
+            continue;
+        if (currentPattern == MosPattern::LOAD || currentPattern == MosPattern::CROSS_LOAD)
+            continue;
+        begin = false;
         if (!endSearch(currentPair.first, currentPinType) && !endSearch(currentPair.second, currentPinType))
-        {
-            std::cout << "Next Searches" << std::endl;
-            std::vector<IndexType> first = _netlist.pinMosfetId(pinId(currentPair.first, Pin::otherPinType(currentPinType)));
-            std::vector<IndexType> second = _netlist.pinMosfetId(pinId(currentPair.second, Pin::otherPinType(currentPinType)));
-            for (IndexType instId: first)
-                std::cout << _netlist.instance(instId).name() << " ";
-            std::cout << std::endl;
-            for (IndexType instId: second)
-                std::cout << _netlist.instance(instId).name() << " ";
-            std::cout << std::endl << "END" << std::endl;
-        }
+            for (InstanceType instanceSearch : possibleMosType)
+                for (PinType pinSearch : possiblePinType)
+                {
+                    IndexType searchPinId1 = _netlist.pinId(currentPair.first, Pin::otherPinType(currentPinType));
+                    IndexType searchPinId2 = _netlist.pinId(currentPair.second, Pin::otherPinType(currentPinType));
+                    std::vector<IndexType> MOS1 = _netlist.pinInstanceId(searchPinId1, instanceSearch, pinSearch);
+                    std::vector<IndexType> MOS2 = _netlist.pinInstanceId(searchPinId2, instanceSearch, pinSearch);
+                    for (IndexType mosId1: MOS1)
+                        for (IndexType mosId2 : MOS2)
+                        {
+                            MosPattern patternSearch = _pattern.pattern(std::pair<IndexType, IndexType> (mosId1, mosId2));
+                            if (patternSearch != MosPattern::INVALID && patternSearch != MosPattern::DIFF_CASCODE && patternSearch != MosPattern::DIFF_SOURCE)
+                            {
+                                DFS_pair.push(std::pair<IndexType, IndexType>(mosId1, mosId2));
+                                DFS_pinType.push(pinSearch);
+                            }
+                        }
+                }
     }
     return symResult;
 }

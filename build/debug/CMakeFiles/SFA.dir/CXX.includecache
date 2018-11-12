@@ -60,9 +60,19 @@ global/global.h
 db/Netlist.h
 ../../src/parser/db/Netlist.h
 
+../../src/sym_detect/Pattern.h
+db/Netlist.h
+../../src/sym_detect/db/Netlist.h
+global/type.h
+../../src/sym_detect/global/type.h
+utility
+-
+
 ../../src/sym_detect/SymDetect.h
 db/Netlist.h
 ../../src/sym_detect/db/Netlist.h
+sym_detect/Pattern.h
+../../src/sym_detect/sym_detect/Pattern.h
 vector
 -
 utility
@@ -109,6 +119,10 @@ InitNetlist.h
 /home/unga/jayliu/SFA/src/parser/InitNetlist.h
 db/Netlist.h
 /home/unga/jayliu/SFA/src/parser/db/Netlist.h
+
+/home/unga/jayliu/SFA/src/sym_detect/Pattern.cpp
+sym_detect/Pattern.h
+/home/unga/jayliu/SFA/src/sym_detect/sym_detect/Pattern.h
 
 /home/unga/jayliu/SFA/src/sym_detect/SymDetect.cpp
 sym_detect/SymDetect.h

@@ -17,12 +17,19 @@ int main(int argc, char* argv[])
     std::cout << "Done!" << std::endl;
     netlist.print_all();
     SymDetect symDetect(netlist);
-    std::vector<SymDetect::diffPair> diffPair;
-    diffPair =  symDetect.diffPairSearch();
-    for (SymDetect::diffPair pair : diffPair)
+    std::cout << "Start diff pair recognition." << std::endl;
+    std::vector<std::pair<IndexType, IndexType>>  diffPair = symDetect.diffPairSearch();
+    std::cout << "Diff pair recognized." << std::endl;
+    for (std::pair<IndexType, IndexType> pair : diffPair)
     {
-        std::cout << netlist.instance(pair.diff.first).name() << " " << netlist.instance(pair.diff.second).name() << std::endl;
-        std::vector<std::pair<IndexType, IndexType>> symGroup = symDetect.symGroup(pair.diff);
+        std::cout << netlist.instance(pair.first).name() << " " << netlist.instance(pair.second).name() << std::endl;
+        std::vector<std::pair<IndexType, IndexType>> symGroup = symDetect.symGroup(pair);
+        std::cout << "BEGIN GROUP!!!" << std::endl;
+        for (std::pair<IndexType, IndexType> matchedPair : symGroup)
+        {
+            std::cout << netlist.instance(matchedPair.first).name() << " " << netlist.instance(matchedPair.second).name() << std::endl;
+        }
+        std::cout << "END GROUP!!!" << std::endl;
     }
     return 0; 
 }

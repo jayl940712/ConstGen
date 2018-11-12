@@ -37,6 +37,13 @@ bool InitNetlist::read(const std::string &fileName)
                     instType = InstanceType::OTHER;
                 inst.type = instType;
                 inFile >> inst.name; 
+                if (inst.type == InstanceType::CAP)
+                {
+                    inFile >> inst.width;
+                    inst.length = 0.0;
+                }
+                else if (inst.type != InstanceType::OTHER)
+                    inFile >> inst.width >> inst.length;
                 IndexType netId;
                 while (inFile >> netId)
                     inst.netIdArray.push_back(netId);

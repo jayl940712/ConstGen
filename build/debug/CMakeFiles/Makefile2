@@ -69,7 +69,7 @@ CMAKE_BINARY_DIR = /home/unga/jayliu/SFA/build/debug
 CMakeFiles/SFA.dir/all:
 	$(MAKE) -f CMakeFiles/SFA.dir/build.make CMakeFiles/SFA.dir/depend
 	$(MAKE) -f CMakeFiles/SFA.dir/build.make CMakeFiles/SFA.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/unga/jayliu/SFA/build/debug/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target SFA"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/unga/jayliu/SFA/build/debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target SFA"
 .PHONY : CMakeFiles/SFA.dir/all
 
 # Include target in all.
@@ -79,7 +79,7 @@ all: CMakeFiles/SFA.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/SFA.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/unga/jayliu/SFA/build/debug/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/unga/jayliu/SFA/build/debug/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/SFA.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/unga/jayliu/SFA/build/debug/CMakeFiles 0
 .PHONY : CMakeFiles/SFA.dir/rule

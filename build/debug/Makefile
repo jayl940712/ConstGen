@@ -261,6 +261,33 @@ src/parser/InitNetlist.cpp.s:
 	$(MAKE) -f CMakeFiles/SFA.dir/build.make CMakeFiles/SFA.dir/src/parser/InitNetlist.cpp.s
 .PHONY : src/parser/InitNetlist.cpp.s
 
+src/sym_detect/Pattern.o: src/sym_detect/Pattern.cpp.o
+
+.PHONY : src/sym_detect/Pattern.o
+
+# target to build an object file
+src/sym_detect/Pattern.cpp.o:
+	$(MAKE) -f CMakeFiles/SFA.dir/build.make CMakeFiles/SFA.dir/src/sym_detect/Pattern.cpp.o
+.PHONY : src/sym_detect/Pattern.cpp.o
+
+src/sym_detect/Pattern.i: src/sym_detect/Pattern.cpp.i
+
+.PHONY : src/sym_detect/Pattern.i
+
+# target to preprocess a source file
+src/sym_detect/Pattern.cpp.i:
+	$(MAKE) -f CMakeFiles/SFA.dir/build.make CMakeFiles/SFA.dir/src/sym_detect/Pattern.cpp.i
+.PHONY : src/sym_detect/Pattern.cpp.i
+
+src/sym_detect/Pattern.s: src/sym_detect/Pattern.cpp.s
+
+.PHONY : src/sym_detect/Pattern.s
+
+# target to generate assembly for a file
+src/sym_detect/Pattern.cpp.s:
+	$(MAKE) -f CMakeFiles/SFA.dir/build.make CMakeFiles/SFA.dir/src/sym_detect/Pattern.cpp.s
+.PHONY : src/sym_detect/Pattern.cpp.s
+
 src/sym_detect/SymDetect.o: src/sym_detect/SymDetect.cpp.o
 
 .PHONY : src/sym_detect/SymDetect.o
@@ -312,6 +339,9 @@ help:
 	@echo "... src/parser/InitNetlist.o"
 	@echo "... src/parser/InitNetlist.i"
 	@echo "... src/parser/InitNetlist.s"
+	@echo "... src/sym_detect/Pattern.o"
+	@echo "... src/sym_detect/Pattern.i"
+	@echo "... src/sym_detect/Pattern.s"
 	@echo "... src/sym_detect/SymDetect.o"
 	@echo "... src/sym_detect/SymDetect.i"
 	@echo "... src/sym_detect/SymDetect.s"
