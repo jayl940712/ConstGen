@@ -34,6 +34,34 @@ bool SymDetect::endSearch(IndexType mosId, PinType currentPinType)
     return true;
 }
 
+bool SymDetect::existPair(std::vector<std::pair<IndexType, IndexType>> &library, std::pair<IndexType, IndexType> query)
+{
+    for (std::pair<IndexType, IndexType> existingPair : library)
+    {
+        if (existingPair.first == query.first && existingPair.second == query.second)
+            return true;
+        if (existingPair.first == query.second && existingPair.second == query.first)
+            return true;
+    }
+    return false;
+}
+
+bool SymDetect::existPair(std::stack<std::pair<IndexType, IndexType>> library, std::pair<IndexType, IndexType> query)
+{
+    std::pair<IndexType, IndexType> existingPair;
+    while (!library.empty())
+    {
+        existingPair = library.top();
+        library.pop();
+        if (existingPair.first == query.first && existingPair.second == query.second)
+            return true;
+        if (existingPair.first == query.second && existingPair.second == query.first)
+            return true;
+    }
+    return false;
+}
+
+
 std::vector<std::pair<IndexType, IndexType>> SymDetect::symGroup(std::pair<IndexType, IndexType> diffPair)
 {
     bool begin = true;
@@ -69,10 +97,11 @@ std::vector<std::pair<IndexType, IndexType>> SymDetect::symGroup(std::pair<Index
                     for (IndexType mosId1: MOS1)
                         for (IndexType mosId2 : MOS2)
                         {
-                            MosPattern patternSearch = _pattern.pattern(std::pair<IndexType, IndexType> (mosId1, mosId2));
-                            if (patternSearch != MosPattern::INVALID && patternSearch != MosPattern::DIFF_CASCODE && patternSearch != MosPattern::DIFF_SOURCE)
+                            std::pair<IndexType, IndexType> toAdd(mosId1, mosId2); 
+                            MosPattern patternSearch = _pattern.pattern(toAdd);
+                            if (!existPair(symResult,toAdd) && !existPair(DFS_pair,toAdd) && patternSearch != MosPattern::INVALID && patternSearch != MosPattern::DIFF_CASCODE && patternSearch != MosPattern::DIFF_SOURCE)
                             {
-                                DFS_pair.push(std::pair<IndexType, IndexType>(mosId1, mosId2));
+                                DFS_pair.push(toAdd);
                                 DFS_pinType.push(pinSearch);
                             }
                         }

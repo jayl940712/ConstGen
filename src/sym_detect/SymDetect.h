@@ -5,6 +5,7 @@
 #include "sym_detect/Pattern.h"
 #include <vector>
 #include <utility>
+#include <stack>
 
 PROJECT_NAMESPACE_BEGIN
 
@@ -21,8 +22,10 @@ public:
 private:
     Netlist & _netlist;
     Pattern   _pattern;
-    bool                                            endSearch(IndexType mosId, PinType pinType);
 
+    bool                                        endSearch(IndexType mosId, PinType pinType);
+    bool                                        existPair(std::vector<std::pair<IndexType, IndexType>> &library, std::pair<IndexType, IndexType> query);
+    bool                                        existPair(std::stack<std::pair<IndexType, IndexType>> library, std::pair<IndexType, IndexType> query);
 }; 
 
 PROJECT_NAMESPACE_END
