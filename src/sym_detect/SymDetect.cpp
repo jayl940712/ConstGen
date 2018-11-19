@@ -2,7 +2,7 @@
 
 PROJECT_NAMESPACE_BEGIN
 
-void SymDetect::getDiffPairNetConn(std::vector<MosPair> & diffPair, IndexType netId)
+void SymDetect::getDiffPairNetConn(std::vector<MosPair> & diffPair, IndexType netId) const
 {
     std::vector<IndexType> srcMos;
     _netlist.getInstNetConn(srcMos, netId);  
@@ -14,7 +14,7 @@ void SymDetect::getDiffPairNetConn(std::vector<MosPair> & diffPair, IndexType ne
                 diffPair.emplace_back(srcMos[i], srcMos[j]);
 }
 
-void SymDetect::getDiffPair(std::vector<MosPair> & diffPair)
+void SymDetect::getDiffPair(std::vector<MosPair> & diffPair) const
 {
     diffPair.clear();
     for (IndexType netId = 0; netId < _netlist.numNet(); netId++)
@@ -28,7 +28,7 @@ void SymDetect::getDiffPair(std::vector<MosPair> & diffPair)
 //    return !_netlist.isSignal(toSrchNetId);
 //}
 
-bool SymDetect::existPair(std::vector<MosPair> & library, IndexType instId1, IndexType instId2)
+bool SymDetect::existPair(std::vector<MosPair> & library, IndexType instId1, IndexType instId2) const
 {
     for (MosPair & currPair : library)
     {
@@ -40,7 +40,7 @@ bool SymDetect::existPair(std::vector<MosPair> & library, IndexType instId1, Ind
     return false;
 }
 
-bool SymDetect::existPair(std::vector<srchObj> & library, IndexType instId1, IndexType instId2)
+bool SymDetect::existPair(std::vector<srchObj> & library, IndexType instId1, IndexType instId2) const
 {
     for (srchObj & currObj : library)
     {
@@ -52,12 +52,12 @@ bool SymDetect::existPair(std::vector<srchObj> & library, IndexType instId1, Ind
     return false;
 }
 
-MosPattern SymDetect::srchObjPtrn(srchObj & obj)
+MosPattern SymDetect::srchObjPtrn(srchObj & obj) const
 {
     return _pattern.pattern(obj.pair.mosId1, obj.pair.mosId2);
 }
 
-bool SymDetect::endSrch(srchObj & currObj)
+bool SymDetect::endSrch(srchObj & currObj) const
 {
     if (srchObjPtrn(currObj) == MosPattern::DIFF_SOURCE &&
         currObj.srchPinType == PinType::DRAIN)
@@ -70,7 +70,8 @@ bool SymDetect::endSrch(srchObj & currObj)
     return false;
 }
 
-bool SymDetect::validSrchObj(IndexType instId1, IndexType instId2, IndexType srchPinId1, IndexType srchPinId2)
+bool SymDetect::validSrchObj(IndexType instId1, IndexType instId2,
+                             IndexType srchPinId1, IndexType srchPinId2) const
 {
     if (_netlist.getPinTypeInstPinConn(instId1, srchPinId1) != _netlist.getPinTypeInstPinConn(instId2, srchPinId2))
         return false;
@@ -83,14 +84,15 @@ bool SymDetect::validSrchObj(IndexType instId1, IndexType instId2, IndexType src
     return false;
 }  
 
-void SymDetect::inVldDiffPairSrch(std::vector<MosPair> & diffPairSrch, MosPair & currPair)
+void SymDetect::inVldDiffPairSrch(std::vector<MosPair> & diffPairSrch, MosPair & currPair) const
 {
     for (MosPair & pair : diffPairSrch)
         if (pair == currPair)
             pair.valid = false;
 }
 
-void SymDetect::pushNextSrchObj(std::vector<MosPair> & dfsVstPair, std::vector<srchObj> & dfsStack, srchObj & currObj, std::vector<MosPair> & diffPairSrc)
+void SymDetect::pushNextSrchObj(std::vector<MosPair> & dfsVstPair, std::vector<srchObj> & dfsStack,
+                                 srchObj & currObj, std::vector<MosPair> & diffPairSrc) const
 {
     if (endSrch(currObj))
         return;
@@ -115,7 +117,8 @@ void SymDetect::pushNextSrchObj(std::vector<MosPair> & dfsVstPair, std::vector<s
     }
 }
 
-void SymDetect::dfsDiffPair(std::vector<MosPair> & dfsVstPair, MosPair & diffPair, std::vector<MosPair> & diffPairSrc)
+void SymDetect::dfsDiffPair(std::vector<MosPair> & dfsVstPair, MosPair & diffPair, 
+                            std::vector<MosPair> & diffPairSrc) const
 {
     std::vector<srchObj> dfsStack;  //use vector to implement stack.
     dfsStack.emplace_back(diffPair, PinType::SOURCE);
@@ -128,7 +131,7 @@ void SymDetect::dfsDiffPair(std::vector<MosPair> & dfsVstPair, MosPair & diffPai
     } 
 }
 
-void SymDetect::hiSymDetect(std::vector<std::vector<MosPair>> & symGroup)
+void SymDetect::hiSymDetect(std::vector<std::vector<MosPair>> & symGroup) const
 {
     std::vector<MosPair> dfsVstPair;
     std::vector<MosPair> diffPairSrc;

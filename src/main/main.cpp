@@ -15,7 +15,7 @@ int main(int argc, char* argv[])
     std::string inFile(argv[1]);
     parser.read(inFile);
     std::cout << "Done!" << std::endl;
-    netlist.print_all();
+//    netlist.print_all();
     SymDetect symDetect(netlist);
     std::vector<std::vector<MosPair>> symGroup;
     symDetect.hiSymDetect(symGroup);

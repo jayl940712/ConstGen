@@ -30,41 +30,42 @@ public:
         std::vector<InitNet>        netArray;
         std::vector<InitInst>       instArray;
     };
+
 public:
     explicit Netlist() = default;
     
     void                            init(InitDataObj &obj);
-    void                            print_all();
+    void                            print_all() const;
 
-    bool                            isMos(InstType instType);
-    bool                            isPasvDev(InstType instType);
+    bool                            isMos(InstType instType) const;
+    bool                            isPasvDev(InstType instType) const;
 
-    bool                            isSignal(IndexType netId)           { return _netArray[netId].netType() == NetType::SIGNAL; }
+    bool                            isSignal(IndexType netId) const     { return _netArray[netId].netType() == NetType::SIGNAL; }
 
-    MosType                         mosType(IndexType mosId);
-    IndexType                       instNetId(IndexType instId, PinType pinType);
-    IndexType                       instPinId(IndexType instId, PinType pinType);
+    MosType                         mosType(IndexType mosId) const;
+    IndexType                       instNetId(IndexType instId, PinType pinType) const;
+    IndexType                       instPinId(IndexType instId, PinType pinType) const;
 
-    IndexType                       srcNetId(IndexType mosId)           { return instNetId(mosId, PinType::SOURCE); }
-    IndexType                       drainNetId(IndexType mosId)         { return instNetId(mosId, PinType::DRAIN); }
-    IndexType                       gateNetId(IndexType mosId)          { return instNetId(mosId, PinType::GATE); }
+    IndexType                       srcNetId(IndexType mosId) const     { return instNetId(mosId, PinType::SOURCE); }
+    IndexType                       drainNetId(IndexType mosId) const   { return instNetId(mosId, PinType::DRAIN); }
+    IndexType                       gateNetId(IndexType mosId) const    { return instNetId(mosId, PinType::GATE); }
 
-    PinType                         getPinTypeInstNetConn(IndexType instId, IndexType pinId);
-    PinType                         getPinTypeInstPinConn(IndexType instId, IndexType pinId);
+    PinType                         getPinTypeInstNetConn(IndexType instId, IndexType pinId) const;
+    PinType                         getPinTypeInstPinConn(IndexType instId, IndexType pinId) const;
 
-    void                            getInstNetConn(std::vector<IndexType> & instArray, IndexType netId);
-    void                            getInstPinConn(std::vector<IndexType> & instArray, IndexType pinId);
+    void                            getInstNetConn(std::vector<IndexType> & instArray, IndexType netId) const;
+    void                            getInstPinConn(std::vector<IndexType> & instArray, IndexType pinId) const;
 
-    void                            rmvInstHasPin(std::vector<IndexType> & instArray, IndexType pinId);
+    void                            rmvInstHasPin(std::vector<IndexType> & instArray, IndexType pinId) const;
 
-    void                            fltrInstPinConnPinType(std::vector<IndexType> & instArray, IndexType pinId, PinType connPinType);
-    void                            fltrInstNetConnPinType(std::vector<IndexType> & instArray, IndexType netId, PinType connPinType);
-    void                            fltrInstMosType(std::vector<IndexType> & instArray, MosType mosType);
+    void                            fltrInstPinConnPinType(std::vector<IndexType> & instArray, IndexType pinId, PinType connPinType) const;
+    void                            fltrInstNetConnPinType(std::vector<IndexType> & instArray, IndexType netId, PinType connPinType) const;
+    void                            fltrInstMosType(std::vector<IndexType> & instArray, MosType mosType) const;
    
     // Getters
-    Pin &                           pin(IndexType id)                   { return _pinArray.at(id); }
-    Net &                           net(IndexType id)                   { return _netArray.at(id); }
-    Inst &                          inst(IndexType id)                  { return _instArray.at(id); }
+    const Pin &                     pin(IndexType id) const             { return _pinArray.at(id); }
+    const Net &                     net(IndexType id) const             { return _netArray.at(id); }
+    const Inst &                    inst(IndexType id) const            { return _instArray.at(id); }
     IndexType                       numPin() const                      { return _pinArray.size(); }
     IndexType                       numNet() const                      { return _netArray.size(); }
     IndexType                       numInst() const                     { return _instArray.size(); }

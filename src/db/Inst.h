@@ -22,7 +22,7 @@ public:
     const std::string &             name() const                        { return _name; }
     InstType                        type() const                        { return _type; } 
     IndexType                       id() const                          { return _id; }
-    std::vector<IndexType> &        pinIdArray()                        { return _pinIdArray; }
+    const std::vector<IndexType> &  pinIdArray() const                  { return _pinIdArray; }
     RealType                        wid() const                         { return _wid; }
     RealType                        len() const                         { return _len; }
 

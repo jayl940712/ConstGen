@@ -18,12 +18,12 @@ public:
     // Getters
     const std::string &             name() const        { return _name; }
     IndexType                       id() const          { return _id; }
-    std::vector<IndexType> &        pinIdArray()        { return _pinIdArray; }
+    const std::vector<IndexType> &  pinIdArray() const  { return _pinIdArray; }
     
     // Setters
     void                        addPinId(IndexType pinId)   { _pinIdArray.push_back(pinId); } 
 
-    NetType                     netType(); 
+    NetType                     netType() const; 
     
 private:
     std::string                 _name;

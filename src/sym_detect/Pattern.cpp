@@ -2,12 +2,12 @@
 
 PROJECT_NAMESPACE_BEGIN
 
-bool Pattern::matchedType(IndexType mosId1, IndexType mosId2)
+bool Pattern::matchedType(IndexType mosId1, IndexType mosId2) const
 {
     return _netlist.inst(mosId1).type() == _netlist.inst(mosId2).type();
 }
     
-bool Pattern::matchedSize(IndexType mosId1, IndexType mosId2)
+bool Pattern::matchedSize(IndexType mosId1, IndexType mosId2) const
 {
     if (_netlist.inst(mosId1).wid() != _netlist.inst(mosId2).wid())
         return false;
@@ -16,7 +16,7 @@ bool Pattern::matchedSize(IndexType mosId1, IndexType mosId2)
     return true;
 }
 
-bool Pattern::diffPairInput(IndexType mosId1, IndexType mosId2)
+bool Pattern::diffPairInput(IndexType mosId1, IndexType mosId2) const
 {
     if (_netlist.srcNetId(mosId1) == _netlist.srcNetId(mosId2) && 
         _netlist.gateNetId(mosId1) != _netlist.gateNetId(mosId2) && 
@@ -27,7 +27,7 @@ bool Pattern::diffPairInput(IndexType mosId1, IndexType mosId2)
     return false;
 }
 
-bool Pattern::diffPairCascode(IndexType mosId1, IndexType mosId2)
+bool Pattern::diffPairCascode(IndexType mosId1, IndexType mosId2) const
 {
     if (_netlist.srcNetId(mosId1) != _netlist.srcNetId(mosId2) && 
         _netlist.gateNetId(mosId1) != _netlist.gateNetId(mosId2) && 
@@ -38,7 +38,7 @@ bool Pattern::diffPairCascode(IndexType mosId1, IndexType mosId2)
     return false;
 }
 
-bool Pattern::validPairCascode(IndexType mosId1, IndexType mosId2)
+bool Pattern::validPairCascode(IndexType mosId1, IndexType mosId2) const
 {
     if (_netlist.mosType(mosId1) != MosType::DIFF && 
         _netlist.mosType(mosId1) != MosType::DIODE )
@@ -53,7 +53,7 @@ bool Pattern::validPairCascode(IndexType mosId1, IndexType mosId2)
     return false;
 }
 
-bool Pattern::validPairLoad(IndexType mosId1, IndexType mosId2)
+bool Pattern::validPairLoad(IndexType mosId1, IndexType mosId2) const
 {
     if (_netlist.mosType(mosId1) != MosType::DIFF && 
         _netlist.mosType(mosId1) != MosType::DIODE )
@@ -73,7 +73,7 @@ bool Pattern::validPairLoad(IndexType mosId1, IndexType mosId2)
     return false;
 }  
 
-bool Pattern::crossPairCascode(IndexType mosId1, IndexType mosId2)
+bool Pattern::crossPairCascode(IndexType mosId1, IndexType mosId2) const
 {
     if (_netlist.srcNetId(mosId1) != _netlist.srcNetId(mosId2) && 
         _netlist.gateNetId(mosId1) == _netlist.drainNetId(mosId2) && 
@@ -84,7 +84,7 @@ bool Pattern::crossPairCascode(IndexType mosId1, IndexType mosId2)
     return false;
 }
 
-bool Pattern::crossPairLoad(IndexType mosId1, IndexType mosId2)
+bool Pattern::crossPairLoad(IndexType mosId1, IndexType mosId2) const
 {
     if (_netlist.srcNetId(mosId1) == _netlist.srcNetId(mosId2) && 
         _netlist.gateNetId(mosId1) == _netlist.drainNetId(mosId2) && 
@@ -95,7 +95,7 @@ bool Pattern::crossPairLoad(IndexType mosId1, IndexType mosId2)
     return false;
 }
 
-MosPattern Pattern::pattern(IndexType mosId1, IndexType mosId2)
+MosPattern Pattern::pattern(IndexType mosId1, IndexType mosId2) const
 {
     if (!matchedSize(mosId1, mosId2) || !matchedType(mosId1, mosId2))
         return MosPattern::INVALID;
