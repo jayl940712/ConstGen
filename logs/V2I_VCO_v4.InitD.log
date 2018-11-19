@@ -256,3 +256,5 @@ Pin 186, from  Instance xi1<0>/m7 to net 5:vcb_kvco<0>
 Pin 187, from  Instance xi1<0>/m7 to net 18:vc_kvco<0> 
 Pin 188, from  Instance xi1<0>/m7 to net 1:vss 
 Pin 189, from  Instance xi1<0>/m7 to net 1:vss 
+Start diff pair recognition.19
+Diff pair recognized.

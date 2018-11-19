@@ -9,7 +9,7 @@ class InitNetlist
 {
 public:
     explicit InitNetlist() = default;
-    explicit InitNetlist(Netlist &netlist) : _netlistDB(netlist) {}
+    explicit InitNetlist(Netlist & netlist) : _netlistDB(netlist) {}
     
     bool read(const std::string &filename);
      

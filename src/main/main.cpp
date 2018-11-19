@@ -16,18 +16,19 @@ int main(int argc, char* argv[])
     parser.read(inFile);
     std::cout << "Done!" << std::endl;
     netlist.print_all();
+    std::cout << "Start diff pair recognition." << netlist.numNet() << std::endl;
+    std::vector<MosPair> diffPair;
     SymDetect symDetect(netlist);
-    std::cout << "Start diff pair recognition." << std::endl;
-    std::vector<std::pair<IndexType, IndexType>>  diffPair = symDetect.diffPairSearch();
+    symDetect.getDiffPair(diffPair);
     std::cout << "Diff pair recognized." << std::endl;
-    for (std::pair<IndexType, IndexType> pair : diffPair)
+    for (MosPair & pair : diffPair)
     {
-        std::cout << netlist.instance(pair.first).name() << " " << netlist.instance(pair.second).name() << std::endl;
-        std::vector<std::pair<IndexType, IndexType>> symGroup = symDetect.symGroup(pair);
+        std::vector<MosPair> symGroup;
+        symDetect.dfsDiffPair(symGroup, pair);
         std::cout << "BEGIN GROUP!!!" << std::endl;
-        for (std::pair<IndexType, IndexType> matchedPair : symGroup)
+        for (MosPair & matchedPair : symGroup)
         {
-            std::cout << netlist.instance(matchedPair.first).name() << " " << netlist.instance(matchedPair.second).name() << std::endl;
+            std::cout << netlist.inst(matchedPair.mosId1).name() << " " << netlist.inst(matchedPair.mosId2).name() << std::endl;
         }
         std::cout << "END GROUP!!!" << std::endl;
     }

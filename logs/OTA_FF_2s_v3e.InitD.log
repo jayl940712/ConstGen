@@ -233,3 +233,21 @@ Instance 43, xr13_4__dmy0
 Pin 163, from  Instance xr13_4__dmy0 to net 23:xr13_3__dmy0 
 Pin 164, from  Instance xr13_4__dmy0 to net 4:vcmo 
 Pin 165, from  Instance xr13_4__dmy0 to net 17:avss 
+Start diff pair recognition.24
+Diff pair recognized.
+BEGIN GROUP!!!
+m34 m33
+END GROUP!!!
+BEGIN GROUP!!!
+m37 m23
+m19 m21
+END GROUP!!!
+BEGIN GROUP!!!
+m50 m20
+m13 m14
+m19 m21
+END GROUP!!!
+BEGIN GROUP!!!
+m21 m19
+m23 m37
+END GROUP!!!

@@ -1,113 +1,123 @@
 #include "sym_detect/SymDetect.h"
-#include "db/Netlist.h"
-#include "db/Pin.h"
-#include <iostream>
-#include <stack>
 
 PROJECT_NAMESPACE_BEGIN
 
-std::vector<std::pair<IndexType, IndexType>> SymDetect::diffPairSearch() 
+void SymDetect::getDiffPairNetConn(std::vector<MosPair> & diffPair, IndexType netId)
 {
-    std::vector<std::pair<IndexType, IndexType>> results;
-    for (IndexType netId = 0; netId < _netlist.numNets(); netId++)
-        if (_netlist.net(netId).netType() == NetType::SIGNAL)
-        {
-            std::vector<IndexType> source;
-            source = _netlist.netMosfetId(netId, PinType::SOURCE, MosType::DIFF);
-            std::cout << "Returned source devices." << std::endl;
-            if (source.size() < 2)
-                continue;
-            for (IndexType i = 0; i < source.size() - 1; i++)
-                for (IndexType j = i + 1; j < source.size(); j++)
-                    if (_pattern.pattern(std::pair<IndexType, IndexType> (source[i], source[j])) == MosPattern::DIFF_SOURCE)
-                        results.push_back(std::pair<IndexType, IndexType> (source[i], source[j]));
-        }
-    return results;
+    std::vector<IndexType> srcMos;
+    _netlist.getInstNetConn(srcMos, netId);  
+    _netlist.fltrInstNetConnPinType(srcMos, netId, PinType::SOURCE);
+    _netlist.fltrInstMosType(srcMos, MosType::DIFF);
+    for (IndexType i = 0; i < srcMos.size(); i++)
+        for (IndexType j = i + 1; j < srcMos.size(); j++)
+            if (_pattern.pattern(srcMos[i], srcMos[j]) == MosPattern::DIFF_SOURCE)
+                diffPair.emplace_back(srcMos[i], srcMos[j]);
 }
 
-bool SymDetect::endSearch(IndexType mosId, PinType currentPinType)
+void SymDetect::getDiffPair(std::vector<MosPair> & diffPair)
 {
-    PinType toSearchPinType = Pin::otherPinType(currentPinType);
-    IndexType toSearchNetId = _netlist.instanceNetId(mosId, toSearchPinType);
-    if (_netlist.net(toSearchNetId).netType() == NetType::SIGNAL)
+    diffPair.clear();
+    for (IndexType netId = 0; netId < _netlist.numNet(); netId++)
+        if (_netlist.isSignal(netId))
+            getDiffPairNetConn(diffPair, netId); 
+}
+
+//bool SymDetect::endSrch(IndexType mosId, PinType currPinType)
+//{
+//    IndexType toSrchNetId = _netlist.instNetId(mosId, Pin::nextPinType(currPinType));
+//    return !_netlist.isSignal(toSrchNetId);
+//}
+
+bool SymDetect::existPair(std::vector<MosPair> & library, IndexType instId1, IndexType instId2)
+{
+    for (MosPair & currPair : library)
+    {
+        if (currPair.mosId1 == instId1 && currPair.mosId2 == instId2)
+            return true;
+        if (currPair.mosId2 == instId1 && currPair.mosId1 == instId1)
+            return true;
+    }
+    return false;
+}
+
+bool SymDetect::existPair(std::vector<srchObj> & library, IndexType instId1, IndexType instId2)
+{
+    for (srchObj & currObj : library)
+    {
+        if (currObj.pair.mosId1 == instId1 && currObj.pair.mosId2 == instId2)
+            return true;
+        if (currObj.pair.mosId2 == instId1 && currObj.pair.mosId1 == instId2)
+            return true;
+    }
+    return false;
+}
+
+MosPattern SymDetect::srchObjPtrn(srchObj & obj)
+{
+    return _pattern.pattern(obj.pair.mosId1, obj.pair.mosId2);
+}
+
+bool SymDetect::endSrch(srchObj & currObj)
+{
+    if (srchObjPtrn(currObj) == MosPattern::DIFF_SOURCE &&
+        currObj.srchPinType == PinType::DRAIN)
+        return true;  
+    if (srchObjPtrn(currObj) == MosPattern::LOAD ||
+        srchObjPtrn(currObj) == MosPattern::CROSS_LOAD)
+        return true;
+    if (currObj.srchPinType != PinType::SOURCE && currObj.srchPinType != PinType::DRAIN)
+        return true;
+    return false;
+}
+
+bool SymDetect::validSrchObj(IndexType instId1, IndexType instId2, IndexType srchPinId1, IndexType srchPinId2)
+{
+    if (_netlist.getPinTypeInstPinConn(instId1, srchPinId1) != _netlist.getPinTypeInstPinConn(instId2, srchPinId2))
         return false;
-    return true;
-}
-
-bool SymDetect::existPair(std::vector<std::pair<IndexType, IndexType>> &library, std::pair<IndexType, IndexType> query)
-{
-    for (std::pair<IndexType, IndexType> existingPair : library)
-    {
-        if (existingPair.first == query.first && existingPair.second == query.second)
-            return true;
-        if (existingPair.first == query.second && existingPair.second == query.first)
-            return true;
-    }
+    MosPattern currPtrn = _pattern.pattern(instId1, instId2);
+    if (currPtrn != MosPattern::INVALID)
+        return true;
     return false;
+}  
+
+void SymDetect::pushNextSrchObj(std::vector<MosPair> & dfsVstPair, std::vector<srchObj> & dfsStack, srchObj & currObj)
+{
+    if (endSrch(currObj))
+        return;
+    IndexType srchPinId1 = _netlist.instPinId(currObj.pair.mosId1, Pin::nextPinType(currObj.srchPinType));
+    IndexType srchPinId2 = _netlist.instPinId(currObj.pair.mosId2, Pin::nextPinType(currObj.srchPinType));
+    std::vector<IndexType> Mos1, Mos2;
+    _netlist.getInstPinConn(Mos1, srchPinId1);
+    _netlist.getInstPinConn(Mos2, srchPinId2);
+    for (IndexType instId1: Mos1)
+    {
+        for (IndexType instId2 : Mos2)
+        {
+            if (validSrchObj(instId1, instId2, srchPinId1, srchPinId2) &&
+                !existPair(dfsVstPair, instId1, instId2) &&
+                !existPair(dfsStack, instId1, instId2)) 
+            {
+                MosPair currPair(instId1, instId2);
+                dfsStack.emplace_back(currPair, _netlist.getPinTypeInstPinConn(instId1, srchPinId1));
+            }
+       }
+    }
 }
 
-bool SymDetect::existPair(std::stack<std::pair<IndexType, IndexType>> library, std::pair<IndexType, IndexType> query)
+void SymDetect::dfsDiffPair(std::vector<MosPair> & dfsVstPair, MosPair & diffPair)
 {
-    std::pair<IndexType, IndexType> existingPair;
-    while (!library.empty())
+    std::vector<srchObj> dfsStack;  //use vector to implement stack.
+    dfsStack.emplace_back(diffPair, PinType::SOURCE);
+    while (!dfsStack.empty())
     {
-        existingPair = library.top();
-        library.pop();
-        if (existingPair.first == query.first && existingPair.second == query.second)
-            return true;
-        if (existingPair.first == query.second && existingPair.second == query.first)
-            return true;
-    }
-    return false;
-}
-
-
-std::vector<std::pair<IndexType, IndexType>> SymDetect::symGroup(std::pair<IndexType, IndexType> diffPair)
-{
-    bool begin = true;
-    std::stack<std::pair<IndexType, IndexType>> DFS_pair;
-    std::stack<PinType> DFS_pinType;
-    std::vector<std::pair<IndexType, IndexType>> symResult;
-    DFS_pair.push(diffPair);
-    DFS_pinType.push(PinType::SOURCE);
-    std::vector<PinType> possiblePinType = {PinType::SOURCE, PinType::DRAIN};
-    std::vector<InstanceType> possibleMosType = {InstanceType::NMOS, InstanceType::PMOS};
-    while (!DFS_pair.empty())
-    {
-        std::pair<IndexType, IndexType> currentPair = DFS_pair.top();
-        PinType currentPinType = DFS_pinType.top();
-        MosPattern currentPattern = _pattern.pattern(currentPair);
-        DFS_pair.pop();
-        DFS_pinType.pop();
-        symResult.push_back(currentPair);
-        std::cout << _netlist.instance(currentPair.first).name() << _netlist.instance(currentPair.second).name() << std::endl;
-        if (!begin && currentPattern == MosPattern::DIFF_SOURCE)
-            continue;
-        if (currentPattern == MosPattern::LOAD || currentPattern == MosPattern::CROSS_LOAD)
-            continue;
-        begin = false;
-        if (!endSearch(currentPair.first, currentPinType) && !endSearch(currentPair.second, currentPinType))
-            for (InstanceType instanceSearch : possibleMosType)
-                for (PinType pinSearch : possiblePinType)
-                {
-                    IndexType searchPinId1 = _netlist.pinId(currentPair.first, Pin::otherPinType(currentPinType));
-                    IndexType searchPinId2 = _netlist.pinId(currentPair.second, Pin::otherPinType(currentPinType));
-                    std::vector<IndexType> MOS1 = _netlist.pinInstanceId(searchPinId1, instanceSearch, pinSearch);
-                    std::vector<IndexType> MOS2 = _netlist.pinInstanceId(searchPinId2, instanceSearch, pinSearch);
-                    for (IndexType mosId1: MOS1)
-                        for (IndexType mosId2 : MOS2)
-                        {
-                            std::pair<IndexType, IndexType> toAdd(mosId1, mosId2); 
-                            MosPattern patternSearch = _pattern.pattern(toAdd);
-                            if (!existPair(symResult,toAdd) && !existPair(DFS_pair,toAdd) && patternSearch != MosPattern::INVALID && patternSearch != MosPattern::DIFF_CASCODE && patternSearch != MosPattern::DIFF_SOURCE)
-                            {
-                                DFS_pair.push(toAdd);
-                                DFS_pinType.push(pinSearch);
-                            }
-                        }
-                }
-    }
-    return symResult;
+        srchObj currObj = dfsStack.back();
+        dfsStack.pop_back();
+        dfsVstPair.push_back(currObj.pair);
+        pushNextSrchObj(dfsVstPair, dfsStack, currObj);
+//        std::cout << _netlist.inst(currObj.pair.mosId1).name() 
+//                  << _netlist.inst(currObj.pair.mosId2).name()
+//                  << std::endl;
+    } 
 }
 
 PROJECT_NAMESPACE_END

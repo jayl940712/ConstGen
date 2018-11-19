@@ -375,3 +375,29 @@ Pin 270, from  Instance xm46 to net 27:interp
 Pin 271, from  Instance xm46 to net 28:vxp2 
 Pin 272, from  Instance xm46 to net 3:vdd 
 Pin 273, from  Instance xm46 to net 3:vdd 
+Start diff pair recognition.33
+Diff pair recognized.
+BEGIN GROUP!!!
+xm14 xm13
+xm18 xm17
+xm36 xm40
+xm45 xm46
+xm45 xm44
+xm47 xm46
+xm47 xm44
+xm38 xm39
+xm37 xm41
+xm12 xm10
+END GROUP!!!
+BEGIN GROUP!!!
+xm17 xm18
+xm40 xm36
+xm46 xm45
+xm46 xm47
+xm44 xm45
+xm44 xm47
+xm39 xm38
+xm41 xm37
+xm13 xm14
+xm10 xm12
+END GROUP!!!

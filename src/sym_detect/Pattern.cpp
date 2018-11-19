@@ -2,111 +2,109 @@
 
 PROJECT_NAMESPACE_BEGIN
 
-Pattern::MosPair Pattern::constructPair(std::pair<IndexType, IndexType> pair, PinType pinType)
+bool Pattern::matchedType(IndexType mosId1, IndexType mosId2)
 {
-    MosPair mosfetPair;
-    mosfetPair.mosId1 = pair.first;
-    mosfetPair.mosId2 = pair.second;
-    mosfetPair.inputPinId1 = _netlist.pinId(pair.first, pinType);
-    mosfetPair.inputPinId2 = _netlist.pinId(pair.second, pinType);
-    mosfetPair.outputPinId1 = _netlist.pinId(pair.first, Pin::otherPinType(pinType));
-    mosfetPair.outputPinId2 = _netlist.pinId(pair.second, Pin::otherPinType(pinType));
-    mosfetPair.inputNetId1 = _netlist.pin(mosfetPair.inputPinId1).netId();
-    mosfetPair.inputNetId2 = _netlist.pin(mosfetPair.inputPinId2).netId();
-    mosfetPair.outputNetId1 = _netlist.pin(mosfetPair.outputPinId1).netId();
-    mosfetPair.outputNetId2 = _netlist.pin(mosfetPair.outputPinId2).netId();
-    mosfetPair.gateNetId1 = _netlist.pin(_netlist.pinId(pair.first, PinType::GATE)).netId();
-    mosfetPair.gateNetId2 = _netlist.pin(_netlist.pinId(pair.second, PinType::GATE)).netId();
-    return mosfetPair;
+    return _netlist.inst(mosId1).type() == _netlist.inst(mosId2).type();
 }
-
-bool Pattern::matchedSize(MosPair & pair)
+    
+bool Pattern::matchedSize(IndexType mosId1, IndexType mosId2)
 {
-    if(_netlist.instance(pair.mosId1).width() != _netlist.instance(pair.mosId2).width())
+    if (_netlist.inst(mosId1).wid() != _netlist.inst(mosId2).wid())
         return false;
-    if(_netlist.instance(pair.mosId1).length() != _netlist.instance(pair.mosId2).length())
+    if (_netlist.inst(mosId1).len() != _netlist.inst(mosId2).len())
         return false;
     return true;
 }
 
-bool Pattern::diffPairInput(MosPair & pair)
+bool Pattern::diffPairInput(IndexType mosId1, IndexType mosId2)
 {
-    if(_netlist.instance(pair.mosId1).type() != _netlist.instance(pair.mosId2).type())
-        return false;
-    if(pair.inputNetId1 == pair.inputNetId2 && pair.gateNetId1 != pair.gateNetId2 && pair.outputNetId1 != pair.outputNetId2 && _netlist.mosType(pair.mosId1) == MosType::DIFF && _netlist.mosType(pair.mosId2) == MosType::DIFF)
+    if (_netlist.srcNetId(mosId1) == _netlist.srcNetId(mosId2) && 
+        _netlist.gateNetId(mosId1) != _netlist.gateNetId(mosId2) && 
+        _netlist.drainNetId(mosId1) != _netlist.drainNetId(mosId2) && 
+        _netlist.mosType(mosId1) == MosType::DIFF && 
+        _netlist.mosType(mosId2) == MosType::DIFF)
         return true;
     return false;
 }
 
-bool Pattern::diffPairCascode(MosPair & pair)
+bool Pattern::diffPairCascode(IndexType mosId1, IndexType mosId2)
 {
-    if(_netlist.instance(pair.mosId1).type() != _netlist.instance(pair.mosId2).type())
-        return false;
-    if(pair.inputNetId1 != pair.inputNetId2 && pair.gateNetId1 != pair.gateNetId2 && pair.outputNetId1 != pair.outputNetId2 && _netlist.mosType(pair.mosId1) == MosType::DIFF && _netlist.mosType(pair.mosId2) == MosType::DIFF)
+    if (_netlist.srcNetId(mosId1) != _netlist.srcNetId(mosId2) && 
+        _netlist.gateNetId(mosId1) != _netlist.gateNetId(mosId2) && 
+        _netlist.drainNetId(mosId1) != _netlist.drainNetId(mosId2) && 
+        _netlist.mosType(mosId1) == MosType::DIFF && 
+        _netlist.mosType(mosId2) == MosType::DIFF)
         return true;
     return false;
 }
 
-bool Pattern::validPairCascode(MosPair & pair)
+bool Pattern::validPairCascode(IndexType mosId1, IndexType mosId2)
 {
-    if(_netlist.instance(pair.mosId1).type() != _netlist.instance(pair.mosId2).type())
+    if (_netlist.mosType(mosId1) != MosType::DIFF && 
+        _netlist.mosType(mosId1) != MosType::DIODE )
         return false;
-    if(_netlist.mosType(pair.mosId1) != MosType::DIFF && _netlist.mosType(pair.mosId1) != MosType::DIODE )
+    if (_netlist.mosType(mosId2) != MosType::DIFF && 
+        _netlist.mosType(mosId2) != MosType::DIODE )
         return false;
-    if(_netlist.mosType(pair.mosId2) != MosType::DIFF && _netlist.mosType(pair.mosId2) != MosType::DIODE )
-        return false;
-    if(pair.inputNetId1 != pair.inputNetId2 && pair.gateNetId1 == pair.gateNetId2 && pair.outputNetId1 != pair.outputNetId2)
+    if (_netlist.srcNetId(mosId1) != _netlist.srcNetId(mosId2) && 
+        _netlist.gateNetId(mosId1) == _netlist.gateNetId(mosId2) && 
+        _netlist.drainNetId(mosId1) != _netlist.drainNetId(mosId2))
         return true;
     return false;
 }
 
-bool Pattern::validPairLoad(MosPair & pair)
+bool Pattern::validPairLoad(IndexType mosId1, IndexType mosId2)
 {
-    if(_netlist.instance(pair.mosId1).type() != _netlist.instance(pair.mosId2).type())
+    if (_netlist.mosType(mosId1) != MosType::DIFF && 
+        _netlist.mosType(mosId1) != MosType::DIODE )
         return false;
-    if(_netlist.mosType(pair.mosId1) != MosType::DIFF && _netlist.mosType(pair.mosId1) != MosType::DIODE )
+    if (_netlist.mosType(mosId2) != MosType::DIFF && 
+        _netlist.mosType(mosId2) != MosType::DIODE )
         return false;
-    if(_netlist.mosType(pair.mosId2) != MosType::DIFF && _netlist.mosType(pair.mosId2) != MosType::DIODE )
-        return false;
-    if(pair.inputNetId1 == pair.inputNetId2 && pair.gateNetId1 == pair.gateNetId2 && pair.outputNetId1 != pair.outputNetId2)
+    if (_netlist.srcNetId(mosId1) == _netlist.srcNetId(mosId2) && 
+        _netlist.gateNetId(mosId1) == _netlist.gateNetId(mosId2) && 
+        _netlist.drainNetId(mosId1) != _netlist.drainNetId(mosId2))
         return true;
     return false;
 }  
 
-bool Pattern::crossPairCascode(MosPair & pair)
+bool Pattern::crossPairCascode(IndexType mosId1, IndexType mosId2)
 {
-    if(_netlist.instance(pair.mosId1).type() != _netlist.instance(pair.mosId2).type())
-        return false;
-    if(pair.inputNetId1 != pair.inputNetId2 && pair.gateNetId1 == pair.outputNetId2 && pair.outputNetId1 == pair.gateNetId2 && _netlist.mosType(pair.mosId1) == MosType::DIFF && _netlist.mosType(pair.mosId2) == MosType::DIFF)
+    if (_netlist.srcNetId(mosId1) != _netlist.srcNetId(mosId2) && 
+        _netlist.gateNetId(mosId1) == _netlist.drainNetId(mosId2) && 
+        _netlist.drainNetId(mosId1) == _netlist.gateNetId(mosId2) && 
+        _netlist.mosType(mosId1) == MosType::DIFF && 
+        _netlist.mosType(mosId2) == MosType::DIFF)
         return true;
     return false;
 }
 
-bool Pattern::crossPairLoad(MosPair & pair)
+bool Pattern::crossPairLoad(IndexType mosId1, IndexType mosId2)
 {
-    if(_netlist.instance(pair.mosId1).type() != _netlist.instance(pair.mosId2).type())
-        return false;
-    if(pair.inputNetId1 == pair.inputNetId2 && pair.gateNetId1 == pair.outputNetId2 && pair.outputNetId1 == pair.gateNetId2 && _netlist.mosType(pair.mosId1) == MosType::DIFF && _netlist.mosType(pair.mosId2) == MosType::DIFF)
+    if (_netlist.srcNetId(mosId1) == _netlist.srcNetId(mosId2) && 
+        _netlist.gateNetId(mosId1) == _netlist.drainNetId(mosId2) && 
+        _netlist.drainNetId(mosId1) == _netlist.gateNetId(mosId2) && 
+        _netlist.mosType(mosId1) == MosType::DIFF && 
+        _netlist.mosType(mosId2) == MosType::DIFF)
         return true;
     return false;
 }
 
-MosPattern Pattern::pattern(std::pair<IndexType, IndexType> pair)
+MosPattern Pattern::pattern(IndexType mosId1, IndexType mosId2)
 {
-    MosPair mosPair = constructPair(pair, PinType::SOURCE);
-    if (!matchedSize(mosPair))
+    if (!matchedSize(mosId1, mosId2) || !matchedType(mosId1, mosId2))
         return MosPattern::INVALID;
-    if (crossPairCascode(mosPair))
+    if (crossPairCascode(mosId1, mosId2))
         return MosPattern::CROSS_CASCODE;
-    if (crossPairLoad(mosPair))
+    if (crossPairLoad(mosId1, mosId2))
         return MosPattern::CROSS_LOAD;
-    if (validPairCascode(mosPair))
+    if (validPairCascode(mosId1, mosId2))
         return MosPattern::CASCODE;
-    if (validPairLoad(mosPair))
+    if (validPairLoad(mosId1, mosId2))
         return MosPattern::LOAD;
-    if (diffPairInput(mosPair))
+    if (diffPairInput(mosId1, mosId2))
         return MosPattern::DIFF_SOURCE;
-    if (diffPairCascode(mosPair))
+    if (diffPairCascode(mosId1, mosId2))
         return MosPattern::DIFF_CASCODE;
     return MosPattern::INVALID; 
 }

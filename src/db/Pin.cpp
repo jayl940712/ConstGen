@@ -2,7 +2,7 @@
 
 PROJECT_NAMESPACE_BEGIN
 
-PinType Pin::otherPinType(PinType type)
+PinType Pin::nextPinType(PinType type)
 {
     if (type == PinType::SOURCE)
         return PinType::DRAIN;

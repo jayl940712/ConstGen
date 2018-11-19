@@ -55,3 +55,13 @@ Pin 28, from  Instance xm36 to net 2:net38
 Pin 29, from  Instance xm36 to net 15:vbp_cs 
 Pin 30, from  Instance xm36 to net 13:net40 
 Pin 31, from  Instance xm36 to net 3:vdd 
+Start diff pair recognition.16
+Diff pair recognized.
+BEGIN GROUP!!!
+xm41 xm39
+xm3 xm4
+END GROUP!!!
+BEGIN GROUP!!!
+xm3 xm4
+xm41 xm39
+END GROUP!!!

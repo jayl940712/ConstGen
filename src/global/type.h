@@ -20,7 +20,16 @@ constexpr RealType      REAL_TYPE_MAX           = 1e100;
 constexpr RealType      REAL_TYPE_MIN           = -1e100;
 constexpr RealType      REAL_TYPE_TOL           = 1e-6; 
 
-enum class InstanceType : Byte
+struct MosPair
+{
+    IndexType mosId1, mosId2;
+    bool valid = true;
+    MosPair(IndexType Id1, IndexType Id2) 
+        : mosId1(Id1), mosId2(Id2) 
+    {}
+};
+
+enum class InstType : Byte
 {
     RES,
     PMOS,

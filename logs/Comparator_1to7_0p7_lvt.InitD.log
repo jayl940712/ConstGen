@@ -181,7 +181,7 @@ Pin 124, from  Instance m2 to net 7:vout2p
 Pin 125, from  Instance m2 to net 9:vss 
 Pin 126, from  Instance m2 to net 7:vout2p 
 Pin 127, from  Instance m2 to net 7:vout2p 
-Instance 32, m3 118
+Instance 32, m3 
 Pin 128, from  Instance m3 to net 7:vout2p 
 Pin 129, from  Instance m3 to net 21:caln 
 Pin 130, from  Instance m3 to net 7:vout2p 
@@ -191,3 +191,27 @@ Pin 132, from  Instance m0 to net 8:vout2m
 Pin 133, from  Instance m0 to net 9:vss 
 Pin 134, from  Instance m0 to net 8:vout2m 
 Pin 135, from  Instance m0 to net 8:vout2m 
+Start diff pair recognition.22
+Diff pair recognized.
+BEGIN GROUP!!!
+xm10 xm11
+xm21 xm14
+xm14 xm21
+xm9 xm6
+xm33 xm25
+xm8 xm7
+xm28 xm34
+xm13 xm12
+xm32 xm29
+END GROUP!!!
+BEGIN GROUP!!!
+xm12 xm13
+xm14 xm21
+xm21 xm14
+xm6 xm9
+xm25 xm33
+xm28 xm34
+xm7 xm8
+xm11 xm10
+xm29 xm32
+END GROUP!!!

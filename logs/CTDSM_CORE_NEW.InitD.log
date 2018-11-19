@@ -2242,3 +2242,66 @@ Pin 1582, from  Instance xi155/xi94/mi7 to net 233:xi155/xi94/net120
 Pin 1583, from  Instance xi155/xi94/mi7 to net 227:xi155/xi94/net81 
 Pin 1584, from  Instance xi155/xi94/mi7 to net 1:vdda 
 Pin 1585, from  Instance xi155/xi94/mi7 to net 1:vdda 
+Start diff pair recognition.234
+Diff pair recognized.
+BEGIN GROUP!!!
+xi160/xm26 xi160/xm27
+xi161/xm13 xi161/xm21
+xi160/xm14 xi160/xm11
+END GROUP!!!
+BEGIN GROUP!!!
+xi128/xi1/m2 xi128/xi0/m2
+xi128/xi1/m3 xi128/xi0/m3
+xi99/mi6 xi97/mi6
+xi99/mi5 xi97/mi5
+xi128/xi0/m2 xi128/xi1/m2
+xi128/xi1/m1 xi128/xi0/m1
+xi128/xi1/m1 xi128/xi0/m0
+xi128/xi1/m0 xi128/xi0/m1
+xi128/xi1/m0 xi128/xi0/m0
+END GROUP!!!
+BEGIN GROUP!!!
+xi146/xm8 xi146/xm18
+END GROUP!!!
+BEGIN GROUP!!!
+xi146/xm8 xi146/xm15
+xi146/xm16 xi146/xm17
+xi128/xi1/m3 xi128/xi0/m3
+xi128/xi1/m1 xi128/xi0/m1
+END GROUP!!!
+BEGIN GROUP!!!
+xi146/xm8 xi146/xm2
+END GROUP!!!
+BEGIN GROUP!!!
+xi146/xm8 xi146/xm1
+END GROUP!!!
+BEGIN GROUP!!!
+xi146/xm8 xi146/xm12
+END GROUP!!!
+BEGIN GROUP!!!
+xi146/xm18 xi146/xm15
+END GROUP!!!
+BEGIN GROUP!!!
+xi146/xm15 xi146/xm2
+END GROUP!!!
+BEGIN GROUP!!!
+xi146/xm15 xi146/xm1
+END GROUP!!!
+BEGIN GROUP!!!
+xi146/xm15 xi146/xm12
+END GROUP!!!
+BEGIN GROUP!!!
+xi161/xm13 xi161/xm21
+xi146/xm6 xi146/xm5
+xi161/xm23 xi161/xm14
+END GROUP!!!
+BEGIN GROUP!!!
+xi146/xm5 xi146/xm6
+xi146/xm18 xi146/xm2
+xi146/xm4 xi146/xm3
+xi146/xm14 xi146/xm13
+xi146/xm1 xi146/xm12
+xi146/xm15 xi146/xm8
+xi146/xm3 xi146/xm4
+xi146/xm17 xi146/xm16
+END GROUP!!!

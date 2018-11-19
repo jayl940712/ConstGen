@@ -6,7 +6,7 @@ PROJECT_NAMESPACE_BEGIN
 
 bool InitNetlist::read(const std::string &fileName)
 {
-    Netlist::InitDataObject obj; 
+    Netlist::InitDataObj obj; 
     std::ifstream inFile(fileName.c_str());
     if (!inFile.is_open())
     {
@@ -23,31 +23,28 @@ bool InitNetlist::read(const std::string &fileName)
             inFile >> inLine;
             if (inLine == "PMOS" || inLine == "NMOS" || inLine == "CAP" || inLine == "RES" || inLine == "OTHER")
             {
-                Netlist::InitInstance inst;
-                InstanceType instType;
+                Netlist::InitInst inst;
+                InstType instType;
                 if (inLine == "PMOS")
-                    instType = InstanceType::PMOS;
+                    instType = InstType::PMOS;
                 else if (inLine == "NMOS")
-                    instType = InstanceType::NMOS;
+                    instType = InstType::NMOS;
                 else if (inLine == "CAP")
-                    instType = InstanceType::CAP;
+                    instType = InstType::CAP;
                 else if (inLine == "RES")
-                    instType = InstanceType::RES;
+                    instType = InstType::RES;
                 else
-                    instType = InstanceType::OTHER;
+                    instType = InstType::OTHER;
                 inst.type = instType;
                 inFile >> inst.name; 
-                if (inst.type == InstanceType::CAP)
-                {
-                    inFile >> inst.width;
-                    inst.length = 0.0;
-                }
-                else if (inst.type != InstanceType::OTHER)
-                    inFile >> inst.width >> inst.length;
+                if (inst.type == InstType::CAP)
+                    inFile >> inst.wid;
+                else if (inst.type != InstType::OTHER)
+                    inFile >> inst.wid >> inst.len;
                 IndexType netId;
                 while (inFile >> netId)
                     inst.netIdArray.push_back(netId);
-                obj.instanceArray.push_back(inst);
+                obj.instArray.push_back(inst);
             }
             else
             {

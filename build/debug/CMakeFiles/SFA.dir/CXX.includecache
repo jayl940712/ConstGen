@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-../../src/db/Instance.h
+../../src/db/Inst.h
 string
 -
 vector
@@ -27,12 +27,14 @@ vector
 -
 string
 -
+global/type.h
+../../src/db/global/type.h
 db/Net.h
 ../../src/db/db/Net.h
 db/Pin.h
 ../../src/db/db/Pin.h
-db/Instance.h
-../../src/db/db/Instance.h
+db/Inst.h
+../../src/db/db/Inst.h
 
 ../../src/db/Pin.h
 string
@@ -65,8 +67,6 @@ db/Netlist.h
 ../../src/sym_detect/db/Netlist.h
 global/type.h
 ../../src/sym_detect/global/type.h
-utility
--
 
 ../../src/sym_detect/SymDetect.h
 db/Netlist.h
@@ -74,10 +74,6 @@ db/Netlist.h
 sym_detect/Pattern.h
 ../../src/sym_detect/sym_detect/Pattern.h
 vector
--
-utility
--
-stack
 -
 
 /home/unga/jayliu/SFA/src/db/Net.cpp
@@ -87,8 +83,6 @@ db/Net.h
 /home/unga/jayliu/SFA/src/db/Netlist.cpp
 db/Netlist.h
 /home/unga/jayliu/SFA/src/db/db/Netlist.h
-cstdio
--
 vector
 -
 algorithm
@@ -129,12 +123,4 @@ sym_detect/Pattern.h
 /home/unga/jayliu/SFA/src/sym_detect/SymDetect.cpp
 sym_detect/SymDetect.h
 /home/unga/jayliu/SFA/src/sym_detect/sym_detect/SymDetect.h
-db/Netlist.h
-/home/unga/jayliu/SFA/src/sym_detect/db/Netlist.h
-db/Pin.h
-/home/unga/jayliu/SFA/src/sym_detect/db/Pin.h
-iostream
--
-stack
--
 

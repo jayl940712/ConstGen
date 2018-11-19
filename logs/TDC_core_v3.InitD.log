@@ -978,3 +978,5 @@ Pin 716, from  Instance xi14<15>/m5 to net 78:ph<1>
 Pin 717, from  Instance xi14<15>/m5 to net 31:net132<14> 
 Pin 718, from  Instance xi14<15>/m5 to net 2:vdd 
 Pin 719, from  Instance xi14<15>/m5 to net 2:vdd 
+Start diff pair recognition.79
+Diff pair recognized.

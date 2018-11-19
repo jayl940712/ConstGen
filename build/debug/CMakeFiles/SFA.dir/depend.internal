@@ -8,7 +8,7 @@ CMakeFiles/SFA.dir/src/db/Net.cpp.o
  ../../src/global/type.h
  /home/unga/jayliu/SFA/src/db/Net.cpp
 CMakeFiles/SFA.dir/src/db/Netlist.cpp.o
- ../../src/db/Instance.h
+ ../../src/db/Inst.h
  ../../src/db/Net.h
  ../../src/db/Netlist.h
  ../../src/db/Pin.h
@@ -23,7 +23,7 @@ CMakeFiles/SFA.dir/src/db/Pin.cpp.o
  ../../src/global/type.h
  /home/unga/jayliu/SFA/src/db/Pin.cpp
 CMakeFiles/SFA.dir/src/main/main.cpp.o
- ../../src/db/Instance.h
+ ../../src/db/Inst.h
  ../../src/db/Net.h
  ../../src/db/Netlist.h
  ../../src/db/Pin.h
@@ -35,7 +35,7 @@ CMakeFiles/SFA.dir/src/main/main.cpp.o
  ../../src/sym_detect/SymDetect.h
  /home/unga/jayliu/SFA/src/main/main.cpp
 CMakeFiles/SFA.dir/src/parser/InitNetlist.cpp.o
- ../../src/db/Instance.h
+ ../../src/db/Inst.h
  ../../src/db/Net.h
  ../../src/db/Netlist.h
  ../../src/db/Pin.h
@@ -45,7 +45,7 @@ CMakeFiles/SFA.dir/src/parser/InitNetlist.cpp.o
  /home/unga/jayliu/SFA/src/parser/InitNetlist.cpp
  /home/unga/jayliu/SFA/src/parser/InitNetlist.h
 CMakeFiles/SFA.dir/src/sym_detect/Pattern.cpp.o
- ../../src/db/Instance.h
+ ../../src/db/Inst.h
  ../../src/db/Net.h
  ../../src/db/Netlist.h
  ../../src/db/Pin.h
@@ -55,7 +55,7 @@ CMakeFiles/SFA.dir/src/sym_detect/Pattern.cpp.o
  ../../src/sym_detect/Pattern.h
  /home/unga/jayliu/SFA/src/sym_detect/Pattern.cpp
 CMakeFiles/SFA.dir/src/sym_detect/SymDetect.cpp.o
- ../../src/db/Instance.h
+ ../../src/db/Inst.h
  ../../src/db/Net.h
  ../../src/db/Netlist.h
  ../../src/db/Pin.h

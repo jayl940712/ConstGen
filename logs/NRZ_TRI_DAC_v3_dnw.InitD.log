@@ -128,3 +128,29 @@ Pin 84, from  Instance xm14 to net 2:vcm
 Pin 85, from  Instance xm14 to net 18:ein 
 Pin 86, from  Instance xm14 to net 14:vcm1 
 Pin 87, from  Instance xm14 to net 13:gnd 
+Start diff pair recognition.19
+Diff pair recognized.
+BEGIN GROUP!!!
+xm7 xm17
+xm14 xm18
+END GROUP!!!
+BEGIN GROUP!!!
+xm7 xm6
+xm14 xm15
+END GROUP!!!
+BEGIN GROUP!!!
+xm17 xm6
+xm18 xm15
+END GROUP!!!
+BEGIN GROUP!!!
+xm18 xm15
+xm17 xm6
+END GROUP!!!
+BEGIN GROUP!!!
+xm18 xm14
+xm17 xm7
+END GROUP!!!
+BEGIN GROUP!!!
+xm15 xm14
+xm6 xm7
+END GROUP!!!

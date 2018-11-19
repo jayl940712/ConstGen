@@ -16,9 +16,9 @@ public:
     {}    
 
     // Getters
-    const std::string &         name() const        {return _name; }
-    IndexType                   id() const          {return _id; }
-    std::vector<IndexType> &    pinIdArray()        {return _pinIdArray; }
+    const std::string &             name() const        { return _name; }
+    IndexType                       id() const          { return _id; }
+    std::vector<IndexType> &        pinIdArray()        { return _pinIdArray; }
     
     // Setters
     void                        addPinId(IndexType pinId)   { _pinIdArray.push_back(pinId); } 

@@ -4,8 +4,6 @@
 #include "db/Netlist.h"
 #include "sym_detect/Pattern.h"
 #include <vector>
-#include <utility>
-#include <stack>
 
 PROJECT_NAMESPACE_BEGIN
 
@@ -16,16 +14,32 @@ public:
         : _netlist(netlist), _pattern(Pattern(netlist))
     {}
 
-    std::vector<std::pair<IndexType, IndexType>>    diffPairSearch();
-    std::vector<std::pair<IndexType, IndexType>>    symGroup(std::pair<IndexType, IndexType> diffPair);
+    void                                getDiffPairNetConn(std::vector<MosPair> & diffPair, IndexType netId);
+    void                                getDiffPair(std::vector<MosPair> & diffPair);
+    void                                dfsDiffPair(std::vector<MosPair> & dfsVstPair, MosPair & diffPair);
+
+private:
+    struct srchObj
+    {
+        MosPair pair;
+        PinType srchPinType;
+        srchObj(MosPair & diffPair, PinType pinType) 
+            : pair(diffPair), srchPinType(pinType) 
+        {}
+    };
 
 private:
     Netlist & _netlist;
     Pattern   _pattern;
 
-    bool                                        endSearch(IndexType mosId, PinType pinType);
-    bool                                        existPair(std::vector<std::pair<IndexType, IndexType>> &library, std::pair<IndexType, IndexType> query);
-    bool                                        existPair(std::stack<std::pair<IndexType, IndexType>> library, std::pair<IndexType, IndexType> query);
+    bool                                endSrch(IndexType mosId, PinType pinType);
+    bool                                existPair(std::vector<MosPair> & library, IndexType instId1, IndexType instId2);
+    bool                                existPair(std::vector<srchObj> & library, IndexType instId1, IndexType instId2);
+
+    MosPattern                          srchObjPtrn(srchObj & obj);
+    bool                                endSrch(srchObj & obj);
+    bool                                validSrchObj(IndexType instId1, IndexType instId2, IndexType srchPinId1, IndexType srchPinId2);
+    void                                pushNextSrchObj(std::vector<MosPair> & dfsVstPair, std::vector<srchObj> & dfsStack, srchObj & currObj);
 }; 
 
 PROJECT_NAMESPACE_END
