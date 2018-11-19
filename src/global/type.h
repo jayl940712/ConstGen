@@ -27,6 +27,14 @@ struct MosPair
     MosPair(IndexType Id1, IndexType Id2) 
         : mosId1(Id1), mosId2(Id2) 
     {}
+    inline int operator == (const MosPair & right) const
+    {
+        if (mosId1 == right.mosId1 && mosId2 == right.mosId2)
+            return 1;
+        if (mosId1 == right.mosId2 && mosId2 == right.mosId1)
+            return 1;
+        return 0;
+    }
 };
 
 enum class InstType : Byte

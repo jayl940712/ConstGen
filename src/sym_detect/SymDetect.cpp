@@ -75,12 +75,22 @@ bool SymDetect::validSrchObj(IndexType instId1, IndexType instId2, IndexType src
     if (_netlist.getPinTypeInstPinConn(instId1, srchPinId1) != _netlist.getPinTypeInstPinConn(instId2, srchPinId2))
         return false;
     MosPattern currPtrn = _pattern.pattern(instId1, instId2);
+//    if (currPtrn == MosPattern::DIFF_SOURCE ||
+//        currPtrn == MosPattern::DIFF_CASCODE)
+//        return false;
     if (currPtrn != MosPattern::INVALID)
         return true;
     return false;
 }  
 
-void SymDetect::pushNextSrchObj(std::vector<MosPair> & dfsVstPair, std::vector<srchObj> & dfsStack, srchObj & currObj)
+void SymDetect::inVldDiffPairSrch(std::vector<MosPair> & diffPairSrch, MosPair & currPair)
+{
+    for (MosPair & pair : diffPairSrch)
+        if (pair == currPair)
+            pair.valid = false;
+}
+
+void SymDetect::pushNextSrchObj(std::vector<MosPair> & dfsVstPair, std::vector<srchObj> & dfsStack, srchObj & currObj, std::vector<MosPair> & diffPairSrc)
 {
     if (endSrch(currObj))
         return;
@@ -99,12 +109,13 @@ void SymDetect::pushNextSrchObj(std::vector<MosPair> & dfsVstPair, std::vector<s
             {
                 MosPair currPair(instId1, instId2);
                 dfsStack.emplace_back(currPair, _netlist.getPinTypeInstPinConn(instId1, srchPinId1));
+                inVldDiffPairSrch(diffPairSrc, currPair);
             }
        }
     }
 }
 
-void SymDetect::dfsDiffPair(std::vector<MosPair> & dfsVstPair, MosPair & diffPair)
+void SymDetect::dfsDiffPair(std::vector<MosPair> & dfsVstPair, MosPair & diffPair, std::vector<MosPair> & diffPairSrc)
 {
     std::vector<srchObj> dfsStack;  //use vector to implement stack.
     dfsStack.emplace_back(diffPair, PinType::SOURCE);
@@ -113,11 +124,24 @@ void SymDetect::dfsDiffPair(std::vector<MosPair> & dfsVstPair, MosPair & diffPai
         srchObj currObj = dfsStack.back();
         dfsStack.pop_back();
         dfsVstPair.push_back(currObj.pair);
-        pushNextSrchObj(dfsVstPair, dfsStack, currObj);
-//        std::cout << _netlist.inst(currObj.pair.mosId1).name() 
-//                  << _netlist.inst(currObj.pair.mosId2).name()
-//                  << std::endl;
+        pushNextSrchObj(dfsVstPair, dfsStack, currObj, diffPairSrc);
     } 
+}
+
+void SymDetect::hiSymDetect(std::vector<std::vector<MosPair>> & symGroup)
+{
+    std::vector<MosPair> dfsVstPair;
+    std::vector<MosPair> diffPairSrc;
+    getDiffPair(diffPairSrc);
+    for (MosPair & pair : diffPairSrc)
+    {
+        if (pair.valid)
+        {
+            dfsVstPair.clear();
+            dfsDiffPair(dfsVstPair, pair, diffPairSrc);
+            symGroup.push_back(dfsVstPair);
+        }
+    }
 }
 
 PROJECT_NAMESPACE_END

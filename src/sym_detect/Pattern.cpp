@@ -65,6 +65,11 @@ bool Pattern::validPairLoad(IndexType mosId1, IndexType mosId2)
         _netlist.gateNetId(mosId1) == _netlist.gateNetId(mosId2) && 
         _netlist.drainNetId(mosId1) != _netlist.drainNetId(mosId2))
         return true;
+    if (_netlist.mosType(mosId1) == MosType::DIODE &&
+        _netlist.mosType(mosId2) == MosType::DIODE &&
+        _netlist.srcNetId(mosId1) == _netlist.srcNetId(mosId2) &&
+        _netlist.drainNetId(mosId1) != _netlist.drainNetId(mosId2))
+        return true;
     return false;
 }  
 

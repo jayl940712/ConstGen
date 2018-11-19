@@ -16,7 +16,9 @@ public:
 
     void                                getDiffPairNetConn(std::vector<MosPair> & diffPair, IndexType netId);
     void                                getDiffPair(std::vector<MosPair> & diffPair);
-    void                                dfsDiffPair(std::vector<MosPair> & dfsVstPair, MosPair & diffPair);
+    void                                dfsDiffPair(std::vector<MosPair> & dfsVstPair, MosPair & diffPair, std::vector<MosPair> & diffPairSrch);
+
+    void                                hiSymDetect(std::vector<std::vector<MosPair>> & symGroup);
 
 private:
     struct srchObj
@@ -39,7 +41,8 @@ private:
     MosPattern                          srchObjPtrn(srchObj & obj);
     bool                                endSrch(srchObj & obj);
     bool                                validSrchObj(IndexType instId1, IndexType instId2, IndexType srchPinId1, IndexType srchPinId2);
-    void                                pushNextSrchObj(std::vector<MosPair> & dfsVstPair, std::vector<srchObj> & dfsStack, srchObj & currObj);
+    void                                pushNextSrchObj(std::vector<MosPair> & dfsVstPair, std::vector<srchObj> & dfsStack, srchObj & currObj, std::vector<MosPair> & diffPairSrc);
+    void                                inVldDiffPairSrch(std::vector<MosPair> & diffPairSrch, MosPair & currPair);
 }; 
 
 PROJECT_NAMESPACE_END
