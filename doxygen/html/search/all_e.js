@@ -9,7 +9,6 @@ var searchData=
   ['pin_2eh',['Pin.h',['../Pin_8h.html',1,'']]],
   ['pinidarray',['pinIdArray',['../classInst.html#ab63305e9b98c220c6c09b8d69a8c8a71',1,'Inst::pinIdArray()'],['../classNet.html#a5d7f652001fbd6a99613408fcba08328',1,'Net::pinIdArray()']]],
   ['pintype',['PinType',['../type_8h.html#afaab50027002ecbb6c8ac27e727d1bb4',1,'type.h']]],
-  ['platform_5fid',['PLATFORM_ID',['../CMakeCCompilerId_8c.html#adbc5372f40838899018fadbc89bd588b',1,'PLATFORM_ID():&#160;CMakeCCompilerId.c'],['../CMakeCXXCompilerId_8cpp.html#adbc5372f40838899018fadbc89bd588b',1,'PLATFORM_ID():&#160;CMakeCXXCompilerId.cpp']]],
   ['pmos',['PMOS',['../type_8h.html#a53644c687d6bc203d9d3d3ee70075f61a24e337dfeaa2e154ab5ac12e8eca5609',1,'type.h']]],
   ['power',['POWER',['../type_8h.html#a24f31c8c9240242bd5fa9a415806eabfac9c9c146c630ca5ef9197c73c032f4a6',1,'type.h']]],
   ['power_5fnet_5fnames',['POWER_NET_NAMES',['../Net_8cpp.html#a0017b2d7dc1a3e4b679679d8d3a07093',1,'Net.cpp']]],

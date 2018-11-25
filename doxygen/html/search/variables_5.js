@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['mos_5fpin_5ftype',['MOS_PIN_TYPE',['../Netlist_8cpp.html#a118f5925cbfa27226f61a4af77a208dd',1,'Netlist.cpp']]],
-  ['mosid1',['mosId1',['../structMosPair.html#a3a76ccc5aee43e44c96068163f42b5c8',1,'MosPair']]],
-  ['mosid2',['mosId2',['../structMosPair.html#ad7532ebe9956affecef77d009bcf120f',1,'MosPair']]]
+  ['name',['name',['../structNetlist_1_1InitNet.html#acb4d378b948bc8e2cd1490f62683ed2d',1,'Netlist::InitNet::name()'],['../structNetlist_1_1InitInst.html#ab15aa94aa397cb0affe046473bf592e6',1,'Netlist::InitInst::name()']]],
+  ['netarray',['netArray',['../structNetlist_1_1InitDataObj.html#a6da3cc62735730affa77954952d1f217',1,'Netlist::InitDataObj']]],
+  ['netidarray',['netIdArray',['../structNetlist_1_1InitInst.html#a0c1130b16eee45cc956cbff8d989c581',1,'Netlist::InitInst']]]
 ];

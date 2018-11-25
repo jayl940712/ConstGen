@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['type',['type',['../structNetlist_1_1InitInst.html#a19eaae603a2805874691d6942e0e3400',1,'Netlist::InitInst']]]
+  ['valid',['valid',['../structMosPair.html#ab43ac4352b3f0c9db37063a7742c4884',1,'MosPair']]]
 ];
