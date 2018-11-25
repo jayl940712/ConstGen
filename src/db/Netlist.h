@@ -158,7 +158,7 @@ public:
 
 /*! @brief Remove from array, Inst that has pinId.
 
-    Used std::vector.erase() for inplace removal. Need to optimize in future.
+    O(n) complexity guaranteed. Similar implementation of std::remove().
     
     @param instArray Reference to instance Id array.
     @param pinId Id of pin.
@@ -167,24 +167,24 @@ public:
 
 /*! @brief Filter instArray. Remove Inst that are connected to pinId through connPinType.
 
-    Removed instId if getPinTypeInstPinConn(instId, pinId) == connPinType. Used
-    std::vector.erase() for inplace removal. O(N^2) complexity. Need to optimize in future.
+    Removed instId if getPinTypeInstPinConn(instId, pinId) == connPinType.
+    O(n) complexity. Similar implementation of std::remove().
     
     @see getPinTypeInstPinConn.
 */
     void                            fltrInstPinConnPinType(std::vector<IndexType> & instArray, IndexType pinId, PinType connPinType) const;
 /*! @brief Filter instArray. Remove Inst that are connected to netId through connPinType.
 
-    Removed instId if getPinTypeInstNetConn(instId, pinId) == connPinType. Used
-    std::vector.erase() for inplace removal. O(N^2) complexity. Need to optimize in future.
+    Removed instId if getPinTypeInstNetConn(instId, pinId) == connPinType.
+    O(n) complexity. Similar implementation of std::remove().
     
     @see getPinTypeInstNetConn.
 */
     void                            fltrInstNetConnPinType(std::vector<IndexType> & instArray, IndexType netId, PinType connPinType) const;
 /*! @brief Filter instArray. Remove Inst whose type are mosType.
 
-    Removed instId if mosType(instId) == mosType. Used
-    std::vector.erase() for inplace removal. O(N^2) complexity. Need to optimize in future.
+    Removed instId if mosType(instId) == mosType. 
+    O(n) complexity. Similar implementation of std::remove().
     
     @see getPinTypeInstNetConn.
 */

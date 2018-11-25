@@ -9,7 +9,7 @@
 <area shape="rect" id="node6" href="$Netlist_8cpp.html" title="Netlist class implementation. " alt="" coords="5,379,131,405"/>
 <area shape="rect" id="node7" href="$InitNetlist_8h.html" title="Parser to initialize netlist. " alt="" coords="155,379,306,405"/>
 <area shape="rect" id="node12" href="$SymDetect_8h.html" title="Detect symmetric patterns. " alt="" coords="269,453,462,480"/>
-<area shape="rect" id="node8" href="$main_8cpp.html" title="src/main/main.cpp" alt="" coords="166,528,295,555"/>
+<area shape="rect" id="node8" href="$main_8cpp.html" title="main.cpp " alt="" coords="166,528,295,555"/>
 <area shape="rect" id="node9" href="$InitNetlist_8cpp.html" title="Parser implementation. " alt="" coords="28,453,193,480"/>
 <area shape="rect" id="node11" href="$Pattern_8cpp.html" title="Pattern definitions. " alt="" coords="486,453,669,480"/>
 <area shape="rect" id="node13" href="$SymDetect_8cpp.html" title="Detect symmetric patterns. " alt="" coords="319,528,526,555"/>

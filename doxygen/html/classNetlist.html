@@ -356,7 +356,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Filter instArray. Remove <a class="el" href="classInst.html" title="Inst class. ">Inst</a> whose type are mosType. </p>
-<p>Removed instId if mosType(instId) == mosType. Used std::vector.erase() for inplace removal. O(N^2) complexity. Need to optimize in future.</p>
+<p>Removed instId if mosType(instId) == mosType. O(n) complexity. Similar implementation of std::remove().</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classNetlist.html#a6bc6f9666ed8c833b967c38f2e164a1e" title="Get PinType of a pin such that Inst and Net are connected through this pin. ">getPinTypeInstNetConn</a>. </dd></dl>
 
 </div>
@@ -394,7 +394,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Filter instArray. Remove <a class="el" href="classInst.html" title="Inst class. ">Inst</a> that are connected to netId through connPinType. </p>
-<p>Removed instId if getPinTypeInstNetConn(instId, pinId) == connPinType. Used std::vector.erase() for inplace removal. O(N^2) complexity. Need to optimize in future.</p>
+<p>Removed instId if getPinTypeInstNetConn(instId, pinId) == connPinType. O(n) complexity. Similar implementation of std::remove().</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classNetlist.html#a6bc6f9666ed8c833b967c38f2e164a1e" title="Get PinType of a pin such that Inst and Net are connected through this pin. ">getPinTypeInstNetConn</a>. </dd></dl>
 
 </div>
@@ -432,7 +432,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Filter instArray. Remove <a class="el" href="classInst.html" title="Inst class. ">Inst</a> that are connected to pinId through connPinType. </p>
-<p>Removed instId if getPinTypeInstPinConn(instId, pinId) == connPinType. Used std::vector.erase() for inplace removal. O(N^2) complexity. Need to optimize in future.</p>
+<p>Removed instId if getPinTypeInstPinConn(instId, pinId) == connPinType. O(n) complexity. Similar implementation of std::remove().</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classNetlist.html#a27d477f7bd6fffd915015dbd3b3a0649" title="Get PinType of a pin such that Inst and Pin are connected through this pin. ">getPinTypeInstPinConn</a>. </dd></dl>
 
 </div>
@@ -1013,7 +1013,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Remove from array, <a class="el" href="classInst.html" title="Inst class. ">Inst</a> that has pinId. </p>
-<p>Used std::vector.erase() for inplace removal. Need to optimize in future.</p>
+<p>O(n) complexity guaranteed. Similar implementation of std::remove().</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">instArray</td><td>Reference to instance Id array. </td></tr>

@@ -160,7 +160,7 @@ Return Drain \hyperlink{classNet}{Net} Id of \hyperlink{classInst}{Inst} mos\+Id
 
 Filter inst\+Array. Remove \hyperlink{classInst}{Inst} whose type are mos\+Type. 
 
-Removed inst\+Id if mos\+Type(inst\+Id) == mos\+Type. Used std\+::vector.\+erase() for inplace removal. O(\+N$^\wedge$2) complexity. Need to optimize in future.
+Removed inst\+Id if mos\+Type(inst\+Id) == mos\+Type. O(n) complexity. Similar implementation of std\+::remove().
 
 \begin{DoxySeeAlso}{See also}
 \hyperlink{classNetlist_a6bc6f9666ed8c833b967c38f2e164a1e}{get\+Pin\+Type\+Inst\+Net\+Conn}. 
@@ -175,7 +175,7 @@ Removed inst\+Id if mos\+Type(inst\+Id) == mos\+Type. Used std\+::vector.\+erase
 
 Filter inst\+Array. Remove \hyperlink{classInst}{Inst} that are connected to net\+Id through conn\+Pin\+Type. 
 
-Removed inst\+Id if get\+Pin\+Type\+Inst\+Net\+Conn(inst\+Id, pin\+Id) == conn\+Pin\+Type. Used std\+::vector.\+erase() for inplace removal. O(\+N$^\wedge$2) complexity. Need to optimize in future.
+Removed inst\+Id if get\+Pin\+Type\+Inst\+Net\+Conn(inst\+Id, pin\+Id) == conn\+Pin\+Type. O(n) complexity. Similar implementation of std\+::remove().
 
 \begin{DoxySeeAlso}{See also}
 \hyperlink{classNetlist_a6bc6f9666ed8c833b967c38f2e164a1e}{get\+Pin\+Type\+Inst\+Net\+Conn}. 
@@ -190,7 +190,7 @@ Removed inst\+Id if get\+Pin\+Type\+Inst\+Net\+Conn(inst\+Id, pin\+Id) == conn\+
 
 Filter inst\+Array. Remove \hyperlink{classInst}{Inst} that are connected to pin\+Id through conn\+Pin\+Type. 
 
-Removed inst\+Id if get\+Pin\+Type\+Inst\+Pin\+Conn(inst\+Id, pin\+Id) == conn\+Pin\+Type. Used std\+::vector.\+erase() for inplace removal. O(\+N$^\wedge$2) complexity. Need to optimize in future.
+Removed inst\+Id if get\+Pin\+Type\+Inst\+Pin\+Conn(inst\+Id, pin\+Id) == conn\+Pin\+Type. O(n) complexity. Similar implementation of std\+::remove().
 
 \begin{DoxySeeAlso}{See also}
 \hyperlink{classNetlist_a27d477f7bd6fffd915015dbd3b3a0649}{get\+Pin\+Type\+Inst\+Pin\+Conn}. 
@@ -450,7 +450,7 @@ Print netlist. \mbox{\Hypertarget{classNetlist_abba19cc3b269dda137f801a555899ca6
 
 Remove from array, \hyperlink{classInst}{Inst} that has pin\+Id. 
 
-Used std\+::vector.\+erase() for inplace removal. Need to optimize in future.
+O(n) complexity guaranteed. Similar implementation of std\+::remove().
 
 
 \begin{DoxyParams}{Parameters}

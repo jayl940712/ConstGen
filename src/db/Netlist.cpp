@@ -107,16 +107,31 @@ void Netlist::getInstNetConn(std::vector<IndexType> & instArray, IndexType netId
 
 void Netlist::rmvInstHasPin(std::vector<IndexType> & instArray, IndexType pinId) const
 {
-// This is probabaly okay since every Inst is unique in instArray. 
+// O(n) complexity guaranteed.
     auto it = instArray.begin();
-    while (it != instArray.end())
+    IndexType numRmv = 0;
+    while (it != instArray.end() - numRmv)
     {
         IndexType instId = *it;
         if (_pinArray[pinId].instId() == instId)
-            it = instArray.erase(it);
+        {      
+            std::iter_swap(it, instArray.end() - 1 - numRmv);
+            numRmv++;
+        }
         else
             ++it;
     }
+    instArray.erase(instArray.end() - numRmv, instArray.end());
+// Below implementation using std::vector.erase(). O(n^2) complexity.
+//    auto it = instArray.begin();
+//    while (it != instArray.end())
+//    {
+//        IndexType instId = *it;
+//        if (_pinArray[pinId].instId() == instId)
+//            it = instArray.erase(it);
+//        else
+//            ++it;
+//    }
 }
 
 void Netlist::getInstPinConn(std::vector<IndexType> & instArray, IndexType pinId) const
@@ -129,16 +144,31 @@ void Netlist::getInstPinConn(std::vector<IndexType> & instArray, IndexType pinId
 void Netlist::fltrInstNetConnPinType(std::vector<IndexType> & instArray,
                 IndexType netId, PinType connPinType) const
 {
-// TODO use two pointers instead of erase(). 
+// O(n) complexity guaranteed.
     auto it = instArray.begin();
-    while (it != instArray.end())
+    IndexType numRmv;
+    while (it != instArray.end() - numRmv)
     {
         IndexType instId = *it;
         if (instNetId(instId, connPinType) != netId)
-            it = instArray.erase(it);
+        { 
+            std::iter_swap(it, instArray.end() - 1 - numRmv);
+            numRmv++;
+        }
         else
             ++it;
     }
+    instArray.erase(instArray.end() - numRmv, instArray.end());
+// Below implementation using std::vector.erase(). O(n^2) complexity.
+//    auto it = instArray.begin();
+//    while (it != instArray.end())
+//    {
+//        IndexType instId = *it;
+//        if (instNetId(instId, connPinType) != netId)
+//            it = instArray.erase(it);
+//        else
+//            ++it;
+//    }
 }
 
 void Netlist::fltrInstPinConnPinType(std::vector<IndexType> & instArray, 
@@ -149,16 +179,31 @@ void Netlist::fltrInstPinConnPinType(std::vector<IndexType> & instArray,
 
 void Netlist::fltrInstMosType(std::vector<IndexType> & instArray, MosType mosType) const
 {
-// TODO use two pointers instead of erase(). 
-    auto it = instArray.begin();
-    while (it != instArray.end())
+// O(n) complexity guaranteed.
+    auto it = instArray.begin();return;
+    IndexType numRmv;
+    while (it != instArray.end() - numRmv)
     {
-        IndexType instId = *it; 
+        IndexType instId = *it;
         if (Netlist::mosType(instId) != mosType)
-            it = instArray.erase(it);
+        {         
+            std::iter_swap(it, instArray.end() - 1 - numRmv);
+            numRmv++;
+        }
         else
             ++it;
     }
+    instArray.erase(instArray.end() - numRmv, instArray.end());
+// Below implementation using std::vector.erase(). O(n^2) complexity.
+//    auto it = instArray.begin();
+//    while (it != instArray.end())
+//    {
+//        IndexType instId = *it; 
+//        if (Netlist::mosType(instId) != mosType)
+//            it = instArray.erase(it);
+//        else
+//            ++it;
+//    }
 }
 
 PinType Netlist::getPinTypeInstNetConn(IndexType instId, IndexType netId) const

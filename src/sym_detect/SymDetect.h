@@ -41,7 +41,7 @@ public:
 
 private:
 /*! @struct srchObj
-    @brief private object to assist DFS.
+    @brief Private object to assist DFS.
 */
     struct srchObj
     {
@@ -64,12 +64,20 @@ private:
     bool                        existPair(std::vector<MosPair> & library, IndexType instId1, IndexType instId2) const;
 /*! @brief Check if pair already reached. */
     bool                        existPair(std::vector<srchObj> & library, IndexType instId1, IndexType instId2) const;
-/*! @brief Return true if end of search path. */
+/*! @brief Return true if end of search path. 
+
+    Current end search terminations:
+    (1) DIFF_SOURCE reached through DRAIN
+    (2) LOAD, CROSS_LOAD 
+    (3) gate connected pairs 
+*/
     bool                        endSrch(srchObj & obj) const;
 /*! @brief Return true if a valid pair. 
 
-    A valid pair should be reached by the same PinType 
-    and should have a valid MosPattern.    
+    Valid pairs have following attributes:
+    (1) Reached through same PinType
+    (2) Not reached through gate
+    (3) Valid MosPattern
 
     @param instId1 Reached pair instId1
     @param instId2 Reached pair instId2
@@ -128,7 +136,7 @@ private:
 /*! @brief Invalidate visited pairs from sources.
 
     If a MosPair have already been visited and is 
-    MosPattern::DIFF_SOURCE. It should be invalidated
+    a DFS source, it should be invalidated
     as a DFS search source to avoid revisiting.
 
     @param diffPairSrch Vector of all DFS sources.
