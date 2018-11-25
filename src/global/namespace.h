@@ -1,3 +1,8 @@
+/*! @file global/namespace.h
+    @brief Namespace header file.
+    @author Mingjie Liu
+    @date 11/24/2018
+*/
 #ifndef __NAMESPACE_H__
 #define __NAMESPACE_H__
 

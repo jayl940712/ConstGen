@@ -1,0 +1,12 @@
+<map id="src/db/Pin.h" name="src/db/Pin.h">
+<area shape="rect" id="node2" href="$Netlist_8h.html" title="Netlist class. " alt="" coords="270,80,381,107"/>
+<area shape="rect" id="node11" href="$Pin_8cpp.html" title="Net class implementation. " alt="" coords="405,80,512,107"/>
+<area shape="rect" id="node3" href="$Netlist_8cpp.html" title="Netlist class implementation. " alt="" coords="5,155,131,181"/>
+<area shape="rect" id="node4" href="$InitNetlist_8h.html" title="Parser to initialize netlist. " alt="" coords="155,155,306,181"/>
+<area shape="rect" id="node7" href="$Pattern_8h.html" title="Mosfet pair patterns. " alt="" coords="337,155,506,181"/>
+<area shape="rect" id="node9" href="$SymDetect_8h.html" title="Detect symmetric patterns. " alt="" coords="537,229,730,256"/>
+<area shape="rect" id="node5" href="$main_8cpp.html" title="src/main/main.cpp" alt="" coords="207,304,337,331"/>
+<area shape="rect" id="node6" href="$InitNetlist_8cpp.html" title="Parser implementation. " alt="" coords="140,229,305,256"/>
+<area shape="rect" id="node8" href="$Pattern_8cpp.html" title="Pattern definitions. " alt="" coords="330,229,513,256"/>
+<area shape="rect" id="node10" href="$SymDetect_8cpp.html" title="Detect symmetric patterns. " alt="" coords="530,304,737,331"/>
+</map>

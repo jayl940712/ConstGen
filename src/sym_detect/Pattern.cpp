@@ -1,3 +1,8 @@
+/*! @file sym_detect/Pattern.cpp
+    @brief Pattern definitions. 
+    @author Mingjie Liu
+    @date 11/24/2018
+*/
 #include "sym_detect/Pattern.h"
 
 PROJECT_NAMESPACE_BEGIN

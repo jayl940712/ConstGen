@@ -1,10 +1,17 @@
+/*! @file db/Netlist.cpp
+    @brief Netlist class implementation.
+    @author Mingjie Liu
+    @date 11/24/2018
+*/
 #include "db/Netlist.h"
 #include <vector>
 #include <algorithm>
 
 PROJECT_NAMESPACE_BEGIN
 
+/*! @brief Mos Pin Types */
 static const PinType MOS_PIN_TYPE[4] = {PinType::DRAIN, PinType::GATE, PinType::SOURCE, PinType::BULK};
+/*! @brief Res/Cap Pin Types */
 static const PinType RES_PIN_TYPE[3] = {PinType::THIS, PinType::THAT, PinType::OTHER};
 
 bool Netlist::isMos(InstType instType) const
@@ -19,21 +26,26 @@ bool Netlist::isPasvDev(InstType instType) const
 
 void Netlist::init(InitDataObj & obj)
 {
+// Add all Net to Netlist 
     for (InitNet & net : obj.netArray)
-        _netArray.emplace_back(net.name, net.id);
+        _netArray.emplace_back(net.name, net.id); 
+// Add all Inst to Netlist 
     for (InitInst & inInst : obj.instArray)
     {
+// If added Inst is Mosfet 
         if (isMos(inInst.type))
         {
             Inst inst(inInst.name, inInst.type, _instArray.size(), inInst.wid, inInst.len);
             for (IndexType i = 0; i < 4; i++)
             {
-                inst.addPinId(_pinArray.size());
-                _netArray[inInst.netIdArray.at(i)].addPinId(_pinArray.size());
-                _pinArray.emplace_back(_pinArray.size(), inst.id(), inInst.netIdArray.at(i), MOS_PIN_TYPE[i]);    
+                inst.addPinId(_pinArray.size()); // Add pin to Inst 
+                _netArray[inInst.netIdArray.at(i)].addPinId(_pinArray.size()); // Add pin to Net 
+                _pinArray.emplace_back(_pinArray.size(), inst.id(),
+                                        inInst.netIdArray.at(i), MOS_PIN_TYPE[i]); // Add Pin    
             }
             _instArray.push_back(inst);
         }
+// If added Inst is Res/Cap 
         else if (isPasvDev(inInst.type))
         {
             Inst inst(inInst.name, inInst.type, _instArray.size(), inInst.wid, inInst.len);
@@ -41,10 +53,12 @@ void Netlist::init(InitDataObj & obj)
             {
                 inst.addPinId(_pinArray.size());
                 _netArray[inInst.netIdArray.at(i)].addPinId(_pinArray.size());
-                _pinArray.emplace_back(_pinArray.size(), inst.id(), inInst.netIdArray.at(i), RES_PIN_TYPE[i]);
+                _pinArray.emplace_back(_pinArray.size(), inst.id(), 
+                                        inInst.netIdArray.at(i), RES_PIN_TYPE[i]);
             }
             _instArray.push_back(inst);
         }
+// Handle Std Cells in future 
         else
         {
             Inst inst(inInst.name, inInst.type, _instArray.size());
@@ -52,7 +66,8 @@ void Netlist::init(InitDataObj & obj)
             {
                 inst.addPinId(_pinArray.size());
                 _netArray[netId].addPinId(_pinArray.size());
-                _pinArray.emplace_back(_pinArray.size(), inst.id(), netId, PinType::OTHER);                
+                _pinArray.emplace_back(_pinArray.size(), inst.id(), 
+                                        netId, PinType::OTHER);                
             }    
             _instArray.push_back(inst);
         } 
@@ -61,10 +76,12 @@ void Netlist::init(InitDataObj & obj)
 
 void Netlist::print_all() const
 {
+// Print Net 
     for (const Net & net : _netArray)
     {
         std::printf("Net %d, %s \n", net.id(), net.name().c_str());
     }
+// Print Inst 
     for (const Inst & inst : _instArray)
     {
         std::printf("Instance %d, %s \n", inst.id(), inst.name().c_str()); 
@@ -77,19 +94,20 @@ void Netlist::print_all() const
 
 void Netlist::getInstNetConn(std::vector<IndexType> & instArray, IndexType netId) const
 {
-    instArray.clear();
+    instArray.clear(); // Reset 
     for(IndexType tempPinId : _netArray[netId].pinIdArray())
     {
         IndexType instId = _pinArray[tempPinId].instId();
         if(std::find(instArray.begin(), instArray.end(), instId) == instArray.end())
         {
-            instArray.push_back(instId); 
+            instArray.push_back(instId); // Only add if unique 
         }
     }
 }
 
 void Netlist::rmvInstHasPin(std::vector<IndexType> & instArray, IndexType pinId) const
 {
+// This is probabaly okay since every Inst is unique in instArray. 
     auto it = instArray.begin();
     while (it != instArray.end())
     {
@@ -108,8 +126,10 @@ void Netlist::getInstPinConn(std::vector<IndexType> & instArray, IndexType pinId
     rmvInstHasPin(instArray, pinId);
 }
 
-void Netlist::fltrInstNetConnPinType(std::vector<IndexType> & instArray, IndexType netId, PinType connPinType) const
+void Netlist::fltrInstNetConnPinType(std::vector<IndexType> & instArray,
+                IndexType netId, PinType connPinType) const
 {
+// TODO use two pointers instead of erase(). 
     auto it = instArray.begin();
     while (it != instArray.end())
     {
@@ -121,13 +141,15 @@ void Netlist::fltrInstNetConnPinType(std::vector<IndexType> & instArray, IndexTy
     }
 }
 
-void Netlist::fltrInstPinConnPinType(std::vector<IndexType> & instArray, IndexType pinId, PinType connPinType) const
+void Netlist::fltrInstPinConnPinType(std::vector<IndexType> & instArray, 
+                IndexType pinId, PinType connPinType) const
 {
     fltrInstNetConnPinType(instArray, _pinArray[pinId].netId(), connPinType);
 }
 
 void Netlist::fltrInstMosType(std::vector<IndexType> & instArray, MosType mosType) const
 {
+// TODO use two pointers instead of erase(). 
     auto it = instArray.begin();
     while (it != instArray.end())
     {
@@ -144,7 +166,7 @@ PinType Netlist::getPinTypeInstNetConn(IndexType instId, IndexType netId) const
     for (IndexType instPinId : _instArray[instId].pinIdArray())
         if (_pinArray[instPinId].netId() == netId)
             return _pinArray[instPinId].type();
-    return PinType::OTHER;
+    return PinType::OTHER; // Caution 
 }
 
 PinType Netlist::getPinTypeInstPinConn(IndexType instId, IndexType pinId) const
@@ -157,11 +179,12 @@ IndexType Netlist::instNetId(IndexType instId, PinType type) const
     for (IndexType pinId : _instArray[instId].pinIdArray())
         if (_pinArray[pinId].type() == type)
             return _pinArray[pinId].netId();
-    return INDEX_TYPE_MAX;
+    return INDEX_TYPE_MAX; // Caution 
 }    
 
 MosType Netlist::mosType(IndexType mosId) const
 {
+// Note the dominance order. 
     if (instNetId(mosId, PinType::SOURCE) == instNetId(mosId, PinType::DRAIN))
         return MosType::DUMMY;
     else if (instNetId(mosId, PinType::GATE) == instNetId(mosId, PinType::DRAIN))
@@ -176,7 +199,7 @@ IndexType Netlist::instPinId(IndexType instId, PinType pinType) const
     for (IndexType pinId : _instArray[instId].pinIdArray())
         if (_pinArray[pinId].type() == pinType)
             return pinId;
-    return INDEX_TYPE_MAX;
+    return INDEX_TYPE_MAX; // Caution 
 }   
 
 

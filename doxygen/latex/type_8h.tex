@@ -1,0 +1,351 @@
+\hypertarget{type_8h}{}\section{src/global/type.h File Reference}
+\label{type_8h}\index{src/global/type.\+h@{src/global/type.\+h}}
+
+
+Type header file.  
+
+
+{\ttfamily \#include $<$cstdint$>$}\newline
+{\ttfamily \#include $<$set$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include \char`\"{}global/global.\+h\char`\"{}}\newline
+Include dependency graph for type.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{type_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{type_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structMosPair}{Mos\+Pair}
+\begin{DoxyCompactList}\small\item\em A pair of id for \hyperlink{classInst}{Inst}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} = std\+::uint32\+\_\+t
+\item 
+using \hyperlink{type_8h_a2db224c368d26648b9a810adaaab4123}{Int\+Type} = std\+::int32\+\_\+t
+\item 
+using \hyperlink{type_8h_a51898ad9e46b1265f3fab67f7d4b04a2}{Real\+Type} = double
+\item 
+using \hyperlink{type_8h_adb8cabc4ac5b90ae59717ab14b0c9d7f}{Byte} = std\+::uint8\+\_\+t
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{type_8h_a53644c687d6bc203d9d3d3ee70075f61}{Inst\+Type} \+: Byte \{ \newline
+\hyperlink{type_8h_a53644c687d6bc203d9d3d3ee70075f61af8af55aaebfbde59fb3954b42cedcf60}{Inst\+Type\+::\+R\+ES}, 
+\hyperlink{type_8h_a53644c687d6bc203d9d3d3ee70075f61a24e337dfeaa2e154ab5ac12e8eca5609}{Inst\+Type\+::\+P\+M\+OS}, 
+\hyperlink{type_8h_a53644c687d6bc203d9d3d3ee70075f61a032a04390cdce604754d59728e3cccfb}{Inst\+Type\+::\+N\+M\+OS}, 
+\hyperlink{type_8h_a53644c687d6bc203d9d3d3ee70075f61adb5ce5cb1b12edacae4584e881e1451f}{Inst\+Type\+::\+C\+AP}, 
+\newline
+\hyperlink{type_8h_a53644c687d6bc203d9d3d3ee70075f61a03570470bad94692ce93e32700d2e1cb}{Inst\+Type\+::\+O\+T\+H\+ER}
+ \}\begin{DoxyCompactList}\small\item\em Type of \hyperlink{classInst}{Inst}. \end{DoxyCompactList}
+\item 
+enum \hyperlink{type_8h_a24f31c8c9240242bd5fa9a415806eabf}{Net\+Type} \+: Byte \{ \hyperlink{type_8h_a24f31c8c9240242bd5fa9a415806eabfac9c9c146c630ca5ef9197c73c032f4a6}{Net\+Type\+::\+P\+O\+W\+ER}, 
+\hyperlink{type_8h_a24f31c8c9240242bd5fa9a415806eabfadedcb56e75fe1488e20865e0ea36d0b9}{Net\+Type\+::\+G\+R\+O\+U\+ND}, 
+\hyperlink{type_8h_a24f31c8c9240242bd5fa9a415806eabfac023ee28e6cb71d64feec71f0cbac067}{Net\+Type\+::\+S\+I\+G\+N\+AL}
+ \}\begin{DoxyCompactList}\small\item\em Type of \hyperlink{classNet}{Net}. \end{DoxyCompactList}
+\item 
+enum \hyperlink{type_8h_afaab50027002ecbb6c8ac27e727d1bb4}{Pin\+Type} \+: Byte \{ \newline
+\hyperlink{type_8h_afaab50027002ecbb6c8ac27e727d1bb4ae60b4854b44ccfb2d92aa6f035171bb4}{Pin\+Type\+::\+S\+O\+U\+R\+CE}, 
+\hyperlink{type_8h_afaab50027002ecbb6c8ac27e727d1bb4ad22e8f7ce637479aeffe9dab9ee7337d}{Pin\+Type\+::\+D\+R\+A\+IN}, 
+\hyperlink{type_8h_afaab50027002ecbb6c8ac27e727d1bb4a1818cedf1c2bed8c63664cc8313b443c}{Pin\+Type\+::\+G\+A\+TE}, 
+\hyperlink{type_8h_afaab50027002ecbb6c8ac27e727d1bb4a6d5b457ed4205e7f1144ef21b944e552}{Pin\+Type\+::\+B\+U\+LK}, 
+\newline
+\hyperlink{type_8h_afaab50027002ecbb6c8ac27e727d1bb4ac9f869114804f0a61ce9b03def9d71f5}{Pin\+Type\+::\+T\+H\+IS}, 
+\hyperlink{type_8h_afaab50027002ecbb6c8ac27e727d1bb4a13d613e84b1e7d08d869695a750caf23}{Pin\+Type\+::\+T\+H\+AT}, 
+\hyperlink{type_8h_afaab50027002ecbb6c8ac27e727d1bb4a03570470bad94692ce93e32700d2e1cb}{Pin\+Type\+::\+O\+T\+H\+ER}
+ \}\begin{DoxyCompactList}\small\item\em Type of \hyperlink{classPin}{Pin}. \end{DoxyCompactList}
+\item 
+enum \hyperlink{type_8h_a34a6a66323cfecf83dfe00bc8fd96333}{Mos\+Type} \+: Byte \{ \hyperlink{type_8h_a34a6a66323cfecf83dfe00bc8fd96333aa2e1ec2dd3d8195d238c5494f0ac5578}{Mos\+Type\+::\+D\+I\+FF}, 
+\hyperlink{type_8h_a34a6a66323cfecf83dfe00bc8fd96333a27a3be7c1707f2fc3e9df9054eed8b4e}{Mos\+Type\+::\+D\+I\+O\+DE}, 
+\hyperlink{type_8h_a34a6a66323cfecf83dfe00bc8fd96333adb5ce5cb1b12edacae4584e881e1451f}{Mos\+Type\+::\+C\+AP}, 
+\hyperlink{type_8h_a34a6a66323cfecf83dfe00bc8fd96333abd2103035a8021942390a78a431ba0c4}{Mos\+Type\+::\+D\+U\+M\+MY}
+ \}\begin{DoxyCompactList}\small\item\em Connection type of Mosfet. \end{DoxyCompactList}
+\item 
+enum \hyperlink{type_8h_af19eddb079bfea723256710b029c38e8}{Mos\+Pattern} \+: Byte \{ \newline
+\hyperlink{type_8h_af19eddb079bfea723256710b029c38e8ad45b64a7d6b85dde1b52dd5a18863933}{Mos\+Pattern\+::\+D\+I\+F\+F\+\_\+\+S\+O\+U\+R\+CE}, 
+\hyperlink{type_8h_af19eddb079bfea723256710b029c38e8a1b7b3de4c92d42d8311e04be030655af}{Mos\+Pattern\+::\+D\+I\+F\+F\+\_\+\+C\+A\+S\+C\+O\+DE}, 
+\hyperlink{type_8h_af19eddb079bfea723256710b029c38e8aac50017227efb09ec529757764e5187c}{Mos\+Pattern\+::\+C\+A\+S\+C\+O\+DE}, 
+\hyperlink{type_8h_af19eddb079bfea723256710b029c38e8a615d2885ef7576cedd9aafbb2578f028}{Mos\+Pattern\+::\+L\+O\+AD}, 
+\newline
+\hyperlink{type_8h_af19eddb079bfea723256710b029c38e8adb952aa3809767bf108688a754ebbf2c}{Mos\+Pattern\+::\+C\+R\+O\+S\+S\+\_\+\+C\+A\+S\+C\+O\+DE}, 
+\hyperlink{type_8h_af19eddb079bfea723256710b029c38e8a19ddbfeab78ac1a4bbe1a186828c5d8d}{Mos\+Pattern\+::\+C\+R\+O\+S\+S\+\_\+\+L\+O\+AD}, 
+\hyperlink{type_8h_af19eddb079bfea723256710b029c38e8accc0377a8afbf50e7094f5c23a8af223}{Mos\+Pattern\+::\+I\+N\+V\+A\+L\+ID}
+ \}\begin{DoxyCompactList}\small\item\em \hyperlink{classPattern}{Pattern} for pair of Mosfet. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} \hyperlink{type_8h_a11591ec4ef05af2b0f48545966a61500}{I\+N\+D\+E\+X\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+AX} = 1000000000
+\item 
+constexpr \hyperlink{type_8h_a2db224c368d26648b9a810adaaab4123}{Int\+Type} \hyperlink{type_8h_a7153b937cb94620c55b52fd559d1073e}{I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+AX} = 1000000000
+\item 
+constexpr \hyperlink{type_8h_a2db224c368d26648b9a810adaaab4123}{Int\+Type} \hyperlink{type_8h_ab6731eb941a9db9a459729271b27199e}{I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+IN} = -\/1000000000
+\item 
+constexpr \hyperlink{type_8h_a51898ad9e46b1265f3fab67f7d4b04a2}{Real\+Type} \hyperlink{type_8h_a68e54c8b6af80e1289b13eccd51be234}{R\+E\+A\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+AX} = 1e100
+\item 
+constexpr \hyperlink{type_8h_a51898ad9e46b1265f3fab67f7d4b04a2}{Real\+Type} \hyperlink{type_8h_aa2991a1c8de5bff9c42fc634a5839df1}{R\+E\+A\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+IN} = -\/1e100
+\item 
+constexpr \hyperlink{type_8h_a51898ad9e46b1265f3fab67f7d4b04a2}{Real\+Type} \hyperlink{type_8h_abe9e9223b325a4a377d3d6a2c752d199}{R\+E\+A\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+OL} = 1e-\/6
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Type header file. 
+
+\begin{DoxyAuthor}{Author}
+Mingjie Liu 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/24/2018 
+\end{DoxyDate}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{type_8h_adb8cabc4ac5b90ae59717ab14b0c9d7f}\label{type_8h_adb8cabc4ac5b90ae59717ab14b0c9d7f}} 
+\index{type.\+h@{type.\+h}!Byte@{Byte}}
+\index{Byte@{Byte}!type.\+h@{type.\+h}}
+\subsubsection{\texorpdfstring{Byte}{Byte}}
+{\footnotesize\ttfamily using \hyperlink{type_8h_adb8cabc4ac5b90ae59717ab14b0c9d7f}{Byte} =  std\+::uint8\+\_\+t}
+
+\mbox{\Hypertarget{type_8h_a581e8093e28e7362f2b6937296190676}\label{type_8h_a581e8093e28e7362f2b6937296190676}} 
+\index{type.\+h@{type.\+h}!Index\+Type@{Index\+Type}}
+\index{Index\+Type@{Index\+Type}!type.\+h@{type.\+h}}
+\subsubsection{\texorpdfstring{Index\+Type}{IndexType}}
+{\footnotesize\ttfamily using \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} =  std\+::uint32\+\_\+t}
+
+\mbox{\Hypertarget{type_8h_a2db224c368d26648b9a810adaaab4123}\label{type_8h_a2db224c368d26648b9a810adaaab4123}} 
+\index{type.\+h@{type.\+h}!Int\+Type@{Int\+Type}}
+\index{Int\+Type@{Int\+Type}!type.\+h@{type.\+h}}
+\subsubsection{\texorpdfstring{Int\+Type}{IntType}}
+{\footnotesize\ttfamily using \hyperlink{type_8h_a2db224c368d26648b9a810adaaab4123}{Int\+Type} =  std\+::int32\+\_\+t}
+
+\mbox{\Hypertarget{type_8h_a51898ad9e46b1265f3fab67f7d4b04a2}\label{type_8h_a51898ad9e46b1265f3fab67f7d4b04a2}} 
+\index{type.\+h@{type.\+h}!Real\+Type@{Real\+Type}}
+\index{Real\+Type@{Real\+Type}!type.\+h@{type.\+h}}
+\subsubsection{\texorpdfstring{Real\+Type}{RealType}}
+{\footnotesize\ttfamily using \hyperlink{type_8h_a51898ad9e46b1265f3fab67f7d4b04a2}{Real\+Type} =  double}
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{type_8h_a53644c687d6bc203d9d3d3ee70075f61}\label{type_8h_a53644c687d6bc203d9d3d3ee70075f61}} 
+\index{type.\+h@{type.\+h}!Inst\+Type@{Inst\+Type}}
+\index{Inst\+Type@{Inst\+Type}!type.\+h@{type.\+h}}
+\subsubsection{\texorpdfstring{Inst\+Type}{InstType}}
+{\footnotesize\ttfamily enum \hyperlink{type_8h_a53644c687d6bc203d9d3d3ee70075f61}{Inst\+Type} \+: \hyperlink{type_8h_adb8cabc4ac5b90ae59717ab14b0c9d7f}{Byte}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Type of \hyperlink{classInst}{Inst}. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+ES@{R\+ES}!type.\+h@{type.\+h}}\index{type.\+h@{type.\+h}!R\+ES@{R\+ES}}}\mbox{\Hypertarget{type_8h_a53644c687d6bc203d9d3d3ee70075f61af8af55aaebfbde59fb3954b42cedcf60}\label{type_8h_a53644c687d6bc203d9d3d3ee70075f61af8af55aaebfbde59fb3954b42cedcf60}} 
+R\+ES&Resistor \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+M\+OS@{P\+M\+OS}!type.\+h@{type.\+h}}\index{type.\+h@{type.\+h}!P\+M\+OS@{P\+M\+OS}}}\mbox{\Hypertarget{type_8h_a53644c687d6bc203d9d3d3ee70075f61a24e337dfeaa2e154ab5ac12e8eca5609}\label{type_8h_a53644c687d6bc203d9d3d3ee70075f61a24e337dfeaa2e154ab5ac12e8eca5609}} 
+P\+M\+OS&P\+Mos \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+M\+OS@{N\+M\+OS}!type.\+h@{type.\+h}}\index{type.\+h@{type.\+h}!N\+M\+OS@{N\+M\+OS}}}\mbox{\Hypertarget{type_8h_a53644c687d6bc203d9d3d3ee70075f61a032a04390cdce604754d59728e3cccfb}\label{type_8h_a53644c687d6bc203d9d3d3ee70075f61a032a04390cdce604754d59728e3cccfb}} 
+N\+M\+OS&N\+Mos \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+AP@{C\+AP}!type.\+h@{type.\+h}}\index{type.\+h@{type.\+h}!C\+AP@{C\+AP}}}\mbox{\Hypertarget{type_8h_a53644c687d6bc203d9d3d3ee70075f61adb5ce5cb1b12edacae4584e881e1451f}\label{type_8h_a53644c687d6bc203d9d3d3ee70075f61adb5ce5cb1b12edacae4584e881e1451f}} 
+C\+AP&Capacitor \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{O\+T\+H\+ER@{O\+T\+H\+ER}!type.\+h@{type.\+h}}\index{type.\+h@{type.\+h}!O\+T\+H\+ER@{O\+T\+H\+ER}}}\mbox{\Hypertarget{type_8h_a53644c687d6bc203d9d3d3ee70075f61a03570470bad94692ce93e32700d2e1cb}\label{type_8h_a53644c687d6bc203d9d3d3ee70075f61a03570470bad94692ce93e32700d2e1cb}} 
+O\+T\+H\+ER&Other \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{type_8h_af19eddb079bfea723256710b029c38e8}\label{type_8h_af19eddb079bfea723256710b029c38e8}} 
+\index{type.\+h@{type.\+h}!Mos\+Pattern@{Mos\+Pattern}}
+\index{Mos\+Pattern@{Mos\+Pattern}!type.\+h@{type.\+h}}
+\subsubsection{\texorpdfstring{Mos\+Pattern}{MosPattern}}
+{\footnotesize\ttfamily enum \hyperlink{type_8h_af19eddb079bfea723256710b029c38e8}{Mos\+Pattern} \+: \hyperlink{type_8h_adb8cabc4ac5b90ae59717ab14b0c9d7f}{Byte}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+\hyperlink{classPattern}{Pattern} for pair of Mosfet. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classPattern_a1214e024706aff22e44bb4f4266d8e97}{Pattern\+::pattern()} 
+\end{DoxySeeAlso}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+I\+F\+F\+\_\+\+S\+O\+U\+R\+CE@{D\+I\+F\+F\+\_\+\+S\+O\+U\+R\+CE}!type.\+h@{type.\+h}}\index{type.\+h@{type.\+h}!D\+I\+F\+F\+\_\+\+S\+O\+U\+R\+CE@{D\+I\+F\+F\+\_\+\+S\+O\+U\+R\+CE}}}\mbox{\Hypertarget{type_8h_af19eddb079bfea723256710b029c38e8ad45b64a7d6b85dde1b52dd5a18863933}\label{type_8h_af19eddb079bfea723256710b029c38e8ad45b64a7d6b85dde1b52dd5a18863933}} 
+D\+I\+F\+F\+\_\+\+S\+O\+U\+R\+CE&Source connected diff pair. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+I\+F\+F\+\_\+\+C\+A\+S\+C\+O\+DE@{D\+I\+F\+F\+\_\+\+C\+A\+S\+C\+O\+DE}!type.\+h@{type.\+h}}\index{type.\+h@{type.\+h}!D\+I\+F\+F\+\_\+\+C\+A\+S\+C\+O\+DE@{D\+I\+F\+F\+\_\+\+C\+A\+S\+C\+O\+DE}}}\mbox{\Hypertarget{type_8h_af19eddb079bfea723256710b029c38e8a1b7b3de4c92d42d8311e04be030655af}\label{type_8h_af19eddb079bfea723256710b029c38e8a1b7b3de4c92d42d8311e04be030655af}} 
+D\+I\+F\+F\+\_\+\+C\+A\+S\+C\+O\+DE&Cascode diff pair. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+A\+S\+C\+O\+DE@{C\+A\+S\+C\+O\+DE}!type.\+h@{type.\+h}}\index{type.\+h@{type.\+h}!C\+A\+S\+C\+O\+DE@{C\+A\+S\+C\+O\+DE}}}\mbox{\Hypertarget{type_8h_af19eddb079bfea723256710b029c38e8aac50017227efb09ec529757764e5187c}\label{type_8h_af19eddb079bfea723256710b029c38e8aac50017227efb09ec529757764e5187c}} 
+C\+A\+S\+C\+O\+DE&Gate connected cascode pair. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+O\+AD@{L\+O\+AD}!type.\+h@{type.\+h}}\index{type.\+h@{type.\+h}!L\+O\+AD@{L\+O\+AD}}}\mbox{\Hypertarget{type_8h_af19eddb079bfea723256710b029c38e8a615d2885ef7576cedd9aafbb2578f028}\label{type_8h_af19eddb079bfea723256710b029c38e8a615d2885ef7576cedd9aafbb2578f028}} 
+L\+O\+AD&Cascode pair with source connected to Power/\+Ground. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+R\+O\+S\+S\+\_\+\+C\+A\+S\+C\+O\+DE@{C\+R\+O\+S\+S\+\_\+\+C\+A\+S\+C\+O\+DE}!type.\+h@{type.\+h}}\index{type.\+h@{type.\+h}!C\+R\+O\+S\+S\+\_\+\+C\+A\+S\+C\+O\+DE@{C\+R\+O\+S\+S\+\_\+\+C\+A\+S\+C\+O\+DE}}}\mbox{\Hypertarget{type_8h_af19eddb079bfea723256710b029c38e8adb952aa3809767bf108688a754ebbf2c}\label{type_8h_af19eddb079bfea723256710b029c38e8adb952aa3809767bf108688a754ebbf2c}} 
+C\+R\+O\+S\+S\+\_\+\+C\+A\+S\+C\+O\+DE&Cross coupled cascode pair. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+R\+O\+S\+S\+\_\+\+L\+O\+AD@{C\+R\+O\+S\+S\+\_\+\+L\+O\+AD}!type.\+h@{type.\+h}}\index{type.\+h@{type.\+h}!C\+R\+O\+S\+S\+\_\+\+L\+O\+AD@{C\+R\+O\+S\+S\+\_\+\+L\+O\+AD}}}\mbox{\Hypertarget{type_8h_af19eddb079bfea723256710b029c38e8a19ddbfeab78ac1a4bbe1a186828c5d8d}\label{type_8h_af19eddb079bfea723256710b029c38e8a19ddbfeab78ac1a4bbe1a186828c5d8d}} 
+C\+R\+O\+S\+S\+\_\+\+L\+O\+AD&Cross coupled load. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\+N\+V\+A\+L\+ID@{I\+N\+V\+A\+L\+ID}!type.\+h@{type.\+h}}\index{type.\+h@{type.\+h}!I\+N\+V\+A\+L\+ID@{I\+N\+V\+A\+L\+ID}}}\mbox{\Hypertarget{type_8h_af19eddb079bfea723256710b029c38e8accc0377a8afbf50e7094f5c23a8af223}\label{type_8h_af19eddb079bfea723256710b029c38e8accc0377a8afbf50e7094f5c23a8af223}} 
+I\+N\+V\+A\+L\+ID&No pattern detected. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{type_8h_a34a6a66323cfecf83dfe00bc8fd96333}\label{type_8h_a34a6a66323cfecf83dfe00bc8fd96333}} 
+\index{type.\+h@{type.\+h}!Mos\+Type@{Mos\+Type}}
+\index{Mos\+Type@{Mos\+Type}!type.\+h@{type.\+h}}
+\subsubsection{\texorpdfstring{Mos\+Type}{MosType}}
+{\footnotesize\ttfamily enum \hyperlink{type_8h_a34a6a66323cfecf83dfe00bc8fd96333}{Mos\+Type} \+: \hyperlink{type_8h_adb8cabc4ac5b90ae59717ab14b0c9d7f}{Byte}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Connection type of Mosfet. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classNetlist_a3dba84b8588a528e42b066083744958f}{Netlist\+::mos\+Type()}. 
+\end{DoxySeeAlso}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+I\+FF@{D\+I\+FF}!type.\+h@{type.\+h}}\index{type.\+h@{type.\+h}!D\+I\+FF@{D\+I\+FF}}}\mbox{\Hypertarget{type_8h_a34a6a66323cfecf83dfe00bc8fd96333aa2e1ec2dd3d8195d238c5494f0ac5578}\label{type_8h_a34a6a66323cfecf83dfe00bc8fd96333aa2e1ec2dd3d8195d238c5494f0ac5578}} 
+D\+I\+FF&D/\+G/S diff \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+I\+O\+DE@{D\+I\+O\+DE}!type.\+h@{type.\+h}}\index{type.\+h@{type.\+h}!D\+I\+O\+DE@{D\+I\+O\+DE}}}\mbox{\Hypertarget{type_8h_a34a6a66323cfecf83dfe00bc8fd96333a27a3be7c1707f2fc3e9df9054eed8b4e}\label{type_8h_a34a6a66323cfecf83dfe00bc8fd96333a27a3be7c1707f2fc3e9df9054eed8b4e}} 
+D\+I\+O\+DE&G/D connected \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+AP@{C\+AP}!type.\+h@{type.\+h}}\index{type.\+h@{type.\+h}!C\+AP@{C\+AP}}}\mbox{\Hypertarget{type_8h_a34a6a66323cfecf83dfe00bc8fd96333adb5ce5cb1b12edacae4584e881e1451f}\label{type_8h_a34a6a66323cfecf83dfe00bc8fd96333adb5ce5cb1b12edacae4584e881e1451f}} 
+C\+AP&G/S connected \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+U\+M\+MY@{D\+U\+M\+MY}!type.\+h@{type.\+h}}\index{type.\+h@{type.\+h}!D\+U\+M\+MY@{D\+U\+M\+MY}}}\mbox{\Hypertarget{type_8h_a34a6a66323cfecf83dfe00bc8fd96333abd2103035a8021942390a78a431ba0c4}\label{type_8h_a34a6a66323cfecf83dfe00bc8fd96333abd2103035a8021942390a78a431ba0c4}} 
+D\+U\+M\+MY&D/S connected \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{type_8h_a24f31c8c9240242bd5fa9a415806eabf}\label{type_8h_a24f31c8c9240242bd5fa9a415806eabf}} 
+\index{type.\+h@{type.\+h}!Net\+Type@{Net\+Type}}
+\index{Net\+Type@{Net\+Type}!type.\+h@{type.\+h}}
+\subsubsection{\texorpdfstring{Net\+Type}{NetType}}
+{\footnotesize\ttfamily enum \hyperlink{type_8h_a24f31c8c9240242bd5fa9a415806eabf}{Net\+Type} \+: \hyperlink{type_8h_adb8cabc4ac5b90ae59717ab14b0c9d7f}{Byte}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Type of \hyperlink{classNet}{Net}. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+O\+W\+ER@{P\+O\+W\+ER}!type.\+h@{type.\+h}}\index{type.\+h@{type.\+h}!P\+O\+W\+ER@{P\+O\+W\+ER}}}\mbox{\Hypertarget{type_8h_a24f31c8c9240242bd5fa9a415806eabfac9c9c146c630ca5ef9197c73c032f4a6}\label{type_8h_a24f31c8c9240242bd5fa9a415806eabfac9c9c146c630ca5ef9197c73c032f4a6}} 
+P\+O\+W\+ER&Power \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+R\+O\+U\+ND@{G\+R\+O\+U\+ND}!type.\+h@{type.\+h}}\index{type.\+h@{type.\+h}!G\+R\+O\+U\+ND@{G\+R\+O\+U\+ND}}}\mbox{\Hypertarget{type_8h_a24f31c8c9240242bd5fa9a415806eabfadedcb56e75fe1488e20865e0ea36d0b9}\label{type_8h_a24f31c8c9240242bd5fa9a415806eabfadedcb56e75fe1488e20865e0ea36d0b9}} 
+G\+R\+O\+U\+ND&Ground \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+I\+G\+N\+AL@{S\+I\+G\+N\+AL}!type.\+h@{type.\+h}}\index{type.\+h@{type.\+h}!S\+I\+G\+N\+AL@{S\+I\+G\+N\+AL}}}\mbox{\Hypertarget{type_8h_a24f31c8c9240242bd5fa9a415806eabfac023ee28e6cb71d64feec71f0cbac067}\label{type_8h_a24f31c8c9240242bd5fa9a415806eabfac023ee28e6cb71d64feec71f0cbac067}} 
+S\+I\+G\+N\+AL&Signal \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{type_8h_afaab50027002ecbb6c8ac27e727d1bb4}\label{type_8h_afaab50027002ecbb6c8ac27e727d1bb4}} 
+\index{type.\+h@{type.\+h}!Pin\+Type@{Pin\+Type}}
+\index{Pin\+Type@{Pin\+Type}!type.\+h@{type.\+h}}
+\subsubsection{\texorpdfstring{Pin\+Type}{PinType}}
+{\footnotesize\ttfamily enum \hyperlink{type_8h_afaab50027002ecbb6c8ac27e727d1bb4}{Pin\+Type} \+: \hyperlink{type_8h_adb8cabc4ac5b90ae59717ab14b0c9d7f}{Byte}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Type of \hyperlink{classPin}{Pin}. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+O\+U\+R\+CE@{S\+O\+U\+R\+CE}!type.\+h@{type.\+h}}\index{type.\+h@{type.\+h}!S\+O\+U\+R\+CE@{S\+O\+U\+R\+CE}}}\mbox{\Hypertarget{type_8h_afaab50027002ecbb6c8ac27e727d1bb4ae60b4854b44ccfb2d92aa6f035171bb4}\label{type_8h_afaab50027002ecbb6c8ac27e727d1bb4ae60b4854b44ccfb2d92aa6f035171bb4}} 
+S\+O\+U\+R\+CE&\hyperlink{classInst}{Inst} is Mosfet \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+R\+A\+IN@{D\+R\+A\+IN}!type.\+h@{type.\+h}}\index{type.\+h@{type.\+h}!D\+R\+A\+IN@{D\+R\+A\+IN}}}\mbox{\Hypertarget{type_8h_afaab50027002ecbb6c8ac27e727d1bb4ad22e8f7ce637479aeffe9dab9ee7337d}\label{type_8h_afaab50027002ecbb6c8ac27e727d1bb4ad22e8f7ce637479aeffe9dab9ee7337d}} 
+D\+R\+A\+IN&\hyperlink{classInst}{Inst} is Mosfet \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+A\+TE@{G\+A\+TE}!type.\+h@{type.\+h}}\index{type.\+h@{type.\+h}!G\+A\+TE@{G\+A\+TE}}}\mbox{\Hypertarget{type_8h_afaab50027002ecbb6c8ac27e727d1bb4a1818cedf1c2bed8c63664cc8313b443c}\label{type_8h_afaab50027002ecbb6c8ac27e727d1bb4a1818cedf1c2bed8c63664cc8313b443c}} 
+G\+A\+TE&\hyperlink{classInst}{Inst} is Mosfet \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+U\+LK@{B\+U\+LK}!type.\+h@{type.\+h}}\index{type.\+h@{type.\+h}!B\+U\+LK@{B\+U\+LK}}}\mbox{\Hypertarget{type_8h_afaab50027002ecbb6c8ac27e727d1bb4a6d5b457ed4205e7f1144ef21b944e552}\label{type_8h_afaab50027002ecbb6c8ac27e727d1bb4a6d5b457ed4205e7f1144ef21b944e552}} 
+B\+U\+LK&\hyperlink{classInst}{Inst} is Mosfet \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+H\+IS@{T\+H\+IS}!type.\+h@{type.\+h}}\index{type.\+h@{type.\+h}!T\+H\+IS@{T\+H\+IS}}}\mbox{\Hypertarget{type_8h_afaab50027002ecbb6c8ac27e727d1bb4ac9f869114804f0a61ce9b03def9d71f5}\label{type_8h_afaab50027002ecbb6c8ac27e727d1bb4ac9f869114804f0a61ce9b03def9d71f5}} 
+T\+H\+IS&\hyperlink{classInst}{Inst} is Passive \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+H\+AT@{T\+H\+AT}!type.\+h@{type.\+h}}\index{type.\+h@{type.\+h}!T\+H\+AT@{T\+H\+AT}}}\mbox{\Hypertarget{type_8h_afaab50027002ecbb6c8ac27e727d1bb4a13d613e84b1e7d08d869695a750caf23}\label{type_8h_afaab50027002ecbb6c8ac27e727d1bb4a13d613e84b1e7d08d869695a750caf23}} 
+T\+H\+AT&\hyperlink{classInst}{Inst} is Passive \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{O\+T\+H\+ER@{O\+T\+H\+ER}!type.\+h@{type.\+h}}\index{type.\+h@{type.\+h}!O\+T\+H\+ER@{O\+T\+H\+ER}}}\mbox{\Hypertarget{type_8h_afaab50027002ecbb6c8ac27e727d1bb4a03570470bad94692ce93e32700d2e1cb}\label{type_8h_afaab50027002ecbb6c8ac27e727d1bb4a03570470bad94692ce93e32700d2e1cb}} 
+O\+T\+H\+ER&Other \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{type_8h_a11591ec4ef05af2b0f48545966a61500}\label{type_8h_a11591ec4ef05af2b0f48545966a61500}} 
+\index{type.\+h@{type.\+h}!I\+N\+D\+E\+X\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+AX@{I\+N\+D\+E\+X\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+AX}}
+\index{I\+N\+D\+E\+X\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+AX@{I\+N\+D\+E\+X\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+AX}!type.\+h@{type.\+h}}
+\subsubsection{\texorpdfstring{I\+N\+D\+E\+X\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+AX}{INDEX\_TYPE\_MAX}}
+{\footnotesize\ttfamily constexpr \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} I\+N\+D\+E\+X\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+AX = 1000000000}
+
+\mbox{\Hypertarget{type_8h_a7153b937cb94620c55b52fd559d1073e}\label{type_8h_a7153b937cb94620c55b52fd559d1073e}} 
+\index{type.\+h@{type.\+h}!I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+AX@{I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+AX}}
+\index{I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+AX@{I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+AX}!type.\+h@{type.\+h}}
+\subsubsection{\texorpdfstring{I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+AX}{INT\_TYPE\_MAX}}
+{\footnotesize\ttfamily constexpr \hyperlink{type_8h_a2db224c368d26648b9a810adaaab4123}{Int\+Type} I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+AX = 1000000000}
+
+\mbox{\Hypertarget{type_8h_ab6731eb941a9db9a459729271b27199e}\label{type_8h_ab6731eb941a9db9a459729271b27199e}} 
+\index{type.\+h@{type.\+h}!I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+IN@{I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+IN}}
+\index{I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+IN@{I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+IN}!type.\+h@{type.\+h}}
+\subsubsection{\texorpdfstring{I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+IN}{INT\_TYPE\_MIN}}
+{\footnotesize\ttfamily constexpr \hyperlink{type_8h_a2db224c368d26648b9a810adaaab4123}{Int\+Type} I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+IN = -\/1000000000}
+
+\mbox{\Hypertarget{type_8h_a68e54c8b6af80e1289b13eccd51be234}\label{type_8h_a68e54c8b6af80e1289b13eccd51be234}} 
+\index{type.\+h@{type.\+h}!R\+E\+A\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+AX@{R\+E\+A\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+AX}}
+\index{R\+E\+A\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+AX@{R\+E\+A\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+AX}!type.\+h@{type.\+h}}
+\subsubsection{\texorpdfstring{R\+E\+A\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+AX}{REAL\_TYPE\_MAX}}
+{\footnotesize\ttfamily constexpr \hyperlink{type_8h_a51898ad9e46b1265f3fab67f7d4b04a2}{Real\+Type} R\+E\+A\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+AX = 1e100}
+
+\mbox{\Hypertarget{type_8h_aa2991a1c8de5bff9c42fc634a5839df1}\label{type_8h_aa2991a1c8de5bff9c42fc634a5839df1}} 
+\index{type.\+h@{type.\+h}!R\+E\+A\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+IN@{R\+E\+A\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+IN}}
+\index{R\+E\+A\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+IN@{R\+E\+A\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+IN}!type.\+h@{type.\+h}}
+\subsubsection{\texorpdfstring{R\+E\+A\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+IN}{REAL\_TYPE\_MIN}}
+{\footnotesize\ttfamily constexpr \hyperlink{type_8h_a51898ad9e46b1265f3fab67f7d4b04a2}{Real\+Type} R\+E\+A\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+IN = -\/1e100}
+
+\mbox{\Hypertarget{type_8h_abe9e9223b325a4a377d3d6a2c752d199}\label{type_8h_abe9e9223b325a4a377d3d6a2c752d199}} 
+\index{type.\+h@{type.\+h}!R\+E\+A\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+OL@{R\+E\+A\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+OL}}
+\index{R\+E\+A\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+OL@{R\+E\+A\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+OL}!type.\+h@{type.\+h}}
+\subsubsection{\texorpdfstring{R\+E\+A\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+OL}{REAL\_TYPE\_TOL}}
+{\footnotesize\ttfamily constexpr \hyperlink{type_8h_a51898ad9e46b1265f3fab67f7d4b04a2}{Real\+Type} R\+E\+A\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+OL = 1e-\/6}
+

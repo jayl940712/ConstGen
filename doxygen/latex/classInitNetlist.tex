@@ -1,0 +1,95 @@
+\hypertarget{classInitNetlist}{}\section{Init\+Netlist Class Reference}
+\label{classInitNetlist}\index{Init\+Netlist@{Init\+Netlist}}
+
+
+\hyperlink{classInitNetlist}{Init\+Netlist} class.  
+
+
+
+
+{\ttfamily \#include $<$Init\+Netlist.\+h$>$}
+
+
+
+Collaboration diagram for Init\+Netlist\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=159pt]{classInitNetlist__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classInitNetlist_a9def85cc1861a8a74494d9fd494acdeb}{Init\+Netlist} ()=default
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classInitNetlist_a330ee469b31e43357171f5943dad6387}{Init\+Netlist} (\hyperlink{classNetlist}{Netlist} \&netlist)
+\begin{DoxyCompactList}\small\item\em Constructor with initialization. \end{DoxyCompactList}\item 
+bool \hyperlink{classInitNetlist_a4c173b7e51678aad9937969e2e54f867}{read} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Parse file and build netlist. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classNetlist}{Netlist} \& \hyperlink{classInitNetlist_af6a6b4238c1ecfeebfa3344426647743}{\+\_\+netlist\+DB}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classInitNetlist}{Init\+Netlist} class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classInitNetlist_a9def85cc1861a8a74494d9fd494acdeb}\label{classInitNetlist_a9def85cc1861a8a74494d9fd494acdeb}} 
+\index{Init\+Netlist@{Init\+Netlist}!Init\+Netlist@{Init\+Netlist}}
+\index{Init\+Netlist@{Init\+Netlist}!Init\+Netlist@{Init\+Netlist}}
+\subsubsection{\texorpdfstring{Init\+Netlist()}{InitNetlist()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Init\+Netlist\+::\+Init\+Netlist (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [default]}}
+
+
+
+Default Constructor. 
+
+\mbox{\Hypertarget{classInitNetlist_a330ee469b31e43357171f5943dad6387}\label{classInitNetlist_a330ee469b31e43357171f5943dad6387}} 
+\index{Init\+Netlist@{Init\+Netlist}!Init\+Netlist@{Init\+Netlist}}
+\index{Init\+Netlist@{Init\+Netlist}!Init\+Netlist@{Init\+Netlist}}
+\subsubsection{\texorpdfstring{Init\+Netlist()}{InitNetlist()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Init\+Netlist\+::\+Init\+Netlist (\begin{DoxyParamCaption}\item[{\hyperlink{classNetlist}{Netlist} \&}]{netlist }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Constructor with initialization. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classInitNetlist_a4c173b7e51678aad9937969e2e54f867}\label{classInitNetlist_a4c173b7e51678aad9937969e2e54f867}} 
+\index{Init\+Netlist@{Init\+Netlist}!read@{read}}
+\index{read@{read}!Init\+Netlist@{Init\+Netlist}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily \hyperlink{namespace_8h_ae48726a24dab2034454cf6d79e531eb8}{P\+R\+O\+J\+E\+C\+T\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+B\+E\+G\+IN} bool Init\+Netlist\+::read (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Parse file and build netlist. 
+
+Input files should follow same format generated through scripts/create\+\_\+init\+\_\+obj.\+py. Sample input files for c++ are under benchmarks. The python scripts take standardized hspice/spectre netlist files as inputs.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Input file to parse. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classInitNetlist_af6a6b4238c1ecfeebfa3344426647743}\label{classInitNetlist_af6a6b4238c1ecfeebfa3344426647743}} 
+\index{Init\+Netlist@{Init\+Netlist}!\+\_\+netlist\+DB@{\+\_\+netlist\+DB}}
+\index{\+\_\+netlist\+DB@{\+\_\+netlist\+DB}!Init\+Netlist@{Init\+Netlist}}
+\subsubsection{\texorpdfstring{\+\_\+netlist\+DB}{\_netlistDB}}
+{\footnotesize\ttfamily \hyperlink{classNetlist}{Netlist}\& Init\+Netlist\+::\+\_\+netlist\+DB\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/parser/\hyperlink{InitNetlist_8h}{Init\+Netlist.\+h}\item 
+src/parser/\hyperlink{InitNetlist_8cpp}{Init\+Netlist.\+cpp}\end{DoxyCompactItemize}

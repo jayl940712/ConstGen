@@ -1,3 +1,8 @@
+/*! @file sym_detect/SymDetect.cpp
+    @brief Detect symmetric patterns
+    @author Mingjie LIu
+    @date 11/24/2018
+*/
 #include "sym_detect/SymDetect.h"
 
 PROJECT_NAMESPACE_BEGIN

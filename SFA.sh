@@ -1,9 +1,3 @@
-#########################################################################
-# File Name: build_graph.sh
-# Author: Biying Xu 
-# mail: biying@utexas.edu
-# Created Time: Mon 29 Oct 2018 05:49:44 PM CDT
-#########################################################################
 #!/bin/bash
 
 FILES=benchmark/*

@@ -1,0 +1,133 @@
+\hypertarget{classNet}{}\section{Net Class Reference}
+\label{classNet}\index{Net@{Net}}
+
+
+\hyperlink{classNet}{Net} class.  
+
+
+
+
+{\ttfamily \#include $<$Net.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classNet_ad2d03f95c5cb74fb3ebcb79738e5a76c}{Net} ()=default
+\item 
+\hyperlink{classNet_ae7ae2cad153da40e1c70062ef2903358}{Net} (const std\+::string \&\hyperlink{classNet_a1782a27bedb6c07e8406d93182107d0f}{name}, \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} \hyperlink{classNet_a4a27de129427445971fcb3a274bad711}{id})
+\begin{DoxyCompactList}\small\item\em Constructor of \hyperlink{classNet}{Net}. \end{DoxyCompactList}\item 
+const std\+::string \& \hyperlink{classNet_a1782a27bedb6c07e8406d93182107d0f}{name} () const
+\item 
+\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} \hyperlink{classNet_a4a27de129427445971fcb3a274bad711}{id} () const
+\item 
+const std\+::vector$<$ \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} $>$ \& \hyperlink{classNet_a5d7f652001fbd6a99613408fcba08328}{pin\+Id\+Array} () const
+\item 
+void \hyperlink{classNet_abe94a5298df3441a8b45c68d3f3b16df}{add\+Pin\+Id} (\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} pin\+Id)
+\item 
+\hyperlink{type_8h_a24f31c8c9240242bd5fa9a415806eabf}{Net\+Type} \hyperlink{classNet_aa74b25d43e1b96f3596661325775f531}{net\+Type} () const
+\begin{DoxyCompactList}\small\item\em Return net type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classNet_a29e9f56c4c3827fdf1ee8625216afdd5}{\+\_\+name}
+\item 
+\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} \hyperlink{classNet_a510f27db002268fc15a1151cc9951c04}{\+\_\+id}
+\item 
+std\+::vector$<$ \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} $>$ \hyperlink{classNet_a0cf0ec3b779c2e24af461231d324c998}{\+\_\+pin\+Id\+Array}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classNet}{Net} class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classNet_ad2d03f95c5cb74fb3ebcb79738e5a76c}\label{classNet_ad2d03f95c5cb74fb3ebcb79738e5a76c}} 
+\index{Net@{Net}!Net@{Net}}
+\index{Net@{Net}!Net@{Net}}
+\subsubsection{\texorpdfstring{Net()}{Net()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Net\+::\+Net (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [default]}}
+
+Default constructor. \mbox{\Hypertarget{classNet_ae7ae2cad153da40e1c70062ef2903358}\label{classNet_ae7ae2cad153da40e1c70062ef2903358}} 
+\index{Net@{Net}!Net@{Net}}
+\index{Net@{Net}!Net@{Net}}
+\subsubsection{\texorpdfstring{Net()}{Net()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Net\+::\+Net (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type}}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Constructor of \hyperlink{classNet}{Net}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of \hyperlink{classNet}{Net}. \\
+\hline
+{\em id} & Id of \hyperlink{classNet}{Net}. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classNet_abe94a5298df3441a8b45c68d3f3b16df}\label{classNet_abe94a5298df3441a8b45c68d3f3b16df}} 
+\index{Net@{Net}!add\+Pin\+Id@{add\+Pin\+Id}}
+\index{add\+Pin\+Id@{add\+Pin\+Id}!Net@{Net}}
+\subsubsection{\texorpdfstring{add\+Pin\+Id()}{addPinId()}}
+{\footnotesize\ttfamily void Net\+::add\+Pin\+Id (\begin{DoxyParamCaption}\item[{\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type}}]{pin\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Connect a pin to the net. \mbox{\Hypertarget{classNet_a4a27de129427445971fcb3a274bad711}\label{classNet_a4a27de129427445971fcb3a274bad711}} 
+\index{Net@{Net}!id@{id}}
+\index{id@{id}!Net@{Net}}
+\subsubsection{\texorpdfstring{id()}{id()}}
+{\footnotesize\ttfamily \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} Net\+::id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return Id of \hyperlink{classNet}{Net}. \mbox{\Hypertarget{classNet_a1782a27bedb6c07e8406d93182107d0f}\label{classNet_a1782a27bedb6c07e8406d93182107d0f}} 
+\index{Net@{Net}!name@{name}}
+\index{name@{name}!Net@{Net}}
+\subsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily const std\+::string\& Net\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return name of \hyperlink{classNet}{Net}. \mbox{\Hypertarget{classNet_aa74b25d43e1b96f3596661325775f531}\label{classNet_aa74b25d43e1b96f3596661325775f531}} 
+\index{Net@{Net}!net\+Type@{net\+Type}}
+\index{net\+Type@{net\+Type}!Net@{Net}}
+\subsubsection{\texorpdfstring{net\+Type()}{netType()}}
+{\footnotesize\ttfamily \hyperlink{type_8h_a24f31c8c9240242bd5fa9a415806eabf}{Net\+Type} Net\+::net\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Return net type. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{type_8h_a24f31c8c9240242bd5fa9a415806eabf}{Net\+Type}.
+\end{DoxySeeAlso}
+Return net\+Type of net based on name. Currently supported Power/\+Ground names are limited to conventional V\+D\+D/\+V\+SS. Add unsupported names for Power/\+Ground filtering to P\+O\+W\+E\+R\+\_\+\+N\+E\+T\+\_\+\+N\+A\+M\+ES and G\+R\+O\+U\+N\+D\+\_\+\+N\+E\+T\+\_\+\+N\+A\+M\+ES to /db/\+Net.cpp. \mbox{\Hypertarget{classNet_a5d7f652001fbd6a99613408fcba08328}\label{classNet_a5d7f652001fbd6a99613408fcba08328}} 
+\index{Net@{Net}!pin\+Id\+Array@{pin\+Id\+Array}}
+\index{pin\+Id\+Array@{pin\+Id\+Array}!Net@{Net}}
+\subsubsection{\texorpdfstring{pin\+Id\+Array()}{pinIdArray()}}
+{\footnotesize\ttfamily const std\+::vector$<$\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type}$>$\& Net\+::pin\+Id\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return index array of connected pins. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classNet_a510f27db002268fc15a1151cc9951c04}\label{classNet_a510f27db002268fc15a1151cc9951c04}} 
+\index{Net@{Net}!\+\_\+id@{\+\_\+id}}
+\index{\+\_\+id@{\+\_\+id}!Net@{Net}}
+\subsubsection{\texorpdfstring{\+\_\+id}{\_id}}
+{\footnotesize\ttfamily \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} Net\+::\+\_\+id\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classNet_a29e9f56c4c3827fdf1ee8625216afdd5}\label{classNet_a29e9f56c4c3827fdf1ee8625216afdd5}} 
+\index{Net@{Net}!\+\_\+name@{\+\_\+name}}
+\index{\+\_\+name@{\+\_\+name}!Net@{Net}}
+\subsubsection{\texorpdfstring{\+\_\+name}{\_name}}
+{\footnotesize\ttfamily std\+::string Net\+::\+\_\+name\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classNet_a0cf0ec3b779c2e24af461231d324c998}\label{classNet_a0cf0ec3b779c2e24af461231d324c998}} 
+\index{Net@{Net}!\+\_\+pin\+Id\+Array@{\+\_\+pin\+Id\+Array}}
+\index{\+\_\+pin\+Id\+Array@{\+\_\+pin\+Id\+Array}!Net@{Net}}
+\subsubsection{\texorpdfstring{\+\_\+pin\+Id\+Array}{\_pinIdArray}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type}$>$ Net\+::\+\_\+pin\+Id\+Array\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/db/\hyperlink{Net_8h}{Net.\+h}\item 
+src/db/\hyperlink{Net_8cpp}{Net.\+cpp}\end{DoxyCompactItemize}

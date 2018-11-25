@@ -1,0 +1,10 @@
+<map id="src/db/Netlist.h" name="src/db/Netlist.h">
+<area shape="rect" id="node2" href="$Netlist_8cpp.html" title="Netlist class implementation. " alt="" coords="5,80,131,107"/>
+<area shape="rect" id="node3" href="$InitNetlist_8h.html" title="Parser to initialize netlist. " alt="" coords="155,80,306,107"/>
+<area shape="rect" id="node6" href="$Pattern_8h.html" title="Mosfet pair patterns. " alt="" coords="337,80,506,107"/>
+<area shape="rect" id="node8" href="$SymDetect_8h.html" title="Detect symmetric patterns. " alt="" coords="537,155,730,181"/>
+<area shape="rect" id="node4" href="$main_8cpp.html" title="src/main/main.cpp" alt="" coords="207,229,337,256"/>
+<area shape="rect" id="node5" href="$InitNetlist_8cpp.html" title="Parser implementation. " alt="" coords="140,155,305,181"/>
+<area shape="rect" id="node7" href="$Pattern_8cpp.html" title="Pattern definitions. " alt="" coords="330,155,513,181"/>
+<area shape="rect" id="node9" href="$SymDetect_8cpp.html" title="Detect symmetric patterns. " alt="" coords="530,229,737,256"/>
+</map>

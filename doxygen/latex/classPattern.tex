@@ -1,0 +1,192 @@
+\hypertarget{classPattern}{}\section{Pattern Class Reference}
+\label{classPattern}\index{Pattern@{Pattern}}
+
+
+\hyperlink{classPattern}{Pattern} class.  
+
+
+
+
+{\ttfamily \#include $<$Pattern.\+h$>$}
+
+
+
+Collaboration diagram for Pattern\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=139pt]{classPattern__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPattern_a11345fc22f0ff9a01cff037c5a3e5115}{Pattern} (const \hyperlink{classNetlist}{Netlist} \&netlist)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{type_8h_af19eddb079bfea723256710b029c38e8}{Mos\+Pattern} \hyperlink{classPattern_a1214e024706aff22e44bb4f4266d8e97}{pattern} (\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} mos\+Id1, \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} mos\+Id2) const
+\begin{DoxyCompactList}\small\item\em Return pattern for pair of mosfets. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classPattern_ab7112a78b0ed0c7638f1af9efdf80955}{matched\+Type} (\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} mos\+Id1, \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} mos\+Id2) const
+\begin{DoxyCompactList}\small\item\em Return true if \hyperlink{classInst}{Inst} pair have same Inst\+Type. \end{DoxyCompactList}\item 
+bool \hyperlink{classPattern_ae25db8902e007a9ab055e64f3347d65d}{matched\+Size} (\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} mos\+Id1, \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} mos\+Id2) const
+\begin{DoxyCompactList}\small\item\em Return true if \hyperlink{classInst}{Inst} pair have same size attributes. \end{DoxyCompactList}\item 
+bool \hyperlink{classPattern_a8e30aad375e98bbcdeab764705e68045}{diff\+Pair\+Input} (\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} mos\+Id1, \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} mos\+Id2) const
+\begin{DoxyCompactList}\small\item\em Return true if fits \hyperlink{type_8h_af19eddb079bfea723256710b029c38e8ad45b64a7d6b85dde1b52dd5a18863933}{Mos\+Pattern\+::\+D\+I\+F\+F\+\_\+\+S\+O\+U\+R\+CE}. \end{DoxyCompactList}\item 
+bool \hyperlink{classPattern_ad59ebd9a536a170735daf63126d71dea}{diff\+Pair\+Cascode} (\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} mos\+Id1, \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} mos\+Id2) const
+\begin{DoxyCompactList}\small\item\em Return true if fits \hyperlink{type_8h_af19eddb079bfea723256710b029c38e8a1b7b3de4c92d42d8311e04be030655af}{Mos\+Pattern\+::\+D\+I\+F\+F\+\_\+\+C\+A\+S\+C\+O\+DE}. \end{DoxyCompactList}\item 
+bool \hyperlink{classPattern_ab1334774aab3ce88b1d2d799e31f3bd9}{valid\+Pair\+Cascode} (\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} mos\+Id1, \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} mos\+Id2) const
+\begin{DoxyCompactList}\small\item\em Return true if fits \hyperlink{type_8h_af19eddb079bfea723256710b029c38e8aac50017227efb09ec529757764e5187c}{Mos\+Pattern\+::\+C\+A\+S\+C\+O\+DE}. \end{DoxyCompactList}\item 
+bool \hyperlink{classPattern_acae638957d000c1a163f949c369d5ef4}{valid\+Pair\+Load} (\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} mos\+Id1, \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} mos\+Id2) const
+\begin{DoxyCompactList}\small\item\em Return true if fits \hyperlink{type_8h_af19eddb079bfea723256710b029c38e8a615d2885ef7576cedd9aafbb2578f028}{Mos\+Pattern\+::\+L\+O\+AD}. \end{DoxyCompactList}\item 
+bool \hyperlink{classPattern_a371cef1fc7d0c4d5b291d80dc5c4b777}{cross\+Pair\+Cascode} (\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} mos\+Id1, \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} mos\+Id2) const
+\begin{DoxyCompactList}\small\item\em Return true if fits \hyperlink{type_8h_af19eddb079bfea723256710b029c38e8adb952aa3809767bf108688a754ebbf2c}{Mos\+Pattern\+::\+C\+R\+O\+S\+S\+\_\+\+C\+A\+S\+C\+O\+DE}. \end{DoxyCompactList}\item 
+bool \hyperlink{classPattern_afe6e5456a639417112340f5f9d164b32}{cross\+Pair\+Load} (\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} mos\+Id1, \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} mos\+Id2) const
+\begin{DoxyCompactList}\small\item\em Return true if fits \hyperlink{type_8h_af19eddb079bfea723256710b029c38e8a19ddbfeab78ac1a4bbe1a186828c5d8d}{Mos\+Pattern\+::\+C\+R\+O\+S\+S\+\_\+\+L\+O\+AD}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{classNetlist}{Netlist} \& \hyperlink{classPattern_a71ec4e16ee6088587cece41cb7b027a3}{\+\_\+netlist}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classPattern}{Pattern} class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classPattern_a11345fc22f0ff9a01cff037c5a3e5115}\label{classPattern_a11345fc22f0ff9a01cff037c5a3e5115}} 
+\index{Pattern@{Pattern}!Pattern@{Pattern}}
+\index{Pattern@{Pattern}!Pattern@{Pattern}}
+\subsubsection{\texorpdfstring{Pattern()}{Pattern()}}
+{\footnotesize\ttfamily Pattern\+::\+Pattern (\begin{DoxyParamCaption}\item[{const \hyperlink{classNetlist}{Netlist} \&}]{netlist }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em netlist} & \hyperlink{classNetlist}{Netlist} for pattern search. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classPattern_a371cef1fc7d0c4d5b291d80dc5c4b777}\label{classPattern_a371cef1fc7d0c4d5b291d80dc5c4b777}} 
+\index{Pattern@{Pattern}!cross\+Pair\+Cascode@{cross\+Pair\+Cascode}}
+\index{cross\+Pair\+Cascode@{cross\+Pair\+Cascode}!Pattern@{Pattern}}
+\subsubsection{\texorpdfstring{cross\+Pair\+Cascode()}{crossPairCascode()}}
+{\footnotesize\ttfamily bool Pattern\+::cross\+Pair\+Cascode (\begin{DoxyParamCaption}\item[{\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type}}]{mos\+Id1,  }\item[{\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type}}]{mos\+Id2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Return true if fits \hyperlink{type_8h_af19eddb079bfea723256710b029c38e8adb952aa3809767bf108688a754ebbf2c}{Mos\+Pattern\+::\+C\+R\+O\+S\+S\+\_\+\+C\+A\+S\+C\+O\+DE}. 
+
+\mbox{\Hypertarget{classPattern_afe6e5456a639417112340f5f9d164b32}\label{classPattern_afe6e5456a639417112340f5f9d164b32}} 
+\index{Pattern@{Pattern}!cross\+Pair\+Load@{cross\+Pair\+Load}}
+\index{cross\+Pair\+Load@{cross\+Pair\+Load}!Pattern@{Pattern}}
+\subsubsection{\texorpdfstring{cross\+Pair\+Load()}{crossPairLoad()}}
+{\footnotesize\ttfamily bool Pattern\+::cross\+Pair\+Load (\begin{DoxyParamCaption}\item[{\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type}}]{mos\+Id1,  }\item[{\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type}}]{mos\+Id2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Return true if fits \hyperlink{type_8h_af19eddb079bfea723256710b029c38e8a19ddbfeab78ac1a4bbe1a186828c5d8d}{Mos\+Pattern\+::\+C\+R\+O\+S\+S\+\_\+\+L\+O\+AD}. 
+
+\mbox{\Hypertarget{classPattern_ad59ebd9a536a170735daf63126d71dea}\label{classPattern_ad59ebd9a536a170735daf63126d71dea}} 
+\index{Pattern@{Pattern}!diff\+Pair\+Cascode@{diff\+Pair\+Cascode}}
+\index{diff\+Pair\+Cascode@{diff\+Pair\+Cascode}!Pattern@{Pattern}}
+\subsubsection{\texorpdfstring{diff\+Pair\+Cascode()}{diffPairCascode()}}
+{\footnotesize\ttfamily bool Pattern\+::diff\+Pair\+Cascode (\begin{DoxyParamCaption}\item[{\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type}}]{mos\+Id1,  }\item[{\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type}}]{mos\+Id2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Return true if fits \hyperlink{type_8h_af19eddb079bfea723256710b029c38e8a1b7b3de4c92d42d8311e04be030655af}{Mos\+Pattern\+::\+D\+I\+F\+F\+\_\+\+C\+A\+S\+C\+O\+DE}. 
+
+\mbox{\Hypertarget{classPattern_a8e30aad375e98bbcdeab764705e68045}\label{classPattern_a8e30aad375e98bbcdeab764705e68045}} 
+\index{Pattern@{Pattern}!diff\+Pair\+Input@{diff\+Pair\+Input}}
+\index{diff\+Pair\+Input@{diff\+Pair\+Input}!Pattern@{Pattern}}
+\subsubsection{\texorpdfstring{diff\+Pair\+Input()}{diffPairInput()}}
+{\footnotesize\ttfamily bool Pattern\+::diff\+Pair\+Input (\begin{DoxyParamCaption}\item[{\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type}}]{mos\+Id1,  }\item[{\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type}}]{mos\+Id2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Return true if fits \hyperlink{type_8h_af19eddb079bfea723256710b029c38e8ad45b64a7d6b85dde1b52dd5a18863933}{Mos\+Pattern\+::\+D\+I\+F\+F\+\_\+\+S\+O\+U\+R\+CE}. 
+
+\mbox{\Hypertarget{classPattern_ae25db8902e007a9ab055e64f3347d65d}\label{classPattern_ae25db8902e007a9ab055e64f3347d65d}} 
+\index{Pattern@{Pattern}!matched\+Size@{matched\+Size}}
+\index{matched\+Size@{matched\+Size}!Pattern@{Pattern}}
+\subsubsection{\texorpdfstring{matched\+Size()}{matchedSize()}}
+{\footnotesize\ttfamily bool Pattern\+::matched\+Size (\begin{DoxyParamCaption}\item[{\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type}}]{mos\+Id1,  }\item[{\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type}}]{mos\+Id2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Return true if \hyperlink{classInst}{Inst} pair have same size attributes. 
+
+\mbox{\Hypertarget{classPattern_ab7112a78b0ed0c7638f1af9efdf80955}\label{classPattern_ab7112a78b0ed0c7638f1af9efdf80955}} 
+\index{Pattern@{Pattern}!matched\+Type@{matched\+Type}}
+\index{matched\+Type@{matched\+Type}!Pattern@{Pattern}}
+\subsubsection{\texorpdfstring{matched\+Type()}{matchedType()}}
+{\footnotesize\ttfamily \hyperlink{namespace_8h_ae48726a24dab2034454cf6d79e531eb8}{P\+R\+O\+J\+E\+C\+T\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+B\+E\+G\+IN} bool Pattern\+::matched\+Type (\begin{DoxyParamCaption}\item[{\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type}}]{mos\+Id1,  }\item[{\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type}}]{mos\+Id2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Return true if \hyperlink{classInst}{Inst} pair have same Inst\+Type. 
+
+\mbox{\Hypertarget{classPattern_a1214e024706aff22e44bb4f4266d8e97}\label{classPattern_a1214e024706aff22e44bb4f4266d8e97}} 
+\index{Pattern@{Pattern}!pattern@{pattern}}
+\index{pattern@{pattern}!Pattern@{Pattern}}
+\subsubsection{\texorpdfstring{pattern()}{pattern()}}
+{\footnotesize\ttfamily \hyperlink{type_8h_af19eddb079bfea723256710b029c38e8}{Mos\+Pattern} Pattern\+::pattern (\begin{DoxyParamCaption}\item[{\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type}}]{mos\+Id1,  }\item[{\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type}}]{mos\+Id2 }\end{DoxyParamCaption}) const}
+
+
+
+Return pattern for pair of mosfets. 
+
+Valid patterns have same Inst\+Type. Currently they also have same size attribute.
+
+T\+O\+DO Add ratio pair detection in future. \begin{DoxySeeAlso}{See also}
+\hyperlink{type_8h_af19eddb079bfea723256710b029c38e8}{Mos\+Pattern}. 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em mos\+Id1} & Id for mosfet. \\
+\hline
+{\em mos\+Id2} & Id for mosfet. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPattern_ab1334774aab3ce88b1d2d799e31f3bd9}\label{classPattern_ab1334774aab3ce88b1d2d799e31f3bd9}} 
+\index{Pattern@{Pattern}!valid\+Pair\+Cascode@{valid\+Pair\+Cascode}}
+\index{valid\+Pair\+Cascode@{valid\+Pair\+Cascode}!Pattern@{Pattern}}
+\subsubsection{\texorpdfstring{valid\+Pair\+Cascode()}{validPairCascode()}}
+{\footnotesize\ttfamily bool Pattern\+::valid\+Pair\+Cascode (\begin{DoxyParamCaption}\item[{\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type}}]{mos\+Id1,  }\item[{\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type}}]{mos\+Id2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Return true if fits \hyperlink{type_8h_af19eddb079bfea723256710b029c38e8aac50017227efb09ec529757764e5187c}{Mos\+Pattern\+::\+C\+A\+S\+C\+O\+DE}. 
+
+\mbox{\Hypertarget{classPattern_acae638957d000c1a163f949c369d5ef4}\label{classPattern_acae638957d000c1a163f949c369d5ef4}} 
+\index{Pattern@{Pattern}!valid\+Pair\+Load@{valid\+Pair\+Load}}
+\index{valid\+Pair\+Load@{valid\+Pair\+Load}!Pattern@{Pattern}}
+\subsubsection{\texorpdfstring{valid\+Pair\+Load()}{validPairLoad()}}
+{\footnotesize\ttfamily bool Pattern\+::valid\+Pair\+Load (\begin{DoxyParamCaption}\item[{\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type}}]{mos\+Id1,  }\item[{\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type}}]{mos\+Id2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Return true if fits \hyperlink{type_8h_af19eddb079bfea723256710b029c38e8a615d2885ef7576cedd9aafbb2578f028}{Mos\+Pattern\+::\+L\+O\+AD}. 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classPattern_a71ec4e16ee6088587cece41cb7b027a3}\label{classPattern_a71ec4e16ee6088587cece41cb7b027a3}} 
+\index{Pattern@{Pattern}!\+\_\+netlist@{\+\_\+netlist}}
+\index{\+\_\+netlist@{\+\_\+netlist}!Pattern@{Pattern}}
+\subsubsection{\texorpdfstring{\+\_\+netlist}{\_netlist}}
+{\footnotesize\ttfamily const \hyperlink{classNetlist}{Netlist}\& Pattern\+::\+\_\+netlist\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/sym\+\_\+detect/\hyperlink{Pattern_8h}{Pattern.\+h}\item 
+src/sym\+\_\+detect/\hyperlink{Pattern_8cpp}{Pattern.\+cpp}\end{DoxyCompactItemize}

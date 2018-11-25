@@ -1,3 +1,8 @@
+/*! @file parser/InitNetlist.cpp
+    @brief Parser implementation.
+    @author Mingjie Liu
+    @date 11/24/2018
+*/
 #include <cstdio>
 #include <fstream>
 #include "InitNetlist.h"
@@ -21,7 +26,8 @@ bool InitNetlist::read(const std::string &fileName)
             IndexType id;
             inFile >> id;
             inFile >> inLine;
-            if (inLine == "PMOS" || inLine == "NMOS" || inLine == "CAP" || inLine == "RES" || inLine == "OTHER")
+            if (inLine == "PMOS" || inLine == "NMOS" || 
+                inLine == "CAP" || inLine == "RES" || inLine == "OTHER")
             {
                 Netlist::InitInst inst;
                 InstType instType;
