@@ -51,10 +51,6 @@ global/namespace.h
 ../../src/global/type.h
 cstdint
 -
-set
--
-string
--
 global/global.h
 ../../src/global/global/global.h
 
@@ -79,12 +75,12 @@ vector
 /home/unga/jayliu/SFA/src/db/Net.cpp
 db/Net.h
 /home/unga/jayliu/SFA/src/db/db/Net.h
+set
+-
 
 /home/unga/jayliu/SFA/src/db/Netlist.cpp
 db/Netlist.h
 /home/unga/jayliu/SFA/src/db/db/Netlist.h
-vector
--
 algorithm
 -
 

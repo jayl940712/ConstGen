@@ -228,8 +228,8 @@
 \indexentry{exist\+Pair@{exist\+Pair}!Sym\+Detect@{Sym\+Detect}|hyperpage}{40}
 \indexentry{Sym\+Detect@{Sym\+Detect}!get\+Diff\+Pair@{get\+Diff\+Pair}|hyperpage}{40}
 \indexentry{get\+Diff\+Pair@{get\+Diff\+Pair}!Sym\+Detect@{Sym\+Detect}|hyperpage}{40}
-\indexentry{Sym\+Detect@{Sym\+Detect}!get\+Diff\+Pair\+Net\+Conn@{get\+Diff\+Pair\+Net\+Conn}|hyperpage}{40}
-\indexentry{get\+Diff\+Pair\+Net\+Conn@{get\+Diff\+Pair\+Net\+Conn}!Sym\+Detect@{Sym\+Detect}|hyperpage}{40}
+\indexentry{Sym\+Detect@{Sym\+Detect}!get\+Patrn\+Net\+Conn@{get\+Patrn\+Net\+Conn}|hyperpage}{40}
+\indexentry{get\+Patrn\+Net\+Conn@{get\+Patrn\+Net\+Conn}!Sym\+Detect@{Sym\+Detect}|hyperpage}{40}
 \indexentry{Sym\+Detect@{Sym\+Detect}!hi\+Sym\+Detect@{hi\+Sym\+Detect}|hyperpage}{41}
 \indexentry{hi\+Sym\+Detect@{hi\+Sym\+Detect}!Sym\+Detect@{Sym\+Detect}|hyperpage}{41}
 \indexentry{Sym\+Detect@{Sym\+Detect}!in\+Vld\+Diff\+Pair\+Srch@{in\+Vld\+Diff\+Pair\+Srch}|hyperpage}{41}
@@ -252,8 +252,8 @@
 \indexentry{P\+O\+W\+E\+R\+\_\+\+N\+E\+T\+\_\+\+N\+A\+M\+ES@{P\+O\+W\+E\+R\+\_\+\+N\+E\+T\+\_\+\+N\+A\+M\+ES}!Net.\+cpp@{Net.\+cpp}|hyperpage}{48}
 \indexentry{src/db/\+Net.\+h@{src/db/\+Net.\+h}|hyperpage}{48}
 \indexentry{src/db/\+Netlist.\+cpp@{src/db/\+Netlist.\+cpp}|hyperpage}{49}
-\indexentry{Netlist.\+cpp@{Netlist.\+cpp}!M\+O\+S\+\_\+\+P\+I\+N\+\_\+\+T\+Y\+PE@{M\+O\+S\+\_\+\+P\+I\+N\+\_\+\+T\+Y\+PE}|hyperpage}{50}
-\indexentry{M\+O\+S\+\_\+\+P\+I\+N\+\_\+\+T\+Y\+PE@{M\+O\+S\+\_\+\+P\+I\+N\+\_\+\+T\+Y\+PE}!Netlist.\+cpp@{Netlist.\+cpp}|hyperpage}{50}
+\indexentry{Netlist.\+cpp@{Netlist.\+cpp}!M\+O\+S\+\_\+\+P\+I\+N\+\_\+\+T\+Y\+PE@{M\+O\+S\+\_\+\+P\+I\+N\+\_\+\+T\+Y\+PE}|hyperpage}{51}
+\indexentry{M\+O\+S\+\_\+\+P\+I\+N\+\_\+\+T\+Y\+PE@{M\+O\+S\+\_\+\+P\+I\+N\+\_\+\+T\+Y\+PE}!Netlist.\+cpp@{Netlist.\+cpp}|hyperpage}{51}
 \indexentry{Netlist.\+cpp@{Netlist.\+cpp}!R\+E\+S\+\_\+\+P\+I\+N\+\_\+\+T\+Y\+PE@{R\+E\+S\+\_\+\+P\+I\+N\+\_\+\+T\+Y\+PE}|hyperpage}{51}
 \indexentry{R\+E\+S\+\_\+\+P\+I\+N\+\_\+\+T\+Y\+PE@{R\+E\+S\+\_\+\+P\+I\+N\+\_\+\+T\+Y\+PE}!Netlist.\+cpp@{Netlist.\+cpp}|hyperpage}{51}
 \indexentry{src/db/\+Netlist.\+h@{src/db/\+Netlist.\+h}|hyperpage}{51}

@@ -1,6 +1,6 @@
 /*! @file sym_detect/SymDetect.cpp
     @brief Detect symmetric patterns
-    @author Mingjie LIu
+    @author Mingjie Liu
     @date 11/24/2018
 */
 #include "sym_detect/SymDetect.h"

@@ -7,8 +7,6 @@
 #define __TYPE_H__
 
 #include <cstdint>
-#include <set>
-#include <string>
 #include "global/global.h"
 
 PROJECT_NAMESPACE_BEGIN

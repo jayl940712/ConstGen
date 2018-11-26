@@ -96,12 +96,12 @@
     \subitem {Netlist}, \hyperpage{23}
   \item {get\+Diff\+Pair}
     \subitem {Sym\+Detect}, \hyperpage{40}
-  \item {get\+Diff\+Pair\+Net\+Conn}
-    \subitem {Sym\+Detect}, \hyperpage{40}
   \item {get\+Inst\+Net\+Conn}
     \subitem {Netlist}, \hyperpage{23}
   \item {get\+Inst\+Pin\+Conn}
     \subitem {Netlist}, \hyperpage{23}
+  \item {get\+Patrn\+Net\+Conn}
+    \subitem {Sym\+Detect}, \hyperpage{40}
   \item {get\+Pin\+Type\+Inst\+Net\+Conn}
     \subitem {Netlist}, \hyperpage{24}
   \item {get\+Pin\+Type\+Inst\+Pin\+Conn}
@@ -182,7 +182,7 @@
   \indexspace
 
   \item {M\+O\+S\+\_\+\+P\+I\+N\+\_\+\+T\+Y\+PE}
-    \subitem {Netlist.\+cpp}, \hyperpage{50}
+    \subitem {Netlist.\+cpp}, \hyperpage{51}
   \item {main}
     \subitem {main.\+cpp}, \hyperpage{64}
   \item {main.\+cpp}
@@ -285,7 +285,7 @@
     \subitem {rmv\+Inst\+Has\+Pin}, \hyperpage{27}
     \subitem {src\+Net\+Id}, \hyperpage{28}
   \item {Netlist.\+cpp}
-    \subitem {M\+O\+S\+\_\+\+P\+I\+N\+\_\+\+T\+Y\+PE}, \hyperpage{50}
+    \subitem {M\+O\+S\+\_\+\+P\+I\+N\+\_\+\+T\+Y\+PE}, \hyperpage{51}
     \subitem {R\+E\+S\+\_\+\+P\+I\+N\+\_\+\+T\+Y\+PE}, \hyperpage{51}
   \item {Netlist\+::\+Init\+Data\+Obj}, \hyperpage{5}
     \subitem {inst\+Array}, \hyperpage{5}
@@ -417,7 +417,7 @@
     \subitem {end\+Srch}, \hyperpage{39}
     \subitem {exist\+Pair}, \hyperpage{40}
     \subitem {get\+Diff\+Pair}, \hyperpage{40}
-    \subitem {get\+Diff\+Pair\+Net\+Conn}, \hyperpage{40}
+    \subitem {get\+Patrn\+Net\+Conn}, \hyperpage{40}
     \subitem {hi\+Sym\+Detect}, \hyperpage{41}
     \subitem {in\+Vld\+Diff\+Pair\+Srch}, \hyperpage{41}
     \subitem {push\+Next\+Srch\+Obj}, \hyperpage{42}

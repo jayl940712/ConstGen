@@ -4,6 +4,7 @@
     @date 11/24/2018
 */
 #include "db/Net.h"
+#include <set>
 
 PROJECT_NAMESPACE_BEGIN
 

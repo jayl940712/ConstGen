@@ -1,9 +1,9 @@
 <map id="src/parser/InitNetlist.h" name="src/parser/InitNetlist.h">
-<area shape="rect" id="node2" href="$Netlist_8h.html" title="Netlist class. " alt="" coords="96,80,186,107"/>
-<area shape="rect" id="node5" href="$type_8h.html" title="Type header file. " alt="" coords="205,229,301,256"/>
-<area shape="rect" id="node10" href="$Net_8h.html" title="Net class. " alt="" coords="57,155,129,181"/>
-<area shape="rect" id="node11" href="$Pin_8h.html" title="Pin class. " alt="" coords="303,155,374,181"/>
-<area shape="rect" id="node12" href="$Inst_8h.html" title="Instance class. " alt="" coords="154,155,227,181"/>
-<area shape="rect" id="node8" href="$global_8h.html" title="Global header file. " alt="" coords="184,304,290,331"/>
-<area shape="rect" id="node9" href="$namespace_8h.html" title="Namespace header file. " alt="" coords="168,379,306,405"/>
+<area shape="rect" id="node2" href="$Netlist_8h.html" title="Netlist class. " alt="" coords="149,80,238,107"/>
+<area shape="rect" id="node5" href="$type_8h.html" title="Type header file. " alt="" coords="244,229,340,256"/>
+<area shape="rect" id="node9" href="$Net_8h.html" title="Net class. " alt="" coords="23,155,95,181"/>
+<area shape="rect" id="node10" href="$Pin_8h.html" title="Pin class. " alt="" coords="269,155,339,181"/>
+<area shape="rect" id="node11" href="$Inst_8h.html" title="Instance class. " alt="" coords="119,155,193,181"/>
+<area shape="rect" id="node7" href="$global_8h.html" title="Global header file. " alt="" coords="294,304,399,331"/>
+<area shape="rect" id="node8" href="$namespace_8h.html" title="Namespace header file. " alt="" coords="277,379,416,405"/>
 </map>

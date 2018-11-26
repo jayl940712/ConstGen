@@ -4,7 +4,6 @@
     @date 11/24/2018
 */
 #include "db/Netlist.h"
-#include <vector>
 #include <algorithm>
 
 PROJECT_NAMESPACE_BEGIN
