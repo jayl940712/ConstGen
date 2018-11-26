@@ -100,19 +100,27 @@ private:
 */
     void                        pushNextSrchObj(std::vector<MosPair> & dfsVstPair, std::vector<srchObj> & dfsStack, 
                                                 srchObj & currObj, std::vector<MosPair> & diffPairSrc) const;
-/*! @brief Get DIFF_SOURCE MosPair connected to netId.
+/*! @brief Get srchPatrn MosPair connected to netId.
 
-    Find MosPair that follow MosPattern::DIFF_SOURCE 
-    and the sources are both connected to netId. Theses
-    MosPair are appended to diffPair.
+    Find MosPair that follow srchPatrn. Theses
+    MosPair are appended to diffPair. Used to 
+    get valid DFS source. srchPatrn inputs commonly
+    are DIFF_SOURCE and CROSS_LOAD.
+    Currently pairs should follow:
+    (1) Have MosPattern srchPatrn
+    (2) source connected to netId
+    (3) MosType::DIFF
 
     @param netId Source should be connected to netId.
     @param diffPair Stored output vector.
 */
-    void                        getDiffPairNetConn(std::vector<MosPair> & diffPair, IndexType netId) const;
-/*! @brief Get DIFF_SOURCE of netlist.
+    void                        getPatrnNetConn(std::vector<MosPair> & diffPair, IndexType netId,
+                                                MosPattern srchPatrn) const;
+/*! @brief Get valid DFS source of netlist.
 
-    Iterate all signal nets for getDiffPairNetConn.
+    Iterate all signal nets for getPatrnNetConn.
+    Commonly srchPatrn are DIFF_SOURCE and 
+    CROSS_LOAD.
     This would return all DFS sources.
 
     @see getDiffPairNetConn

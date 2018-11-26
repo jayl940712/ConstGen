@@ -45,10 +45,10 @@ bool \hyperlink{classSymDetect_ad4636f69ae0cad2fc23be2472c59ff4c}{valid\+Srch\+O
 \begin{DoxyCompactList}\small\item\em Return true if a valid pair. \end{DoxyCompactList}\item 
 void \hyperlink{classSymDetect_a9bdb845d015762b59f3dc977a76aed32}{push\+Next\+Srch\+Obj} (std\+::vector$<$ \hyperlink{structMosPair}{Mos\+Pair} $>$ \&dfs\+Vst\+Pair, std\+::vector$<$ \hyperlink{structSymDetect_1_1srchObj}{srch\+Obj} $>$ \&dfs\+Stack, \hyperlink{structSymDetect_1_1srchObj}{srch\+Obj} \&curr\+Obj, std\+::vector$<$ \hyperlink{structMosPair}{Mos\+Pair} $>$ \&diff\+Pair\+Src) const
 \begin{DoxyCompactList}\small\item\em Push next valid \hyperlink{structSymDetect_1_1srchObj}{srch\+Obj} to dfs\+Stack. \end{DoxyCompactList}\item 
-void \hyperlink{classSymDetect_acbcaf5319edd53b2b6cedaa5818bdd38}{get\+Diff\+Pair\+Net\+Conn} (std\+::vector$<$ \hyperlink{structMosPair}{Mos\+Pair} $>$ \&diff\+Pair, \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} net\+Id) const
-\begin{DoxyCompactList}\small\item\em Get D\+I\+F\+F\+\_\+\+S\+O\+U\+R\+CE \hyperlink{structMosPair}{Mos\+Pair} connected to net\+Id. \end{DoxyCompactList}\item 
+void \hyperlink{classSymDetect_af7d1b22086aa98a27b1eafc9266596d8}{get\+Patrn\+Net\+Conn} (std\+::vector$<$ \hyperlink{structMosPair}{Mos\+Pair} $>$ \&diff\+Pair, \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} net\+Id, \hyperlink{type_8h_af19eddb079bfea723256710b029c38e8}{Mos\+Pattern} srch\+Patrn) const
+\begin{DoxyCompactList}\small\item\em Get srch\+Patrn \hyperlink{structMosPair}{Mos\+Pair} connected to net\+Id. \end{DoxyCompactList}\item 
 void \hyperlink{classSymDetect_af04b93dac7e090cef8e741d8d1812485}{get\+Diff\+Pair} (std\+::vector$<$ \hyperlink{structMosPair}{Mos\+Pair} $>$ \&diff\+Pair) const
-\begin{DoxyCompactList}\small\item\em Get D\+I\+F\+F\+\_\+\+S\+O\+U\+R\+CE of netlist. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Get valid D\+FS source of netlist. \end{DoxyCompactList}\item 
 void \hyperlink{classSymDetect_acd33a2c834493240fc4e8840819d676c}{dfs\+Diff\+Pair} (std\+::vector$<$ \hyperlink{structMosPair}{Mos\+Pair} $>$ \&dfs\+Vst\+Pair, \hyperlink{structMosPair}{Mos\+Pair} \&diff\+Pair, std\+::vector$<$ \hyperlink{structMosPair}{Mos\+Pair} $>$ \&diff\+Pair\+Srch) const
 \begin{DoxyCompactList}\small\item\em D\+FS search with given source. Visited \hyperlink{structMosPair}{Mos\+Pair} are stored. \end{DoxyCompactList}\item 
 void \hyperlink{classSymDetect_ae6a1ba27f6768f215cba0623b6e2ce08}{in\+Vld\+Diff\+Pair\+Srch} (std\+::vector$<$ \hyperlink{structMosPair}{Mos\+Pair} $>$ \&diff\+Pair\+Srch, \hyperlink{structMosPair}{Mos\+Pair} \&curr\+Pair) const
@@ -146,29 +146,29 @@ Check if pair already reached.
 
 
 
-Get D\+I\+F\+F\+\_\+\+S\+O\+U\+R\+CE of netlist. 
+Get valid D\+FS source of netlist. 
 
-Iterate all signal nets for get\+Diff\+Pair\+Net\+Conn. This would return all D\+FS sources.
+Iterate all signal nets for get\+Patrn\+Net\+Conn. Commonly srch\+Patrn are D\+I\+F\+F\+\_\+\+S\+O\+U\+R\+CE and C\+R\+O\+S\+S\+\_\+\+L\+O\+AD. This would return all D\+FS sources.
 
 \begin{DoxySeeAlso}{See also}
-\hyperlink{classSymDetect_acbcaf5319edd53b2b6cedaa5818bdd38}{get\+Diff\+Pair\+Net\+Conn} 
+get\+Diff\+Pair\+Net\+Conn 
 \end{DoxySeeAlso}
 
 \begin{DoxyParams}{Parameters}
 {\em diff\+Pair} & Store the output vector \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classSymDetect_acbcaf5319edd53b2b6cedaa5818bdd38}\label{classSymDetect_acbcaf5319edd53b2b6cedaa5818bdd38}} 
-\index{Sym\+Detect@{Sym\+Detect}!get\+Diff\+Pair\+Net\+Conn@{get\+Diff\+Pair\+Net\+Conn}}
-\index{get\+Diff\+Pair\+Net\+Conn@{get\+Diff\+Pair\+Net\+Conn}!Sym\+Detect@{Sym\+Detect}}
-\subsubsection{\texorpdfstring{get\+Diff\+Pair\+Net\+Conn()}{getDiffPairNetConn()}}
-{\footnotesize\ttfamily \hyperlink{namespace_8h_ae48726a24dab2034454cf6d79e531eb8}{P\+R\+O\+J\+E\+C\+T\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+B\+E\+G\+IN} void Sym\+Detect\+::get\+Diff\+Pair\+Net\+Conn (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \hyperlink{structMosPair}{Mos\+Pair} $>$ \&}]{diff\+Pair,  }\item[{\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type}}]{net\+Id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\Hypertarget{classSymDetect_af7d1b22086aa98a27b1eafc9266596d8}\label{classSymDetect_af7d1b22086aa98a27b1eafc9266596d8}} 
+\index{Sym\+Detect@{Sym\+Detect}!get\+Patrn\+Net\+Conn@{get\+Patrn\+Net\+Conn}}
+\index{get\+Patrn\+Net\+Conn@{get\+Patrn\+Net\+Conn}!Sym\+Detect@{Sym\+Detect}}
+\subsubsection{\texorpdfstring{get\+Patrn\+Net\+Conn()}{getPatrnNetConn()}}
+{\footnotesize\ttfamily \hyperlink{namespace_8h_ae48726a24dab2034454cf6d79e531eb8}{P\+R\+O\+J\+E\+C\+T\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+B\+E\+G\+IN} void Sym\+Detect\+::get\+Patrn\+Net\+Conn (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \hyperlink{structMosPair}{Mos\+Pair} $>$ \&}]{diff\+Pair,  }\item[{\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type}}]{net\+Id,  }\item[{\hyperlink{type_8h_af19eddb079bfea723256710b029c38e8}{Mos\+Pattern}}]{srch\+Patrn }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Get D\+I\+F\+F\+\_\+\+S\+O\+U\+R\+CE \hyperlink{structMosPair}{Mos\+Pair} connected to net\+Id. 
+Get srch\+Patrn \hyperlink{structMosPair}{Mos\+Pair} connected to net\+Id. 
 
-Find \hyperlink{structMosPair}{Mos\+Pair} that follow \hyperlink{type_8h_af19eddb079bfea723256710b029c38e8ad45b64a7d6b85dde1b52dd5a18863933}{Mos\+Pattern\+::\+D\+I\+F\+F\+\_\+\+S\+O\+U\+R\+CE} and the sources are both connected to net\+Id. Theses \hyperlink{structMosPair}{Mos\+Pair} are appended to diff\+Pair.
+Find \hyperlink{structMosPair}{Mos\+Pair} that follow srch\+Patrn. Theses \hyperlink{structMosPair}{Mos\+Pair} are appended to diff\+Pair. Used to get valid D\+FS source. srch\+Patrn inputs commonly are D\+I\+F\+F\+\_\+\+S\+O\+U\+R\+CE and C\+R\+O\+S\+S\+\_\+\+L\+O\+AD. Currently pairs should follow\+: (1) Have Mos\+Pattern srch\+Patrn (2) source connected to net\+Id (3) \hyperlink{type_8h_a34a6a66323cfecf83dfe00bc8fd96333aa2e1ec2dd3d8195d238c5494f0ac5578}{Mos\+Type\+::\+D\+I\+FF}
 
 
 \begin{DoxyParams}{Parameters}

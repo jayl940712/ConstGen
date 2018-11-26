@@ -120,11 +120,11 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a9bdb845d015762b59f3dc977a76aed32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymDetect.html#a9bdb845d015762b59f3dc977a76aed32">pushNextSrchObj</a> (std::vector&lt; <a class="el" href="structMosPair.html">MosPair</a> &gt; &amp;dfsVstPair, std::vector&lt; <a class="el" href="structSymDetect_1_1srchObj.html">srchObj</a> &gt; &amp;dfsStack, <a class="el" href="structSymDetect_1_1srchObj.html">srchObj</a> &amp;currObj, std::vector&lt; <a class="el" href="structMosPair.html">MosPair</a> &gt; &amp;diffPairSrc) const</td></tr>
 <tr class="memdesc:a9bdb845d015762b59f3dc977a76aed32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Push next valid <a class="el" href="structSymDetect_1_1srchObj.html" title="Private object to assist DFS. ">srchObj</a> to dfsStack.  <a href="#a9bdb845d015762b59f3dc977a76aed32">More...</a><br /></td></tr>
 <tr class="separator:a9bdb845d015762b59f3dc977a76aed32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acbcaf5319edd53b2b6cedaa5818bdd38"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymDetect.html#acbcaf5319edd53b2b6cedaa5818bdd38">getDiffPairNetConn</a> (std::vector&lt; <a class="el" href="structMosPair.html">MosPair</a> &gt; &amp;diffPair, <a class="el" href="type_8h.html#a581e8093e28e7362f2b6937296190676">IndexType</a> netId) const</td></tr>
-<tr class="memdesc:acbcaf5319edd53b2b6cedaa5818bdd38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get DIFF_SOURCE <a class="el" href="structMosPair.html" title="A pair of id for Inst. ">MosPair</a> connected to netId.  <a href="#acbcaf5319edd53b2b6cedaa5818bdd38">More...</a><br /></td></tr>
-<tr class="separator:acbcaf5319edd53b2b6cedaa5818bdd38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7d1b22086aa98a27b1eafc9266596d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymDetect.html#af7d1b22086aa98a27b1eafc9266596d8">getPatrnNetConn</a> (std::vector&lt; <a class="el" href="structMosPair.html">MosPair</a> &gt; &amp;diffPair, <a class="el" href="type_8h.html#a581e8093e28e7362f2b6937296190676">IndexType</a> netId, <a class="el" href="type_8h.html#af19eddb079bfea723256710b029c38e8">MosPattern</a> srchPatrn) const</td></tr>
+<tr class="memdesc:af7d1b22086aa98a27b1eafc9266596d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get srchPatrn <a class="el" href="structMosPair.html" title="A pair of id for Inst. ">MosPair</a> connected to netId.  <a href="#af7d1b22086aa98a27b1eafc9266596d8">More...</a><br /></td></tr>
+<tr class="separator:af7d1b22086aa98a27b1eafc9266596d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af04b93dac7e090cef8e741d8d1812485"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymDetect.html#af04b93dac7e090cef8e741d8d1812485">getDiffPair</a> (std::vector&lt; <a class="el" href="structMosPair.html">MosPair</a> &gt; &amp;diffPair) const</td></tr>
-<tr class="memdesc:af04b93dac7e090cef8e741d8d1812485"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get DIFF_SOURCE of netlist.  <a href="#af04b93dac7e090cef8e741d8d1812485">More...</a><br /></td></tr>
+<tr class="memdesc:af04b93dac7e090cef8e741d8d1812485"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get valid DFS source of netlist.  <a href="#af04b93dac7e090cef8e741d8d1812485">More...</a><br /></td></tr>
 <tr class="separator:af04b93dac7e090cef8e741d8d1812485"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd33a2c834493240fc4e8840819d676c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymDetect.html#acd33a2c834493240fc4e8840819d676c">dfsDiffPair</a> (std::vector&lt; <a class="el" href="structMosPair.html">MosPair</a> &gt; &amp;dfsVstPair, <a class="el" href="structMosPair.html">MosPair</a> &amp;diffPair, std::vector&lt; <a class="el" href="structMosPair.html">MosPair</a> &gt; &amp;diffPairSrch) const</td></tr>
 <tr class="memdesc:acd33a2c834493240fc4e8840819d676c"><td class="mdescLeft">&#160;</td><td class="mdescRight">DFS search with given source. Visited <a class="el" href="structMosPair.html" title="A pair of id for Inst. ">MosPair</a> are stored.  <a href="#acd33a2c834493240fc4e8840819d676c">More...</a><br /></td></tr>
@@ -374,9 +374,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get DIFF_SOURCE of netlist. </p>
-<p>Iterate all signal nets for getDiffPairNetConn. This would return all DFS sources.</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classSymDetect.html#acbcaf5319edd53b2b6cedaa5818bdd38" title="Get DIFF_SOURCE MosPair connected to netId. ">getDiffPairNetConn</a> </dd></dl>
+<p>Get valid DFS source of netlist. </p>
+<p>Iterate all signal nets for getPatrnNetConn. Commonly srchPatrn are DIFF_SOURCE and CROSS_LOAD. This would return all DFS sources.</p>
+<dl class="section see"><dt>See also</dt><dd>getDiffPairNetConn </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">diffPair</td><td>Store the output vector </td></tr>
@@ -386,8 +386,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="acbcaf5319edd53b2b6cedaa5818bdd38"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acbcaf5319edd53b2b6cedaa5818bdd38">&#9670;&nbsp;</a></span>getDiffPairNetConn()</h2>
+<a id="af7d1b22086aa98a27b1eafc9266596d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7d1b22086aa98a27b1eafc9266596d8">&#9670;&nbsp;</a></span>getPatrnNetConn()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -396,7 +396,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_8h.html#ae48726a24dab2034454cf6d79e531eb8">PROJECT_NAMESPACE_BEGIN</a> void SymDetect::getDiffPairNetConn </td>
+          <td class="memname"><a class="el" href="namespace_8h.html#ae48726a24dab2034454cf6d79e531eb8">PROJECT_NAMESPACE_BEGIN</a> void SymDetect::getPatrnNetConn </td>
           <td>(</td>
           <td class="paramtype">std::vector&lt; <a class="el" href="structMosPair.html">MosPair</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>diffPair</em>, </td>
@@ -405,7 +405,13 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="type_8h.html#a581e8093e28e7362f2b6937296190676">IndexType</a>&#160;</td>
-          <td class="paramname"><em>netId</em>&#160;</td>
+          <td class="paramname"><em>netId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="type_8h.html#af19eddb079bfea723256710b029c38e8">MosPattern</a>&#160;</td>
+          <td class="paramname"><em>srchPatrn</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -420,8 +426,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get DIFF_SOURCE <a class="el" href="structMosPair.html" title="A pair of id for Inst. ">MosPair</a> connected to netId. </p>
-<p>Find <a class="el" href="structMosPair.html" title="A pair of id for Inst. ">MosPair</a> that follow <a class="el" href="type_8h.html#af19eddb079bfea723256710b029c38e8ad45b64a7d6b85dde1b52dd5a18863933">MosPattern::DIFF_SOURCE</a> and the sources are both connected to netId. Theses <a class="el" href="structMosPair.html" title="A pair of id for Inst. ">MosPair</a> are appended to diffPair.</p>
+<p>Get srchPatrn <a class="el" href="structMosPair.html" title="A pair of id for Inst. ">MosPair</a> connected to netId. </p>
+<p>Find <a class="el" href="structMosPair.html" title="A pair of id for Inst. ">MosPair</a> that follow srchPatrn. Theses <a class="el" href="structMosPair.html" title="A pair of id for Inst. ">MosPair</a> are appended to diffPair. Used to get valid DFS source. srchPatrn inputs commonly are DIFF_SOURCE and CROSS_LOAD. Currently pairs should follow: (1) Have MosPattern srchPatrn (2) source connected to netId (3) <a class="el" href="type_8h.html#a34a6a66323cfecf83dfe00bc8fd96333aa2e1ec2dd3d8195d238c5494f0ac5578">MosType::DIFF</a></p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">netId</td><td>Source should be connected to netId. </td></tr>

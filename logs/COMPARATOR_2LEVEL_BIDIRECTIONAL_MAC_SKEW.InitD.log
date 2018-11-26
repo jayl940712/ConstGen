@@ -6,3 +6,10 @@ xm40 xm36
 xm41 xm37
 xm10 xm12
 END GROUP
+BEGIN GROUP
+xm49 xm48
+xm46 xm47
+xm42 xm43
+xm39 xm38
+xm44 xm45
+END GROUP
