@@ -126,6 +126,33 @@ SFA/fast:
 	$(MAKE) -f CMakeFiles/SFA.dir/build.make CMakeFiles/SFA.dir/build
 .PHONY : SFA/fast
 
+src/db/MosPair.o: src/db/MosPair.cpp.o
+
+.PHONY : src/db/MosPair.o
+
+# target to build an object file
+src/db/MosPair.cpp.o:
+	$(MAKE) -f CMakeFiles/SFA.dir/build.make CMakeFiles/SFA.dir/src/db/MosPair.cpp.o
+.PHONY : src/db/MosPair.cpp.o
+
+src/db/MosPair.i: src/db/MosPair.cpp.i
+
+.PHONY : src/db/MosPair.i
+
+# target to preprocess a source file
+src/db/MosPair.cpp.i:
+	$(MAKE) -f CMakeFiles/SFA.dir/build.make CMakeFiles/SFA.dir/src/db/MosPair.cpp.i
+.PHONY : src/db/MosPair.cpp.i
+
+src/db/MosPair.s: src/db/MosPair.cpp.s
+
+.PHONY : src/db/MosPair.s
+
+# target to generate assembly for a file
+src/db/MosPair.cpp.s:
+	$(MAKE) -f CMakeFiles/SFA.dir/build.make CMakeFiles/SFA.dir/src/db/MosPair.cpp.s
+.PHONY : src/db/MosPair.cpp.s
+
 src/db/Net.o: src/db/Net.cpp.o
 
 .PHONY : src/db/Net.o
@@ -324,6 +351,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... SFA"
+	@echo "... src/db/MosPair.o"
+	@echo "... src/db/MosPair.i"
+	@echo "... src/db/MosPair.s"
 	@echo "... src/db/Net.o"
 	@echo "... src/db/Net.i"
 	@echo "... src/db/Net.s"

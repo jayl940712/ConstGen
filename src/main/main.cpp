@@ -35,7 +35,8 @@ int main(int argc, char* argv[])
         std::cout << "BEGIN GROUP" << std::endl;
         for (MosPair & pair : diffPair)
         {
-            std::cout << netlist.inst(pair.mosId1).name() << " " << netlist.inst(pair.mosId2).name() << std::endl;
+            std::cout << netlist.inst(pair.mosId1()).name() << " " 
+                << netlist.inst(pair.mosId2()).name() << std::endl;
         }
         std::cout << "END GROUP" << std::endl;
     }

@@ -11,6 +11,11 @@
 },
 {
   "directory": "/home/unga/jayliu/SFA/build/debug",
+  "command": "/usr/bin/c++    -I/home/unga/jayliu/SFA/src -I/home/unga/jayliu/SFA/unittest  -std=c++11 -Wall  -g3 -O0 -fno-inline   -o CMakeFiles/SFA.dir/src/db/MosPair.cpp.o -c /home/unga/jayliu/SFA/src/db/MosPair.cpp",
+  "file": "/home/unga/jayliu/SFA/src/db/MosPair.cpp"
+},
+{
+  "directory": "/home/unga/jayliu/SFA/build/debug",
   "command": "/usr/bin/c++    -I/home/unga/jayliu/SFA/src -I/home/unga/jayliu/SFA/unittest  -std=c++11 -Wall  -g3 -O0 -fno-inline   -o CMakeFiles/SFA.dir/src/db/Net.cpp.o -c /home/unga/jayliu/SFA/src/db/Net.cpp",
   "file": "/home/unga/jayliu/SFA/src/db/Net.cpp"
 },

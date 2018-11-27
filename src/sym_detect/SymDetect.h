@@ -7,6 +7,7 @@
 #define __SYMDETECT_H__
 
 #include "db/Netlist.h"
+#include "db/MosPair.h"
 #include "sym_detect/Pattern.h"
 #include <vector>
 
@@ -40,30 +41,16 @@ public:
     void                        hiSymDetect(std::vector<std::vector<MosPair>> & symGroup) const;
 
 private:
-/*! @struct srchObj
-    @brief Private object to assist DFS.
-*/
-    struct srchObj
-    {
-        MosPair pair; /*!< Pair of mosfet that fits MosPattern. Note it is not a reference!*/
-        PinType srchPinType; /*!< Indicate the pinType visited from last MosPair */
-/*! @brief Constructor */
-        srchObj(MosPair & diffPair, PinType pinType) 
-            : pair(diffPair), srchPinType(pinType) 
-        {}
-    };
-
-private:
     const Netlist & _netlist;
     Pattern   _pattern;
 
-/*! @brief Return pattern of srchObj. */
-    MosPattern                  srchObjPtrn(srchObj & obj) const;
+/*! @brief Return pattern of MosPair. */
+    MosPattern                  MosPairPtrn(MosPair & obj) const;
 ///    bool                        endSrch(IndexType mosId, PinType pinType) const;
 /*! @brief Check if pair already reached. */
     bool                        existPair(std::vector<MosPair> & library, IndexType instId1, IndexType instId2) const;
 /*! @brief Check if pair already reached. */
-    bool                        existPair(std::vector<srchObj> & library, IndexType instId1, IndexType instId2) const;
+//    bool                        existPair(std::vector<MosPair> & library, IndexType instId1, IndexType instId2) const;
 /*! @brief Return true if end of search path. 
 
     Current end search terminations:
@@ -71,7 +58,7 @@ private:
     (2) LOAD, CROSS_LOAD 
     (3) gate connected pairs 
 */
-    bool                        endSrch(srchObj & obj) const;
+    bool                        endSrch(MosPair & obj) const;
 /*! @brief Return true if a valid pair. 
 
     Valid pairs have following attributes:
@@ -86,7 +73,7 @@ private:
 */
     bool                        validSrchObj(IndexType instId1, IndexType instId2, 
                                              IndexType srchPinId1, IndexType srchPinId2) const;
-/*! @brief Push next valid srchObj to dfsStack.
+/*! @brief Push next valid MosPair to dfsStack.
 
     This function push valid pairs that could be reached 
     from currObj to dfsStack. It also removes reached DIFF_SOURCE
@@ -95,14 +82,14 @@ private:
     @see inVldDiffPairSrch.
     @param dfsVstPair All current visited MosPair
     @param dfsStack Stack to store to visit MosPair
-    @param currObj Current srchObj under visit
+    @param currObj Current MosPair under visit
     @param diffPairSrc All DFS sources
 */
-    void                        pushNextSrchObj(std::vector<MosPair> & dfsVstPair, std::vector<srchObj> & dfsStack, 
-                                                srchObj & currObj, std::vector<MosPair> & diffPairSrc) const;
+    void                        pushNextSrchObj(std::vector<MosPair> & dfsVstPair, std::vector<MosPair> & dfsStack, 
+                                                MosPair & currObj, std::vector<MosPair> & diffPairSrc) const;
 /*! @brief Get srchPatrn MosPair connected to netId.
 
-    Find MosPair that follow srchPatrn. Theses
+    Find MosPair that follow srchPatrn. These
     MosPair are appended to diffPair. Used to 
     get valid DFS source. srchPatrn inputs commonly
     are DIFF_SOURCE and CROSS_LOAD.

@@ -14,6 +14,12 @@ vector
 global/type.h
 ../../src/db/global/type.h
 
+../../src/db/MosPair.h
+global/type.h
+../../src/db/global/type.h
+sym_detect/Pattern.h
+../../src/db/sym_detect/Pattern.h
+
 ../../src/db/Net.h
 string
 -
@@ -67,10 +73,16 @@ global/type.h
 ../../src/sym_detect/SymDetect.h
 db/Netlist.h
 ../../src/sym_detect/db/Netlist.h
+db/MosPair.h
+../../src/sym_detect/db/MosPair.h
 sym_detect/Pattern.h
 ../../src/sym_detect/sym_detect/Pattern.h
 vector
 -
+
+/home/unga/jayliu/SFA/src/db/MosPair.cpp
+db/MosPair.h
+/home/unga/jayliu/SFA/src/db/db/MosPair.h
 
 /home/unga/jayliu/SFA/src/db/Net.cpp
 db/Net.h

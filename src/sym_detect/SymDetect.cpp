@@ -15,9 +15,16 @@ void SymDetect::getPatrnNetConn(std::vector<MosPair> & diffPair, IndexType netId
     _netlist.fltrInstNetConnPinType(srcMos, netId, PinType::SOURCE); //filter connect by source
     _netlist.fltrInstMosType(srcMos, MosType::DIFF); //filter by MosType::DIFF
     for (IndexType i = 0; i < srcMos.size(); i++)
+    {
         for (IndexType j = i + 1; j < srcMos.size(); j++)
-            if (_pattern.pattern(srcMos[i], srcMos[j]) == srchPatrn)
-                diffPair.emplace_back(srcMos[i], srcMos[j]); //add only if matched MosPattern
+        {
+            MosPattern pattern = _pattern.pattern(srcMos[i], srcMos[j]);
+            if (pattern == srchPatrn)
+            {
+                diffPair.emplace_back(srcMos[i], srcMos[j], pattern); //add only if matched MosPattern
+            }
+        }
+    }
 }
 
 void SymDetect::getDiffPair(std::vector<MosPair> & diffPair) const
@@ -31,53 +38,31 @@ void SymDetect::getDiffPair(std::vector<MosPair> & diffPair) const
             getPatrnNetConn(diffPair, netId, MosPattern::CROSS_LOAD); 
 }
 
-//bool SymDetect::endSrch(IndexType mosId, PinType currPinType)
-//{
-//    IndexType toSrchNetId = _netlist.instNetId(mosId, Pin::nextPinType(currPinType));
-//    return !_netlist.isSignal(toSrchNetId);
-//}
-
 bool SymDetect::existPair(std::vector<MosPair> & library, IndexType instId1, IndexType instId2) const
 {
     for (MosPair & currPair : library)
     {
-        if (currPair.mosId1 == instId1 && currPair.mosId2 == instId2)
+        if (currPair.mosId1() == instId1 && currPair.mosId2() == instId2)
             return true;
-        if (currPair.mosId2 == instId1 && currPair.mosId1 == instId2)
-            return true;
-    }
-    return false;
-}
-
-bool SymDetect::existPair(std::vector<srchObj> & library, IndexType instId1, IndexType instId2) const
-{
-    for (srchObj & currObj : library)
-    {
-        if (currObj.pair.mosId1 == instId1 && currObj.pair.mosId2 == instId2)
-            return true;
-        if (currObj.pair.mosId2 == instId1 && currObj.pair.mosId1 == instId2)
+        if (currPair.mosId2() == instId1 && currPair.mosId1() == instId2)
             return true;
     }
     return false;
 }
 
-MosPattern SymDetect::srchObjPtrn(srchObj & obj) const
+bool SymDetect::endSrch(MosPair & currObj) const
 {
-    return _pattern.pattern(obj.pair.mosId1, obj.pair.mosId2);
-}
-
-bool SymDetect::endSrch(srchObj & currObj) const
-{
-    if (srchObjPtrn(currObj) == MosPattern::DIFF_SOURCE &&
-        currObj.srchPinType == PinType::DRAIN)
+    if (currObj.pattern() == MosPattern::DIFF_SOURCE &&
+        currObj.srchPinType() == PinType::DRAIN)
         return true; // If reached new DIFF_SOURCE through drain. 
-    if (srchObjPtrn(currObj) == MosPattern::CROSS_LOAD &&
-        currObj.srchPinType == PinType::DRAIN)
+    if (currObj.pattern() == MosPattern::CROSS_LOAD &&
+        currObj.srchPinType() == PinType::DRAIN)
         return true; // If reached new CROSS_LOAD through drain. 
-   if (srchObjPtrn(currObj) == MosPattern::LOAD)
+   if (currObj.pattern() == MosPattern::LOAD)
 //        srchObjPtrn(currObj) == MosPattern::CROSS_LOAD)
         return true; // If LOAD pattern.
-    if (currObj.srchPinType != PinType::SOURCE && currObj.srchPinType != PinType::DRAIN)
+    if (currObj.srchPinType() != PinType::SOURCE && 
+        currObj.srchPinType() != PinType::DRAIN)
         return true; // If reached by gate.
     return false;
 }
@@ -105,17 +90,17 @@ bool SymDetect::validSrchObj(IndexType instId1, IndexType instId2,
 void SymDetect::inVldDiffPairSrch(std::vector<MosPair> & diffPairSrch, MosPair & currPair) const
 {
     for (MosPair & pair : diffPairSrch)
-        if (pair == currPair)
-            pair.valid = false;
+        if (pair.isEqual(currPair))
+            pair.inVld();
 }
 
-void SymDetect::pushNextSrchObj(std::vector<MosPair> & dfsVstPair, std::vector<srchObj> & dfsStack,
-                                 srchObj & currObj, std::vector<MosPair> & diffPairSrc) const
+void SymDetect::pushNextSrchObj(std::vector<MosPair> & dfsVstPair, std::vector<MosPair> & dfsStack,
+                                 MosPair & currObj, std::vector<MosPair> & diffPairSrc) const
 {
     if (endSrch(currObj))
         return; //return if endSrch
-    IndexType srchPinId1 = _netlist.instPinId(currObj.pair.mosId1, Pin::nextPinType(currObj.srchPinType));
-    IndexType srchPinId2 = _netlist.instPinId(currObj.pair.mosId2, Pin::nextPinType(currObj.srchPinType));
+    IndexType srchPinId1 = _netlist.instPinId(currObj.mosId1(), currObj.nextPinType());
+    IndexType srchPinId2 = _netlist.instPinId(currObj.mosId2(), currObj.nextPinType());
     std::vector<IndexType> Mos1, Mos2;
     _netlist.getInstPinConn(Mos1, srchPinId1); //Connected Inst through nextPinType
     _netlist.getInstPinConn(Mos2, srchPinId2);
@@ -127,8 +112,9 @@ void SymDetect::pushNextSrchObj(std::vector<MosPair> & dfsVstPair, std::vector<s
                 !existPair(dfsVstPair, instId1, instId2) && //not visited before
                 !existPair(dfsStack, instId1, instId2)) 
             {
-                MosPair currPair(instId1, instId2);
-                dfsStack.emplace_back(currPair, _netlist.getPinTypeInstPinConn(instId1, srchPinId1));
+                MosPair currPair(instId1, instId2, _pattern.pattern(instId1, instId2));
+                currPair.setSrchPinType(_netlist.getPinTypeInstPinConn(instId1, srchPinId1));
+                dfsStack.push_back(currPair);
                 inVldDiffPairSrch(diffPairSrc, currPair); //invalidate DFS sources
             }
        }
@@ -138,13 +124,13 @@ void SymDetect::pushNextSrchObj(std::vector<MosPair> & dfsVstPair, std::vector<s
 void SymDetect::dfsDiffPair(std::vector<MosPair> & dfsVstPair, MosPair & diffPair, 
                             std::vector<MosPair> & diffPairSrc) const
 {
-    std::vector<srchObj> dfsStack;  //use vector to implement stack.
-    dfsStack.emplace_back(diffPair, PinType::SOURCE);
+    std::vector<MosPair> dfsStack;  //use vector to implement stack.
+    dfsStack.push_back(diffPair);
     while (!dfsStack.empty()) //DFS 
     {
-        srchObj currObj = dfsStack.back();
+        MosPair currObj = dfsStack.back();
         dfsStack.pop_back();
-        dfsVstPair.push_back(currObj.pair);
+        dfsVstPair.push_back(currObj); //pop current visit from stack and add to visited
         pushNextSrchObj(dfsVstPair, dfsStack, currObj, diffPairSrc);
     } 
 }
@@ -156,7 +142,7 @@ void SymDetect::hiSymDetect(std::vector<std::vector<MosPair>> & symGroup) const
     getDiffPair(diffPairSrc); //get all DFS source
     for (MosPair & pair : diffPairSrc) //for each source
     {
-        if (pair.valid)
+        if (pair.valid())
         {
             dfsVstPair.clear();
             dfsDiffPair(dfsVstPair, pair, diffPairSrc); //search
