@@ -170,7 +170,10 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="type_8h.html#af19eddb079bfea723256710b029c38e8adb952aa3809767bf108688a754ebbf2c">MosPattern::CROSS_CASCODE</a>, 
 <a class="el" href="type_8h.html#af19eddb079bfea723256710b029c38e8a19ddbfeab78ac1a4bbe1a186828c5d8d">MosPattern::CROSS_LOAD</a>, 
-<a class="el" href="type_8h.html#af19eddb079bfea723256710b029c38e8accc0377a8afbf50e7094f5c23a8af223">MosPattern::INVALID</a>
+<a class="el" href="type_8h.html#af19eddb079bfea723256710b029c38e8ade1c70a20d797811b2fd32facf64bbd4">MosPattern::PASSIVE</a>, 
+<a class="el" href="type_8h.html#af19eddb079bfea723256710b029c38e8abe5470eb0ca5e3845ed08a1b358a5fb9">MosPattern::SELF</a>, 
+<br />
+&#160;&#160;<a class="el" href="type_8h.html#af19eddb079bfea723256710b029c38e8accc0377a8afbf50e7094f5c23a8af223">MosPattern::INVALID</a>
 <br />
  }<tr class="memdesc:af19eddb079bfea723256710b029c38e8"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPattern.html" title="Pattern class. ">Pattern</a> for pair of Mosfet.  <a href="type_8h.html#af19eddb079bfea723256710b029c38e8">More...</a><br /></td></tr>
 </td></tr>
@@ -274,9 +277,6 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Type of <a class="el" href="classInst.html" title="Inst class. ">Inst</a>. </p>
-<p>Constructor</p>
-<p>Equal operator.</p>
-<p>Two pairs are equal if all Id are equal. Sequence does not matter. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a53644c687d6bc203d9d3d3ee70075f61af8af55aaebfbde59fb3954b42cedcf60"></a>RES&#160;</td><td class="fielddoc"><p>Resistor </p>
 </td></tr>
@@ -313,6 +313,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p><a class="el" href="classPattern.html" title="Pattern class. ">Pattern</a> for pair of Mosfet. </p>
+<p>The patterns have been augmented to also handle self symmetry pairs and passive devices. The name retains as legacy.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classPattern.html#a1214e024706aff22e44bb4f4266d8e97" title="Return pattern for pair of mosfets. ">Pattern::pattern()</a> </dd></dl>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="af19eddb079bfea723256710b029c38e8ad45b64a7d6b85dde1b52dd5a18863933"></a>DIFF_SOURCE&#160;</td><td class="fielddoc"><p>Source connected diff pair. </p>
@@ -326,6 +327,10 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="af19eddb079bfea723256710b029c38e8adb952aa3809767bf108688a754ebbf2c"></a>CROSS_CASCODE&#160;</td><td class="fielddoc"><p>Cross coupled cascode pair. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="af19eddb079bfea723256710b029c38e8a19ddbfeab78ac1a4bbe1a186828c5d8d"></a>CROSS_LOAD&#160;</td><td class="fielddoc"><p>Cross coupled load. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="af19eddb079bfea723256710b029c38e8ade1c70a20d797811b2fd32facf64bbd4"></a>PASSIVE&#160;</td><td class="fielddoc"><p>Matched passive device. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="af19eddb079bfea723256710b029c38e8abe5470eb0ca5e3845ed08a1b358a5fb9"></a>SELF&#160;</td><td class="fielddoc"><p>Self symmetry <a class="el" href="classInst.html" title="Inst class. ">Inst</a>. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="af19eddb079bfea723256710b029c38e8accc0377a8afbf50e7094f5c23a8af223"></a>INVALID&#160;</td><td class="fielddoc"><p>No pattern detected. </p>
 </td></tr>

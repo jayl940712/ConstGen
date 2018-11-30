@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['self',['SELF',['../type_8h.html#af19eddb079bfea723256710b029c38e8abe5470eb0ca5e3845ed08a1b358a5fb9',1,'type.h']]],
   ['selfsymsrch',['selfSymSrch',['../classSymDetect.html#ab6f286024b013fa257295111016da18b',1,'SymDetect']]],
   ['setlen',['setLen',['../classInst.html#a63908bff80f6af5034e6d51e894a54e2',1,'Inst']]],
   ['setsrchpintype',['setSrchPinType',['../classMosPair.html#a133614566bf03ab4b37aced8169aee87',1,'MosPair']]],

@@ -14,8 +14,7 @@ Include dependency graph for type.\+h\+:\nopagebreak
 \includegraphics[width=236pt]{type_8h__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:
-\nopagebreak
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -75,6 +74,9 @@ enum \hyperlink{type_8h_af19eddb079bfea723256710b029c38e8}{Mos\+Pattern} \+: Byt
 \newline
 \hyperlink{type_8h_af19eddb079bfea723256710b029c38e8adb952aa3809767bf108688a754ebbf2c}{Mos\+Pattern\+::\+C\+R\+O\+S\+S\+\_\+\+C\+A\+S\+C\+O\+DE}, 
 \hyperlink{type_8h_af19eddb079bfea723256710b029c38e8a19ddbfeab78ac1a4bbe1a186828c5d8d}{Mos\+Pattern\+::\+C\+R\+O\+S\+S\+\_\+\+L\+O\+AD}, 
+\hyperlink{type_8h_af19eddb079bfea723256710b029c38e8ade1c70a20d797811b2fd32facf64bbd4}{Mos\+Pattern\+::\+P\+A\+S\+S\+I\+VE}, 
+\hyperlink{type_8h_af19eddb079bfea723256710b029c38e8abe5470eb0ca5e3845ed08a1b358a5fb9}{Mos\+Pattern\+::\+S\+E\+LF}, 
+\newline
 \hyperlink{type_8h_af19eddb079bfea723256710b029c38e8accc0377a8afbf50e7094f5c23a8af223}{Mos\+Pattern\+::\+I\+N\+V\+A\+L\+ID}
  \}\begin{DoxyCompactList}\small\item\em \hyperlink{classPattern}{Pattern} for pair of Mosfet. \end{DoxyCompactList}
 \end{DoxyCompactItemize}
@@ -144,11 +146,7 @@ Mingjie Liu
 
 Type of \hyperlink{classInst}{Inst}. 
 
-Constructor
-
-Equal operator.
-
-Two pairs are equal if all Id are equal. Sequence does not matter. \begin{DoxyEnumFields}{Enumerator}
+\begin{DoxyEnumFields}{Enumerator}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{R\+ES@{R\+ES}!type.\+h@{type.\+h}}\index{type.\+h@{type.\+h}!R\+ES@{R\+ES}}}\mbox{\Hypertarget{type_8h_a53644c687d6bc203d9d3d3ee70075f61af8af55aaebfbde59fb3954b42cedcf60}\label{type_8h_a53644c687d6bc203d9d3d3ee70075f61af8af55aaebfbde59fb3954b42cedcf60}} 
 R\+ES&Resistor \\
 \hline
@@ -180,6 +178,8 @@ O\+T\+H\+ER&Other \\
 
 \hyperlink{classPattern}{Pattern} for pair of Mosfet. 
 
+The patterns have been augmented to also handle self symmetry pairs and passive devices. The name retains as legacy.
+
 \begin{DoxySeeAlso}{See also}
 \hyperlink{classPattern_a1214e024706aff22e44bb4f4266d8e97}{Pattern\+::pattern()} 
 \end{DoxySeeAlso}
@@ -206,6 +206,14 @@ C\+R\+O\+S\+S\+\_\+\+C\+A\+S\+C\+O\+DE&Cross coupled cascode pair. \\
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{C\+R\+O\+S\+S\+\_\+\+L\+O\+AD@{C\+R\+O\+S\+S\+\_\+\+L\+O\+AD}!type.\+h@{type.\+h}}\index{type.\+h@{type.\+h}!C\+R\+O\+S\+S\+\_\+\+L\+O\+AD@{C\+R\+O\+S\+S\+\_\+\+L\+O\+AD}}}\mbox{\Hypertarget{type_8h_af19eddb079bfea723256710b029c38e8a19ddbfeab78ac1a4bbe1a186828c5d8d}\label{type_8h_af19eddb079bfea723256710b029c38e8a19ddbfeab78ac1a4bbe1a186828c5d8d}} 
 C\+R\+O\+S\+S\+\_\+\+L\+O\+AD&Cross coupled load. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+A\+S\+S\+I\+VE@{P\+A\+S\+S\+I\+VE}!type.\+h@{type.\+h}}\index{type.\+h@{type.\+h}!P\+A\+S\+S\+I\+VE@{P\+A\+S\+S\+I\+VE}}}\mbox{\Hypertarget{type_8h_af19eddb079bfea723256710b029c38e8ade1c70a20d797811b2fd32facf64bbd4}\label{type_8h_af19eddb079bfea723256710b029c38e8ade1c70a20d797811b2fd32facf64bbd4}} 
+P\+A\+S\+S\+I\+VE&Matched passive device. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+E\+LF@{S\+E\+LF}!type.\+h@{type.\+h}}\index{type.\+h@{type.\+h}!S\+E\+LF@{S\+E\+LF}}}\mbox{\Hypertarget{type_8h_af19eddb079bfea723256710b029c38e8abe5470eb0ca5e3845ed08a1b358a5fb9}\label{type_8h_af19eddb079bfea723256710b029c38e8abe5470eb0ca5e3845ed08a1b358a5fb9}} 
+S\+E\+LF&Self symmetry \hyperlink{classInst}{Inst}. \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{I\+N\+V\+A\+L\+ID@{I\+N\+V\+A\+L\+ID}!type.\+h@{type.\+h}}\index{type.\+h@{type.\+h}!I\+N\+V\+A\+L\+ID@{I\+N\+V\+A\+L\+ID}}}\mbox{\Hypertarget{type_8h_af19eddb079bfea723256710b029c38e8accc0377a8afbf50e7094f5c23a8af223}\label{type_8h_af19eddb079bfea723256710b029c38e8accc0377a8afbf50e7094f5c23a8af223}} 

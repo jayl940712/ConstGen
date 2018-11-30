@@ -49,49 +49,49 @@ Scanning input file refman.idx....
    -- First argument too long (max 1024).
 !! Input index error (file = refman.idx, line = 329):
    -- First argument too long (max 1024).
-
+!! Input index error (file = refman.idx, line = 330):
+   -- Extra `@' at position 146 of first argument.
+!! Input index error (file = refman.idx, line = 331):
+   -- Extra `@' at position 120 of first argument.
 !! Input index error (file = refman.idx, line = 332):
-   -- Extra `@' at position 146 of first argument.
+   -- First argument too long (max 1024).
 !! Input index error (file = refman.idx, line = 333):
-   -- Extra `@' at position 120 of first argument.
-!! Input index error (file = refman.idx, line = 334):
-   -- Extra `@' at position 146 of first argument.
-!! Input index error (file = refman.idx, line = 335):
-   -- Extra `@' at position 120 of first argument.
+   -- First argument too long (max 1024).
+
 !! Input index error (file = refman.idx, line = 336):
-   -- Extra `@' at position 117 of first argument.
+   -- Extra `@' at position 146 of first argument.
 !! Input index error (file = refman.idx, line = 337):
    -- Extra `@' at position 120 of first argument.
 !! Input index error (file = refman.idx, line = 338):
    -- Extra `@' at position 146 of first argument.
 !! Input index error (file = refman.idx, line = 339):
    -- Extra `@' at position 120 of first argument.
-
+!! Input index error (file = refman.idx, line = 340):
+   -- Extra `@' at position 117 of first argument.
+!! Input index error (file = refman.idx, line = 341):
+   -- Extra `@' at position 120 of first argument.
 !! Input index error (file = refman.idx, line = 342):
    -- Extra `@' at position 146 of first argument.
 !! Input index error (file = refman.idx, line = 343):
    -- Extra `@' at position 120 of first argument.
-!! Input index error (file = refman.idx, line = 344):
-   -- First argument too long (max 1024).
-!! Input index error (file = refman.idx, line = 345):
-   -- First argument too long (max 1024).
-!! Input index error (file = refman.idx, line = 346):
-   -- First argument too long (max 1024).
-!! Input index error (file = refman.idx, line = 347):
-   -- First argument too long (max 1024).
 
+!! Input index error (file = refman.idx, line = 346):
+   -- Extra `@' at position 146 of first argument.
+!! Input index error (file = refman.idx, line = 347):
+   -- Extra `@' at position 120 of first argument.
+!! Input index error (file = refman.idx, line = 348):
+   -- First argument too long (max 1024).
+!! Input index error (file = refman.idx, line = 349):
+   -- First argument too long (max 1024).
 !! Input index error (file = refman.idx, line = 350):
    -- First argument too long (max 1024).
 !! Input index error (file = refman.idx, line = 351):
    -- First argument too long (max 1024).
-!! Input index error (file = refman.idx, line = 352):
-   -- Extra `@' at position 146 of first argument.
-!! Input index error (file = refman.idx, line = 353):
-   -- Extra `@' at position 120 of first argument.
+
 !! Input index error (file = refman.idx, line = 354):
-   -- Extra `@' at position 146 of first argument.
+   -- First argument too long (max 1024).
 !! Input index error (file = refman.idx, line = 355):
-   -- Extra `@' at position 120 of first argument.
+   -- First argument too long (max 1024).
 !! Input index error (file = refman.idx, line = 356):
    -- Extra `@' at position 146 of first argument.
 !! Input index error (file = refman.idx, line = 357):
@@ -108,7 +108,15 @@ Scanning input file refman.idx....
    -- Extra `@' at position 146 of first argument.
 !! Input index error (file = refman.idx, line = 363):
    -- Extra `@' at position 120 of first argument.
-done (334 entries accepted, 52 rejected).
+!! Input index error (file = refman.idx, line = 364):
+   -- Extra `@' at position 146 of first argument.
+!! Input index error (file = refman.idx, line = 365):
+   -- Extra `@' at position 120 of first argument.
+!! Input index error (file = refman.idx, line = 366):
+   -- Extra `@' at position 146 of first argument.
+!! Input index error (file = refman.idx, line = 367):
+   -- Extra `@' at position 120 of first argument.
+done (334 entries accepted, 56 rejected).
 Sorting entries.....done (2888 comparisons).
 Generating output file refman.ind....done (501 lines written, 0 warnings).
 Output written in refman.ind.
