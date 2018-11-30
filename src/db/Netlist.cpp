@@ -20,7 +20,7 @@ bool Netlist::isMos(InstType instType) const
 
 bool Netlist::isPasvDev(InstType instType) const
 {
-    return instType == InstType::NMOS || instType == InstType::PMOS;  
+    return instType == InstType::CAP || instType == InstType::RES;  
 }
 
 void Netlist::init(InitDataObj & obj)

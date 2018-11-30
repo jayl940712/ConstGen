@@ -64,6 +64,8 @@ bool SymDetect::existPair(std::vector<MosPair> & library, IndexType instId) cons
 
 bool SymDetect::endSrch(MosPair & currObj) const
 {
+    if (currObj.pattern() == MosPattern::PASSIVE)
+        return true; // If reached passive device.
     if (currObj.pattern() == MosPattern::DIFF_SOURCE &&
         currObj.srchPinType() == PinType::DRAIN)
         return true; // If reached new DIFF_SOURCE through drain. 
@@ -82,14 +84,18 @@ bool SymDetect::endSrch(MosPair & currObj) const
 bool SymDetect::validSrchObj(IndexType instId1, IndexType instId2,
                              IndexType srchPinId1, IndexType srchPinId2) const
 {
+
+    MosPattern currPtrn = _pattern.pattern(instId1, instId2);
+    if (currPtrn == MosPattern::PASSIVE)
+        return true; // Pass valid for all passive pairs.
 // This needs update and more considerations.
-    if (_netlist.getPinTypeInstPinConn(instId1, srchPinId1) != _netlist.getPinTypeInstPinConn(instId2, srchPinId2))
+    if (_netlist.getPinTypeInstPinConn(instId1, srchPinId1) != 
+        _netlist.getPinTypeInstPinConn(instId2, srchPinId2))
         return false; //false if reached through different PinType
     if (_netlist.getPinTypeInstPinConn(instId1, srchPinId1) == PinType::GATE)
         return false; //block gate connected patterns
     if (_netlist.getPinTypeInstPinConn(instId2, srchPinId2) == PinType::GATE)
         return false;
-    MosPattern currPtrn = _pattern.pattern(instId1, instId2);
 //  Below is removed, DIFF_SOURCE removal updated.
 //    if (currPtrn == MosPattern::DIFF_SOURCE ||
 //        currPtrn == MosPattern::DIFF_CASCODE)
@@ -175,24 +181,24 @@ void SymDetect::getVldDrainMos(std::vector<IndexType> & vldMos, IndexType netId)
 void SymDetect::selfSymSrch(std::vector<MosPair> & dfsVstPair, MosPair & diffPair) const
 {
     if (diffPair.pattern() != MosPattern::DIFF_SOURCE)
-        return;
+        return; //return if not of DIFF_SOURCE pattern.
     if (!_netlist.isSignal(_netlist.srcNetId(diffPair.mosId1())))
-        return;
-    std::vector<IndexType> dfsStack;
-    getVldDrainMos(dfsStack, _netlist.srcNetId(diffPair.mosId1()));
-    while (!dfsStack.empty())
+        return; //return if already reached ground.
+    std::vector<IndexType> dfsStack; //used vector as stack implementation.
+    getVldDrainMos(dfsStack, _netlist.srcNetId(diffPair.mosId1())); //push all valid drain connection to stack.
+    while (!dfsStack.empty()) //dfs search
     {
         IndexType currMosId = dfsStack.back();
         dfsStack.pop_back();
-        if (!existPair(dfsVstPair, currMosId))
-            dfsVstPair.emplace_back(currMosId, currMosId, MosPattern::INVALID);
+        if (!existPair(dfsVstPair, currMosId)) //if not already as a pattern.
+            dfsVstPair.emplace_back(currMosId, currMosId, MosPattern::SELF);
         IndexType netId = _netlist.srcNetId(currMosId);
-        if (_netlist.isSignal(netId))
+        if (_netlist.isSignal(netId)) //search if not reached ground.
         {
             std::vector<IndexType> nextVst;
             getVldDrainMos(nextVst, _netlist.srcNetId(currMosId));
             for (IndexType id : nextVst)
-                dfsStack.push_back(id);
+                dfsStack.push_back(id); //add valid Inst to search.
         }
     }
 }

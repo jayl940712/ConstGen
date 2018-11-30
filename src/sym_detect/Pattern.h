@@ -1,5 +1,10 @@
 /*! @file sym_detect/Pattern.h
     @brief Mosfet pair patterns.
+
+    This class has been augmented also to handle passive
+    device matching and self symmetry mosfets. The name
+    remains as legacy.
+
     @author Mingjie Liu
     @date 11/24/2018
 */

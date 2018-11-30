@@ -116,6 +116,10 @@ MosPattern Pattern::pattern(IndexType mosId1, IndexType mosId2) const
         return MosPattern::DIFF_SOURCE;
     if (diffPairCascode(mosId1, mosId2))
         return MosPattern::DIFF_CASCODE;
+// return true if same type passive device
+    if (_netlist.isPasvDev(_netlist.inst(mosId1).type()) &&
+        _netlist.inst(mosId1).type() == _netlist.inst(mosId2).type())
+        return MosPattern::PASSIVE;
     return MosPattern::INVALID; 
 }
 
