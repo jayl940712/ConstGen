@@ -1,10 +1,12 @@
 <map id="src/db/Netlist.h" name="src/db/Netlist.h">
 <area shape="rect" id="node2" href="$Netlist_8cpp.html" title="Netlist class implementation. " alt="" coords="5,80,131,107"/>
 <area shape="rect" id="node3" href="$InitNetlist_8h.html" title="Parser to initialize netlist. " alt="" coords="155,80,306,107"/>
-<area shape="rect" id="node6" href="$Pattern_8h.html" title="Mosfet pair patterns. " alt="" coords="337,80,506,107"/>
-<area shape="rect" id="node8" href="$SymDetect_8h.html" title="Detect symmetric patterns. " alt="" coords="537,155,730,181"/>
-<area shape="rect" id="node4" href="$main_8cpp.html" title="main.cpp " alt="" coords="207,229,337,256"/>
-<area shape="rect" id="node5" href="$InitNetlist_8cpp.html" title="Parser implementation. " alt="" coords="140,155,305,181"/>
-<area shape="rect" id="node7" href="$Pattern_8cpp.html" title="Pattern definitions. " alt="" coords="330,155,513,181"/>
-<area shape="rect" id="node9" href="$SymDetect_8cpp.html" title="Detect symmetric patterns. " alt="" coords="530,229,737,256"/>
+<area shape="rect" id="node6" href="$Pattern_8h.html" title="Mosfet pair patterns. " alt="" coords="371,80,541,107"/>
+<area shape="rect" id="node9" href="$SymDetect_8h.html" title="Detect symmetric patterns. " alt="" coords="379,229,573,256"/>
+<area shape="rect" id="node4" href="$main_8cpp.html" title="main.cpp " alt="" coords="122,304,251,331"/>
+<area shape="rect" id="node5" href="$InitNetlist_8cpp.html" title="Parser implementation. " alt="" coords="127,155,292,181"/>
+<area shape="rect" id="node7" href="$MosPair_8h.html" title="A pair of Mosfet with MosPattern. " alt="" coords="317,155,438,181"/>
+<area shape="rect" id="node11" href="$Pattern_8cpp.html" title="Pattern definitions. " alt="" coords="514,155,697,181"/>
+<area shape="rect" id="node8" href="$MosPair_8cpp.html" title="MosPair implementation. " alt="" coords="221,229,355,256"/>
+<area shape="rect" id="node10" href="$SymDetect_8cpp.html" title="Detect symmetric patterns. " alt="" coords="373,304,579,331"/>
 </map>

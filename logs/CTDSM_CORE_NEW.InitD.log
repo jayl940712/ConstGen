@@ -41,10 +41,12 @@ xi146/xm15 xi146/xm12
 END GROUP
 BEGIN GROUP
 xi161/xm13 xi161/xm21
+xi161/xm22
 xi161/xm23 xi161/xm14
 END GROUP
 BEGIN GROUP
 xi146/xm6 xi146/xm5
+xi146/xm7
 xi146/xm2 xi146/xm18
 xi146/xm3 xi146/xm4
 xi146/xm12 xi146/xm1

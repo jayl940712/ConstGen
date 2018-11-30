@@ -74,6 +74,7 @@ $(function() {
 <p>Detect symmetric patterns.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="Netlist_8h_source.html">db/Netlist.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="MosPair_8h_source.html">db/MosPair.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Pattern_8h_source.html">sym_detect/Pattern.h</a>&quot;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -81,14 +82,15 @@ Include dependency graph for SymDetect.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="SymDetect_8h__incl.png" border="0" usemap="#src_2sym__detect_2SymDetect_8h" alt=""/></div>
 <map name="src_2sym__detect_2SymDetect_8h" id="src_2sym__detect_2SymDetect_8h">
-<area shape="rect" id="node2" href="Netlist_8h.html" title="Netlist class. " alt="" coords="162,155,251,181"/>
-<area shape="rect" id="node12" href="Pattern_8h.html" title="Mosfet pair patterns. " alt="" coords="188,80,335,107"/>
-<area shape="rect" id="node5" href="type_8h.html" title="Type header file. " alt="" coords="269,304,365,331"/>
-<area shape="rect" id="node9" href="Net_8h.html" title="Net class. " alt="" coords="36,229,108,256"/>
-<area shape="rect" id="node10" href="Pin_8h.html" title="Pin class. " alt="" coords="282,229,353,256"/>
-<area shape="rect" id="node11" href="Inst_8h.html" title="Instance class. " alt="" coords="133,229,206,256"/>
-<area shape="rect" id="node7" href="global_8h.html" title="Global header file. " alt="" coords="319,379,425,405"/>
-<area shape="rect" id="node8" href="namespace_8h.html" title="Namespace header file. " alt="" coords="303,453,441,480"/>
+<area shape="rect" id="node2" href="Netlist_8h.html" title="Netlist class. " alt="" coords="257,229,346,256"/>
+<area shape="rect" id="node12" href="MosPair_8h.html" title="A pair of Mosfet with MosPattern. " alt="" coords="389,80,488,107"/>
+<area shape="rect" id="node13" href="Pattern_8h.html" title="Mosfet pair patterns. " alt="" coords="352,155,499,181"/>
+<area shape="rect" id="node5" href="type_8h.html" title="Type header file. " alt="" coords="363,379,459,405"/>
+<area shape="rect" id="node9" href="Net_8h.html" title="Net class. " alt="" coords="93,304,165,331"/>
+<area shape="rect" id="node10" href="Pin_8h.html" title="Pin class. " alt="" coords="339,304,410,331"/>
+<area shape="rect" id="node11" href="Inst_8h.html" title="Instance class. " alt="" coords="190,304,263,331"/>
+<area shape="rect" id="node7" href="global_8h.html" title="Global header file. " alt="" coords="413,453,518,480"/>
+<area shape="rect" id="node8" href="namespace_8h.html" title="Namespace header file. " alt="" coords="396,528,535,555"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -107,9 +109,6 @@ This graph shows which files directly or indirectly include this file:</div>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymDetect.html">SymDetect</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classSymDetect.html" title="SymDetect class. ">SymDetect</a> class.  <a href="classSymDetect.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSymDetect_1_1srchObj.html">SymDetect::srchObj</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Private object to assist DFS.  <a href="structSymDetect_1_1srchObj.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>

@@ -32,7 +32,8 @@ public:
     Output would contain 2 levels of hierarchy. symGroup
     is a vector of std::vector<MosPair> oneGroup. Where 
     oneGroup is a group of MosPair in the same symmetry 
-    group. Each MosPair should follow a MosPattern. 
+    group. Each MosPair should follow a MosPattern, or 
+    it should be of self symmetry. 
 
     @param symGroup Detected symmetry groups of netlist.
     @see MosPattern
@@ -49,6 +50,8 @@ private:
 ///    bool                        endSrch(IndexType mosId, PinType pinType) const;
 /*! @brief Check if pair already reached. */
     bool                        existPair(std::vector<MosPair> & library, IndexType instId1, IndexType instId2) const;
+/*! @breif Check if self symmetry pair already reached. */
+    bool                        existPair(std::vector<MosPair> & library, IndexType instId) const;
 /*! @brief Check if pair already reached. */
 //    bool                        existPair(std::vector<MosPair> & library, IndexType instId1, IndexType instId2) const;
 /*! @brief Return true if end of search path. 
@@ -137,8 +140,43 @@ private:
     @param diffPairSrch Vector of all DFS sources.
     @param currPair MosPair to invalidate.
 */
-    void                        inVldDiffPairSrch(std::vector<MosPair> & diffPairSrch, MosPair & currPair) const;
-}; 
+    void                        inVldDiffPairSrch(std::vector<MosPair> & diffPairSrch, MosPair & currPair) const; 
+/*! @brief Get valid drain connected mosfet to netId.
+
+    Valid Mosfets must be connected to netId through PinType::DRAIN,
+    it should also have MosType::DIFF. This is used to search self
+    symmetric pairs connected to MosPattern::DIFF_SOURCE.
+
+    @param vldMos Vector to store valid Mosfet.
+    @param netId Id of connected net.
+*/
+    void                        getVldDrainMos(std::vector<IndexType> & vldMos, IndexType netId) const;
+/*! @brief Iteratively search for self symmetry given diffPair.
+
+    diffPair should be of MosPattern::DIFF_SOURCE. Valid self
+    symmetric instances are added to dfsVstPair. Redundancy is 
+    also removed from dfsVstPair.
+
+    @param dfsVstPair Self symmetric pairs will be added to this vector.
+    @param diffPair MosPattern::DIFF_SOURCE pair to begin self symmetry search.
+
+    @see getVldDrainMos
+*/
+    void                        selfSymSrch(std::vector<MosPair> & dfsVstPair, MosPair & diffPair) const;
+/*! @brief Top function to call to add self symmetry to already searched symmetry group.
+
+    Iteratively searches for self symmetry instances for MosPattern::DIFF_SOURCE pairs in dfsVstPair.
+    Valid self symmetry instances will be appended. This function is called at the end of every
+    DFS search for symmetry pairs.
+
+    @param dfsVstPair Symmetry group.
+
+    @see selfSymSrch
+    @see hiSymDetect
+*/
+    void                        addSelfSym(std::vector<MosPair> & dfsVstPair) const;
+
+};
 
 PROJECT_NAMESPACE_END
 

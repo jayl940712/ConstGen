@@ -50,6 +50,18 @@ bool SymDetect::existPair(std::vector<MosPair> & library, IndexType instId1, Ind
     return false;
 }
 
+bool SymDetect::existPair(std::vector<MosPair> & library, IndexType instId) const
+{
+    for (MosPair & currPair : library)
+    {
+        if (currPair.mosId1() == instId)
+            return true;
+        if (currPair.mosId2() == instId)
+            return true;
+    }
+    return false;
+}
+
 bool SymDetect::endSrch(MosPair & currObj) const
 {
     if (currObj.pattern() == MosPattern::DIFF_SOURCE &&
@@ -146,9 +158,49 @@ void SymDetect::hiSymDetect(std::vector<std::vector<MosPair>> & symGroup) const
         {
             dfsVstPair.clear();
             dfsDiffPair(dfsVstPair, pair, diffPairSrc); //search
+            addSelfSym(dfsVstPair); //add self symmetry pairs.
             symGroup.push_back(dfsVstPair); //add results to new group
         }
     }
+}
+
+void SymDetect::getVldDrainMos(std::vector<IndexType> & vldMos, IndexType netId) const
+{
+    _netlist.getInstNetConn(vldMos, netId);  
+    _netlist.fltrInstNetConnPinType(vldMos, netId, PinType::DRAIN); //filter connect by drain
+    _netlist.fltrInstMosType(vldMos, MosType::DIFF); //filter by MosType::DIFF
+}
+    
+
+void SymDetect::selfSymSrch(std::vector<MosPair> & dfsVstPair, MosPair & diffPair) const
+{
+    if (diffPair.pattern() != MosPattern::DIFF_SOURCE)
+        return;
+    if (!_netlist.isSignal(_netlist.srcNetId(diffPair.mosId1())))
+        return;
+    std::vector<IndexType> dfsStack;
+    getVldDrainMos(dfsStack, _netlist.srcNetId(diffPair.mosId1()));
+    while (!dfsStack.empty())
+    {
+        IndexType currMosId = dfsStack.back();
+        dfsStack.pop_back();
+        if (!existPair(dfsVstPair, currMosId))
+            dfsVstPair.emplace_back(currMosId, currMosId, MosPattern::INVALID);
+        IndexType netId = _netlist.srcNetId(currMosId);
+        if (_netlist.isSignal(netId))
+        {
+            std::vector<IndexType> nextVst;
+            getVldDrainMos(nextVst, _netlist.srcNetId(currMosId));
+            for (IndexType id : nextVst)
+                dfsStack.push_back(id);
+        }
+    }
+}
+
+void SymDetect::addSelfSym(std::vector<MosPair> & dfsVstPair) const
+{
+    for (MosPair & pair : dfsVstPair)
+        selfSymSrch(dfsVstPair, pair);
 }
 
 PROJECT_NAMESPACE_END

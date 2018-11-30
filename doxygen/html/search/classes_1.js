@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mospair',['MosPair',['../structMosPair.html',1,'']]]
+  ['mospair',['MosPair',['../classMosPair.html',1,'']]]
 ];

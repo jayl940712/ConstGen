@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -80,27 +80,27 @@ sym_detect/Pattern.h
 vector
 -
 
-/home/jayliu/Research/sfa/src/db/MosPair.cpp
+/home/unga/jayliu/sfa/src/db/MosPair.cpp
 db/MosPair.h
-/home/jayliu/Research/sfa/src/db/db/MosPair.h
+/home/unga/jayliu/sfa/src/db/db/MosPair.h
 
-/home/jayliu/Research/sfa/src/db/Net.cpp
+/home/unga/jayliu/sfa/src/db/Net.cpp
 db/Net.h
-/home/jayliu/Research/sfa/src/db/db/Net.h
+/home/unga/jayliu/sfa/src/db/db/Net.h
 set
 -
 
-/home/jayliu/Research/sfa/src/db/Netlist.cpp
+/home/unga/jayliu/sfa/src/db/Netlist.cpp
 db/Netlist.h
-/home/jayliu/Research/sfa/src/db/db/Netlist.h
+/home/unga/jayliu/sfa/src/db/db/Netlist.h
 algorithm
 -
 
-/home/jayliu/Research/sfa/src/db/Pin.cpp
+/home/unga/jayliu/sfa/src/db/Pin.cpp
 db/Pin.h
-/home/jayliu/Research/sfa/src/db/db/Pin.h
+/home/unga/jayliu/sfa/src/db/db/Pin.h
 
-/home/jayliu/Research/sfa/src/main/main.cpp
+/home/unga/jayliu/sfa/src/main/main.cpp
 string
 -
 iostream
@@ -108,27 +108,27 @@ iostream
 vector
 -
 parser/InitNetlist.h
-/home/jayliu/Research/sfa/src/main/parser/InitNetlist.h
+/home/unga/jayliu/sfa/src/main/parser/InitNetlist.h
 sym_detect/SymDetect.h
-/home/jayliu/Research/sfa/src/main/sym_detect/SymDetect.h
+/home/unga/jayliu/sfa/src/main/sym_detect/SymDetect.h
 
-/home/jayliu/Research/sfa/src/parser/InitNetlist.cpp
+/home/unga/jayliu/sfa/src/parser/InitNetlist.cpp
 cstdio
 -
 fstream
 -
 InitNetlist.h
-/home/jayliu/Research/sfa/src/parser/InitNetlist.h
+/home/unga/jayliu/sfa/src/parser/InitNetlist.h
 
-/home/jayliu/Research/sfa/src/parser/InitNetlist.h
+/home/unga/jayliu/sfa/src/parser/InitNetlist.h
 db/Netlist.h
-/home/jayliu/Research/sfa/src/parser/db/Netlist.h
+/home/unga/jayliu/sfa/src/parser/db/Netlist.h
 
-/home/jayliu/Research/sfa/src/sym_detect/Pattern.cpp
+/home/unga/jayliu/sfa/src/sym_detect/Pattern.cpp
 sym_detect/Pattern.h
-/home/jayliu/Research/sfa/src/sym_detect/sym_detect/Pattern.h
+/home/unga/jayliu/sfa/src/sym_detect/sym_detect/Pattern.h
 
-/home/jayliu/Research/sfa/src/sym_detect/SymDetect.cpp
+/home/unga/jayliu/sfa/src/sym_detect/SymDetect.cpp
 sym_detect/SymDetect.h
-/home/jayliu/Research/sfa/src/sym_detect/sym_detect/SymDetect.h
+/home/unga/jayliu/sfa/src/sym_detect/sym_detect/SymDetect.h
 

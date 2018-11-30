@@ -1,32 +1,43 @@
 Done!
 BEGIN GROUP
-xi0/xm8 xm0
+xm88 xm87
+xm63 xm77
+xm19 xm74
+xm26 xm75
+xm2 xm78
+xm23 xm80
+xm18 xm79
+xm11 xm55
+xm0
+xm52
+xm51
+xm17 xm73
+xm17 xm76
+xm19 xm77
+xm63 xm74
+xm19 xm44
+xm64 xm73
+xm43 xm74
+xm63 xm44
+xm19 xm43
+xm17 xm64
+xm11
+xm0
+xm52
+xm51
+xm43 xm77
+xm44 xm74
+xm76 xm73
+xm55
+xm0
+xm52
+xm51
+xm43 xm44
+xm64 xm76
+xm38 xm33
 END GROUP
 BEGIN GROUP
-xm87 xm88
-xm77 xm63
-xm74 xm19
-xm75 xm26
-xm78 xm2
-xm79 xm18
-xm80 xm23
-xm73 xm17
-xm73 xm64
-xm74 xm63
-xm77 xm19
-xm74 xm43
-xm76 xm17
-xm44 xm19
-xm55 xm11
-xm77 xm43
-xm74 xm44
-xm73 xm76
-xm44 xm63
-xm43 xm19
-xm64 xm17
-xm44 xm43
-xm76 xm64
-xm33 xm38
+xi0/xm8 xm0
 END GROUP
 BEGIN GROUP
 xi6<0>/m1 xi5<0>/m1
@@ -82,9 +93,25 @@ xi5<1>/m0 xi4<1>/m0
 END GROUP
 BEGIN GROUP
 xm19 xm63
+xm11
+xm0
+xm52
+xm51
 xm17 xm64
+xm11
+xm0
+xm52
+xm51
 END GROUP
 BEGIN GROUP
 xm77 xm74
+xm55
+xm0
+xm52
+xm51
 xm76 xm73
+xm55
+xm0
+xm52
+xm51
 END GROUP

@@ -1,0 +1,225 @@
+\hypertarget{classMosPair}{}\section{Mos\+Pair Struct Reference}
+\label{classMosPair}\index{Mos\+Pair@{Mos\+Pair}}
+
+
+A pair of Mosfet with Mos\+Pattern.  
+
+
+
+
+{\ttfamily \#include $<$Mos\+Pair.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMosPair_ad595508e33836b1645f98d85978375c1}{Mos\+Pair} ()=default
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classMosPair_a03e4f764099652cbb0a79f7e0392c315}{Mos\+Pair} (\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} \hyperlink{classMosPair_a324d89c99656159e6882e6f9701f0efe}{mos\+Id1}, \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} \hyperlink{classMosPair_a08f2d371ecad665d546bef76c45e2665}{mos\+Id2}, \hyperlink{type_8h_af19eddb079bfea723256710b029c38e8}{Mos\+Pattern} \hyperlink{classMosPair_a342efc591b339fc9d08ad468d7399dd9}{pattern})
+\begin{DoxyCompactList}\small\item\em Constructor for \hyperlink{classMosPair}{Mos\+Pair}. \end{DoxyCompactList}\item 
+\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} \hyperlink{classMosPair_a324d89c99656159e6882e6f9701f0efe}{mos\+Id1} () const
+\begin{DoxyCompactList}\small\item\em Get mos\+Id1. \end{DoxyCompactList}\item 
+\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} \hyperlink{classMosPair_a08f2d371ecad665d546bef76c45e2665}{mos\+Id2} () const
+\begin{DoxyCompactList}\small\item\em Get mos\+Id2. \end{DoxyCompactList}\item 
+bool \hyperlink{classMosPair_a16696e5a4fa38118f88549dfc782ac22}{valid} () const
+\begin{DoxyCompactList}\small\item\em Return if valid search pair. \end{DoxyCompactList}\item 
+\hyperlink{type_8h_af19eddb079bfea723256710b029c38e8}{Mos\+Pattern} \hyperlink{classMosPair_a342efc591b339fc9d08ad468d7399dd9}{pattern} () const
+\begin{DoxyCompactList}\small\item\em Get pattern. \end{DoxyCompactList}\item 
+\hyperlink{type_8h_afaab50027002ecbb6c8ac27e727d1bb4}{Pin\+Type} \hyperlink{classMosPair_a85a281d835a1046346b621ac6c3c6770}{srch\+Pin\+Type} () const
+\begin{DoxyCompactList}\small\item\em Get Pin\+Type on how D\+FS reached the pair. \end{DoxyCompactList}\item 
+void \hyperlink{classMosPair_a3064a984676f0bd8e6d380a050bd2152}{in\+Vld} ()
+\begin{DoxyCompactList}\small\item\em Invalidate pair. \end{DoxyCompactList}\item 
+void \hyperlink{classMosPair_a133614566bf03ab4b37aced8169aee87}{set\+Srch\+Pin\+Type} (\hyperlink{type_8h_afaab50027002ecbb6c8ac27e727d1bb4}{Pin\+Type} type)
+\begin{DoxyCompactList}\small\item\em set reached Pin\+Type. \end{DoxyCompactList}\item 
+\hyperlink{type_8h_afaab50027002ecbb6c8ac27e727d1bb4}{Pin\+Type} \hyperlink{classMosPair_a6c0bf6ad66a5076dc19a48a8d038d044}{next\+Pin\+Type} ()
+\begin{DoxyCompactList}\small\item\em Return next Pin\+Type to search. \end{DoxyCompactList}\item 
+bool \hyperlink{classMosPair_a4e4d694485bcc5c7c14981abef32774c}{is\+Equal} (const \hyperlink{classMosPair}{Mos\+Pair} \&right) const
+\begin{DoxyCompactList}\small\item\em Equal operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} \hyperlink{classMosPair_a783f254c414a4b746eadbb9d2e49281b}{\+\_\+mos\+Id1}
+\item 
+\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} \hyperlink{classMosPair_a4d44569f1b7537fddae9f4c89d5c0f96}{\+\_\+mos\+Id2}
+\item 
+\hyperlink{type_8h_af19eddb079bfea723256710b029c38e8}{Mos\+Pattern} \hyperlink{classMosPair_a075dadc02f1a5b85d53bf7b2271f8825}{\+\_\+pattern}
+\item 
+bool \hyperlink{classMosPair_a7a0adcf1db1e0b59d09f1a4270bf8efb}{\+\_\+valid}
+\item 
+\hyperlink{type_8h_afaab50027002ecbb6c8ac27e727d1bb4}{Pin\+Type} \hyperlink{classMosPair_a81b74a234b444867a693e890126a37a1}{\+\_\+srch\+Pin\+Type}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A pair of Mosfet with Mos\+Pattern. 
+
+A pair of id for \hyperlink{classInst}{Inst}.
+
+This class stores a pair of Mosfet Id and also assists D\+FS in \hyperlink{SymDetect_8h}{Sym\+Detect.\+h}. This class has no reference to netlist, pattern needs to be set at construction. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMosPair_ad595508e33836b1645f98d85978375c1}\label{classMosPair_ad595508e33836b1645f98d85978375c1}} 
+\index{Mos\+Pair@{Mos\+Pair}!Mos\+Pair@{Mos\+Pair}}
+\index{Mos\+Pair@{Mos\+Pair}!Mos\+Pair@{Mos\+Pair}}
+\subsubsection{\texorpdfstring{Mos\+Pair()}{MosPair()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Mos\+Pair\+::\+Mos\+Pair (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [default]}}
+
+
+
+Default Constructor. 
+
+\mbox{\Hypertarget{classMosPair_a03e4f764099652cbb0a79f7e0392c315}\label{classMosPair_a03e4f764099652cbb0a79f7e0392c315}} 
+\index{Mos\+Pair@{Mos\+Pair}!Mos\+Pair@{Mos\+Pair}}
+\index{Mos\+Pair@{Mos\+Pair}!Mos\+Pair@{Mos\+Pair}}
+\subsubsection{\texorpdfstring{Mos\+Pair()}{MosPair()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Mos\+Pair\+::\+Mos\+Pair (\begin{DoxyParamCaption}\item[{\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type}}]{mos\+Id1,  }\item[{\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type}}]{mos\+Id2,  }\item[{\hyperlink{type_8h_af19eddb079bfea723256710b029c38e8}{Mos\+Pattern}}]{pattern }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Constructor for \hyperlink{classMosPair}{Mos\+Pair}. 
+
+Sequence of Ids does not matter. pattern is set according to input.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mos\+Id1} & Id for Mos1 \\
+\hline
+{\em mos\+Id2} & Id for Mos2 \\
+\hline
+\end{DoxyParams}
+$<$ valid is set true as default.
+
+$<$ reached \hyperlink{classPin}{Pin} set as S\+O\+U\+R\+CE default. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classMosPair_a3064a984676f0bd8e6d380a050bd2152}\label{classMosPair_a3064a984676f0bd8e6d380a050bd2152}} 
+\index{Mos\+Pair@{Mos\+Pair}!in\+Vld@{in\+Vld}}
+\index{in\+Vld@{in\+Vld}!Mos\+Pair@{Mos\+Pair}}
+\subsubsection{\texorpdfstring{in\+Vld()}{inVld()}}
+{\footnotesize\ttfamily void Mos\+Pair\+::in\+Vld (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Invalidate pair. 
+
+\mbox{\Hypertarget{classMosPair_a4e4d694485bcc5c7c14981abef32774c}\label{classMosPair_a4e4d694485bcc5c7c14981abef32774c}} 
+\index{Mos\+Pair@{Mos\+Pair}!is\+Equal@{is\+Equal}}
+\index{is\+Equal@{is\+Equal}!Mos\+Pair@{Mos\+Pair}}
+\subsubsection{\texorpdfstring{is\+Equal()}{isEqual()}}
+{\footnotesize\ttfamily \hyperlink{namespace_8h_ae48726a24dab2034454cf6d79e531eb8}{P\+R\+O\+J\+E\+C\+T\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+B\+E\+G\+IN} bool Mos\+Pair\+::is\+Equal (\begin{DoxyParamCaption}\item[{const \hyperlink{classMosPair}{Mos\+Pair} \&}]{right }\end{DoxyParamCaption}) const}
+
+
+
+Equal operator. 
+
+Two pairs are equal if Id are equal. Sequence of Id does not matter. \mbox{\Hypertarget{classMosPair_a324d89c99656159e6882e6f9701f0efe}\label{classMosPair_a324d89c99656159e6882e6f9701f0efe}} 
+\index{Mos\+Pair@{Mos\+Pair}!mos\+Id1@{mos\+Id1}}
+\index{mos\+Id1@{mos\+Id1}!Mos\+Pair@{Mos\+Pair}}
+\subsubsection{\texorpdfstring{mos\+Id1()}{mosId1()}}
+{\footnotesize\ttfamily \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} Mos\+Pair\+::mos\+Id1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get mos\+Id1. 
+
+\mbox{\Hypertarget{classMosPair_a08f2d371ecad665d546bef76c45e2665}\label{classMosPair_a08f2d371ecad665d546bef76c45e2665}} 
+\index{Mos\+Pair@{Mos\+Pair}!mos\+Id2@{mos\+Id2}}
+\index{mos\+Id2@{mos\+Id2}!Mos\+Pair@{Mos\+Pair}}
+\subsubsection{\texorpdfstring{mos\+Id2()}{mosId2()}}
+{\footnotesize\ttfamily \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} Mos\+Pair\+::mos\+Id2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get mos\+Id2. 
+
+\mbox{\Hypertarget{classMosPair_a6c0bf6ad66a5076dc19a48a8d038d044}\label{classMosPair_a6c0bf6ad66a5076dc19a48a8d038d044}} 
+\index{Mos\+Pair@{Mos\+Pair}!next\+Pin\+Type@{next\+Pin\+Type}}
+\index{next\+Pin\+Type@{next\+Pin\+Type}!Mos\+Pair@{Mos\+Pair}}
+\subsubsection{\texorpdfstring{next\+Pin\+Type()}{nextPinType()}}
+{\footnotesize\ttfamily \hyperlink{type_8h_afaab50027002ecbb6c8ac27e727d1bb4}{Pin\+Type} Mos\+Pair\+::next\+Pin\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return next Pin\+Type to search. 
+
+\mbox{\Hypertarget{classMosPair_a342efc591b339fc9d08ad468d7399dd9}\label{classMosPair_a342efc591b339fc9d08ad468d7399dd9}} 
+\index{Mos\+Pair@{Mos\+Pair}!pattern@{pattern}}
+\index{pattern@{pattern}!Mos\+Pair@{Mos\+Pair}}
+\subsubsection{\texorpdfstring{pattern()}{pattern()}}
+{\footnotesize\ttfamily \hyperlink{type_8h_af19eddb079bfea723256710b029c38e8}{Mos\+Pattern} Mos\+Pair\+::pattern (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get pattern. 
+
+\mbox{\Hypertarget{classMosPair_a133614566bf03ab4b37aced8169aee87}\label{classMosPair_a133614566bf03ab4b37aced8169aee87}} 
+\index{Mos\+Pair@{Mos\+Pair}!set\+Srch\+Pin\+Type@{set\+Srch\+Pin\+Type}}
+\index{set\+Srch\+Pin\+Type@{set\+Srch\+Pin\+Type}!Mos\+Pair@{Mos\+Pair}}
+\subsubsection{\texorpdfstring{set\+Srch\+Pin\+Type()}{setSrchPinType()}}
+{\footnotesize\ttfamily void Mos\+Pair\+::set\+Srch\+Pin\+Type (\begin{DoxyParamCaption}\item[{\hyperlink{type_8h_afaab50027002ecbb6c8ac27e727d1bb4}{Pin\+Type}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set reached Pin\+Type. 
+
+This is how the pair is reached through D\+FS search. \mbox{\Hypertarget{classMosPair_a85a281d835a1046346b621ac6c3c6770}\label{classMosPair_a85a281d835a1046346b621ac6c3c6770}} 
+\index{Mos\+Pair@{Mos\+Pair}!srch\+Pin\+Type@{srch\+Pin\+Type}}
+\index{srch\+Pin\+Type@{srch\+Pin\+Type}!Mos\+Pair@{Mos\+Pair}}
+\subsubsection{\texorpdfstring{srch\+Pin\+Type()}{srchPinType()}}
+{\footnotesize\ttfamily \hyperlink{type_8h_afaab50027002ecbb6c8ac27e727d1bb4}{Pin\+Type} Mos\+Pair\+::srch\+Pin\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get Pin\+Type on how D\+FS reached the pair. 
+
+\mbox{\Hypertarget{classMosPair_a16696e5a4fa38118f88549dfc782ac22}\label{classMosPair_a16696e5a4fa38118f88549dfc782ac22}} 
+\index{Mos\+Pair@{Mos\+Pair}!valid@{valid}}
+\index{valid@{valid}!Mos\+Pair@{Mos\+Pair}}
+\subsubsection{\texorpdfstring{valid()}{valid()}}
+{\footnotesize\ttfamily bool Mos\+Pair\+::valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return if valid search pair. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classSymDetect_ae6a1ba27f6768f215cba0623b6e2ce08}{Sym\+Detect\+::in\+Vld\+Diff\+Pair\+Srch} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classMosPair_a783f254c414a4b746eadbb9d2e49281b}\label{classMosPair_a783f254c414a4b746eadbb9d2e49281b}} 
+\index{Mos\+Pair@{Mos\+Pair}!\+\_\+mos\+Id1@{\+\_\+mos\+Id1}}
+\index{\+\_\+mos\+Id1@{\+\_\+mos\+Id1}!Mos\+Pair@{Mos\+Pair}}
+\subsubsection{\texorpdfstring{\+\_\+mos\+Id1}{\_mosId1}}
+{\footnotesize\ttfamily \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} Mos\+Pair\+::\+\_\+mos\+Id1\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMosPair_a4d44569f1b7537fddae9f4c89d5c0f96}\label{classMosPair_a4d44569f1b7537fddae9f4c89d5c0f96}} 
+\index{Mos\+Pair@{Mos\+Pair}!\+\_\+mos\+Id2@{\+\_\+mos\+Id2}}
+\index{\+\_\+mos\+Id2@{\+\_\+mos\+Id2}!Mos\+Pair@{Mos\+Pair}}
+\subsubsection{\texorpdfstring{\+\_\+mos\+Id2}{\_mosId2}}
+{\footnotesize\ttfamily \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} Mos\+Pair\+::\+\_\+mos\+Id2\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMosPair_a075dadc02f1a5b85d53bf7b2271f8825}\label{classMosPair_a075dadc02f1a5b85d53bf7b2271f8825}} 
+\index{Mos\+Pair@{Mos\+Pair}!\+\_\+pattern@{\+\_\+pattern}}
+\index{\+\_\+pattern@{\+\_\+pattern}!Mos\+Pair@{Mos\+Pair}}
+\subsubsection{\texorpdfstring{\+\_\+pattern}{\_pattern}}
+{\footnotesize\ttfamily \hyperlink{type_8h_af19eddb079bfea723256710b029c38e8}{Mos\+Pattern} Mos\+Pair\+::\+\_\+pattern\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMosPair_a81b74a234b444867a693e890126a37a1}\label{classMosPair_a81b74a234b444867a693e890126a37a1}} 
+\index{Mos\+Pair@{Mos\+Pair}!\+\_\+srch\+Pin\+Type@{\+\_\+srch\+Pin\+Type}}
+\index{\+\_\+srch\+Pin\+Type@{\+\_\+srch\+Pin\+Type}!Mos\+Pair@{Mos\+Pair}}
+\subsubsection{\texorpdfstring{\+\_\+srch\+Pin\+Type}{\_srchPinType}}
+{\footnotesize\ttfamily \hyperlink{type_8h_afaab50027002ecbb6c8ac27e727d1bb4}{Pin\+Type} Mos\+Pair\+::\+\_\+srch\+Pin\+Type\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMosPair_a7a0adcf1db1e0b59d09f1a4270bf8efb}\label{classMosPair_a7a0adcf1db1e0b59d09f1a4270bf8efb}} 
+\index{Mos\+Pair@{Mos\+Pair}!\+\_\+valid@{\+\_\+valid}}
+\index{\+\_\+valid@{\+\_\+valid}!Mos\+Pair@{Mos\+Pair}}
+\subsubsection{\texorpdfstring{\+\_\+valid}{\_valid}}
+{\footnotesize\ttfamily bool Mos\+Pair\+::\+\_\+valid\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/db/\hyperlink{MosPair_8h}{Mos\+Pair.\+h}\item 
+src/db/\hyperlink{MosPair_8cpp}{Mos\+Pair.\+cpp}\end{DoxyCompactItemize}

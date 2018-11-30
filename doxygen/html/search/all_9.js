@@ -10,7 +10,7 @@ var searchData=
   ['initnetlist',['InitNetlist',['../classInitNetlist.html',1,'InitNetlist'],['../classInitNetlist.html#a9def85cc1861a8a74494d9fd494acdeb',1,'InitNetlist::InitNetlist()=default'],['../classInitNetlist.html#a330ee469b31e43357171f5943dad6387',1,'InitNetlist::InitNetlist(Netlist &amp;netlist)']]],
   ['initnetlist_2ecpp',['InitNetlist.cpp',['../InitNetlist_8cpp.html',1,'']]],
   ['initnetlist_2eh',['InitNetlist.h',['../InitNetlist_8h.html',1,'']]],
-  ['inst',['Inst',['../classInst.html',1,'Inst'],['../classInst.html#af6abd595ee04b976a8928325df4076c1',1,'Inst::Inst()=default'],['../classInst.html#a30315ac6216ae022a383d701d42e6a86',1,'Inst::Inst(const std::string &amp;name, InstType type, IndexType id)'],['../classInst.html#adb54d3441f94302e5d0c8e0d8c3ad429',1,'Inst::Inst(const std::string &amp;name, InstType type, IndexType id, RealType wid, RealType len)'],['../classNetlist.html#a0670a50d2a63b33b1fb72c7b0d352c11',1,'Netlist::inst()']]],
+  ['inst',['Inst',['../classInst.html',1,'Inst'],['../classNetlist.html#a0670a50d2a63b33b1fb72c7b0d352c11',1,'Netlist::inst()'],['../classInst.html#af6abd595ee04b976a8928325df4076c1',1,'Inst::Inst()=default'],['../classInst.html#a30315ac6216ae022a383d701d42e6a86',1,'Inst::Inst(const std::string &amp;name, InstType type, IndexType id)'],['../classInst.html#adb54d3441f94302e5d0c8e0d8c3ad429',1,'Inst::Inst(const std::string &amp;name, InstType type, IndexType id, RealType wid, RealType len)']]],
   ['inst_2eh',['Inst.h',['../Inst_8h.html',1,'']]],
   ['instarray',['instArray',['../structNetlist_1_1InitDataObj.html#af268c80f194c76f372f8e1dbaed071e0',1,'Netlist::InitDataObj']]],
   ['instid',['instId',['../classPin.html#a8ddc3b130a28cbc1781b155dea8c333e',1,'Pin']]],
@@ -21,7 +21,9 @@ var searchData=
   ['int_5ftype_5fmin',['INT_TYPE_MIN',['../type_8h.html#ab6731eb941a9db9a459729271b27199e',1,'type.h']]],
   ['inttype',['IntType',['../type_8h.html#a2db224c368d26648b9a810adaaab4123',1,'type.h']]],
   ['invalid',['INVALID',['../type_8h.html#af19eddb079bfea723256710b029c38e8accc0377a8afbf50e7094f5c23a8af223',1,'type.h']]],
+  ['invld',['inVld',['../classMosPair.html#a3064a984676f0bd8e6d380a050bd2152',1,'MosPair']]],
   ['invlddiffpairsrch',['inVldDiffPairSrch',['../classSymDetect.html#ae6a1ba27f6768f215cba0623b6e2ce08',1,'SymDetect']]],
+  ['isequal',['isEqual',['../classMosPair.html#a4e4d694485bcc5c7c14981abef32774c',1,'MosPair']]],
   ['ismos',['isMos',['../classNetlist.html#a3ea34258d9e7f6793736dcac5b927eb6',1,'Netlist']]],
   ['ispasvdev',['isPasvDev',['../classNetlist.html#acb347983cc7dcfb9d40c2affe8442cb2',1,'Netlist']]],
   ['issignal',['isSignal',['../classNetlist.html#ae518e05727e5cc449d728b43426e035d',1,'Netlist']]]

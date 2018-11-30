@@ -6,5 +6,6 @@ var searchData=
   ['getinstpinconn',['getInstPinConn',['../classNetlist.html#a422fb4c4465ac40da6d103e941621119',1,'Netlist']]],
   ['getpatrnnetconn',['getPatrnNetConn',['../classSymDetect.html#af7d1b22086aa98a27b1eafc9266596d8',1,'SymDetect']]],
   ['getpintypeinstnetconn',['getPinTypeInstNetConn',['../classNetlist.html#a6bc6f9666ed8c833b967c38f2e164a1e',1,'Netlist']]],
-  ['getpintypeinstpinconn',['getPinTypeInstPinConn',['../classNetlist.html#a27d477f7bd6fffd915015dbd3b3a0649',1,'Netlist']]]
+  ['getpintypeinstpinconn',['getPinTypeInstPinConn',['../classNetlist.html#a27d477f7bd6fffd915015dbd3b3a0649',1,'Netlist']]],
+  ['getvlddrainmos',['getVldDrainMos',['../classSymDetect.html#a48c23173bf5e56c3aa11ac306715cba2',1,'SymDetect']]]
 ];
