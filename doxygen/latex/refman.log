@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.21)  26 NOV 2018 17:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.11.30)  30 NOV 2018 01:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **refman
 (./refman.tex
-LaTeX2e <2017/01/01> patch level 3
-Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+LaTeX2e <2017-04-15>
+Babel <3.18> and hyphenation patterns for 3 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/bk10.clo
@@ -86,22 +86,14 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 Package xcolor Info: Driver file: pdftex.def on input line 225.
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-)
-\Gread@gobject=\count92
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 )
 (/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
 Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
 \everycr=\toks19
 \minrowclearance=\skip48
 )
-\rownum=\count93
+\rownum=\count92
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
 Package xcolor Info: Model `RGB' extended on input line 1364.
@@ -118,16 +110,16 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LTright=\skip50
 \LTpre=\skip51
 \LTpost=\skip52
-\LTchunksize=\count94
+\LTchunksize=\count93
 \LTcapwidth=\dimen107
 \LT@head=\box28
 \LT@firsthead=\box29
 \LT@foot=\box30
 \LT@lastfoot=\box31
-\LT@cols=\count95
-\LT@rows=\count96
-\c@LT@tables=\count97
-\c@LT@chunks=\count98
+\LT@cols=\count94
+\LT@rows=\count95
+\c@LT@tables=\count96
+\c@LT@chunks=\count97
 \LT@p@ftn=\toks20
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tabu/tabu.sty
@@ -136,16 +128,16 @@ Package: tabu 2011/02/26 v2.8 - flexible LaTeX tabulars (FC)
 (/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box32
-\sift@deathcycles=\count99
+\sift@deathcycles=\count98
 \@vwid@loff=\dimen108
 \@vwid@roff=\dimen109
 )
-\c@taburow=\count100
-\tabu@nbcols=\count101
-\tabu@cnt=\count102
-\tabu@Xcol=\count103
-\tabu@alloc=\count104
-\tabu@nested=\count105
+\c@taburow=\count99
+\tabu@nbcols=\count100
+\tabu@cnt=\count101
+\tabu@Xcol=\count102
+\tabu@alloc=\count103
+\tabu@nested=\count104
 \tabu@target=\dimen110
 \tabu@spreadtarget=\dimen111
 \tabu@naturalX=\dimen112
@@ -170,13 +162,13 @@ Package: tabularx 2016/02/03 v2.11 `tabularx' package (DPC)
 \TX@old@col=\dimen121
 \TX@target=\dimen122
 \TX@delta=\dimen123
-\TX@cols=\count106
+\TX@cols=\count105
 \TX@ftn=\toks23
 )
 (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
 \multirow@colwidth=\skip54
-\multirow@cntb=\count107
+\multirow@cntb=\count106
 \multirow@dima=\skip55
 \bigstrutjot=\dimen124
 )
@@ -195,7 +187,7 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 \XKV@tempa@toks=\toks25
 
 (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/keyval.tex))
-\XKV@depth=\count108
+\XKV@depth=\count107
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjcalc.sty
@@ -206,10 +198,10 @@ Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
 Package: trimclip 2012/05/16 v1.0 Trim and clip general TeX material
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2016/10/09 v1.0u Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
@@ -242,7 +234,7 @@ File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
 
 (/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
-\c@checkoddpage=\count109
+\c@checkoddpage=\count108
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
@@ -566,15 +558,15 @@ Now handling font encoding U ...
 Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
-Package: multicol 2016/04/07 v1.8p multicolumn formatting (FMi)
-\c@tracingmulticols=\count110
+Package: multicol 2017/04/11 v1.8q multicolumn formatting (FMi)
+\c@tracingmulticols=\count109
 \mult@box=\box39
 \multicol@leftmargin=\dimen135
-\c@unbalance=\count111
-\c@collectmore=\count112
-\doublecol@number=\count113
-\multicoltolerance=\count114
-\multicolpretolerance=\count115
+\c@unbalance=\count110
+\c@collectmore=\count111
+\doublecol@number=\count112
+\multicoltolerance=\count113
+\multicolpretolerance=\count114
 \full@width=\dimen136
 \page@free=\dimen137
 \premulticols=\dimen138
@@ -605,17 +597,17 @@ Package: multicol 2016/04/07 v1.8p multicolumn formatting (FMi)
 \@tempa=\box60
 \@tempa=\box61
 \@tempa=\box62
-\c@columnbadness=\count116
-\c@finalcolumnbadness=\count117
+\c@columnbadness=\count115
+\c@finalcolumnbadness=\count116
 \last@try=\dimen141
 \multicolovershoot=\dimen142
 \multicolundershoot=\dimen143
 \mult@nat@firstbox=\box63
 \colbreak@box=\box64
-\mc@col@check@num=\count118
+\mc@col@check@num=\count117
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
-Package: textcomp 2017/02/22 v2.0g Standard LaTeX package
+Package: textcomp 2017/04/05 v2.0i Standard LaTeX package
 Package textcomp Info: Sub-encoding information:
 (textcomp)               5 = only ISO-Adobe without \textcurrency
 (textcomp)               4 = 5 + \texteuro
@@ -777,10 +769,10 @@ LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
 (Font)                  U/wasy/m/n --> U/wasy/b/n on input line 90.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2017/02/22 v2.0g Standard LaTeX package
+Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
-File: t1enc.def 2017/02/22 v2.0g Standard LaTeX file
+File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/helvet.sty
@@ -808,7 +800,7 @@ les
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
 )
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
@@ -817,9 +809,9 @@ Package ifvtex Info: VTeX not detected.
 (/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count119
-\Gm@cntv=\count120
-\c@Gm@tempcnt=\count121
+\Gm@cnth=\count118
+\Gm@cntv=\count119
+\c@Gm@tempcnt=\count120
 \Gm@bindingoffset=\dimen144
 \Gm@wd@mp=\dimen145
 \Gm@odd@mp=\dimen146
@@ -831,27 +823,28 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@dimlist=\toks29
 )
 (/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-Package: fancyhdr 2016/09/06 3.8 Extensive control of page headers and footers
-\fancy@headwidth=\skip59
-\f@ncyO@elh=\skip60
-\f@ncyO@erh=\skip61
-\f@ncyO@olh=\skip62
-\f@ncyO@orh=\skip63
-\f@ncyO@elf=\skip64
-\f@ncyO@erf=\skip65
-\f@ncyO@olf=\skip66
-\f@ncyO@orf=\skip67
+Package: fancyhdr 2017/06/30 v3.9a Extensive control of page headers and footer
+s
+\f@nch@headwidth=\skip59
+\f@nch@O@elh=\skip60
+\f@nch@O@erh=\skip61
+\f@nch@O@olh=\skip62
+\f@nch@O@orh=\skip63
+\f@nch@O@elf=\skip64
+\f@nch@O@erf=\skip65
+\f@nch@O@olf=\skip66
+\f@nch@O@orf=\skip67
 )
 (/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip68
 \bibsep=\skip69
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count122
+\c@NAT@ctr=\count121
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tocloft/tocloft.sty
-Package: tocloft 2013/05/02 v2.3f parameterised ToC, etc., typesetting
-Package tocloft Info: The document has chapter divisions on input line 44.
+Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
+Package tocloft Info: The document has chapter divisions on input line 51.
 \cftparskip=\skip70
 \cftbeforetoctitleskip=\skip71
 \cftaftertoctitleskip=\skip72
@@ -881,8 +874,8 @@ Package tocloft Info: The document has chapter divisions on input line 44.
 \cftbeforefigskip=\skip96
 \cftfigindent=\skip97
 \cftfignumwidth=\skip98
-\c@lofdepth=\count123
-\c@lotdepth=\count124
+\c@lofdepth=\count122
+\c@lotdepth=\count123
 \cftbeforelottitleskip=\skip99
 \cftafterlottitleskip=\skip100
 \cftbeforetabskip=\skip101
@@ -895,7 +888,7 @@ Package tocloft Info: The document has chapter divisions on input line 44.
 
 Writing index file refman.idx
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2016/06/24 v6.83q Hypertext links for LaTeX
+Package: hyperref 2018/02/06 v6.86b Hypertext links for LaTeX
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
 Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
@@ -904,8 +897,8 @@ Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
 Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
-Package hobsub Info: Skipping package `infwarerr' (already loaded).
-Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 Package hobsub Info: Skipping package `ifvtex' (already loaded).
@@ -918,7 +911,7 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
+Package: pdftexcmds 2018/01/21 v0.26 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
@@ -947,26 +940,26 @@ Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
 \@linkdim=\dimen152
-\Hy@linkcounter=\count125
-\Hy@pagecounter=\count126
+\Hy@linkcounter=\count124
+\Hy@pagecounter=\count125
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2016/06/24 v6.83q Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2018/02/06 v6.86b Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count127
+\Hy@SavedSpaceFactor=\count126
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-Package hyperref Info: Hyper figures OFF on input line 4486.
-Package hyperref Info: Link nesting OFF on input line 4491.
-Package hyperref Info: Hyper index ON on input line 4494.
-Package hyperref Info: Plain pages OFF on input line 4501.
-Package hyperref Info: Backreferencing ON on input line 4504.
+Package hyperref Info: Hyper figures OFF on input line 4509.
+Package hyperref Info: Link nesting OFF on input line 4514.
+Package hyperref Info: Hyper index ON on input line 4517.
+Package hyperref Info: Plain pages OFF on input line 4524.
+Package hyperref Info: Backreferencing ON on input line 4527.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4735.
+Package hyperref Info: Bookmarks ON on input line 4762.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/backref.sty
 Package: backref 2016/05/21 v1.39 Bibliographical back referencing
@@ -976,44 +969,43 @@ Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 ))
-\c@Hy@tempcnt=\count128
+\c@Hy@tempcnt=\count127
 
 (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 5088.
+LaTeX Info: Redefining \url on input line 5115.
 \XeTeXLinkMargin=\dimen153
-\Fld@menulength=\count129
+\Fld@menulength=\count128
 \Field@Width=\dimen154
 \Fld@charsize=\dimen155
-Package hyperref Info: Hyper figures OFF on input line 6342.
-Package hyperref Info: Link nesting OFF on input line 6347.
-Package hyperref Info: Hyper index ON on input line 6350.
-Package hyperref Info: backreferencing ON on input line 6355.
-Package hyperref Info: Link coloring OFF on input line 6362.
-Package hyperref Info: Link coloring with OCG OFF on input line 6367.
-Package hyperref Info: PDF/A mode OFF on input line 6372.
-LaTeX Info: Redefining \ref on input line 6412.
-LaTeX Info: Redefining \pageref on input line 6416.
-\Hy@abspage=\count130
-\c@Item=\count131
-\c@Hfootnote=\count132
+Package hyperref Info: Hyper figures OFF on input line 6369.
+Package hyperref Info: Link nesting OFF on input line 6374.
+Package hyperref Info: Hyper index ON on input line 6377.
+Package hyperref Info: backreferencing ON on input line 6382.
+Package hyperref Info: Link coloring OFF on input line 6389.
+Package hyperref Info: Link coloring with OCG OFF on input line 6394.
+Package hyperref Info: PDF/A mode OFF on input line 6399.
+LaTeX Info: Redefining \ref on input line 6439.
+LaTeX Info: Redefining \pageref on input line 6443.
+\Hy@abspage=\count129
+\c@Item=\count130
+\c@Hfootnote=\count131
 )
-
-Package hyperref Message: Driver: hpdftex.
+Package hyperref Info: Driver: hpdftex.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2016/06/24 v6.83q Hyperref driver for pdfTeX
-\Fld@listcount=\count133
-\c@bookmark@seq@number=\count134
+File: hpdftex.def 2018/02/06 v6.86b Hyperref driver for pdfTeX
+\Fld@listcount=\count132
+\c@bookmark@seq@number=\count133
 \Hy@SectionHShift=\skip104
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 105.
 Package hyperref Info: Option `unicode' set `true' on input line 105.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
-File: puenc.def 2016/06/24 v6.83q Hyperref: PDF Unicode definition (HO)
+File: puenc.def 2018/02/06 v6.86b Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
@@ -1031,7 +1023,7 @@ Package caption3 Info: TeX engine: e-TeX on input line 67.
 \caption@parindent=\dimen161
 \caption@hangindent=\dimen162
 )
-\c@ContinuedFloat=\count135
+\c@ContinuedFloat=\count134
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: longtable package is loaded.
@@ -1074,16 +1066,16 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count136
+\scratchcounter=\count135
 \scratchdimen=\dimen163
 \scratchbox=\box65
-\nofMPsegments=\count137
-\nofMParguments=\count138
+\nofMPsegments=\count136
+\nofMParguments=\count137
 \everyMPshowfont=\toks30
-\MPscratchCnt=\count139
+\MPscratchCnt=\count138
 \MPscratchDim=\dimen164
-\MPnumerator=\count140
-\makeMPintoPDFobject=\count141
+\MPnumerator=\count139
+\makeMPintoPDFobject=\count140
 \everyMPtoPDFconversion=\toks31
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -1094,7 +1086,7 @@ Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 38.
 Package grfext Info: Graphics extension search list:
-(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 
@@ -1145,7 +1137,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count142
+\c@section@level=\count141
 )
 LaTeX Info: Redefining \ref on input line 117.
 LaTeX Info: Redefining \pageref on input line 117.
@@ -1276,10 +1268,9 @@ Underfull \hbox (badness 10000) detected at line 24
 (./classInitNetlist.tex [7]
 <classInitNetlist__coll__graph.pdf, id=1457, 159.59625pt x 167.62625pt>
 File: classInitNetlist__coll__graph.pdf Graphic file (type pdf)
-
 <use classInitNetlist__coll__graph.pdf>
-Package pdftex.def Info: classInitNetlist__coll__graph.pdf used on input line 1
-8.
+Package pdftex.def Info: classInitNetlist__coll__graph.pdf  used on input line 
+18.
 (pdftex.def)             Requested size: 159.0pt x 167.00172pt.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 8.09995pt on input line 25.
@@ -1363,9 +1354,8 @@ Underfull \hbox (badness 10000) detected at line 472
 ) (./classPattern.tex
 <classPattern__coll__graph.pdf, id=2106, 139.52126pt x 167.62625pt>
 File: classPattern__coll__graph.pdf Graphic file (type pdf)
-
 <use classPattern__coll__graph.pdf>
-Package pdftex.def Info: classPattern__coll__graph.pdf used on input line 18.
+Package pdftex.def Info: classPattern__coll__graph.pdf  used on input line 18.
 (pdftex.def)             Requested size: 139.0pt x 167.00427pt.
  [28] [29 <./classPattern__coll__graph.pdf>] [30]
 Underfull \hbox (badness 10000) detected at line 148
@@ -1391,18 +1381,17 @@ Underfull \hbox (badness 10000) detected at line 140
 <structSymDetect_1_1srchObj__coll__graph.pdf, id=2335, 186.6975pt x 167.62625pt
 >
 File: structSymDetect_1_1srchObj__coll__graph.pdf Graphic file (type pdf)
- <use structSymDetect_1_1srchObj__coll__graph.pdf>
-Package pdftex.def Info: structSymDetect_1_1srchObj__coll__graph.pdf used on in
-put line 14.
+<use structSymDetect_1_1srchObj__coll__graph.pdf>
+Package pdftex.def Info: structSymDetect_1_1srchObj__coll__graph.pdf  used on i
+nput line 14.
 (pdftex.def)             Requested size: 186.0pt x 167.00684pt.
  [35] [36 <./structSymDetect_1_1srchObj__coll__graph.pdf>]) (./classSymDetect.t
 ex
 <classSymDetect__coll__graph.pdf, id=2371, 198.7425pt x 234.8775pt>
 File: classSymDetect__coll__graph.pdf Graphic file (type pdf)
-
 <use classSymDetect__coll__graph.pdf>
-Package pdftex.def Info: classSymDetect__coll__graph.pdf used on input line 18.
-
+Package pdftex.def Info: classSymDetect__coll__graph.pdf  used on input line 18
+.
 (pdftex.def)             Requested size: 198.0pt x 234.00601pt.
  [37 <./classSymDetect__coll__graph.pdf>]
 [38]
@@ -1429,18 +1418,16 @@ Underfull \hbox (badness 10000) detected at line 233
 
 ]
 Chapter 4.
-(./Inst_8h.tex <Inst_8h__incl.pdf, id=2560, 331.2375pt x 269.005pt>
+(./Inst_8h.tex
+<Inst_8h__incl.pdf, id=2560, 331.2375pt x 269.005pt>
 File: Inst_8h__incl.pdf Graphic file (type pdf)
-
 <use Inst_8h__incl.pdf>
-Package pdftex.def Info: Inst_8h__incl.pdf used on input line 16.
+Package pdftex.def Info: Inst_8h__incl.pdf  used on input line 16.
 (pdftex.def)             Requested size: 330.0pt x 268.01099pt.
-
 <Inst_8h__dep__incl.pdf, id=2561, 631.35875pt x 325.215pt>
 File: Inst_8h__dep__incl.pdf Graphic file (type pdf)
-
 <use Inst_8h__dep__incl.pdf>
-Package pdftex.def Info: Inst_8h__dep__incl.pdf used on input line 24.
+Package pdftex.def Info: Inst_8h__dep__incl.pdf  used on input line 24.
 (pdftex.def)             Requested size: 350.0pt x 180.28804pt.
  [45 <./Inst_8h__incl.pdf>]
 Underfull \hbox (badness 10000) detected at line 37
@@ -1452,11 +1439,11 @@ Underfull \hbox (badness 10000) detected at line 40
 [][][]
  []
 
-) (./Net_8cpp.tex <Net_8cpp__incl.pdf, id=2577, 331.2375pt x 325.215pt>
+) (./Net_8cpp.tex
+<Net_8cpp__incl.pdf, id=2577, 331.2375pt x 325.215pt>
 File: Net_8cpp__incl.pdf Graphic file (type pdf)
-
 <use Net_8cpp__incl.pdf>
-Package pdftex.def Info: Net_8cpp__incl.pdf used on input line 15.
+Package pdftex.def Info: Net_8cpp__incl.pdf  used on input line 15.
 (pdftex.def)             Requested size: 330.0pt x 324.0133pt.
  [46 <./Inst_8h__dep__incl.pdf>]
 Underfull \hbox (badness 10000) detected at line 30
@@ -1483,18 +1470,16 @@ OML/cmm/m/it/8 >$ \T1/pcr/bc/n/8 P[]O[]W[]E[]R[]_[][]N[]E[]T[]_[][]N[]A[]M[]ES
 = {"vdd", "V[]DD", "Vdd",
  []
 
-) (./Net_8h.tex <Net_8h__incl.pdf, id=2610, 331.2375pt x 269.005pt>
+) (./Net_8h.tex
+<Net_8h__incl.pdf, id=2610, 331.2375pt x 269.005pt>
 File: Net_8h__incl.pdf Graphic file (type pdf)
-
 <use Net_8h__incl.pdf>
-Package pdftex.def Info: Net_8h__incl.pdf used on input line 16.
+Package pdftex.def Info: Net_8h__incl.pdf  used on input line 16.
 (pdftex.def)             Requested size: 330.0pt x 268.01099pt.
-
 <Net_8h__dep__incl.pdf, id=2611, 631.35875pt x 325.215pt>
 File: Net_8h__dep__incl.pdf Graphic file (type pdf)
-
 <use Net_8h__dep__incl.pdf>
-Package pdftex.def Info: Net_8h__dep__incl.pdf used on input line 24.
+Package pdftex.def Info: Net_8h__dep__incl.pdf  used on input line 24.
 (pdftex.def)             Requested size: 350.0pt x 180.28804pt.
  [48 <./Net_8h__incl.pdf>]
 Underfull \hbox (badness 10000) detected at line 37
@@ -1506,11 +1491,11 @@ Underfull \hbox (badness 10000) detected at line 40
 [][][]
  []
 
-) (./Netlist_8cpp.tex <Netlist_8cpp__incl.pdf, id=2628, 389.455pt x 381.425pt>
+) (./Netlist_8cpp.tex
+<Netlist_8cpp__incl.pdf, id=2628, 389.455pt x 381.425pt>
 File: Netlist_8cpp__incl.pdf Graphic file (type pdf)
-
 <use Netlist_8cpp__incl.pdf>
-Package pdftex.def Info: Netlist_8cpp__incl.pdf used on input line 15.
+Package pdftex.def Info: Netlist_8cpp__incl.pdf  used on input line 15.
 (pdftex.def)             Requested size: 350.0pt x 342.79625pt.
  [49 <./Net_8h__dep__incl.pdf>]
 Underfull \hbox (badness 10000) detected at line 30
@@ -1533,16 +1518,13 @@ n[]
 [50 <./Netlist_8cpp__incl.pdf>]) (./Netlist_8h.tex
 <Netlist_8h__incl.pdf, id=2689, 389.455pt x 325.215pt>
 File: Netlist_8h__incl.pdf Graphic file (type pdf)
-
 <use Netlist_8h__incl.pdf>
-Package pdftex.def Info: Netlist_8h__incl.pdf used on input line 19.
+Package pdftex.def Info: Netlist_8h__incl.pdf  used on input line 19.
 (pdftex.def)             Requested size: 350.0pt x 292.27892pt.
-
 <Netlist_8h__dep__incl.pdf, id=2690, 631.35875pt x 269.005pt>
 File: Netlist_8h__dep__incl.pdf Graphic file (type pdf)
-
 <use Netlist_8h__dep__incl.pdf>
-Package pdftex.def Info: Netlist_8h__dep__incl.pdf used on input line 27.
+Package pdftex.def Info: Netlist_8h__dep__incl.pdf  used on input line 27.
 (pdftex.def)             Requested size: 350.0pt x 149.12714pt.
  [51 <./Netlist_8h__incl.pdf>]
 Underfull \hbox (badness 10000) detected at line 46
@@ -1554,11 +1536,11 @@ Underfull \hbox (badness 10000) detected at line 49
 [][][]
  []
 
-) (./Pin_8cpp.tex <Pin_8cpp__incl.pdf, id=2714, 270.00874pt x 325.215pt>
+) (./Pin_8cpp.tex
+<Pin_8cpp__incl.pdf, id=2714, 270.00874pt x 325.215pt>
 File: Pin_8cpp__incl.pdf Graphic file (type pdf)
-
 <use Pin_8cpp__incl.pdf>
-Package pdftex.def Info: Pin_8cpp__incl.pdf used on input line 14.
+Package pdftex.def Info: Pin_8cpp__incl.pdf  used on input line 14.
 (pdftex.def)             Requested size: 269.0pt x 324.00833pt.
  [52 <./Netlist_8h__dep__incl.pdf>]
 Underfull \hbox (badness 10000) detected at line 22
@@ -1570,18 +1552,17 @@ Underfull \hbox (badness 10000) detected at line 25
 [][][]
  []
 
-) (./Pin_8h.tex <Pin_8h__incl.pdf, id=2730, 270.00874pt x 269.005pt>
+) (./Pin_8h.tex
+<Pin_8h__incl.pdf, id=2730, 270.00874pt x 269.005pt>
 File: Pin_8h__incl.pdf Graphic file (type pdf)
-
 <use Pin_8h__incl.pdf>
-Package pdftex.def Info: Pin_8h__incl.pdf used on input line 15.
+Package pdftex.def Info: Pin_8h__incl.pdf  used on input line 15.
 (pdftex.def)             Requested size: 269.0pt x 268.00688pt.
  [53 <./Pin_8cpp__incl.pdf>]
 <Pin_8h__dep__incl.pdf, id=2742, 631.35875pt x 325.215pt>
 File: Pin_8h__dep__incl.pdf Graphic file (type pdf)
-
 <use Pin_8h__dep__incl.pdf>
-Package pdftex.def Info: Pin_8h__dep__incl.pdf used on input line 23.
+Package pdftex.def Info: Pin_8h__dep__incl.pdf  used on input line 23.
 (pdftex.def)             Requested size: 350.0pt x 180.28804pt.
  [54 <./Pin_8h__incl.pdf> <./Pin_8h__dep__incl.pdf
 
@@ -1597,18 +1578,16 @@ Underfull \hbox (badness 10000) detected at line 39
 [][][]
  []
 
-) (./global_8h.tex <global_8h__incl.pdf, id=2764, 184.69pt x 156.585pt>
+) (./global_8h.tex
+<global_8h__incl.pdf, id=2764, 184.69pt x 156.585pt>
 File: global_8h__incl.pdf Graphic file (type pdf)
-
 <use global_8h__incl.pdf>
-Package pdftex.def Info: global_8h__incl.pdf used on input line 13.
+Package pdftex.def Info: global_8h__incl.pdf  used on input line 13.
 (pdftex.def)             Requested size: 184.0pt x 156.00162pt.
-
 <global_8h__dep__incl.pdf, id=2765, 580.1675pt x 437.635pt>
 File: global_8h__dep__incl.pdf Graphic file (type pdf)
-
 <use global_8h__dep__incl.pdf>
-Package pdftex.def Info: global_8h__dep__incl.pdf used on input line 20.
+Package pdftex.def Info: global_8h__dep__incl.pdf  used on input line 20.
 (pdftex.def)             Requested size: 350.0pt x 264.01205pt.
  [55 <./global_8h__incl.pdf> <./global_8h__dep__incl.pdf
 
@@ -1627,9 +1606,8 @@ Underfull \hbox (badness 10000) detected at line 31
 ) (./namespace_8h.tex
 <namespace_8h__dep__incl.pdf, id=2783, 580.1675pt x 493.845pt>
 File: namespace_8h__dep__incl.pdf Graphic file (type pdf)
-
 <use namespace_8h__dep__incl.pdf>
-Package pdftex.def Info: namespace_8h__dep__incl.pdf used on input line 12.
+Package pdftex.def Info: namespace_8h__dep__incl.pdf  used on input line 12.
 (pdftex.def)             Requested size: 350.0pt x 297.92186pt.
 
 Underfull \hbox (badness 10000) detected at line 29
@@ -1641,18 +1619,17 @@ Underfull \hbox (badness 10000) detected at line 32
 [][][]
  []
 
-) (./type_8h.tex <type_8h__incl.pdf, id=2803, 236.885pt x 212.795pt>
+) (./type_8h.tex
+<type_8h__incl.pdf, id=2803, 236.885pt x 212.795pt>
 File: type_8h__incl.pdf Graphic file (type pdf)
-
 <use type_8h__incl.pdf>
-Package pdftex.def Info: type_8h__incl.pdf used on input line 15.
+Package pdftex.def Info: type_8h__incl.pdf  used on input line 15.
 (pdftex.def)             Requested size: 236.0pt x 212.00543pt.
  [57]
 <type_8h__dep__incl.pdf, id=2809, 580.1675pt x 381.425pt>
 File: type_8h__dep__incl.pdf Graphic file (type pdf)
-
 <use type_8h__dep__incl.pdf>
-Package pdftex.def Info: type_8h__dep__incl.pdf used on input line 23.
+Package pdftex.def Info: type_8h__dep__incl.pdf  used on input line 23.
 (pdftex.def)             Requested size: 350.0pt x 230.10225pt.
  [58 <./type_8h__incl.pdf> <./type_8h__dep__incl.pdf
 
@@ -1685,11 +1662,10 @@ Overfull \vbox (1.19237pt too high) has occurred while \output is active []
 [61]) (./main_8cpp.tex [62]
 <main_8cpp__incl.pdf, id=2970, 610.28pt x 493.845pt>
 File: main_8cpp__incl.pdf Graphic file (type pdf)
- <use main_8cpp__incl.pdf>
-Package pdftex.def Info: main_8cpp__incl.pdf used on input line 18.
+<use main_8cpp__incl.pdf>
+Package pdftex.def Info: main_8cpp__incl.pdf  used on input line 18.
 (pdftex.def)             Requested size: 350.0pt x 283.23526pt.
-
-[63 <./main_8cpp__incl.pdf>]
+ [63 <./main_8cpp__incl.pdf>]
 Underfull \hbox (badness 10000) detected at line 36
 [][][]
  []
@@ -1702,9 +1678,8 @@ Underfull \hbox (badness 10000) detected at line 39
 ) (./InitNetlist_8cpp.tex
 <InitNetlist_8cpp__incl.pdf, id=2990, 412.54124pt x 437.635pt>
 File: InitNetlist_8cpp__incl.pdf Graphic file (type pdf)
-
 <use InitNetlist_8cpp__incl.pdf>
-Package pdftex.def Info: InitNetlist_8cpp__incl.pdf used on input line 16.
+Package pdftex.def Info: InitNetlist_8cpp__incl.pdf  used on input line 16.
 (pdftex.def)             Requested size: 350.0pt x 371.29701pt.
  [64]
 Underfull \hbox (badness 10000) detected at line 24
@@ -1719,16 +1694,14 @@ Underfull \hbox (badness 10000) detected at line 27
 ) (./InitNetlist_8h.tex
 <InitNetlist_8h__incl.pdf, id=2999, 389.455pt x 381.425pt>
 File: InitNetlist_8h__incl.pdf Graphic file (type pdf)
-
 <use InitNetlist_8h__incl.pdf>
-Package pdftex.def Info: InitNetlist_8h__incl.pdf used on input line 14.
+Package pdftex.def Info: InitNetlist_8h__incl.pdf  used on input line 14.
 (pdftex.def)             Requested size: 350.0pt x 342.79625pt.
  [65 <./InitNetlist_8cpp__incl.pdf>]
 <InitNetlist_8h__dep__incl.pdf, id=3012, 321.2pt x 156.585pt>
 File: InitNetlist_8h__dep__incl.pdf Graphic file (type pdf)
-
 <use InitNetlist_8h__dep__incl.pdf>
-Package pdftex.def Info: InitNetlist_8h__dep__incl.pdf used on input line 22.
+Package pdftex.def Info: InitNetlist_8h__dep__incl.pdf  used on input line 22.
 (pdftex.def)             Requested size: 320.0pt x 156.004pt.
  [66 <./InitNetlist_8h__incl.pdf> <./InitNetlist_8h__dep__incl.pdf
 
@@ -1747,9 +1720,8 @@ Underfull \hbox (badness 10000) detected at line 38
 ) (./Pattern_8cpp.tex
 <Pattern_8cpp__incl.pdf, id=3034, 398.48875pt x 437.635pt>
 File: Pattern_8cpp__incl.pdf Graphic file (type pdf)
-
 <use Pattern_8cpp__incl.pdf>
-Package pdftex.def Info: Pattern_8cpp__incl.pdf used on input line 14.
+Package pdftex.def Info: Pattern_8cpp__incl.pdf  used on input line 14.
 (pdftex.def)             Requested size: 350.0pt x 384.39879pt.
  [67 <./Pattern_8cpp__incl.pdf>]
 Underfull \hbox (badness 10000) detected at line 22
@@ -1761,18 +1733,16 @@ Underfull \hbox (badness 10000) detected at line 25
 [][][]
  []
 
-) (./Pattern_8h.tex <Pattern_8h__incl.pdf, id=3047, 398.48875pt x 381.425pt>
+) (./Pattern_8h.tex
+<Pattern_8h__incl.pdf, id=3047, 398.48875pt x 381.425pt>
 File: Pattern_8h__incl.pdf Graphic file (type pdf)
-
 <use Pattern_8h__incl.pdf>
-Package pdftex.def Info: Pattern_8h__incl.pdf used on input line 15.
+Package pdftex.def Info: Pattern_8h__incl.pdf  used on input line 15.
 (pdftex.def)             Requested size: 350.0pt x 335.02646pt.
-
 <Pattern_8h__dep__incl.pdf, id=3048, 458.71375pt x 212.795pt>
 File: Pattern_8h__dep__incl.pdf Graphic file (type pdf)
-
 <use Pattern_8h__dep__incl.pdf>
-Package pdftex.def Info: Pattern_8h__dep__incl.pdf used on input line 23.
+Package pdftex.def Info: Pattern_8h__dep__incl.pdf  used on input line 23.
 (pdftex.def)             Requested size: 350.0pt x 162.37201pt.
  [68 <./Pattern_8h__incl.pdf>]
 Underfull \hbox (badness 10000) detected at line 36
@@ -1787,9 +1757,8 @@ Underfull \hbox (badness 10000) detected at line 39
 ) (./SymDetect_8cpp.tex
 <SymDetect_8cpp__incl.pdf, id=3062, 408.52625pt x 493.845pt>
 File: SymDetect_8cpp__incl.pdf Graphic file (type pdf)
-
 <use SymDetect_8cpp__incl.pdf>
-Package pdftex.def Info: SymDetect_8cpp__incl.pdf used on input line 14.
+Package pdftex.def Info: SymDetect_8cpp__incl.pdf  used on input line 14.
 (pdftex.def)             Requested size: 350.0pt x 423.11597pt.
  [69 <./Pattern_8h__dep__incl.pdf>]
 Underfull \hbox (badness 10000) detected at line 22
@@ -1804,16 +1773,14 @@ Underfull \hbox (badness 10000) detected at line 25
 ) (./SymDetect_8h.tex
 <SymDetect_8h__incl.pdf, id=3076, 408.52625pt x 437.635pt>
 File: SymDetect_8h__incl.pdf Graphic file (type pdf)
-
 <use SymDetect_8h__incl.pdf>
-Package pdftex.def Info: SymDetect_8h__incl.pdf used on input line 16.
+Package pdftex.def Info: SymDetect_8h__incl.pdf  used on input line 16.
 (pdftex.def)             Requested size: 350.0pt x 374.95642pt.
  [70 <./SymDetect_8cpp__incl.pdf>]
 <SymDetect_8h__dep__incl.pdf, id=3088, 351.3125pt x 156.585pt>
 File: SymDetect_8h__dep__incl.pdf Graphic file (type pdf)
-
 <use SymDetect_8h__dep__incl.pdf>
-Package pdftex.def Info: SymDetect_8h__dep__incl.pdf used on input line 24.
+Package pdftex.def Info: SymDetect_8h__dep__incl.pdf  used on input line 24.
 (pdftex.def)             Requested size: 350.0pt x 156.01117pt.
  [71 <./SymDetect_8h__incl.pdf> <./SymDetect_8h__dep__incl.pdf
 
@@ -1848,12 +1815,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 186.
  ) 
 Here is how much of TeX's memory you used:
- 16150 strings out of 493013
- 244158 string characters out of 6135682
- 333122 words of memory out of 5000000
- 18731 multiletter control sequences out of 15000+600000
+ 16101 strings out of 494923
+ 244141 string characters out of 6180741
+ 323567 words of memory out of 5000000
+ 18461 multiletter control sequences out of 15000+600000
  67356 words of font info for 85 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
+ 14 hyphenation exceptions out of 8191
  53i,16n,92p,2752b,630s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
@@ -1867,7 +1834,7 @@ r/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (86 pages, 394884 bytes).
+Output written on refman.pdf (86 pages, 394890 bytes).
 PDF statistics:
  3600 PDF objects out of 4296 (max. 8388607)
  3334 compressed objects within 34 object streams

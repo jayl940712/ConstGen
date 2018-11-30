@@ -1,42 +1,42 @@
 [
 {
-  "directory": "/home/unga/jayliu/SFA/build/debug",
-  "command": "/usr/bin/c++    -I/home/unga/jayliu/SFA/src -I/home/unga/jayliu/SFA/unittest  -std=c++11 -Wall  -g3 -O0 -fno-inline   -o CMakeFiles/SFA.dir/src/main/main.cpp.o -c /home/unga/jayliu/SFA/src/main/main.cpp",
-  "file": "/home/unga/jayliu/SFA/src/main/main.cpp"
+  "directory": "/home/jayliu/Research/sfa/build/debug",
+  "command": "/usr/bin/c++   -I/home/jayliu/Research/sfa/src -I/home/jayliu/Research/sfa/unittest  -std=c++11 -Wall  -g3 -O0 -fno-inline   -o CMakeFiles/SFA.dir/src/main/main.cpp.o -c /home/jayliu/Research/sfa/src/main/main.cpp",
+  "file": "/home/jayliu/Research/sfa/src/main/main.cpp"
 },
 {
-  "directory": "/home/unga/jayliu/SFA/build/debug",
-  "command": "/usr/bin/c++    -I/home/unga/jayliu/SFA/src -I/home/unga/jayliu/SFA/unittest  -std=c++11 -Wall  -g3 -O0 -fno-inline   -o CMakeFiles/SFA.dir/src/parser/InitNetlist.cpp.o -c /home/unga/jayliu/SFA/src/parser/InitNetlist.cpp",
-  "file": "/home/unga/jayliu/SFA/src/parser/InitNetlist.cpp"
+  "directory": "/home/jayliu/Research/sfa/build/debug",
+  "command": "/usr/bin/c++   -I/home/jayliu/Research/sfa/src -I/home/jayliu/Research/sfa/unittest  -std=c++11 -Wall  -g3 -O0 -fno-inline   -o CMakeFiles/SFA.dir/src/parser/InitNetlist.cpp.o -c /home/jayliu/Research/sfa/src/parser/InitNetlist.cpp",
+  "file": "/home/jayliu/Research/sfa/src/parser/InitNetlist.cpp"
 },
 {
-  "directory": "/home/unga/jayliu/SFA/build/debug",
-  "command": "/usr/bin/c++    -I/home/unga/jayliu/SFA/src -I/home/unga/jayliu/SFA/unittest  -std=c++11 -Wall  -g3 -O0 -fno-inline   -o CMakeFiles/SFA.dir/src/db/MosPair.cpp.o -c /home/unga/jayliu/SFA/src/db/MosPair.cpp",
-  "file": "/home/unga/jayliu/SFA/src/db/MosPair.cpp"
+  "directory": "/home/jayliu/Research/sfa/build/debug",
+  "command": "/usr/bin/c++   -I/home/jayliu/Research/sfa/src -I/home/jayliu/Research/sfa/unittest  -std=c++11 -Wall  -g3 -O0 -fno-inline   -o CMakeFiles/SFA.dir/src/db/MosPair.cpp.o -c /home/jayliu/Research/sfa/src/db/MosPair.cpp",
+  "file": "/home/jayliu/Research/sfa/src/db/MosPair.cpp"
 },
 {
-  "directory": "/home/unga/jayliu/SFA/build/debug",
-  "command": "/usr/bin/c++    -I/home/unga/jayliu/SFA/src -I/home/unga/jayliu/SFA/unittest  -std=c++11 -Wall  -g3 -O0 -fno-inline   -o CMakeFiles/SFA.dir/src/db/Net.cpp.o -c /home/unga/jayliu/SFA/src/db/Net.cpp",
-  "file": "/home/unga/jayliu/SFA/src/db/Net.cpp"
+  "directory": "/home/jayliu/Research/sfa/build/debug",
+  "command": "/usr/bin/c++   -I/home/jayliu/Research/sfa/src -I/home/jayliu/Research/sfa/unittest  -std=c++11 -Wall  -g3 -O0 -fno-inline   -o CMakeFiles/SFA.dir/src/db/Net.cpp.o -c /home/jayliu/Research/sfa/src/db/Net.cpp",
+  "file": "/home/jayliu/Research/sfa/src/db/Net.cpp"
 },
 {
-  "directory": "/home/unga/jayliu/SFA/build/debug",
-  "command": "/usr/bin/c++    -I/home/unga/jayliu/SFA/src -I/home/unga/jayliu/SFA/unittest  -std=c++11 -Wall  -g3 -O0 -fno-inline   -o CMakeFiles/SFA.dir/src/db/Netlist.cpp.o -c /home/unga/jayliu/SFA/src/db/Netlist.cpp",
-  "file": "/home/unga/jayliu/SFA/src/db/Netlist.cpp"
+  "directory": "/home/jayliu/Research/sfa/build/debug",
+  "command": "/usr/bin/c++   -I/home/jayliu/Research/sfa/src -I/home/jayliu/Research/sfa/unittest  -std=c++11 -Wall  -g3 -O0 -fno-inline   -o CMakeFiles/SFA.dir/src/db/Netlist.cpp.o -c /home/jayliu/Research/sfa/src/db/Netlist.cpp",
+  "file": "/home/jayliu/Research/sfa/src/db/Netlist.cpp"
 },
 {
-  "directory": "/home/unga/jayliu/SFA/build/debug",
-  "command": "/usr/bin/c++    -I/home/unga/jayliu/SFA/src -I/home/unga/jayliu/SFA/unittest  -std=c++11 -Wall  -g3 -O0 -fno-inline   -o CMakeFiles/SFA.dir/src/db/Pin.cpp.o -c /home/unga/jayliu/SFA/src/db/Pin.cpp",
-  "file": "/home/unga/jayliu/SFA/src/db/Pin.cpp"
+  "directory": "/home/jayliu/Research/sfa/build/debug",
+  "command": "/usr/bin/c++   -I/home/jayliu/Research/sfa/src -I/home/jayliu/Research/sfa/unittest  -std=c++11 -Wall  -g3 -O0 -fno-inline   -o CMakeFiles/SFA.dir/src/db/Pin.cpp.o -c /home/jayliu/Research/sfa/src/db/Pin.cpp",
+  "file": "/home/jayliu/Research/sfa/src/db/Pin.cpp"
 },
 {
-  "directory": "/home/unga/jayliu/SFA/build/debug",
-  "command": "/usr/bin/c++    -I/home/unga/jayliu/SFA/src -I/home/unga/jayliu/SFA/unittest  -std=c++11 -Wall  -g3 -O0 -fno-inline   -o CMakeFiles/SFA.dir/src/sym_detect/Pattern.cpp.o -c /home/unga/jayliu/SFA/src/sym_detect/Pattern.cpp",
-  "file": "/home/unga/jayliu/SFA/src/sym_detect/Pattern.cpp"
+  "directory": "/home/jayliu/Research/sfa/build/debug",
+  "command": "/usr/bin/c++   -I/home/jayliu/Research/sfa/src -I/home/jayliu/Research/sfa/unittest  -std=c++11 -Wall  -g3 -O0 -fno-inline   -o CMakeFiles/SFA.dir/src/sym_detect/Pattern.cpp.o -c /home/jayliu/Research/sfa/src/sym_detect/Pattern.cpp",
+  "file": "/home/jayliu/Research/sfa/src/sym_detect/Pattern.cpp"
 },
 {
-  "directory": "/home/unga/jayliu/SFA/build/debug",
-  "command": "/usr/bin/c++    -I/home/unga/jayliu/SFA/src -I/home/unga/jayliu/SFA/unittest  -std=c++11 -Wall  -g3 -O0 -fno-inline   -o CMakeFiles/SFA.dir/src/sym_detect/SymDetect.cpp.o -c /home/unga/jayliu/SFA/src/sym_detect/SymDetect.cpp",
-  "file": "/home/unga/jayliu/SFA/src/sym_detect/SymDetect.cpp"
+  "directory": "/home/jayliu/Research/sfa/build/debug",
+  "command": "/usr/bin/c++   -I/home/jayliu/Research/sfa/src -I/home/jayliu/Research/sfa/unittest  -std=c++11 -Wall  -g3 -O0 -fno-inline   -o CMakeFiles/SFA.dir/src/sym_detect/SymDetect.cpp.o -c /home/jayliu/Research/sfa/src/sym_detect/SymDetect.cpp",
+  "file": "/home/jayliu/Research/sfa/src/sym_detect/SymDetect.cpp"
 }
 ]

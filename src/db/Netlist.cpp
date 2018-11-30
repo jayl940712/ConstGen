@@ -145,7 +145,7 @@ void Netlist::fltrInstNetConnPinType(std::vector<IndexType> & instArray,
 {
 // O(n) complexity guaranteed.
     auto it = instArray.begin();
-    IndexType numRmv;
+    IndexType numRmv = 0;
     while (it != instArray.end() - numRmv)
     {
         IndexType instId = *it;
@@ -179,8 +179,8 @@ void Netlist::fltrInstPinConnPinType(std::vector<IndexType> & instArray,
 void Netlist::fltrInstMosType(std::vector<IndexType> & instArray, MosType mosType) const
 {
 // O(n) complexity guaranteed.
-    auto it = instArray.begin();return;
-    IndexType numRmv;
+    auto it = instArray.begin();
+    IndexType numRmv = 0;
     while (it != instArray.end() - numRmv)
     {
         IndexType instId = *it;
