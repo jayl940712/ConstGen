@@ -36,6 +36,15 @@ PinType Pin::nextPinType(PinType type)
     return PinType::OTHER;
 }
 
+/*! 
+    A pin is said to belong to a passive 
+    device if the PinType is PinType::THIS 
+    or PinType::THAT.
+*/
+bool Pin::isPasvDev(PinType type)
+{
+    return type == PinType::THIS || type == PinType::THAT;
+}
 
 PROJECT_NAMESPACE_END
 

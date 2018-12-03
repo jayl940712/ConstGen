@@ -44,6 +44,8 @@ public:
 
 /*! @brief Return the next search PinType for DFS. */   
     static PinType                  nextPinType(PinType type);
+/*! @breif Return true if PinType belongs to a passive device. */
+    static bool                     isPasvDev(PinType type);
 
 private:
     IndexType                       _id;

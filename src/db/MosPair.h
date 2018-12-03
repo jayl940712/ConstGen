@@ -35,7 +35,8 @@ public:
         :_mosId1(mosId1), _mosId2(mosId2), _pattern(pattern)
     {
         _valid = true; /*!< valid is set true as default. */
-        _srchPinType = PinType::SOURCE; /*!< reached Pin set as SOURCE default. */
+        _srchPinType1 = PinType::SOURCE; /*!< reached Pin set as SOURCE default. */
+        _srchPinType2 = PinType::SOURCE;
     }
 
     // Getters
@@ -49,20 +50,29 @@ public:
     bool                    valid() const                   { return _valid; }
 /*! @brief Get pattern */
     MosPattern              pattern() const                 { return _pattern; }
-/*! @brief Get PinType on how DFS reached the pair. */
-    PinType                 srchPinType() const             { return _srchPinType; }
+/*! @brief Get PinType on how DFS reached mosId1 of the pair. */
+    PinType                 srchPinType1() const            { return _srchPinType1; }
+/*! @brief Get PinType on how DFS reached mosId1 of the pair. */
+    PinType                 srchPinType2() const            { return _srchPinType2; }
 
     // Setters
 /*! @brief Invalidate pair. */
     void                    inVld()                         { _valid = false; }
 /*! @brief set reached PinType.
     
-    This is how the pair is reached through DFS search.
+    This is how mosId1 of the pair is reached through DFS search.
 */
-    void                    setSrchPinType(PinType type)    { _srchPinType = type; }
+    void                    setSrchPinType1(PinType type)   { _srchPinType1 = type; }
+/*! @brief set reached PinType.
+    
+    This is how mosId2 of the pair is reached through DFS search.
+*/
+    void                    setSrchPinType2(PinType type)   { _srchPinType2 = type; }
 
-/*! @brief Return next PinType to search. */
-    PinType                 nextPinType()                   { return Pin::nextPinType(_srchPinType); }
+/*! @brief Return next PinType to search for mosId1. */
+    PinType                 nextPinType1()                  { return Pin::nextPinType(_srchPinType1); }
+/*! @brief Return next PinType to search for mosId2. */
+    PinType                 nextPinType2()                  { return Pin::nextPinType(_srchPinType2); }
 /*! @brief Equal operator 
     
     Two pairs are equal if Id are equal.
@@ -74,7 +84,7 @@ private:
     IndexType               _mosId1, _mosId2;
     MosPattern              _pattern;
     bool                    _valid;
-    PinType                 _srchPinType;
+    PinType                 _srchPinType1, _srchPinType2;
 };
 
 PROJECT_NAMESPACE_END
