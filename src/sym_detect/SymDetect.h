@@ -33,7 +33,8 @@ public:
     is a vector of std::vector<MosPair> oneGroup. Where 
     oneGroup is a group of MosPair in the same symmetry 
     group. Each MosPair should follow a MosPattern, or 
-    it should be of self symmetry. 
+    it should be of self symmetry. This funtion has been 
+    also updated to contain basic passive pair symmetry. 
 
     @param symGroup Detected symmetry groups of netlist.
     @see MosPattern
@@ -57,17 +58,19 @@ private:
 /*! @brief Return true if end of search path. 
 
     Current end search terminations:
-    (1) DIFF_SOURCE reached through DRAIN
-    (2) LOAD, CROSS_LOAD 
-    (3) gate connected pairs 
+    (1) Connected PASSIVE
+    (2) DIFF_SOURCE reached through DRAIN
+    (3) LOAD, CROSS_LOAD 
+    (4) gate connected pairs 
 */
     bool                        endSrch(MosPair & obj) const;
 /*! @brief Return true if a valid pair. 
 
     Valid pairs have following attributes:
-    (1) Reached through same PinType
-    (2) Not reached through gate
-    (3) Valid MosPattern
+    (1) Any mosfet pairs not reached by PASSIVE
+    (2) Reached through same PinType
+    (3) Not reached through gate
+    (4) Valid MosPattern
 
     @param instId1 Reached pair instId1
     @param instId2 Reached pair instId2

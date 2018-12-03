@@ -97,6 +97,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a86313ccf5cf94894c0d6cece183cb25d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="type_8h.html#afaab50027002ecbb6c8ac27e727d1bb4">PinType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPin.html#a86313ccf5cf94894c0d6cece183cb25d">nextPinType</a> (<a class="el" href="type_8h.html#afaab50027002ecbb6c8ac27e727d1bb4">PinType</a> <a class="el" href="classPin.html#a788397e41a9a4fa196b36f8076eb6d6c">type</a>)</td></tr>
 <tr class="memdesc:a86313ccf5cf94894c0d6cece183cb25d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the next search PinType for DFS.  <a href="#a86313ccf5cf94894c0d6cece183cb25d">More...</a><br /></td></tr>
 <tr class="separator:a86313ccf5cf94894c0d6cece183cb25d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfab9edd97a71fe12e0bb76ac2ea109a"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPin.html#abfab9edd97a71fe12e0bb76ac2ea109a">isPasvDev</a> (<a class="el" href="type_8h.html#afaab50027002ecbb6c8ac27e727d1bb4">PinType</a> <a class="el" href="classPin.html#a788397e41a9a4fa196b36f8076eb6d6c">type</a>)</td></tr>
+<tr class="separator:abfab9edd97a71fe12e0bb76ac2ea109a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -247,6 +249,34 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Return id of connected <a class="el" href="classInst.html" title="Inst class. ">Inst</a>. </p>
+
+</div>
+</div>
+<a id="abfab9edd97a71fe12e0bb76ac2ea109a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfab9edd97a71fe12e0bb76ac2ea109a">&#9670;&nbsp;</a></span>isPasvDev()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Pin::isPasvDev </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="type_8h.html#afaab50027002ecbb6c8ac27e727d1bb4">PinType</a>&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Return true if PinType belongs to a passive device.</p>
+<p>A pin is said to belong to a passive device if the PinType is <a class="el" href="type_8h.html#afaab50027002ecbb6c8ac27e727d1bb4ac9f869114804f0a61ce9b03def9d71f5">PinType::THIS</a> or <a class="el" href="type_8h.html#afaab50027002ecbb6c8ac27e727d1bb4a13d613e84b1e7d08d869695a750caf23">PinType::THAT</a>. </p>
 
 </div>
 </div>

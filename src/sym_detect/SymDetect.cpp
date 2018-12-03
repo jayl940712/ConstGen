@@ -66,7 +66,7 @@ bool SymDetect::endSrch(MosPair & currObj) const
 {
     if (currObj.pattern() == MosPattern::PASSIVE)
         return _netlist.instNetId(currObj.mosId1(), currObj.nextPinType1()) == 
-               _netlist.instNetId(currObj.mosId2(), currObj.nextPinType2()); // If reached passive device.
+               _netlist.instNetId(currObj.mosId2(), currObj.nextPinType2()); // If reached connected passive device.
     if (currObj.pattern() == MosPattern::DIFF_SOURCE &&
         currObj.srchPinType1() == PinType::DRAIN)
         return true; // If reached new DIFF_SOURCE through drain. 

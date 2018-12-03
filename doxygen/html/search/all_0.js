@@ -15,7 +15,8 @@ var searchData=
   ['_5fpattern',['_pattern',['../classMosPair.html#a075dadc02f1a5b85d53bf7b2271f8825',1,'MosPair::_pattern()'],['../classSymDetect.html#a77937a3591871874553ea30e7d78fc2e',1,'SymDetect::_pattern()']]],
   ['_5fpinarray',['_pinArray',['../classNetlist.html#a918185a2ba92067c416408dfc9d8fab2',1,'Netlist']]],
   ['_5fpinidarray',['_pinIdArray',['../classInst.html#aba5f13fac393f1f506630ef1259853b7',1,'Inst::_pinIdArray()'],['../classNet.html#a0cf0ec3b779c2e24af461231d324c998',1,'Net::_pinIdArray()']]],
-  ['_5fsrchpintype',['_srchPinType',['../classMosPair.html#a81b74a234b444867a693e890126a37a1',1,'MosPair']]],
+  ['_5fsrchpintype1',['_srchPinType1',['../classMosPair.html#a54111cc25c62331c5c4e3c0aee23ac54',1,'MosPair']]],
+  ['_5fsrchpintype2',['_srchPinType2',['../classMosPair.html#ad05a079ecda10e5527b3c8d5b11f6ac2',1,'MosPair']]],
   ['_5ftype',['_type',['../classInst.html#a71f59c0ab13351f33a67c57839aa5e3d',1,'Inst::_type()'],['../classPin.html#a0a660d777203aca04685f4cdf6623f72',1,'Pin::_type()']]],
   ['_5fvalid',['_valid',['../classMosPair.html#a7a0adcf1db1e0b59d09f1a4270bf8efb',1,'MosPair']]],
   ['_5fwid',['_wid',['../classInst.html#ad9ded5bad369f4ab225372c839820ab9',1,'Inst']]]

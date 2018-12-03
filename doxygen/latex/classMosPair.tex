@@ -24,14 +24,20 @@ bool \hyperlink{classMosPair_a16696e5a4fa38118f88549dfc782ac22}{valid} () const
 \begin{DoxyCompactList}\small\item\em Return if valid search pair. \end{DoxyCompactList}\item 
 \hyperlink{type_8h_af19eddb079bfea723256710b029c38e8}{Mos\+Pattern} \hyperlink{classMosPair_a342efc591b339fc9d08ad468d7399dd9}{pattern} () const
 \begin{DoxyCompactList}\small\item\em Get pattern. \end{DoxyCompactList}\item 
-\hyperlink{type_8h_afaab50027002ecbb6c8ac27e727d1bb4}{Pin\+Type} \hyperlink{classMosPair_a85a281d835a1046346b621ac6c3c6770}{srch\+Pin\+Type} () const
-\begin{DoxyCompactList}\small\item\em Get Pin\+Type on how D\+FS reached the pair. \end{DoxyCompactList}\item 
+\hyperlink{type_8h_afaab50027002ecbb6c8ac27e727d1bb4}{Pin\+Type} \hyperlink{classMosPair_ad0de45e3e866860a50715a01edcd4422}{srch\+Pin\+Type1} () const
+\begin{DoxyCompactList}\small\item\em Get Pin\+Type on how D\+FS reached mos\+Id1 of the pair. \end{DoxyCompactList}\item 
+\hyperlink{type_8h_afaab50027002ecbb6c8ac27e727d1bb4}{Pin\+Type} \hyperlink{classMosPair_aae7ff1f0f5a50dd2d849e00a3de2225a}{srch\+Pin\+Type2} () const
+\begin{DoxyCompactList}\small\item\em Get Pin\+Type on how D\+FS reached mos\+Id1 of the pair. \end{DoxyCompactList}\item 
 void \hyperlink{classMosPair_a3064a984676f0bd8e6d380a050bd2152}{in\+Vld} ()
 \begin{DoxyCompactList}\small\item\em Invalidate pair. \end{DoxyCompactList}\item 
-void \hyperlink{classMosPair_a133614566bf03ab4b37aced8169aee87}{set\+Srch\+Pin\+Type} (\hyperlink{type_8h_afaab50027002ecbb6c8ac27e727d1bb4}{Pin\+Type} type)
+void \hyperlink{classMosPair_a68fce010dca21d0834db83f8b8c0be0d}{set\+Srch\+Pin\+Type1} (\hyperlink{type_8h_afaab50027002ecbb6c8ac27e727d1bb4}{Pin\+Type} type)
 \begin{DoxyCompactList}\small\item\em set reached Pin\+Type. \end{DoxyCompactList}\item 
-\hyperlink{type_8h_afaab50027002ecbb6c8ac27e727d1bb4}{Pin\+Type} \hyperlink{classMosPair_a6c0bf6ad66a5076dc19a48a8d038d044}{next\+Pin\+Type} ()
-\begin{DoxyCompactList}\small\item\em Return next Pin\+Type to search. \end{DoxyCompactList}\item 
+void \hyperlink{classMosPair_a0a6573b1ad04183fde75d60c887f9a9b}{set\+Srch\+Pin\+Type2} (\hyperlink{type_8h_afaab50027002ecbb6c8ac27e727d1bb4}{Pin\+Type} type)
+\begin{DoxyCompactList}\small\item\em set reached Pin\+Type. \end{DoxyCompactList}\item 
+\hyperlink{type_8h_afaab50027002ecbb6c8ac27e727d1bb4}{Pin\+Type} \hyperlink{classMosPair_a533ead636fe63d9b3b9deed09e14a3b3}{next\+Pin\+Type1} ()
+\begin{DoxyCompactList}\small\item\em Return next Pin\+Type to search for mos\+Id1. \end{DoxyCompactList}\item 
+\hyperlink{type_8h_afaab50027002ecbb6c8ac27e727d1bb4}{Pin\+Type} \hyperlink{classMosPair_adc8c1ea8aff3b461f0d09652d1e730f8}{next\+Pin\+Type2} ()
+\begin{DoxyCompactList}\small\item\em Return next Pin\+Type to search for mos\+Id2. \end{DoxyCompactList}\item 
 bool \hyperlink{classMosPair_a4e4d694485bcc5c7c14981abef32774c}{is\+Equal} (const \hyperlink{classMosPair}{Mos\+Pair} \&right) const
 \begin{DoxyCompactList}\small\item\em Equal operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
@@ -45,7 +51,9 @@ bool \hyperlink{classMosPair_a4e4d694485bcc5c7c14981abef32774c}{is\+Equal} (cons
 \item 
 bool \hyperlink{classMosPair_a7a0adcf1db1e0b59d09f1a4270bf8efb}{\+\_\+valid}
 \item 
-\hyperlink{type_8h_afaab50027002ecbb6c8ac27e727d1bb4}{Pin\+Type} \hyperlink{classMosPair_a81b74a234b444867a693e890126a37a1}{\+\_\+srch\+Pin\+Type}
+\hyperlink{type_8h_afaab50027002ecbb6c8ac27e727d1bb4}{Pin\+Type} \hyperlink{classMosPair_a54111cc25c62331c5c4e3c0aee23ac54}{\+\_\+srch\+Pin\+Type1}
+\item 
+\hyperlink{type_8h_afaab50027002ecbb6c8ac27e727d1bb4}{Pin\+Type} \hyperlink{classMosPair_ad05a079ecda10e5527b3c8d5b11f6ac2}{\+\_\+srch\+Pin\+Type2}
 \end{DoxyCompactItemize}
 
 
@@ -129,15 +137,25 @@ Get mos\+Id1.
 
 Get mos\+Id2. 
 
-\mbox{\Hypertarget{classMosPair_a6c0bf6ad66a5076dc19a48a8d038d044}\label{classMosPair_a6c0bf6ad66a5076dc19a48a8d038d044}} 
-\index{Mos\+Pair@{Mos\+Pair}!next\+Pin\+Type@{next\+Pin\+Type}}
-\index{next\+Pin\+Type@{next\+Pin\+Type}!Mos\+Pair@{Mos\+Pair}}
-\subsubsection{\texorpdfstring{next\+Pin\+Type()}{nextPinType()}}
-{\footnotesize\ttfamily \hyperlink{type_8h_afaab50027002ecbb6c8ac27e727d1bb4}{Pin\+Type} Mos\+Pair\+::next\+Pin\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\Hypertarget{classMosPair_a533ead636fe63d9b3b9deed09e14a3b3}\label{classMosPair_a533ead636fe63d9b3b9deed09e14a3b3}} 
+\index{Mos\+Pair@{Mos\+Pair}!next\+Pin\+Type1@{next\+Pin\+Type1}}
+\index{next\+Pin\+Type1@{next\+Pin\+Type1}!Mos\+Pair@{Mos\+Pair}}
+\subsubsection{\texorpdfstring{next\+Pin\+Type1()}{nextPinType1()}}
+{\footnotesize\ttfamily \hyperlink{type_8h_afaab50027002ecbb6c8ac27e727d1bb4}{Pin\+Type} Mos\+Pair\+::next\+Pin\+Type1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Return next Pin\+Type to search. 
+Return next Pin\+Type to search for mos\+Id1. 
+
+\mbox{\Hypertarget{classMosPair_adc8c1ea8aff3b461f0d09652d1e730f8}\label{classMosPair_adc8c1ea8aff3b461f0d09652d1e730f8}} 
+\index{Mos\+Pair@{Mos\+Pair}!next\+Pin\+Type2@{next\+Pin\+Type2}}
+\index{next\+Pin\+Type2@{next\+Pin\+Type2}!Mos\+Pair@{Mos\+Pair}}
+\subsubsection{\texorpdfstring{next\+Pin\+Type2()}{nextPinType2()}}
+{\footnotesize\ttfamily \hyperlink{type_8h_afaab50027002ecbb6c8ac27e727d1bb4}{Pin\+Type} Mos\+Pair\+::next\+Pin\+Type2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return next Pin\+Type to search for mos\+Id2. 
 
 \mbox{\Hypertarget{classMosPair_a342efc591b339fc9d08ad468d7399dd9}\label{classMosPair_a342efc591b339fc9d08ad468d7399dd9}} 
 \index{Mos\+Pair@{Mos\+Pair}!pattern@{pattern}}
@@ -149,25 +167,45 @@ Return next Pin\+Type to search.
 
 Get pattern. 
 
-\mbox{\Hypertarget{classMosPair_a133614566bf03ab4b37aced8169aee87}\label{classMosPair_a133614566bf03ab4b37aced8169aee87}} 
-\index{Mos\+Pair@{Mos\+Pair}!set\+Srch\+Pin\+Type@{set\+Srch\+Pin\+Type}}
-\index{set\+Srch\+Pin\+Type@{set\+Srch\+Pin\+Type}!Mos\+Pair@{Mos\+Pair}}
-\subsubsection{\texorpdfstring{set\+Srch\+Pin\+Type()}{setSrchPinType()}}
-{\footnotesize\ttfamily void Mos\+Pair\+::set\+Srch\+Pin\+Type (\begin{DoxyParamCaption}\item[{\hyperlink{type_8h_afaab50027002ecbb6c8ac27e727d1bb4}{Pin\+Type}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\Hypertarget{classMosPair_a68fce010dca21d0834db83f8b8c0be0d}\label{classMosPair_a68fce010dca21d0834db83f8b8c0be0d}} 
+\index{Mos\+Pair@{Mos\+Pair}!set\+Srch\+Pin\+Type1@{set\+Srch\+Pin\+Type1}}
+\index{set\+Srch\+Pin\+Type1@{set\+Srch\+Pin\+Type1}!Mos\+Pair@{Mos\+Pair}}
+\subsubsection{\texorpdfstring{set\+Srch\+Pin\+Type1()}{setSrchPinType1()}}
+{\footnotesize\ttfamily void Mos\+Pair\+::set\+Srch\+Pin\+Type1 (\begin{DoxyParamCaption}\item[{\hyperlink{type_8h_afaab50027002ecbb6c8ac27e727d1bb4}{Pin\+Type}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 set reached Pin\+Type. 
 
-This is how the pair is reached through D\+FS search. \mbox{\Hypertarget{classMosPair_a85a281d835a1046346b621ac6c3c6770}\label{classMosPair_a85a281d835a1046346b621ac6c3c6770}} 
-\index{Mos\+Pair@{Mos\+Pair}!srch\+Pin\+Type@{srch\+Pin\+Type}}
-\index{srch\+Pin\+Type@{srch\+Pin\+Type}!Mos\+Pair@{Mos\+Pair}}
-\subsubsection{\texorpdfstring{srch\+Pin\+Type()}{srchPinType()}}
-{\footnotesize\ttfamily \hyperlink{type_8h_afaab50027002ecbb6c8ac27e727d1bb4}{Pin\+Type} Mos\+Pair\+::srch\+Pin\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+This is how mos\+Id1 of the pair is reached through D\+FS search. \mbox{\Hypertarget{classMosPair_a0a6573b1ad04183fde75d60c887f9a9b}\label{classMosPair_a0a6573b1ad04183fde75d60c887f9a9b}} 
+\index{Mos\+Pair@{Mos\+Pair}!set\+Srch\+Pin\+Type2@{set\+Srch\+Pin\+Type2}}
+\index{set\+Srch\+Pin\+Type2@{set\+Srch\+Pin\+Type2}!Mos\+Pair@{Mos\+Pair}}
+\subsubsection{\texorpdfstring{set\+Srch\+Pin\+Type2()}{setSrchPinType2()}}
+{\footnotesize\ttfamily void Mos\+Pair\+::set\+Srch\+Pin\+Type2 (\begin{DoxyParamCaption}\item[{\hyperlink{type_8h_afaab50027002ecbb6c8ac27e727d1bb4}{Pin\+Type}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Get Pin\+Type on how D\+FS reached the pair. 
+set reached Pin\+Type. 
+
+This is how mos\+Id2 of the pair is reached through D\+FS search. \mbox{\Hypertarget{classMosPair_ad0de45e3e866860a50715a01edcd4422}\label{classMosPair_ad0de45e3e866860a50715a01edcd4422}} 
+\index{Mos\+Pair@{Mos\+Pair}!srch\+Pin\+Type1@{srch\+Pin\+Type1}}
+\index{srch\+Pin\+Type1@{srch\+Pin\+Type1}!Mos\+Pair@{Mos\+Pair}}
+\subsubsection{\texorpdfstring{srch\+Pin\+Type1()}{srchPinType1()}}
+{\footnotesize\ttfamily \hyperlink{type_8h_afaab50027002ecbb6c8ac27e727d1bb4}{Pin\+Type} Mos\+Pair\+::srch\+Pin\+Type1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get Pin\+Type on how D\+FS reached mos\+Id1 of the pair. 
+
+\mbox{\Hypertarget{classMosPair_aae7ff1f0f5a50dd2d849e00a3de2225a}\label{classMosPair_aae7ff1f0f5a50dd2d849e00a3de2225a}} 
+\index{Mos\+Pair@{Mos\+Pair}!srch\+Pin\+Type2@{srch\+Pin\+Type2}}
+\index{srch\+Pin\+Type2@{srch\+Pin\+Type2}!Mos\+Pair@{Mos\+Pair}}
+\subsubsection{\texorpdfstring{srch\+Pin\+Type2()}{srchPinType2()}}
+{\footnotesize\ttfamily \hyperlink{type_8h_afaab50027002ecbb6c8ac27e727d1bb4}{Pin\+Type} Mos\+Pair\+::srch\+Pin\+Type2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get Pin\+Type on how D\+FS reached mos\+Id1 of the pair. 
 
 \mbox{\Hypertarget{classMosPair_a16696e5a4fa38118f88549dfc782ac22}\label{classMosPair_a16696e5a4fa38118f88549dfc782ac22}} 
 \index{Mos\+Pair@{Mos\+Pair}!valid@{valid}}
@@ -203,11 +241,17 @@ Return if valid search pair.
 \subsubsection{\texorpdfstring{\+\_\+pattern}{\_pattern}}
 {\footnotesize\ttfamily \hyperlink{type_8h_af19eddb079bfea723256710b029c38e8}{Mos\+Pattern} Mos\+Pair\+::\+\_\+pattern\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{classMosPair_a81b74a234b444867a693e890126a37a1}\label{classMosPair_a81b74a234b444867a693e890126a37a1}} 
-\index{Mos\+Pair@{Mos\+Pair}!\+\_\+srch\+Pin\+Type@{\+\_\+srch\+Pin\+Type}}
-\index{\+\_\+srch\+Pin\+Type@{\+\_\+srch\+Pin\+Type}!Mos\+Pair@{Mos\+Pair}}
-\subsubsection{\texorpdfstring{\+\_\+srch\+Pin\+Type}{\_srchPinType}}
-{\footnotesize\ttfamily \hyperlink{type_8h_afaab50027002ecbb6c8ac27e727d1bb4}{Pin\+Type} Mos\+Pair\+::\+\_\+srch\+Pin\+Type\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\Hypertarget{classMosPair_a54111cc25c62331c5c4e3c0aee23ac54}\label{classMosPair_a54111cc25c62331c5c4e3c0aee23ac54}} 
+\index{Mos\+Pair@{Mos\+Pair}!\+\_\+srch\+Pin\+Type1@{\+\_\+srch\+Pin\+Type1}}
+\index{\+\_\+srch\+Pin\+Type1@{\+\_\+srch\+Pin\+Type1}!Mos\+Pair@{Mos\+Pair}}
+\subsubsection{\texorpdfstring{\+\_\+srch\+Pin\+Type1}{\_srchPinType1}}
+{\footnotesize\ttfamily \hyperlink{type_8h_afaab50027002ecbb6c8ac27e727d1bb4}{Pin\+Type} Mos\+Pair\+::\+\_\+srch\+Pin\+Type1\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMosPair_ad05a079ecda10e5527b3c8d5b11f6ac2}\label{classMosPair_ad05a079ecda10e5527b3c8d5b11f6ac2}} 
+\index{Mos\+Pair@{Mos\+Pair}!\+\_\+srch\+Pin\+Type2@{\+\_\+srch\+Pin\+Type2}}
+\index{\+\_\+srch\+Pin\+Type2@{\+\_\+srch\+Pin\+Type2}!Mos\+Pair@{Mos\+Pair}}
+\subsubsection{\texorpdfstring{\+\_\+srch\+Pin\+Type2}{\_srchPinType2}}
+{\footnotesize\ttfamily \hyperlink{type_8h_afaab50027002ecbb6c8ac27e727d1bb4}{Pin\+Type} Mos\+Pair\+::\+\_\+srch\+Pin\+Type2\hspace{0.3cm}{\ttfamily [private]}}
 
 \mbox{\Hypertarget{classMosPair_a7a0adcf1db1e0b59d09f1a4270bf8efb}\label{classMosPair_a7a0adcf1db1e0b59d09f1a4270bf8efb}} 
 \index{Mos\+Pair@{Mos\+Pair}!\+\_\+valid@{\+\_\+valid}}

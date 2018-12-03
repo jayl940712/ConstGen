@@ -11,6 +11,6 @@ var searchData=
   ['invlddiffpairsrch',['inVldDiffPairSrch',['../classSymDetect.html#ae6a1ba27f6768f215cba0623b6e2ce08',1,'SymDetect']]],
   ['isequal',['isEqual',['../classMosPair.html#a4e4d694485bcc5c7c14981abef32774c',1,'MosPair']]],
   ['ismos',['isMos',['../classNetlist.html#a3ea34258d9e7f6793736dcac5b927eb6',1,'Netlist']]],
-  ['ispasvdev',['isPasvDev',['../classNetlist.html#acb347983cc7dcfb9d40c2affe8442cb2',1,'Netlist']]],
+  ['ispasvdev',['isPasvDev',['../classNetlist.html#acb347983cc7dcfb9d40c2affe8442cb2',1,'Netlist::isPasvDev()'],['../classPin.html#abfab9edd97a71fe12e0bb76ac2ea109a',1,'Pin::isPasvDev()']]],
   ['issignal',['isSignal',['../classNetlist.html#ae518e05727e5cc449d728b43426e035d',1,'Netlist']]]
 ];

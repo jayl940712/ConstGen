@@ -143,7 +143,7 @@ Check if pair already reached.
 
 Return true if end of search path.
 
-Current end search terminations\+: (1) D\+I\+F\+F\+\_\+\+S\+O\+U\+R\+CE reached through D\+R\+A\+IN (2) L\+O\+AD, C\+R\+O\+S\+S\+\_\+\+L\+O\+AD (3) gate connected pairs \mbox{\Hypertarget{classSymDetect_a245b48760c705d4ad9b2bad39012030e}\label{classSymDetect_a245b48760c705d4ad9b2bad39012030e}} 
+Current end search terminations\+: (1) Connected P\+A\+S\+S\+I\+VE (2) D\+I\+F\+F\+\_\+\+S\+O\+U\+R\+CE reached through D\+R\+A\+IN (3) L\+O\+AD, C\+R\+O\+S\+S\+\_\+\+L\+O\+AD (4) gate connected pairs \mbox{\Hypertarget{classSymDetect_a245b48760c705d4ad9b2bad39012030e}\label{classSymDetect_a245b48760c705d4ad9b2bad39012030e}} 
 \index{Sym\+Detect@{Sym\+Detect}!exist\+Pair@{exist\+Pair}}
 \index{exist\+Pair@{exist\+Pair}!Sym\+Detect@{Sym\+Detect}}
 \subsubsection{\texorpdfstring{exist\+Pair()}{existPair()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
@@ -227,7 +227,7 @@ Valid Mosfets must be connected to net\+Id through \hyperlink{type_8h_afaab50027
 
 Hierarchy symmetry detection. 
 
-Output would contain 2 levels of hierarchy. sym\+Group is a vector of std\+::vector$<$\+Mos\+Pair$>$ one\+Group. Where one\+Group is a group of \hyperlink{classMosPair}{Mos\+Pair} in the same symmetry group. Each \hyperlink{classMosPair}{Mos\+Pair} should follow a Mos\+Pattern, or it should be of self symmetry.
+Output would contain 2 levels of hierarchy. sym\+Group is a vector of std\+::vector$<$\+Mos\+Pair$>$ one\+Group. Where one\+Group is a group of \hyperlink{classMosPair}{Mos\+Pair} in the same symmetry group. Each \hyperlink{classMosPair}{Mos\+Pair} should follow a Mos\+Pattern, or it should be of self symmetry. This funtion has been also updated to contain basic passive pair symmetry.
 
 
 \begin{DoxyParams}{Parameters}
@@ -326,7 +326,7 @@ diff\+Pair should be of \hyperlink{type_8h_af19eddb079bfea723256710b029c38e8ad45
 
 Return true if a valid pair. 
 
-Valid pairs have following attributes\+: (1) Reached through same Pin\+Type (2) Not reached through gate (3) Valid Mos\+Pattern
+Valid pairs have following attributes\+: (1) Any mosfet pairs not reached by P\+A\+S\+S\+I\+VE (2) Reached through same Pin\+Type (3) Not reached through gate (4) Valid Mos\+Pattern
 
 
 \begin{DoxyParams}{Parameters}

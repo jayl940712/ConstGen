@@ -9,6 +9,9 @@ m23 m37
 xc4 xc5
 m21 m19
 xr13_1__dmy0 xr12_4__dmy0
+xr13_2__dmy0 xr12_3__dmy0
+xr13_3__dmy0 xr12_2__dmy0
+xr13_4__dmy0 xr12_1__dmy0
 m36
 END GROUP
 BEGIN GROUP

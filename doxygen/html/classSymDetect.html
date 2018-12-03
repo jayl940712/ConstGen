@@ -297,7 +297,7 @@ Private Attributes</h2></td></tr>
 
 <p>Check if pair already reached. </p>
 <p>Return true if end of search path.</p>
-<p>Current end search terminations: (1) DIFF_SOURCE reached through DRAIN (2) LOAD, CROSS_LOAD (3) gate connected pairs </p>
+<p>Current end search terminations: (1) Connected PASSIVE (2) DIFF_SOURCE reached through DRAIN (3) LOAD, CROSS_LOAD (4) gate connected pairs </p>
 
 </div>
 </div>
@@ -534,7 +534,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Hierarchy symmetry detection. </p>
-<p>Output would contain 2 levels of hierarchy. symGroup is a vector of std::vector&lt;MosPair&gt; oneGroup. Where oneGroup is a group of <a class="el" href="classMosPair.html" title="A pair of Mosfet with MosPattern. ">MosPair</a> in the same symmetry group. Each <a class="el" href="classMosPair.html" title="A pair of Mosfet with MosPattern. ">MosPair</a> should follow a MosPattern, or it should be of self symmetry.</p>
+<p>Output would contain 2 levels of hierarchy. symGroup is a vector of std::vector&lt;MosPair&gt; oneGroup. Where oneGroup is a group of <a class="el" href="classMosPair.html" title="A pair of Mosfet with MosPattern. ">MosPair</a> in the same symmetry group. Each <a class="el" href="classMosPair.html" title="A pair of Mosfet with MosPattern. ">MosPair</a> should follow a MosPattern, or it should be of self symmetry. This funtion has been also updated to contain basic passive pair symmetry.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">symGroup</td><td>Detected symmetry groups of netlist. </td></tr>
@@ -776,7 +776,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Return true if a valid pair. </p>
-<p>Valid pairs have following attributes: (1) Reached through same PinType (2) Not reached through gate (3) Valid MosPattern</p>
+<p>Valid pairs have following attributes: (1) Any mosfet pairs not reached by PASSIVE (2) Reached through same PinType (3) Not reached through gate (4) Valid MosPattern</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">instId1</td><td>Reached pair instId1 </td></tr>

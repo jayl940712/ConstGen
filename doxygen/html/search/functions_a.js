@@ -5,7 +5,9 @@ var searchData=
   ['netid',['netId',['../classPin.html#a5bcc2c816d52b915690738820c4042b3',1,'Pin']]],
   ['netlist',['Netlist',['../classNetlist.html#a946b08b1adb8999f1cff352f5e9b588b',1,'Netlist']]],
   ['nettype',['netType',['../classNet.html#aa74b25d43e1b96f3596661325775f531',1,'Net']]],
-  ['nextpintype',['nextPinType',['../classMosPair.html#a6c0bf6ad66a5076dc19a48a8d038d044',1,'MosPair::nextPinType()'],['../classPin.html#a86313ccf5cf94894c0d6cece183cb25d',1,'Pin::nextPinType()']]],
+  ['nextpintype',['nextPinType',['../classPin.html#a86313ccf5cf94894c0d6cece183cb25d',1,'Pin']]],
+  ['nextpintype1',['nextPinType1',['../classMosPair.html#a533ead636fe63d9b3b9deed09e14a3b3',1,'MosPair']]],
+  ['nextpintype2',['nextPinType2',['../classMosPair.html#adc8c1ea8aff3b461f0d09652d1e730f8',1,'MosPair']]],
   ['numinst',['numInst',['../classNetlist.html#aa9b8924df39d788ba5f70f11ea083fea',1,'Netlist']]],
   ['numnet',['numNet',['../classNetlist.html#aead543556d8cea4364a852d1bb2e3b68',1,'Netlist']]],
   ['numpin',['numPin',['../classNetlist.html#a90a41d0d2a05b8036589136916f2a27b',1,'Netlist']]]
