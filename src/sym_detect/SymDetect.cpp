@@ -116,9 +116,9 @@ bool SymDetect::validDiffPair(IndexType instId1, IndexType instId2,
 {
     if (_netlist.getPinTypeInstPinConn(instId1, srchPinId1) != PinType::GATE ||
         _netlist.getPinTypeInstPinConn(instId2, srchPinId2) != PinType::GATE)
-        return false;
+        return false; // Should be reached through GATE.
     if (_pattern.pattern(instId1, instId2) == MosPattern::DIFF_SOURCE)
-        return true;
+        return true; // Should be DIFF_SOURCE pair.
     return false;
 }
 
@@ -153,10 +153,10 @@ void SymDetect::pushNextSrchObj(std::vector<MosPair> & dfsVstPair, std::vector<M
                 dfsStack.push_back(currPair);
                 inVldDiffPairSrch(diffPairSrc, currPair); //invalidate DFS sources
             }
-            else if (validDiffPair(instId1, instId2, srchPinId1, srchPinId2) &&
-                    !existPair(dfsVstPair, instId1, instId2) && 
+            else if (validDiffPair(instId1, instId2, srchPinId1, srchPinId2) && // valid DIFF_SOURCE
+                    !existPair(dfsVstPair, instId1, instId2) &&  // not visited
                     !existPair(dfsStack, instId1, instId2) &&
-                    !existPair(diffPairSrc, instId1, instId2))
+                    !existPair(diffPairSrc, instId1, instId2)) // not already as DFS source.
             {
                 MosPair currPair(instId1, instId2, MosPattern::DIFF_SOURCE);
                 dfsStack.push_back(currPair);

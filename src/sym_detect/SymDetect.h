@@ -79,16 +79,35 @@ private:
 */
     bool                        validSrchObj(IndexType instId1, IndexType instId2, 
                                              IndexType srchPinId1, IndexType srchPinId2) const;
+/*! @brief Return true if a valid DIFF_SOURCE gate connected.
 
+    This funtion is used to expand symmetry groups through DRAIN
+    to GATE connections like searching for 2 stage OTAs. Since
+    validSrchObj funtion blocks all gate connections, this funtion 
+    is used to check for DIFF_SOURCE second stage "input" pairs.
+
+    Valid pairs have following attributes:
+    (1) Reached through gate
+    (2) DIFF_SOURCE pattern type.
+
+    @see validSrchObj
+    @param instId1 Reached pair instId1
+    @param instId2 Reached pair instId2
+    @param srchPinId1 instId1 reached by srchPinId1.
+    @param srchPinId2 instId2 reached by srchPinId2.
+*/
     bool                        validDiffPair(IndexType instId1, IndexType instId2,
                                             IndexType srchPinId1, IndexType srchPinId2) const;
 /*! @brief Push next valid MosPair to dfsStack.
 
     This function push valid pairs that could be reached 
     from currObj to dfsStack. It also removes reached DIFF_SOURCE
-    MosPair from diffPairSrc.
+    MosPair from diffPairSrc. A pair is valid either a valid 
+    load or a valid second stage input DIFF_SOURCE.
 
-    @see inVldDiffPairSrch.
+    @see inVldDiffPairSrch
+    @see validSrchObj
+    @see validDiffPair
     @param dfsVstPair All current visited MosPair
     @param dfsStack Stack to store to visit MosPair
     @param currObj Current MosPair under visit

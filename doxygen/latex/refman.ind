@@ -1,7 +1,7 @@
 \begin{theindex}
 
   \item {\+\_\+\+\_\+\+S\+F\+A\+\_\+\+T\+E\+S\+T\+\_\+\+\_\+}
-    \subitem {main.\+cpp}, \hyperpage{69}
+    \subitem {main.\+cpp}, \hyperpage{71}
   \item {\+\_\+id}
     \subitem {Inst}, \hyperpage{13}
     \subitem {Net}, \hyperpage{21}
@@ -30,7 +30,7 @@
     \subitem {Init\+Netlist}, \hyperpage{9}
   \item {\+\_\+pattern}
     \subitem {Mos\+Pair}, \hyperpage{19}
-    \subitem {Sym\+Detect}, \hyperpage{46}
+    \subitem {Sym\+Detect}, \hyperpage{47}
   \item {\+\_\+pin\+Array}
     \subitem {Netlist}, \hyperpage{31}
   \item {\+\_\+pin\+Id\+Array}
@@ -65,7 +65,7 @@
   \indexspace
 
   \item {Byte}
-    \subitem {type.\+h}, \hyperpage{64}
+    \subitem {type.\+h}, \hyperpage{66}
 
   \indexspace
 
@@ -104,7 +104,7 @@
   \indexspace
 
   \item {G\+R\+O\+U\+N\+D\+\_\+\+N\+E\+T\+\_\+\+N\+A\+M\+ES}
-    \subitem {Net.\+cpp}, \hyperpage{52}
+    \subitem {Net.\+cpp}, \hyperpage{54}
   \item {gate\+Net\+Id}
     \subitem {Netlist}, \hyperpage{26}
   \item {get\+Diff\+Pair}
@@ -130,11 +130,11 @@
   \indexspace
 
   \item {I\+N\+D\+E\+X\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+AX}
-    \subitem {type.\+h}, \hyperpage{66}
+    \subitem {type.\+h}, \hyperpage{68}
   \item {I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+AX}
-    \subitem {type.\+h}, \hyperpage{66}
+    \subitem {type.\+h}, \hyperpage{68}
   \item {I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+IN}
-    \subitem {type.\+h}, \hyperpage{67}
+    \subitem {type.\+h}, \hyperpage{69}
   \item {id}
     \subitem {Inst}, \hyperpage{12}
     \subitem {Net}, \hyperpage{20}
@@ -145,7 +145,7 @@
   \item {in\+Vld\+Diff\+Pair\+Srch}
     \subitem {Sym\+Detect}, \hyperpage{44}
   \item {Index\+Type}
-    \subitem {type.\+h}, \hyperpage{64}
+    \subitem {type.\+h}, \hyperpage{66}
   \item {init}
     \subitem {Netlist}, \hyperpage{28}
   \item {Init\+Netlist}, \hyperpage{8}
@@ -180,9 +180,9 @@
   \item {inst\+Pin\+Id}
     \subitem {Netlist}, \hyperpage{28}
   \item {Inst\+Type}
-    \subitem {type.\+h}, \hyperpage{64}
+    \subitem {type.\+h}, \hyperpage{66}
   \item {Int\+Type}
-    \subitem {type.\+h}, \hyperpage{64}
+    \subitem {type.\+h}, \hyperpage{66}
   \item {is\+Equal}
     \subitem {Mos\+Pair}, \hyperpage{16}
   \item {is\+Mos}
@@ -202,13 +202,13 @@
   \indexspace
 
   \item {M\+O\+S\+\_\+\+P\+I\+N\+\_\+\+T\+Y\+PE}
-    \subitem {Netlist.\+cpp}, \hyperpage{55}
+    \subitem {Netlist.\+cpp}, \hyperpage{57}
   \item {main}
-    \subitem {main.\+cpp}, \hyperpage{69}
+    \subitem {main.\+cpp}, \hyperpage{71}
   \item {main.\+cpp}
     \subitem {\+\_\+\+\_\+\+S\+F\+A\+\_\+\+T\+E\+S\+T\+\_\+\+\_\+}, 
-		\hyperpage{69}
-    \subitem {main}, \hyperpage{69}
+		\hyperpage{71}
+    \subitem {main}, \hyperpage{71}
   \item {matched\+Size}
     \subitem {Pattern}, \hyperpage{34}
   \item {matched\+Type}
@@ -240,9 +240,9 @@
   \item {Mos\+Pair\+Ptrn}
     \subitem {Sym\+Detect}, \hyperpage{44}
   \item {Mos\+Pattern}
-    \subitem {type.\+h}, \hyperpage{65}
+    \subitem {type.\+h}, \hyperpage{67}
   \item {Mos\+Type}
-    \subitem {type.\+h}, \hyperpage{65}
+    \subitem {type.\+h}, \hyperpage{67}
   \item {mos\+Type}
     \subitem {Netlist}, \hyperpage{29}
 
@@ -255,11 +255,11 @@
     \subitem {Netlist\+::\+Init\+Net}, \hyperpage{7}
   \item {namespace.\+h}
     \subitem {P\+R\+O\+J\+E\+C\+T\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+B\+E\+G\+IN}, 
-		\hyperpage{62}
+		\hyperpage{64}
     \subitem {P\+R\+O\+J\+E\+C\+T\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+E\+ND}, 
-		\hyperpage{62}
+		\hyperpage{64}
     \subitem {P\+R\+O\+J\+E\+C\+T\+\_\+\+N\+A\+M\+E\+S\+P\+A\+CE}, 
-		\hyperpage{61}
+		\hyperpage{63}
   \item {Net}, \hyperpage{19}
     \subitem {\+\_\+id}, \hyperpage{21}
     \subitem {\+\_\+name}, \hyperpage{21}
@@ -274,9 +274,9 @@
     \subitem {Netlist}, \hyperpage{29}
   \item {Net.\+cpp}
     \subitem {G\+R\+O\+U\+N\+D\+\_\+\+N\+E\+T\+\_\+\+N\+A\+M\+ES}, 
-		\hyperpage{52}
+		\hyperpage{54}
     \subitem {P\+O\+W\+E\+R\+\_\+\+N\+E\+T\+\_\+\+N\+A\+M\+ES}, 
-		\hyperpage{52}
+		\hyperpage{54}
   \item {net\+Array}
     \subitem {Netlist\+::\+Init\+Data\+Obj}, \hyperpage{5}
   \item {net\+Id}
@@ -284,7 +284,7 @@
   \item {net\+Id\+Array}
     \subitem {Netlist\+::\+Init\+Inst}, \hyperpage{6}
   \item {Net\+Type}
-    \subitem {type.\+h}, \hyperpage{66}
+    \subitem {type.\+h}, \hyperpage{68}
   \item {net\+Type}
     \subitem {Net}, \hyperpage{21}
   \item {Netlist}, \hyperpage{22}
@@ -321,8 +321,8 @@
     \subitem {rmv\+Inst\+Has\+Pin}, \hyperpage{30}
     \subitem {src\+Net\+Id}, \hyperpage{31}
   \item {Netlist.\+cpp}
-    \subitem {M\+O\+S\+\_\+\+P\+I\+N\+\_\+\+T\+Y\+PE}, \hyperpage{55}
-    \subitem {R\+E\+S\+\_\+\+P\+I\+N\+\_\+\+T\+Y\+PE}, \hyperpage{55}
+    \subitem {M\+O\+S\+\_\+\+P\+I\+N\+\_\+\+T\+Y\+PE}, \hyperpage{57}
+    \subitem {R\+E\+S\+\_\+\+P\+I\+N\+\_\+\+T\+Y\+PE}, \hyperpage{57}
   \item {Netlist\+::\+Init\+Data\+Obj}, \hyperpage{5}
     \subitem {inst\+Array}, \hyperpage{5}
     \subitem {net\+Array}, \hyperpage{5}
@@ -351,13 +351,13 @@
   \indexspace
 
   \item {P\+O\+W\+E\+R\+\_\+\+N\+E\+T\+\_\+\+N\+A\+M\+ES}
-    \subitem {Net.\+cpp}, \hyperpage{52}
+    \subitem {Net.\+cpp}, \hyperpage{54}
   \item {P\+R\+O\+J\+E\+C\+T\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+B\+E\+G\+IN}
-    \subitem {namespace.\+h}, \hyperpage{62}
+    \subitem {namespace.\+h}, \hyperpage{64}
   \item {P\+R\+O\+J\+E\+C\+T\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+E\+ND}
-    \subitem {namespace.\+h}, \hyperpage{62}
+    \subitem {namespace.\+h}, \hyperpage{64}
   \item {P\+R\+O\+J\+E\+C\+T\+\_\+\+N\+A\+M\+E\+S\+P\+A\+CE}
-    \subitem {namespace.\+h}, \hyperpage{61}
+    \subitem {namespace.\+h}, \hyperpage{63}
   \item {Pattern}, \hyperpage{32}
     \subitem {\+\_\+netlist}, \hyperpage{35}
     \subitem {cross\+Pair\+Cascode}, \hyperpage{33}
@@ -391,7 +391,7 @@
     \subitem {Inst}, \hyperpage{12}
     \subitem {Net}, \hyperpage{21}
   \item {Pin\+Type}
-    \subitem {type.\+h}, \hyperpage{66}
+    \subitem {type.\+h}, \hyperpage{68}
   \item {print\+\_\+all}
     \subitem {Netlist}, \hyperpage{30}
   \item {push\+Next\+Srch\+Obj}
@@ -400,17 +400,17 @@
   \indexspace
 
   \item {R\+E\+A\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+AX}
-    \subitem {type.\+h}, \hyperpage{67}
+    \subitem {type.\+h}, \hyperpage{69}
   \item {R\+E\+A\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+IN}
-    \subitem {type.\+h}, \hyperpage{67}
+    \subitem {type.\+h}, \hyperpage{69}
   \item {R\+E\+A\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+OL}
-    \subitem {type.\+h}, \hyperpage{67}
+    \subitem {type.\+h}, \hyperpage{69}
   \item {R\+E\+S\+\_\+\+P\+I\+N\+\_\+\+T\+Y\+PE}
-    \subitem {Netlist.\+cpp}, \hyperpage{55}
+    \subitem {Netlist.\+cpp}, \hyperpage{57}
   \item {read}
     \subitem {Init\+Netlist}, \hyperpage{9}
   \item {Real\+Type}
-    \subitem {type.\+h}, \hyperpage{64}
+    \subitem {type.\+h}, \hyperpage{66}
   \item {rmv\+Inst\+Has\+Pin}
     \subitem {Netlist}, \hyperpage{30}
 
@@ -426,25 +426,25 @@
     \subitem {Mos\+Pair}, \hyperpage{17}
   \item {set\+Wid}
     \subitem {Inst}, \hyperpage{13}
-  \item {src/db/\+Inst.\+h}, \hyperpage{47}
-  \item {src/db/\+Mos\+Pair.\+cpp}, \hyperpage{48}
-  \item {src/db/\+Mos\+Pair.\+h}, \hyperpage{49}
-  \item {src/db/\+Net.\+cpp}, \hyperpage{51}
-  \item {src/db/\+Net.\+h}, \hyperpage{52}
-  \item {src/db/\+Netlist.\+cpp}, \hyperpage{54}
-  \item {src/db/\+Netlist.\+h}, \hyperpage{56}
-  \item {src/db/\+Pin.\+cpp}, \hyperpage{57}
-  \item {src/db/\+Pin.\+h}, \hyperpage{58}
-  \item {src/global/global.\+h}, \hyperpage{59}
-  \item {src/global/namespace.\+h}, \hyperpage{61}
-  \item {src/global/type.\+h}, \hyperpage{62}
-  \item {src/main/main.\+cpp}, \hyperpage{67}
-  \item {src/parser/\+Init\+Netlist.\+cpp}, \hyperpage{69}
-  \item {src/parser/\+Init\+Netlist.\+h}, \hyperpage{70}
-  \item {src/sym\+\_\+detect/\+Pattern.\+cpp}, \hyperpage{72}
-  \item {src/sym\+\_\+detect/\+Pattern.\+h}, \hyperpage{73}
-  \item {src/sym\+\_\+detect/\+Sym\+Detect.\+cpp}, \hyperpage{74}
-  \item {src/sym\+\_\+detect/\+Sym\+Detect.\+h}, \hyperpage{76}
+  \item {src/db/\+Inst.\+h}, \hyperpage{49}
+  \item {src/db/\+Mos\+Pair.\+cpp}, \hyperpage{50}
+  \item {src/db/\+Mos\+Pair.\+h}, \hyperpage{51}
+  \item {src/db/\+Net.\+cpp}, \hyperpage{53}
+  \item {src/db/\+Net.\+h}, \hyperpage{54}
+  \item {src/db/\+Netlist.\+cpp}, \hyperpage{56}
+  \item {src/db/\+Netlist.\+h}, \hyperpage{58}
+  \item {src/db/\+Pin.\+cpp}, \hyperpage{59}
+  \item {src/db/\+Pin.\+h}, \hyperpage{60}
+  \item {src/global/global.\+h}, \hyperpage{61}
+  \item {src/global/namespace.\+h}, \hyperpage{63}
+  \item {src/global/type.\+h}, \hyperpage{64}
+  \item {src/main/main.\+cpp}, \hyperpage{69}
+  \item {src/parser/\+Init\+Netlist.\+cpp}, \hyperpage{71}
+  \item {src/parser/\+Init\+Netlist.\+h}, \hyperpage{72}
+  \item {src/sym\+\_\+detect/\+Pattern.\+cpp}, \hyperpage{74}
+  \item {src/sym\+\_\+detect/\+Pattern.\+h}, \hyperpage{75}
+  \item {src/sym\+\_\+detect/\+Sym\+Detect.\+cpp}, \hyperpage{76}
+  \item {src/sym\+\_\+detect/\+Sym\+Detect.\+h}, \hyperpage{78}
   \item {src\+Net\+Id}
     \subitem {Netlist}, \hyperpage{31}
   \item {srch\+Pin\+Type1}
@@ -453,7 +453,7 @@
     \subitem {Mos\+Pair}, \hyperpage{18}
   \item {Sym\+Detect}, \hyperpage{39}
     \subitem {\+\_\+netlist}, \hyperpage{46}
-    \subitem {\+\_\+pattern}, \hyperpage{46}
+    \subitem {\+\_\+pattern}, \hyperpage{47}
     \subitem {add\+Self\+Sym}, \hyperpage{41}
     \subitem {dfs\+Diff\+Pair}, \hyperpage{41}
     \subitem {end\+Srch}, \hyperpage{42}
@@ -467,7 +467,8 @@
     \subitem {push\+Next\+Srch\+Obj}, \hyperpage{44}
     \subitem {self\+Sym\+Srch}, \hyperpage{45}
     \subitem {Sym\+Detect}, \hyperpage{40}
-    \subitem {valid\+Srch\+Obj}, \hyperpage{45}
+    \subitem {valid\+Diff\+Pair}, \hyperpage{45}
+    \subitem {valid\+Srch\+Obj}, \hyperpage{46}
 
   \indexspace
 
@@ -476,36 +477,38 @@
     \subitem {Netlist\+::\+Init\+Inst}, \hyperpage{7}
     \subitem {Pin}, \hyperpage{38}
   \item {type.\+h}
-    \subitem {Byte}, \hyperpage{64}
+    \subitem {Byte}, \hyperpage{66}
     \subitem {I\+N\+D\+E\+X\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+AX}, 
-		\hyperpage{66}
-    \subitem {I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+AX}, \hyperpage{66}
-    \subitem {I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+IN}, \hyperpage{67}
-    \subitem {Index\+Type}, \hyperpage{64}
-    \subitem {Inst\+Type}, \hyperpage{64}
-    \subitem {Int\+Type}, \hyperpage{64}
-    \subitem {Mos\+Pattern}, \hyperpage{65}
-    \subitem {Mos\+Type}, \hyperpage{65}
-    \subitem {Net\+Type}, \hyperpage{66}
-    \subitem {Pin\+Type}, \hyperpage{66}
+		\hyperpage{68}
+    \subitem {I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+AX}, \hyperpage{68}
+    \subitem {I\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+IN}, \hyperpage{69}
+    \subitem {Index\+Type}, \hyperpage{66}
+    \subitem {Inst\+Type}, \hyperpage{66}
+    \subitem {Int\+Type}, \hyperpage{66}
+    \subitem {Mos\+Pattern}, \hyperpage{67}
+    \subitem {Mos\+Type}, \hyperpage{67}
+    \subitem {Net\+Type}, \hyperpage{68}
+    \subitem {Pin\+Type}, \hyperpage{68}
     \subitem {R\+E\+A\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+AX}, 
-		\hyperpage{67}
+		\hyperpage{69}
     \subitem {R\+E\+A\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+IN}, 
-		\hyperpage{67}
+		\hyperpage{69}
     \subitem {R\+E\+A\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+OL}, 
-		\hyperpage{67}
-    \subitem {Real\+Type}, \hyperpage{64}
+		\hyperpage{69}
+    \subitem {Real\+Type}, \hyperpage{66}
 
   \indexspace
 
   \item {valid}
     \subitem {Mos\+Pair}, \hyperpage{18}
+  \item {valid\+Diff\+Pair}
+    \subitem {Sym\+Detect}, \hyperpage{45}
   \item {valid\+Pair\+Cascode}
     \subitem {Pattern}, \hyperpage{35}
   \item {valid\+Pair\+Load}
     \subitem {Pattern}, \hyperpage{35}
   \item {valid\+Srch\+Obj}
-    \subitem {Sym\+Detect}, \hyperpage{45}
+    \subitem {Sym\+Detect}, \hyperpage{46}
 
   \indexspace
 

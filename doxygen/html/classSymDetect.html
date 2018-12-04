@@ -109,6 +109,9 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:ad4636f69ae0cad2fc23be2472c59ff4c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymDetect.html#ad4636f69ae0cad2fc23be2472c59ff4c">validSrchObj</a> (<a class="el" href="type_8h.html#a581e8093e28e7362f2b6937296190676">IndexType</a> instId1, <a class="el" href="type_8h.html#a581e8093e28e7362f2b6937296190676">IndexType</a> instId2, <a class="el" href="type_8h.html#a581e8093e28e7362f2b6937296190676">IndexType</a> srchPinId1, <a class="el" href="type_8h.html#a581e8093e28e7362f2b6937296190676">IndexType</a> srchPinId2) const</td></tr>
 <tr class="memdesc:ad4636f69ae0cad2fc23be2472c59ff4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if a valid pair.  <a href="#ad4636f69ae0cad2fc23be2472c59ff4c">More...</a><br /></td></tr>
 <tr class="separator:ad4636f69ae0cad2fc23be2472c59ff4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1153c5f98df1f6dde97ed3335367bb66"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymDetect.html#a1153c5f98df1f6dde97ed3335367bb66">validDiffPair</a> (<a class="el" href="type_8h.html#a581e8093e28e7362f2b6937296190676">IndexType</a> instId1, <a class="el" href="type_8h.html#a581e8093e28e7362f2b6937296190676">IndexType</a> instId2, <a class="el" href="type_8h.html#a581e8093e28e7362f2b6937296190676">IndexType</a> srchPinId1, <a class="el" href="type_8h.html#a581e8093e28e7362f2b6937296190676">IndexType</a> srchPinId2) const</td></tr>
+<tr class="memdesc:a1153c5f98df1f6dde97ed3335367bb66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if a valid DIFF_SOURCE gate connected.  <a href="#a1153c5f98df1f6dde97ed3335367bb66">More...</a><br /></td></tr>
+<tr class="separator:a1153c5f98df1f6dde97ed3335367bb66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f4cd1010a21da88d35abb89c6f33f00"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymDetect.html#a7f4cd1010a21da88d35abb89c6f33f00">pushNextSrchObj</a> (std::vector&lt; <a class="el" href="classMosPair.html">MosPair</a> &gt; &amp;dfsVstPair, std::vector&lt; <a class="el" href="classMosPair.html">MosPair</a> &gt; &amp;dfsStack, <a class="el" href="classMosPair.html">MosPair</a> &amp;currObj, std::vector&lt; <a class="el" href="classMosPair.html">MosPair</a> &gt; &amp;diffPairSrc) const</td></tr>
 <tr class="memdesc:a7f4cd1010a21da88d35abb89c6f33f00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Push next valid <a class="el" href="classMosPair.html" title="A pair of Mosfet with MosPattern. ">MosPair</a> to dfsStack.  <a href="#a7f4cd1010a21da88d35abb89c6f33f00">More...</a><br /></td></tr>
 <tr class="separator:a7f4cd1010a21da88d35abb89c6f33f00"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -668,8 +671,12 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Push next valid <a class="el" href="classMosPair.html" title="A pair of Mosfet with MosPattern. ">MosPair</a> to dfsStack. </p>
-<p>This function push valid pairs that could be reached from currObj to dfsStack. It also removes reached DIFF_SOURCE <a class="el" href="classMosPair.html" title="A pair of Mosfet with MosPattern. ">MosPair</a> from diffPairSrc.</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classSymDetect.html#ae6a1ba27f6768f215cba0623b6e2ce08" title="Invalidate visited pairs from sources. ">inVldDiffPairSrch</a>. </dd></dl>
+<p>This function push valid pairs that could be reached from currObj to dfsStack. It also removes reached DIFF_SOURCE <a class="el" href="classMosPair.html" title="A pair of Mosfet with MosPattern. ">MosPair</a> from diffPairSrc. A pair is valid either a valid load or a valid second stage input DIFF_SOURCE.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classSymDetect.html#ae6a1ba27f6768f215cba0623b6e2ce08" title="Invalidate visited pairs from sources. ">inVldDiffPairSrch</a> </dd>
+<dd>
+<a class="el" href="classSymDetect.html#ad4636f69ae0cad2fc23be2472c59ff4c" title="Return true if a valid pair. ">validSrchObj</a> </dd>
+<dd>
+<a class="el" href="classSymDetect.html#a1153c5f98df1f6dde97ed3335367bb66" title="Return true if a valid DIFF_SOURCE gate connected. ">validDiffPair</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">dfsVstPair</td><td>All current visited <a class="el" href="classMosPair.html" title="A pair of Mosfet with MosPattern. ">MosPair</a> </td></tr>
@@ -726,6 +733,68 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classSymDetect.html#a48c23173bf5e56c3aa11ac306715cba2" title="Get valid drain connected mosfet to netId. ">getVldDrainMos</a> </dd></dl>
+
+</div>
+</div>
+<a id="a1153c5f98df1f6dde97ed3335367bb66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1153c5f98df1f6dde97ed3335367bb66">&#9670;&nbsp;</a></span>validDiffPair()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SymDetect::validDiffPair </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="type_8h.html#a581e8093e28e7362f2b6937296190676">IndexType</a>&#160;</td>
+          <td class="paramname"><em>instId1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="type_8h.html#a581e8093e28e7362f2b6937296190676">IndexType</a>&#160;</td>
+          <td class="paramname"><em>instId2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="type_8h.html#a581e8093e28e7362f2b6937296190676">IndexType</a>&#160;</td>
+          <td class="paramname"><em>srchPinId1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="type_8h.html#a581e8093e28e7362f2b6937296190676">IndexType</a>&#160;</td>
+          <td class="paramname"><em>srchPinId2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return true if a valid DIFF_SOURCE gate connected. </p>
+<p>This funtion is used to expand symmetry groups through DRAIN to GATE connections like searching for 2 stage OTAs. Since validSrchObj funtion blocks all gate connections, this funtion is used to check for DIFF_SOURCE second stage "input" pairs.</p>
+<p>Valid pairs have following attributes: (1) Reached through gate (2) DIFF_SOURCE pattern type.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classSymDetect.html#ad4636f69ae0cad2fc23be2472c59ff4c" title="Return true if a valid pair. ">validSrchObj</a> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">instId1</td><td>Reached pair instId1 </td></tr>
+    <tr><td class="paramname">instId2</td><td>Reached pair instId2 </td></tr>
+    <tr><td class="paramname">srchPinId1</td><td>instId1 reached by srchPinId1. </td></tr>
+    <tr><td class="paramname">srchPinId2</td><td>instId2 reached by srchPinId2. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

@@ -38,6 +38,8 @@ bool \hyperlink{classSymDetect_ac46824a93f71489b6c9f1aec961a0f8d}{end\+Srch} (\h
 \begin{DoxyCompactList}\small\item\em Check if pair already reached. \end{DoxyCompactList}\item 
 bool \hyperlink{classSymDetect_ad4636f69ae0cad2fc23be2472c59ff4c}{valid\+Srch\+Obj} (\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} inst\+Id1, \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} inst\+Id2, \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} srch\+Pin\+Id1, \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} srch\+Pin\+Id2) const
 \begin{DoxyCompactList}\small\item\em Return true if a valid pair. \end{DoxyCompactList}\item 
+bool \hyperlink{classSymDetect_a1153c5f98df1f6dde97ed3335367bb66}{valid\+Diff\+Pair} (\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} inst\+Id1, \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} inst\+Id2, \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} srch\+Pin\+Id1, \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} srch\+Pin\+Id2) const
+\begin{DoxyCompactList}\small\item\em Return true if a valid D\+I\+F\+F\+\_\+\+S\+O\+U\+R\+CE gate connected. \end{DoxyCompactList}\item 
 void \hyperlink{classSymDetect_a7f4cd1010a21da88d35abb89c6f33f00}{push\+Next\+Srch\+Obj} (std\+::vector$<$ \hyperlink{classMosPair}{Mos\+Pair} $>$ \&dfs\+Vst\+Pair, std\+::vector$<$ \hyperlink{classMosPair}{Mos\+Pair} $>$ \&dfs\+Stack, \hyperlink{classMosPair}{Mos\+Pair} \&curr\+Obj, std\+::vector$<$ \hyperlink{classMosPair}{Mos\+Pair} $>$ \&diff\+Pair\+Src) const
 \begin{DoxyCompactList}\small\item\em Push next valid \hyperlink{classMosPair}{Mos\+Pair} to dfs\+Stack. \end{DoxyCompactList}\item 
 void \hyperlink{classSymDetect_af7d1b22086aa98a27b1eafc9266596d8}{get\+Patrn\+Net\+Conn} (std\+::vector$<$ \hyperlink{classMosPair}{Mos\+Pair} $>$ \&diff\+Pair, \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} net\+Id, \hyperlink{type_8h_af19eddb079bfea723256710b029c38e8}{Mos\+Pattern} srch\+Patrn) const
@@ -278,10 +280,14 @@ Return pattern of \hyperlink{classMosPair}{Mos\+Pair}.
 
 Push next valid \hyperlink{classMosPair}{Mos\+Pair} to dfs\+Stack. 
 
-This function push valid pairs that could be reached from curr\+Obj to dfs\+Stack. It also removes reached D\+I\+F\+F\+\_\+\+S\+O\+U\+R\+CE \hyperlink{classMosPair}{Mos\+Pair} from diff\+Pair\+Src.
+This function push valid pairs that could be reached from curr\+Obj to dfs\+Stack. It also removes reached D\+I\+F\+F\+\_\+\+S\+O\+U\+R\+CE \hyperlink{classMosPair}{Mos\+Pair} from diff\+Pair\+Src. A pair is valid either a valid load or a valid second stage input D\+I\+F\+F\+\_\+\+S\+O\+U\+R\+CE.
 
 \begin{DoxySeeAlso}{See also}
-\hyperlink{classSymDetect_ae6a1ba27f6768f215cba0623b6e2ce08}{in\+Vld\+Diff\+Pair\+Srch}. 
+\hyperlink{classSymDetect_ae6a1ba27f6768f215cba0623b6e2ce08}{in\+Vld\+Diff\+Pair\+Srch} 
+
+\hyperlink{classSymDetect_ad4636f69ae0cad2fc23be2472c59ff4c}{valid\+Srch\+Obj} 
+
+\hyperlink{classSymDetect_a1153c5f98df1f6dde97ed3335367bb66}{valid\+Diff\+Pair} 
 \end{DoxySeeAlso}
 
 \begin{DoxyParams}{Parameters}
@@ -316,6 +322,34 @@ diff\+Pair should be of \hyperlink{type_8h_af19eddb079bfea723256710b029c38e8ad45
 \begin{DoxySeeAlso}{See also}
 \hyperlink{classSymDetect_a48c23173bf5e56c3aa11ac306715cba2}{get\+Vld\+Drain\+Mos} 
 \end{DoxySeeAlso}
+\mbox{\Hypertarget{classSymDetect_a1153c5f98df1f6dde97ed3335367bb66}\label{classSymDetect_a1153c5f98df1f6dde97ed3335367bb66}} 
+\index{Sym\+Detect@{Sym\+Detect}!valid\+Diff\+Pair@{valid\+Diff\+Pair}}
+\index{valid\+Diff\+Pair@{valid\+Diff\+Pair}!Sym\+Detect@{Sym\+Detect}}
+\subsubsection{\texorpdfstring{valid\+Diff\+Pair()}{validDiffPair()}}
+{\footnotesize\ttfamily bool Sym\+Detect\+::valid\+Diff\+Pair (\begin{DoxyParamCaption}\item[{\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type}}]{inst\+Id1,  }\item[{\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type}}]{inst\+Id2,  }\item[{\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type}}]{srch\+Pin\+Id1,  }\item[{\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type}}]{srch\+Pin\+Id2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Return true if a valid D\+I\+F\+F\+\_\+\+S\+O\+U\+R\+CE gate connected. 
+
+This funtion is used to expand symmetry groups through D\+R\+A\+IN to G\+A\+TE connections like searching for 2 stage O\+T\+As. Since valid\+Srch\+Obj funtion blocks all gate connections, this funtion is used to check for D\+I\+F\+F\+\_\+\+S\+O\+U\+R\+CE second stage \char`\"{}input\char`\"{} pairs.
+
+Valid pairs have following attributes\+: (1) Reached through gate (2) D\+I\+F\+F\+\_\+\+S\+O\+U\+R\+CE pattern type.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classSymDetect_ad4636f69ae0cad2fc23be2472c59ff4c}{valid\+Srch\+Obj} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em inst\+Id1} & Reached pair inst\+Id1 \\
+\hline
+{\em inst\+Id2} & Reached pair inst\+Id2 \\
+\hline
+{\em srch\+Pin\+Id1} & inst\+Id1 reached by srch\+Pin\+Id1. \\
+\hline
+{\em srch\+Pin\+Id2} & inst\+Id2 reached by srch\+Pin\+Id2. \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classSymDetect_ad4636f69ae0cad2fc23be2472c59ff4c}\label{classSymDetect_ad4636f69ae0cad2fc23be2472c59ff4c}} 
 \index{Sym\+Detect@{Sym\+Detect}!valid\+Srch\+Obj@{valid\+Srch\+Obj}}
 \index{valid\+Srch\+Obj@{valid\+Srch\+Obj}!Sym\+Detect@{Sym\+Detect}}
