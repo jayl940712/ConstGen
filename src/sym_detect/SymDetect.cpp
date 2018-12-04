@@ -70,11 +70,14 @@ bool SymDetect::endSrch(MosPair & currObj) const
     if (currObj.pattern() == MosPattern::DIFF_SOURCE &&
         currObj.srchPinType1() == PinType::DRAIN)
         return true; // If reached new DIFF_SOURCE through drain. 
+    if (currObj.pattern() == MosPattern::DIFF_SOURCE &&
+        currObj.srchPinType1() == PinType::GATE &&
+        currObj.srchPinType2() == PinType::GATE)
+        return false; // If reached new DIFF_SOURCE through gate. Comment to exclude gate connections. 
     if (currObj.pattern() == MosPattern::CROSS_LOAD &&
         currObj.srchPinType1() == PinType::DRAIN)
         return true; // If reached new CROSS_LOAD through drain. 
    if (currObj.pattern() == MosPattern::LOAD)
-//        srchObjPtrn(currObj) == MosPattern::CROSS_LOAD)
         return true; // If LOAD pattern.
     if (currObj.srchPinType1() != PinType::SOURCE && 
         currObj.srchPinType1() != PinType::DRAIN)
@@ -108,6 +111,17 @@ bool SymDetect::validSrchObj(IndexType instId1, IndexType instId2,
     return false;
 }  
 
+bool SymDetect::validDiffPair(IndexType instId1, IndexType instId2,
+                            IndexType srchPinId1, IndexType srchPinId2) const
+{
+    if (_netlist.getPinTypeInstPinConn(instId1, srchPinId1) != PinType::GATE ||
+        _netlist.getPinTypeInstPinConn(instId2, srchPinId2) != PinType::GATE)
+        return false;
+    if (_pattern.pattern(instId1, instId2) == MosPattern::DIFF_SOURCE)
+        return true;
+    return false;
+}
+
 void SymDetect::inVldDiffPairSrch(std::vector<MosPair> & diffPairSrch, MosPair & currPair) const
 {
     for (MosPair & pair : diffPairSrch)
@@ -138,6 +152,14 @@ void SymDetect::pushNextSrchObj(std::vector<MosPair> & dfsVstPair, std::vector<M
                 currPair.setSrchPinType2(_netlist.getPinTypeInstPinConn(instId2, srchPinId2));
                 dfsStack.push_back(currPair);
                 inVldDiffPairSrch(diffPairSrc, currPair); //invalidate DFS sources
+            }
+            else if (validDiffPair(instId1, instId2, srchPinId1, srchPinId2) &&
+                    !existPair(dfsVstPair, instId1, instId2) && 
+                    !existPair(dfsStack, instId1, instId2) &&
+                    !existPair(diffPairSrc, instId1, instId2))
+            {
+                MosPair currPair(instId1, instId2, MosPattern::DIFF_SOURCE);
+                dfsStack.push_back(currPair);
             }
        }
     }

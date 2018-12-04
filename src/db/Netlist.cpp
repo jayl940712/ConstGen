@@ -48,7 +48,7 @@ void Netlist::init(InitDataObj & obj)
         else if (isPasvDev(inInst.type))
         {
             Inst inst(inInst.name, inInst.type, _instArray.size(), inInst.wid, inInst.len);
-            for (IndexType i = 0; i < 3; i++)
+            for (IndexType i = 0; i < inInst.netIdArray.size(); i++) //Modified for 2/3 pin passives
             {
                 inst.addPinId(_pinArray.size());
                 _netArray[inInst.netIdArray.at(i)].addPinId(_pinArray.size());

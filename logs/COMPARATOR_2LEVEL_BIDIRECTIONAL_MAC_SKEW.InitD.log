@@ -3,15 +3,17 @@ BEGIN GROUP
 xm13 xm14
 xm17 xm18
 xm40 xm36
+xm44 xm47
+xm44 xm45
+xm42 xm43
+xm9 xm2
+xm49 xm48
+xm6 xm16
+xm46 xm47
+xm46 xm45
+xm39 xm38
 xm41 xm37
 xm10 xm12
 xm15
 xm19
-END GROUP
-BEGIN GROUP
-xm49 xm48
-xm46 xm47
-xm42 xm43
-xm39 xm38
-xm44 xm45
 END GROUP

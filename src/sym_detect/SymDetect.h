@@ -79,6 +79,9 @@ private:
 */
     bool                        validSrchObj(IndexType instId1, IndexType instId2, 
                                              IndexType srchPinId1, IndexType srchPinId2) const;
+
+    bool                        validDiffPair(IndexType instId1, IndexType instId2,
+                                            IndexType srchPinId1, IndexType srchPinId2) const;
 /*! @brief Push next valid MosPair to dfsStack.
 
     This function push valid pairs that could be reached 

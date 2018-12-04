@@ -29,6 +29,10 @@ END GROUP
 BEGIN GROUP
 xi146/xm8 xi146/xm15
 xi146/xm16 xi146/xm17
+xi128/xi1/m1 xi128/xi0/m1
+xi128/xi1/m3 xi128/xi0/m3
+xi128/xi1/m2 xi128/xi0/m2
+xi128/xi1/m0 xi128/xi0/m0
 END GROUP
 BEGIN GROUP
 xi146/xm8 xi146/xm2
@@ -115,5 +119,11 @@ xi146/xm2 xi146/xm18
 xi146/xm3 xi146/xm4
 xi146/xm12 xi146/xm1
 xi146/xm13 xi146/xm14
+xi146/xm16 xi146/xm17
+xi146/xm8 xi146/xm15
+xi128/xi1/m1 xi128/xi0/m1
+xi128/xi1/m3 xi128/xi0/m3
+xi128/xi1/m2 xi128/xi0/m2
+xi128/xi1/m0 xi128/xi0/m0
 xi146/xm7
 END GROUP
