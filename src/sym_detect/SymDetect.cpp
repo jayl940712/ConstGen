@@ -4,8 +4,26 @@
     @date 11/24/2018
 */
 #include "sym_detect/SymDetect.h"
+#include <iostream>
 
 PROJECT_NAMESPACE_BEGIN
+
+void SymDetect::print() const
+{
+    for (const std::vector<MosPair> & diffPair : _symGroup) //print hiSym Groups
+    {
+        std::cout << "BEGIN GROUP" << std::endl;
+        for (const MosPair & pair : diffPair)
+        {
+            if (pair.mosId1() != pair.mosId2())
+                std::cout << _netlist.inst(pair.mosId1()).name() << " " 
+                    << _netlist.inst(pair.mosId2()).name() << std::endl;
+            else
+                std::cout << _netlist.inst(pair.mosId1()).name() << std::endl; 
+        }
+        std::cout << "END GROUP" << std::endl;
+    }
+} 
 
 void SymDetect::getPatrnNetConn(std::vector<MosPair> & diffPair, IndexType netId,
                                     MosPattern srchPatrn) const
@@ -45,6 +63,18 @@ bool SymDetect::existPair(std::vector<MosPair> & library, IndexType instId1, Ind
         if (currPair.mosId1() == instId1 && currPair.mosId2() == instId2)
             return true;
         if (currPair.mosId2() == instId1 && currPair.mosId1() == instId2)
+            return true;
+    }
+    return false;
+}
+
+bool SymDetect::existNetPair(IndexType netId1, IndexType netId2) const
+{
+    for (const NetPair & currPair : _symNet)
+    {
+        if (currPair.netId1() == netId1 && currPair.netId2() == netId2)
+            return true;
+        if (currPair.netId2() == netId1 && currPair.netId1() == netId2)
             return true;
     }
     return false;
@@ -122,6 +152,15 @@ bool SymDetect::validDiffPair(IndexType instId1, IndexType instId2,
     return false;
 }
 
+bool SymDetect::validNetPair(IndexType netId1, IndexType netId2) const
+{
+    // Very naive priliminary approach. Only check pin numbers.
+    if (_netlist.net(netId1).pinIdArray().size() == 
+        _netlist.net(netId2).pinIdArray().size())
+        return true;
+    return false;
+}
+
 void SymDetect::inVldDiffPairSrch(std::vector<MosPair> & diffPairSrch, MosPair & currPair) const
 {
     for (MosPair & pair : diffPairSrch)
@@ -153,7 +192,7 @@ void SymDetect::pushNextSrchObj(std::vector<MosPair> & dfsVstPair, std::vector<M
                 dfsStack.push_back(currPair);
                 inVldDiffPairSrch(diffPairSrc, currPair); //invalidate DFS sources
             }
-            else if (validDiffPair(instId1, instId2, srchPinId1, srchPinId2) && // valid DIFF_SOURCE
+            else if (validDiffPair(instId1, instId2, srchPinId1, srchPinId2) && // valid DIFF_SOURCE connected through gate.
                     !existPair(dfsVstPair, instId1, instId2) &&  // not visited
                     !existPair(dfsStack, instId1, instId2) &&
                     !existPair(diffPairSrc, instId1, instId2)) // not already as DFS source.

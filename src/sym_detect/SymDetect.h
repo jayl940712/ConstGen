@@ -8,6 +8,7 @@
 
 #include "db/Netlist.h"
 #include "db/MosPair.h"
+#include "db/NetPair.h"
 #include "sym_detect/Pattern.h"
 #include <vector>
 
@@ -25,36 +26,31 @@ public:
  */
     explicit SymDetect(const Netlist & netlist)
         : _netlist(netlist), _pattern(Pattern(netlist))
-    {}
+    {
+        hiSymDetect(_symGroup);
+        _symNet.clear();
+    }
 
-/*! @brief Hierarchy symmetry detection. 
-    
-    Output would contain 2 levels of hierarchy. symGroup
-    is a vector of std::vector<MosPair> oneGroup. Where 
-    oneGroup is a group of MosPair in the same symmetry 
-    group. Each MosPair should follow a MosPattern, or 
-    it should be of self symmetry. This funtion has been 
-    also updated to contain basic passive pair symmetry. 
-
-    @param symGroup Detected symmetry groups of netlist.
-    @see MosPattern
-    @see MosPair
-*/
-    void                        hiSymDetect(std::vector<std::vector<MosPair>> & symGroup) const;
+/*! @brief Print symGroup for netlist. */
+    void                        print() const;                       
 
 private:
-    const Netlist & _netlist;
-    Pattern   _pattern;
+    const Netlist &             _netlist;
+    Pattern                     _pattern;
+/*! @brief Symmetry nets of netlist. */
+    std::vector<NetPair>        _symNet;
+/*! @brief Symmetry groups of netlist. */
+    std::vector<std::vector<MosPair>>   _symGroup;
 
 /*! @brief Return pattern of MosPair. */
     MosPattern                  MosPairPtrn(MosPair & obj) const;
-///    bool                        endSrch(IndexType mosId, PinType pinType) const;
 /*! @brief Check if pair already reached. */
     bool                        existPair(std::vector<MosPair> & library, IndexType instId1, IndexType instId2) const;
 /*! @breif Check if self symmetry pair already reached. */
     bool                        existPair(std::vector<MosPair> & library, IndexType instId) const;
-/*! @brief Check if pair already reached. */
-//    bool                        existPair(std::vector<MosPair> & library, IndexType instId1, IndexType instId2) const;
+/*! @brief Check if already contains NetPair in _symNet. */
+    bool                        existNetPair(IndexType instId1, IndexType instId2) const;
+
 /*! @brief Return true if end of search path. 
 
     Current end search terminations:
@@ -98,6 +94,20 @@ private:
 */
     bool                        validDiffPair(IndexType instId1, IndexType instId2,
                                             IndexType srchPinId1, IndexType srchPinId2) const;
+/*! @brief Return true if a valid symmetry NetPair.
+
+    A NetPair is a pair of symmetry nets.
+    Symmetry nets connected Inst need to be 
+    all grouped into symmetry pairs.
+    The current implementation is very naive
+    and only checks that pin numbers are equal.
+
+    @see NetPair
+    @param netId1 Id of Net1.
+    @param netId2 Id of Net2.
+*/
+    bool                        validNetPair(IndexType netId1, IndexType netId2) const;
+
 /*! @brief Push next valid MosPair to dfsStack.
 
     This function push valid pairs that could be reached 
@@ -201,6 +211,20 @@ private:
 */
     void                        addSelfSym(std::vector<MosPair> & dfsVstPair) const;
 
+/*! @brief Hierarchy symmetry detection. 
+    
+    Output would contain 2 levels of hierarchy. symGroup
+    is a vector of std::vector<MosPair> oneGroup. Where 
+    oneGroup is a group of MosPair in the same symmetry 
+    group. Each MosPair should follow a MosPattern, or 
+    it should be of self symmetry. This funtion has been 
+    also updated to contain basic passive pair symmetry. 
+
+    @param symGroup Detected symmetry groups of netlist.
+    @see MosPattern
+    @see MosPair
+*/
+    void                        hiSymDetect(std::vector<std::vector<MosPair>> & symGroup) const;
 };
 
 PROJECT_NAMESPACE_END

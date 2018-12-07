@@ -36,6 +36,7 @@ CMakeFiles/SFA.dir/src/db/Pin.cpp.o: ../../src/db/Pin.cpp
 CMakeFiles/SFA.dir/src/main/main.cpp.o: ../../src/db/Inst.h
 CMakeFiles/SFA.dir/src/main/main.cpp.o: ../../src/db/MosPair.h
 CMakeFiles/SFA.dir/src/main/main.cpp.o: ../../src/db/Net.h
+CMakeFiles/SFA.dir/src/main/main.cpp.o: ../../src/db/NetPair.h
 CMakeFiles/SFA.dir/src/main/main.cpp.o: ../../src/db/Netlist.h
 CMakeFiles/SFA.dir/src/main/main.cpp.o: ../../src/db/Pin.h
 CMakeFiles/SFA.dir/src/main/main.cpp.o: ../../src/global/global.h
@@ -69,6 +70,7 @@ CMakeFiles/SFA.dir/src/sym_detect/Pattern.cpp.o: ../../src/sym_detect/Pattern.cp
 CMakeFiles/SFA.dir/src/sym_detect/SymDetect.cpp.o: ../../src/db/Inst.h
 CMakeFiles/SFA.dir/src/sym_detect/SymDetect.cpp.o: ../../src/db/MosPair.h
 CMakeFiles/SFA.dir/src/sym_detect/SymDetect.cpp.o: ../../src/db/Net.h
+CMakeFiles/SFA.dir/src/sym_detect/SymDetect.cpp.o: ../../src/db/NetPair.h
 CMakeFiles/SFA.dir/src/sym_detect/SymDetect.cpp.o: ../../src/db/Netlist.h
 CMakeFiles/SFA.dir/src/sym_detect/SymDetect.cpp.o: ../../src/db/Pin.h
 CMakeFiles/SFA.dir/src/sym_detect/SymDetect.cpp.o: ../../src/global/global.h
