@@ -47,3 +47,11 @@ xi11/m9 xi25/m1
 xi20/m1 xi26/m9
 xi20/m1 xi25/m1
 END GROUP
+BEGIN NET
+dvdd
+qb q
+net027 net032
+net034 qbn
+net021 net015
+net030 net028
+END NET

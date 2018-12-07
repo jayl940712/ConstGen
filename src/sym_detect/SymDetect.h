@@ -27,8 +27,7 @@ public:
     explicit SymDetect(const Netlist & netlist)
         : _netlist(netlist), _pattern(Pattern(netlist))
     {
-        hiSymDetect(_symGroup);
-        _symNet.clear();
+        hiSymDetect(_symGroup, _symNet);
     }
 
 /*! @brief Print symGroup for netlist. */
@@ -48,8 +47,10 @@ private:
     bool                        existPair(std::vector<MosPair> & library, IndexType instId1, IndexType instId2) const;
 /*! @breif Check if self symmetry pair already reached. */
     bool                        existPair(std::vector<MosPair> & library, IndexType instId) const;
-/*! @brief Check if already contains NetPair in _symNet. */
-    bool                        existNetPair(IndexType instId1, IndexType instId2) const;
+/*! @brief Check if already contains NetPair in library. */
+    bool                        existNetPair(std::vector<NetPair> & library, IndexType netId1, IndexType netId2) const;
+/*! @brief Check if self symmetry Net in library. */
+    bool                        existNetPair(std::vector<NetPair> & library, IndexType netId) const;
 
 /*! @brief Return true if end of search path. 
 
@@ -74,7 +75,7 @@ private:
     @param srchPinId2 instId2 reached by srchPinId2.
 */
     bool                        validSrchObj(IndexType instId1, IndexType instId2, 
-                                             IndexType srchPinId1, IndexType srchPinId2) const;
+                                    IndexType srchPinId1, IndexType srchPinId2) const;
 /*! @brief Return true if a valid DIFF_SOURCE gate connected.
 
     This funtion is used to expand symmetry groups through DRAIN
@@ -93,7 +94,7 @@ private:
     @param srchPinId2 instId2 reached by srchPinId2.
 */
     bool                        validDiffPair(IndexType instId1, IndexType instId2,
-                                            IndexType srchPinId1, IndexType srchPinId2) const;
+                                    IndexType srchPinId1, IndexType srchPinId2) const;
 /*! @brief Return true if a valid symmetry NetPair.
 
     A NetPair is a pair of symmetry nets.
@@ -124,7 +125,7 @@ private:
     @param diffPairSrc All DFS sources
 */
     void                        pushNextSrchObj(std::vector<MosPair> & dfsVstPair, std::vector<MosPair> & dfsStack, 
-                                                MosPair & currObj, std::vector<MosPair> & diffPairSrc) const;
+                                    MosPair & currObj, std::vector<MosPair> & diffPairSrc) const;
 /*! @brief Get srchPatrn MosPair connected to netId.
 
     Find MosPair that follow srchPatrn. These
@@ -140,7 +141,7 @@ private:
     @param diffPair Stored output vector.
 */
     void                        getPatrnNetConn(std::vector<MosPair> & diffPair, IndexType netId,
-                                                MosPattern srchPatrn) const;
+                                    MosPattern srchPatrn) const;
 /*! @brief Get valid DFS source of netlist.
 
     Iterate all signal nets for getPatrnNetConn.
@@ -165,7 +166,7 @@ private:
     @param[in] diffPairSrch Vector of all stored DFS search source
 */
     void                        dfsDiffPair(std::vector<MosPair> & dfsVstPair, MosPair & diffPair, 
-                                             std::vector<MosPair> & diffPairSrch) const;
+                                    std::vector<MosPair> & diffPairSrch, std::vector<NetPair> & netPair) const;
 /*! @brief Invalidate visited pairs from sources.
 
     If a MosPair have already been visited and is 
@@ -211,6 +212,8 @@ private:
 */
     void                        addSelfSym(std::vector<MosPair> & dfsVstPair) const;
 
+    void                        addSymNet(std::vector<NetPair> & netPair, MosPair & currObj) const;
+
 /*! @brief Hierarchy symmetry detection. 
     
     Output would contain 2 levels of hierarchy. symGroup
@@ -224,7 +227,8 @@ private:
     @see MosPattern
     @see MosPair
 */
-    void                        hiSymDetect(std::vector<std::vector<MosPair>> & symGroup) const;
+    void                        hiSymDetect(std::vector<std::vector<MosPair>> & symGroup, 
+                                    std::vector<NetPair> & netPair) const;
 };
 
 PROJECT_NAMESPACE_END

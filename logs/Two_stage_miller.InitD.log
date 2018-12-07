@@ -16,3 +16,9 @@ mp1a mp1b
 m11
 m10
 END GROUP
+BEGIN NET
+net020
+net7
+intm intp
+outp outm
+END NET

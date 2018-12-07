@@ -23,6 +23,16 @@ void SymDetect::print() const
         }
         std::cout << "END GROUP" << std::endl;
     }
+    std::cout << "BEGIN NET" << std::endl;
+    for (const NetPair & pair : _symNet)
+    {
+        if (pair.netId1() != pair.netId2())
+            std::cout << _netlist.net(pair.netId1()).name() << " "
+                << _netlist.net(pair.netId2()).name() << std::endl;
+        else
+            std::cout << _netlist.net(pair.netId1()).name() << std::endl;
+    }
+    std::cout << "END NET" << std::endl;
 } 
 
 void SymDetect::getPatrnNetConn(std::vector<MosPair> & diffPair, IndexType netId,
@@ -68,13 +78,25 @@ bool SymDetect::existPair(std::vector<MosPair> & library, IndexType instId1, Ind
     return false;
 }
 
-bool SymDetect::existNetPair(IndexType netId1, IndexType netId2) const
+bool SymDetect::existNetPair(std::vector<NetPair> & library, IndexType netId1, IndexType netId2) const
 {
-    for (const NetPair & currPair : _symNet)
+    for (const NetPair & currPair : library)
     {
         if (currPair.netId1() == netId1 && currPair.netId2() == netId2)
             return true;
         if (currPair.netId2() == netId1 && currPair.netId1() == netId2)
+            return true;
+    }
+    return false;
+}
+
+bool SymDetect::existNetPair(std::vector<NetPair> & library, IndexType netId) const
+{
+    for (const NetPair & currPair : library)
+    {
+        if (currPair.netId1() == netId)
+            return true;
+        if (currPair.netId2() == netId)
             return true;
     }
     return false;
@@ -169,7 +191,7 @@ void SymDetect::inVldDiffPairSrch(std::vector<MosPair> & diffPairSrch, MosPair &
 }
 
 void SymDetect::pushNextSrchObj(std::vector<MosPair> & dfsVstPair, std::vector<MosPair> & dfsStack,
-                                 MosPair & currObj, std::vector<MosPair> & diffPairSrc) const
+                                MosPair & currObj, std::vector<MosPair> & diffPairSrc) const
 {
     if (endSrch(currObj))
         return; //return if endSrch
@@ -195,9 +217,11 @@ void SymDetect::pushNextSrchObj(std::vector<MosPair> & dfsVstPair, std::vector<M
             else if (validDiffPair(instId1, instId2, srchPinId1, srchPinId2) && // valid DIFF_SOURCE connected through gate.
                     !existPair(dfsVstPair, instId1, instId2) &&  // not visited
                     !existPair(dfsStack, instId1, instId2) &&
-                    !existPair(diffPairSrc, instId1, instId2)) // not already as DFS source.
+                    !existPair(diffPairSrc, instId1, instId2)) // not already as DFS source. we don't want to merge these groups.
             {
                 MosPair currPair(instId1, instId2, MosPattern::DIFF_SOURCE);
+                currPair.setSrchPinType1(_netlist.getPinTypeInstPinConn(instId1, srchPinId1));
+                currPair.setSrchPinType2(_netlist.getPinTypeInstPinConn(instId2, srchPinId2));
                 dfsStack.push_back(currPair);
             }
        }
@@ -205,20 +229,36 @@ void SymDetect::pushNextSrchObj(std::vector<MosPair> & dfsVstPair, std::vector<M
 }
 
 void SymDetect::dfsDiffPair(std::vector<MosPair> & dfsVstPair, MosPair & diffPair, 
-                            std::vector<MosPair> & diffPairSrc) const
+                            std::vector<MosPair> & diffPairSrc, std::vector<NetPair> & netPair) const
 {
     std::vector<MosPair> dfsStack;  //use vector to implement stack.
     dfsStack.push_back(diffPair);
     while (!dfsStack.empty()) //DFS 
     {
         MosPair currObj = dfsStack.back();
+        addSymNet(netPair, currObj); //add symmetry nets
         dfsStack.pop_back();
         dfsVstPair.push_back(currObj); //pop current visit from stack and add to visited
         pushNextSrchObj(dfsVstPair, dfsStack, currObj, diffPairSrc);
     } 
 }
 
-void SymDetect::hiSymDetect(std::vector<std::vector<MosPair>> & symGroup) const
+void SymDetect::addSymNet(std::vector<NetPair> & netPair, MosPair & currObj) const
+{
+    IndexType netId1, netId2;
+    netId1 = _netlist.instNetId(currObj.mosId1(), currObj.srchPinType1());
+    netId2 = _netlist.instNetId(currObj.mosId2(), currObj.srchPinType2());
+    if (netId1 == netId2 &&
+        !existNetPair(netPair, netId1) &&
+        _netlist.isSignal(netId1))
+        netPair.emplace_back(netId1, netId1);
+    else if (netId1 != netId2 &&
+                !existNetPair(netPair, netId1, netId2) &&
+                validNetPair(netId1, netId2))
+        netPair.emplace_back(netId1, netId2);
+}
+
+void SymDetect::hiSymDetect(std::vector<std::vector<MosPair>> & symGroup, std::vector<NetPair> & netPair) const 
 {
     std::vector<MosPair> dfsVstPair;
     std::vector<MosPair> diffPairSrc;
@@ -228,7 +268,7 @@ void SymDetect::hiSymDetect(std::vector<std::vector<MosPair>> & symGroup) const
         if (pair.valid())
         {
             dfsVstPair.clear();
-            dfsDiffPair(dfsVstPair, pair, diffPairSrc); //search
+            dfsDiffPair(dfsVstPair, pair, diffPairSrc, netPair); //search
             addSelfSym(dfsVstPair); //add self symmetry pairs.
             symGroup.push_back(dfsVstPair); //add results to new group
         }

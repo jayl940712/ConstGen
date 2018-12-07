@@ -9,3 +9,8 @@ xm13 xm14
 xm16 xm17
 xm7
 END GROUP
+BEGIN NET
+net050
+interp intern
+crossp crossn
+END NET

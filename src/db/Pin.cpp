@@ -19,13 +19,15 @@ PROJECT_NAMESPACE_BEGIN
     | Input PinType   | nextPinType   |
     | --------------- | ------------- |
     | SOURCE          | DRAIN         |
+    | GATE            | DRAIN         |
     | DRAIN           | SOURCE        |
     | THIS            | THAT          |
     | THAT            | THIS          |
 */
 PinType Pin::nextPinType(PinType type) 
 {
-    if (type == PinType::SOURCE)
+    if (type == PinType::SOURCE ||
+        type == PinType::GATE)
         return PinType::DRAIN;
     if (type == PinType::DRAIN)
         return PinType::SOURCE;

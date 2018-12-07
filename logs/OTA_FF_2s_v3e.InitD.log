@@ -19,3 +19,13 @@ m20 m50
 m14 m13
 m4
 END GROUP
+BEGIN NET
+net057
+net59
+on op
+xr13_1__dmy0 xr12_3__dmy0
+xr13_2__dmy0 xr12_2__dmy0
+xr13_3__dmy0 xr12_1__dmy0
+net5
+op1 on1
+END NET

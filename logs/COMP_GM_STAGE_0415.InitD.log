@@ -97,3 +97,12 @@ xm0
 xm52
 xm51
 END GROUP
+BEGIN NET
+vcc_gm
+ictrm ictrp
+net019 net042
+net83 net90
+net030 net054
+outp outm
+vcc_comp
+END NET

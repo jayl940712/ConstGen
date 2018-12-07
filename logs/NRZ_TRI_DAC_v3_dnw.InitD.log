@@ -23,3 +23,9 @@ xm3
 xm13
 xm12
 END GROUP
+BEGIN NET
+vcm2
+vcm ioutn
+vcm ioutp
+ioutn ioutp
+END NET

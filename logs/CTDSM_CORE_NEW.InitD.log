@@ -127,3 +127,67 @@ xi128/xi1/m2 xi128/xi0/m2
 xi128/xi1/m0 xi128/xi0/m0
 xi146/xm7
 END GROUP
+BEGIN NET
+xi160/net074
+vo2p vo2m
+net074 net073
+xi160/xr11_1__dmy0 xi160/xr12_8__dmy0
+xi160/xr11_2__dmy0 xi160/xr12_7__dmy0
+xi160/xr11_3__dmy0 xi160/xr12_6__dmy0
+xi160/xr11_4__dmy0 xi160/xr12_5__dmy0
+xi160/xr11_5__dmy0 xi160/xr12_4__dmy0
+xi160/xr11_6__dmy0 xi160/xr12_3__dmy0
+xi160/xr11_7__dmy0 xi160/xr12_2__dmy0
+xi160/xr11_8__dmy0 xi160/xr12_1__dmy0
+vddd
+xi128/xi1/net13 xi128/xi0/net13
+outm outp
+net072 net071
+xi161/net100
+vo3m vo3p
+xi161/xr12_8__dmy0 xi161/xr11_1__dmy0
+xi161/xr12_7__dmy0 xi161/xr11_2__dmy0
+xi161/xr12_6__dmy0 xi161/xr11_3__dmy0
+xi161/xr12_5__dmy0 xi161/xr11_4__dmy0
+xi161/xr12_4__dmy0 xi161/xr11_5__dmy0
+xi161/xr12_3__dmy0 xi161/xr11_6__dmy0
+xi161/xr12_2__dmy0 xi161/xr11_7__dmy0
+xi161/xr12_1__dmy0 xi161/xr11_8__dmy0
+xi161/xr12_1__dmy0 xi161/xr12_8__dmy0
+xi161/xr12_2__dmy0 xi161/xr12_7__dmy0
+xi161/xr12_3__dmy0 xi161/xr12_6__dmy0
+xi161/xr12_4__dmy0 xi161/xr12_5__dmy0
+xi161/xr11_8__dmy0 xi161/xr12_8__dmy0
+xi161/xr11_7__dmy0 xi161/xr12_7__dmy0
+xi161/xr11_6__dmy0 xi161/xr12_6__dmy0
+xi155/xr64_1__dmy0 xi154/xr64_1__dmy0
+xi155/xr64_2__dmy0 xi154/xr64_2__dmy0
+xi155/xr64_3__dmy0 xi154/xr64_3__dmy0
+xi161/xr11_1__dmy0 xi161/xr12_1__dmy0
+xi161/xr11_2__dmy0 xi161/xr12_2__dmy0
+xi161/xr11_3__dmy0 xi161/xr12_3__dmy0
+xi161/xr11_1__dmy0 xi161/xr11_8__dmy0
+xi161/xr11_2__dmy0 xi161/xr11_7__dmy0
+xi161/xr11_3__dmy0 xi161/xr11_6__dmy0
+xi161/xr11_4__dmy0 xi161/xr11_5__dmy0
+xi154/xr27_1__dmy0 xi155/xr27_1__dmy0
+xi154/xr27_2__dmy0 xi155/xr27_2__dmy0
+xi154/xr27_3__dmy0 xi155/xr27_3__dmy0
+xi154/xr27_4__dmy0 xi155/xr27_4__dmy0
+xi154/xr27_5__dmy0 xi155/xr27_5__dmy0
+xi154/xr27_6__dmy0 xi155/xr27_6__dmy0
+xi154/xr27_7__dmy0 xi155/xr27_7__dmy0
+xi154/xr27_8__dmy0 xi155/xr27_8__dmy0
+xi154/xr27_9__dmy0 xi155/xr27_9__dmy0
+xi154/xr27_10__dmy0 xi155/xr27_10__dmy0
+xi154/xr27_11__dmy0 xi155/xr27_11__dmy0
+xi154/xr27_12__dmy0 xi155/xr27_12__dmy0
+xi154/xr27_13__dmy0 xi155/xr27_13__dmy0
+xi154/xr27_14__dmy0 xi155/xr27_14__dmy0
+xi154/xr27_15__dmy0 xi155/xr27_15__dmy0
+xi154/xr27_16__dmy0 xi155/xr27_16__dmy0
+xi154/xr27_17__dmy0 xi155/xr27_17__dmy0
+xi146/net069
+xi146/interp xi146/intern
+xi146/crossp xi146/crossn
+END NET

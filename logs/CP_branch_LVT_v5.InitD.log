@@ -7,3 +7,7 @@ xm13
 xm9
 xm10
 END GROUP
+BEGIN NET
+net38
+vdm iout
+END NET

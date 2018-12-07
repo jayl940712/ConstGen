@@ -17,3 +17,10 @@ xm10 xm12
 xm15
 xm19
 END GROUP
+BEGIN NET
+net05
+vxp vxn
+vxp2 vxn2
+vmid vmidb
+interp intern
+END NET

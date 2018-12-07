@@ -9297,3 +9297,15 @@ END GROUP
 BEGIN GROUP
 xi12/m3 xi23/m8
 END GROUP
+BEGIN NET
+vcc
+cdsb xi26/net5
+net027 net024
+net027 net022
+xi24/net5 xi11/net5
+xi24/net57 xi11/net57
+xi24/net57 xi11/net44
+xi24/net44 xi11/net57
+xi24/net44 xi11/net44
+net024 net022
+END NET

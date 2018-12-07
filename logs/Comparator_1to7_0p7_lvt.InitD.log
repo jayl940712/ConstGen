@@ -13,3 +13,8 @@ xm36
 xm40
 xm37
 END GROUP
+BEGIN NET
+net058
+vout1p vout1m
+vout2p vout2m
+END NET
