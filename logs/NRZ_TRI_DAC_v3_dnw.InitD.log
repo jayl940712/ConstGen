@@ -26,6 +26,7 @@ END GROUP
 BEGIN NET
 vcm2
 vcm ioutn
+vcm1
 vcm ioutp
 ioutn ioutp
 END NET

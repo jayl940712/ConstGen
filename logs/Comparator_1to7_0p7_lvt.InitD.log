@@ -17,4 +17,6 @@ BEGIN NET
 net058
 vout1p vout1m
 vout2p vout2m
+db d
+net057
 END NET

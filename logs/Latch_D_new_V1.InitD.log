@@ -50,6 +50,7 @@ END GROUP
 BEGIN NET
 dvdd
 qb q
+dvss
 net027 net032
 net034 qbn
 net021 net015

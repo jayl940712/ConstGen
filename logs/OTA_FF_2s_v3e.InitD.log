@@ -21,8 +21,10 @@ m4
 END GROUP
 BEGIN NET
 net057
+avss
 net59
 on op
+vcmo
 xr13_1__dmy0 xr12_3__dmy0
 xr13_2__dmy0 xr12_2__dmy0
 xr13_3__dmy0 xr12_1__dmy0

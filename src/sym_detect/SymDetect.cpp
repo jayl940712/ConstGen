@@ -256,6 +256,17 @@ void SymDetect::addSymNet(std::vector<NetPair> & netPair, MosPair & currObj) con
                 !existNetPair(netPair, netId1, netId2) &&
                 validNetPair(netId1, netId2))
         netPair.emplace_back(netId1, netId2);
+    netId1 = _netlist.instNetId(currObj.mosId1(), currObj.nextPinType1());
+    netId2 = _netlist.instNetId(currObj.mosId2(), currObj.nextPinType2());
+    if (netId1 == netId2 &&
+        !existNetPair(netPair, netId1) &&
+        _netlist.isSignal(netId1))
+        netPair.emplace_back(netId1, netId1);
+    else if (netId1 != netId2 &&
+                !existNetPair(netPair, netId1, netId2) &&
+                validNetPair(netId1, netId2))
+        netPair.emplace_back(netId1, netId2);
+
 }
 
 void SymDetect::hiSymDetect(std::vector<std::vector<MosPair>> & symGroup, std::vector<NetPair> & netPair) const 

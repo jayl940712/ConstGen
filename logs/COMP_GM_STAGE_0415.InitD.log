@@ -105,4 +105,6 @@ net83 net90
 net030 net054
 outp outm
 vcc_comp
+net070
+pre_charge
 END NET

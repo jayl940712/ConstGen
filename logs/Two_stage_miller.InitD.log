@@ -18,7 +18,9 @@ m10
 END GROUP
 BEGIN NET
 net020
+net028
 net7
 intm intp
 outp outm
+net047 net037
 END NET

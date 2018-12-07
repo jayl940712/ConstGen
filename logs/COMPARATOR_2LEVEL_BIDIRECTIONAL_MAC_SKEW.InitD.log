@@ -20,7 +20,10 @@ END GROUP
 BEGIN NET
 net05
 vxp vxn
+net04
 vxp2 vxn2
 vmid vmidb
 interp intern
+outp outm
+net066 net065
 END NET

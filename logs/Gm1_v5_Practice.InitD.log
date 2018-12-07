@@ -17,6 +17,7 @@ END GROUP
 BEGIN NET
 net074
 vom vop
+ntail1
 xr11_1__dmy0 xr12_8__dmy0
 xr11_2__dmy0 xr12_7__dmy0
 xr11_3__dmy0 xr12_6__dmy0

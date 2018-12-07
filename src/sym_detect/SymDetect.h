@@ -158,12 +158,13 @@ private:
     Search for symmetry patterns in DFS manner with search source as diffPair.
     Store visited valid MosPair at dfsVstPair. diffPairSrch are needed as input
     to invalidate reached sources. dfsVstPair would be in the same hierarchy 
-    symmetry group.
+    symmetry group. All symmetry nets would be appended to netPair vector.
 
     @see pushNextSrchObj
     @param[out] dfsVstPair Vector to store all visited MosPair
     @param[in] diffPair DFS search source
     @param[in] diffPairSrch Vector of all stored DFS search source
+    @param[out] netPair Symmetry Nets.
 */
     void                        dfsDiffPair(std::vector<MosPair> & dfsVstPair, MosPair & diffPair, 
                                     std::vector<MosPair> & diffPairSrch, std::vector<NetPair> & netPair) const;
@@ -212,6 +213,15 @@ private:
 */
     void                        addSelfSym(std::vector<MosPair> & dfsVstPair) const;
 
+/*! @brief Based on currObj symmetry Inst pair, valid symmetry nets are appended to netPair.
+
+    Valid symmetry net that are connected to symmetry Inst pair
+    currObj would be added to vector.
+
+    @see validNetPair
+    @param netPair Symmetry Net appended to this vector.
+    @param currObj Current symmetry Inst pair.
+*/
     void                        addSymNet(std::vector<NetPair> & netPair, MosPair & currObj) const;
 
 /*! @brief Hierarchy symmetry detection. 
@@ -222,6 +232,8 @@ private:
     group. Each MosPair should follow a MosPattern, or 
     it should be of self symmetry. This funtion has been 
     also updated to contain basic passive pair symmetry. 
+
+    Symmetry Nets would be added to vector netPair.
 
     @param symGroup Detected symmetry groups of netlist.
     @see MosPattern

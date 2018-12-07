@@ -13,4 +13,5 @@ BEGIN NET
 net050
 interp intern
 crossp crossn
+outm outp
 END NET
