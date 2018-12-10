@@ -90,6 +90,7 @@ enum class MosPattern: Byte
     CROSS_LOAD, /*!< Cross coupled load. */
     PASSIVE, /*!< Matched passive device. */
     SELF, /*!< Self symmetry Inst. */
+    BIAS, /*!< Bias symmetry pair. */
     INVALID /*!< No pattern detected. */
 };
     

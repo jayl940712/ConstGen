@@ -5,6 +5,7 @@
 */
 #include "sym_detect/SymDetect.h"
 #include <iostream>
+#include <algorithm>
 
 PROJECT_NAMESPACE_BEGIN
 
@@ -33,6 +34,15 @@ void SymDetect::print() const
             std::cout << _netlist.net(pair.netId1()).name() << std::endl;
     }
     std::cout << "END NET" << std::endl;
+    for (const std::vector<IndexType> & bias : _biasGroup) //print hiSym Groups
+    {
+        std::cout << "BEGIN BIAS" << std::endl;
+        for (IndexType id : bias)
+        {
+            std::cout << _netlist.inst(id).name() << " "; 
+        }
+        std::cout << std::endl << "END BIAS" << std::endl;
+    }
 } 
 
 void SymDetect::getPatrnNetConn(std::vector<MosPair> & diffPair, IndexType netId,
@@ -228,6 +238,34 @@ void SymDetect::pushNextSrchObj(std::vector<MosPair> & dfsVstPair, std::vector<M
     }
 }
 
+bool SymDetect::comBias(MosPair & currObj) const
+{
+    if (currObj.pattern() == MosPattern::LOAD ||
+        currObj.pattern() == MosPattern::CASCODE)
+    {
+        if (_netlist.mosType(currObj.mosId1()) == MosType::DIFF &&
+            _netlist.mosType(currObj.mosId2()) == MosType::DIFF &&
+            _netlist.gateNetId(currObj.mosId1()) == _netlist.gateNetId(currObj.mosId2()))
+        {
+            return true;
+        }
+    }   
+    return false;
+}
+
+void SymDetect::addBiasSym(std::vector<MosPair> & dfsVstPair, MosPair & currObj) const
+{
+    if (comBias(currObj))
+    {
+        std::vector<IndexType> Mos;
+        _netlist.getInstNetConn(Mos, _netlist.gateNetId(currObj.mosId1()));
+        _netlist.fltrInstMosType(Mos, MosType::DIODE);
+        if (Mos.size() == 2 &&
+                !existPair(dfsVstPair, Mos[0], Mos[1]))
+            dfsVstPair.emplace_back(Mos[0], Mos[1], MosPattern::INVALID);
+    }
+}
+
 void SymDetect::dfsDiffPair(std::vector<MosPair> & dfsVstPair, MosPair & diffPair, 
                             std::vector<MosPair> & diffPairSrc, std::vector<NetPair> & netPair) const
 {
@@ -240,6 +278,7 @@ void SymDetect::dfsDiffPair(std::vector<MosPair> & dfsVstPair, MosPair & diffPai
         dfsStack.pop_back();
         dfsVstPair.push_back(currObj); //pop current visit from stack and add to visited
         pushNextSrchObj(dfsVstPair, dfsStack, currObj, diffPairSrc);
+        addBiasSym(dfsVstPair, currObj); //Added bias symmetry pairs.
     } 
 }
 
@@ -323,6 +362,60 @@ void SymDetect::addSelfSym(std::vector<MosPair> & dfsVstPair) const
 {
     for (MosPair & pair : dfsVstPair)
         selfSymSrch(dfsVstPair, pair);
+}
+
+void SymDetect::flattenSymGroup(std::vector<std::vector<MosPair>> & symGroup, std::vector<MosPair> & flatPair) const
+{
+    for (std::vector<MosPair> & group : symGroup)
+    {
+        for (MosPair & pair : group)
+        {
+            flatPair.push_back(pair);
+        }
+    }
+}
+
+void SymDetect::biasGroup(std::vector<MosPair> & flatPair, std::vector<std::vector<IndexType>> & biasGroup) const
+{
+    std::vector<IndexType> vstNet;
+    for (MosPair & pair : flatPair)
+    {
+        if (comBias(pair))
+        {
+            std::vector<IndexType> bias;
+            IndexType netId = _netlist.gateNetId(pair.mosId1());
+            if (std::find(vstNet.begin(), vstNet.end(), netId) == vstNet.end())
+            {
+                _netlist.getInstNetConn(bias, netId);
+                biasGroup.push_back(bias);
+                vstNet.push_back(netId);
+            }
+        }
+    }
+}
+
+void SymDetect::biasMatch(std::vector<std::vector<IndexType>> & biasGroup, std::vector<std::vector<MosPair>> & symGroup,
+                            std::vector<MosPair> & flatPair) const
+{
+    for (std::vector<IndexType> & bias : biasGroup)
+    {
+        std::vector<IndexType> driver = bias;
+        _netlist.fltrInstMosType(driver, MosType::DIODE);
+        if (driver.size() == 1)
+        {
+            for (IndexType target : bias)
+            {
+                if (target != driver[0] &&
+                    _pattern.pattern(target, driver[0]) != MosPattern::INVALID &&
+                    !existPair(flatPair, target, driver[0]))
+                {
+                    std::vector<MosPair> add;
+                    add.emplace_back(driver[0], target, MosPattern::BIAS);
+                    symGroup.push_back(add);
+                }
+            }
+        }
+    }
 }
 
 PROJECT_NAMESPACE_END

@@ -28,6 +28,9 @@ public:
         : _netlist(netlist), _pattern(Pattern(netlist))
     {
         hiSymDetect(_symGroup, _symNet);
+        flattenSymGroup(_symGroup, _flatPair);
+        biasGroup(_flatPair, _biasGroup);
+        biasMatch(_biasGroup, _symGroup, _flatPair);
     }
 
 /*! @brief Print symGroup for netlist. */
@@ -40,6 +43,8 @@ private:
     std::vector<NetPair>        _symNet;
 /*! @brief Symmetry groups of netlist. */
     std::vector<std::vector<MosPair>>   _symGroup;
+    std::vector<MosPair>        _flatPair;
+    std::vector<std::vector<IndexType>>   _biasGroup;
 
 /*! @brief Return pattern of MosPair. */
     MosPattern                  MosPairPtrn(MosPair & obj) const;
@@ -126,6 +131,16 @@ private:
 */
     void                        pushNextSrchObj(std::vector<MosPair> & dfsVstPair, std::vector<MosPair> & dfsStack, 
                                     MosPair & currObj, std::vector<MosPair> & diffPairSrc) const;
+
+    bool                        comBias(MosPair& currObj) const;
+    void                        addBiasSym(std::vector<MosPair> & dfsVstPair, MosPair & currObj) const;
+    void                        flattenSymGroup(std::vector<std::vector<MosPair>> & symGroup,
+                                    std::vector<MosPair> & flatPair) const;
+    void                        biasGroup(std::vector<MosPair> & flatPair, 
+                                    std::vector<std::vector<IndexType>> & biasGroup) const;
+
+    void                        biasMatch(std::vector<std::vector<IndexType>> & biasGroup, 
+                                    std::vector<std::vector<MosPair>> & symGroup, std::vector<MosPair> & flatPair) const;
 /*! @brief Get srchPatrn MosPair connected to netId.
 
     Find MosPair that follow srchPatrn. These
