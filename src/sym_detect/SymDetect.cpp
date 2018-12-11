@@ -34,10 +34,12 @@ void SymDetect::print() const
             std::cout << _netlist.net(pair.netId1()).name() << std::endl;
     }
     std::cout << "END NET" << std::endl;
-    for (const std::vector<IndexType> & bias : _biasGroup) //print hiSym Groups
+    for (const Bias & bias : _biasGroup) //print hiSym Groups
     {
+        if (!bias.valid())
+            continue;
         std::cout << "BEGIN BIAS" << std::endl;
-        for (IndexType id : bias)
+        for (IndexType id : bias.bias())
         {
             std::cout << _netlist.inst(id).name() << " "; 
         }
@@ -262,7 +264,7 @@ void SymDetect::addBiasSym(std::vector<MosPair> & dfsVstPair, MosPair & currObj)
         _netlist.fltrInstMosType(Mos, MosType::DIODE);
         if (Mos.size() == 2 &&
                 !existPair(dfsVstPair, Mos[0], Mos[1]))
-            dfsVstPair.emplace_back(Mos[0], Mos[1], MosPattern::INVALID);
+            dfsVstPair.emplace_back(Mos[0], Mos[1], MosPattern::BIAS);
     }
 }
 
@@ -375,43 +377,39 @@ void SymDetect::flattenSymGroup(std::vector<std::vector<MosPair>> & symGroup, st
     }
 }
 
-void SymDetect::biasGroup(std::vector<MosPair> & flatPair, std::vector<std::vector<IndexType>> & biasGroup) const
+void SymDetect::biasGroup(std::vector<MosPair> & flatPair, std::vector<Bias> & biasGroup) const
 {
     std::vector<IndexType> vstNet;
     for (MosPair & pair : flatPair)
     {
         if (comBias(pair))
         {
-            std::vector<IndexType> bias;
             IndexType netId = _netlist.gateNetId(pair.mosId1());
             if (std::find(vstNet.begin(), vstNet.end(), netId) == vstNet.end())
             {
-                _netlist.getInstNetConn(bias, netId);
-                biasGroup.push_back(bias);
                 vstNet.push_back(netId);
+                biasGroup.emplace_back(netId, _netlist);
             }
         }
     }
 }
 
-void SymDetect::biasMatch(std::vector<std::vector<IndexType>> & biasGroup, std::vector<std::vector<MosPair>> & symGroup,
+void SymDetect::biasMatch(std::vector<Bias> & biasGroup, std::vector<std::vector<MosPair>> & symGroup,
                             std::vector<MosPair> & flatPair) const
 {
-    for (std::vector<IndexType> & bias : biasGroup)
+    for (Bias & bias : biasGroup)
     {
-        std::vector<IndexType> driver = bias;
-        _netlist.fltrInstMosType(driver, MosType::DIODE);
-        if (driver.size() == 1)
+        if (bias.valid())
         {
-            for (IndexType target : bias)
+            for (IndexType target : bias.bias())
             {
-                if (target != driver[0] &&
-                    _pattern.pattern(target, driver[0]) != MosPattern::INVALID &&
-                    !existPair(flatPair, target, driver[0]))
+                if (target != bias.driver().at(0) &&
+                    _pattern.pattern(target, bias.driver().at(0)) != MosPattern::INVALID &&
+                    !existPair(flatPair, target))
                 {
-                    std::vector<MosPair> add;
-                    add.emplace_back(driver[0], target, MosPattern::BIAS);
-                    symGroup.push_back(add);
+                    std::vector<MosPair> biasPair;
+                    biasPair.emplace_back(bias.driver().at(0), target, MosPattern::BIAS);
+                    symGroup.push_back(biasPair);
                 }
             }
         }

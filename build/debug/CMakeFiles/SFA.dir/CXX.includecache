@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+../../src/db/Bias.h
+global/type.h
+../../src/db/global/type.h
+db/Netlist.h
+../../src/db/db/Netlist.h
+db/MosPair.h
+../../src/db/db/MosPair.h
+
 ../../src/db/Inst.h
 string
 -
@@ -81,10 +89,16 @@ db/MosPair.h
 ../../src/sym_detect/db/MosPair.h
 db/NetPair.h
 ../../src/sym_detect/db/NetPair.h
+db/Bias.h
+../../src/sym_detect/db/Bias.h
 sym_detect/Pattern.h
 ../../src/sym_detect/sym_detect/Pattern.h
 vector
 -
+
+/home/unga/jayliu/sfa/src/db/Bias.cpp
+db/Bias.h
+/home/unga/jayliu/sfa/src/db/db/Bias.h
 
 /home/unga/jayliu/sfa/src/db/MosPair.cpp
 db/MosPair.h

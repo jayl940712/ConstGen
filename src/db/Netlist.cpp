@@ -205,6 +205,25 @@ void Netlist::fltrInstMosType(std::vector<IndexType> & instArray, MosType mosTyp
 //    }
 }
 
+void Netlist::fltrInstType(std::vector<IndexType> & instArray, InstType type) const
+{
+// O(n) complexity guaranteed.
+    auto it = instArray.begin();
+    IndexType numRmv = 0;
+    while (it != instArray.end() - numRmv)
+    {
+        IndexType instId = *it;
+        if (_instArray[instId].type() != type)
+        {         
+            std::iter_swap(it, instArray.end() - 1 - numRmv);
+            numRmv++;
+        }
+        else
+            ++it;
+    }
+    instArray.erase(instArray.end() - numRmv, instArray.end());
+}
+
 PinType Netlist::getPinTypeInstNetConn(IndexType instId, IndexType netId) const
 {
     for (IndexType instPinId : _instArray[instId].pinIdArray())

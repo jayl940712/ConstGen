@@ -11,6 +11,11 @@
 },
 {
   "directory": "/home/unga/jayliu/sfa/build/debug",
+  "command": "/usr/bin/c++    -I/home/unga/jayliu/sfa/src -I/home/unga/jayliu/sfa/unittest  -std=c++11 -Wall  -g3 -O0 -fno-inline   -o CMakeFiles/SFA.dir/src/db/Bias.cpp.o -c /home/unga/jayliu/sfa/src/db/Bias.cpp",
+  "file": "/home/unga/jayliu/sfa/src/db/Bias.cpp"
+},
+{
+  "directory": "/home/unga/jayliu/sfa/build/debug",
   "command": "/usr/bin/c++    -I/home/unga/jayliu/sfa/src -I/home/unga/jayliu/sfa/unittest  -std=c++11 -Wall  -g3 -O0 -fno-inline   -o CMakeFiles/SFA.dir/src/db/MosPair.cpp.o -c /home/unga/jayliu/sfa/src/db/MosPair.cpp",
   "file": "/home/unga/jayliu/sfa/src/db/MosPair.cpp"
 },

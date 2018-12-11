@@ -108,9 +108,33 @@ CMakeFiles/SFA.dir/src/parser/InitNetlist.cpp.o.provides: CMakeFiles/SFA.dir/src
 CMakeFiles/SFA.dir/src/parser/InitNetlist.cpp.o.provides.build: CMakeFiles/SFA.dir/src/parser/InitNetlist.cpp.o
 
 
+CMakeFiles/SFA.dir/src/db/Bias.cpp.o: CMakeFiles/SFA.dir/flags.make
+CMakeFiles/SFA.dir/src/db/Bias.cpp.o: ../../src/db/Bias.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unga/jayliu/sfa/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/SFA.dir/src/db/Bias.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SFA.dir/src/db/Bias.cpp.o -c /home/unga/jayliu/sfa/src/db/Bias.cpp
+
+CMakeFiles/SFA.dir/src/db/Bias.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SFA.dir/src/db/Bias.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/unga/jayliu/sfa/src/db/Bias.cpp > CMakeFiles/SFA.dir/src/db/Bias.cpp.i
+
+CMakeFiles/SFA.dir/src/db/Bias.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SFA.dir/src/db/Bias.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/unga/jayliu/sfa/src/db/Bias.cpp -o CMakeFiles/SFA.dir/src/db/Bias.cpp.s
+
+CMakeFiles/SFA.dir/src/db/Bias.cpp.o.requires:
+
+.PHONY : CMakeFiles/SFA.dir/src/db/Bias.cpp.o.requires
+
+CMakeFiles/SFA.dir/src/db/Bias.cpp.o.provides: CMakeFiles/SFA.dir/src/db/Bias.cpp.o.requires
+	$(MAKE) -f CMakeFiles/SFA.dir/build.make CMakeFiles/SFA.dir/src/db/Bias.cpp.o.provides.build
+.PHONY : CMakeFiles/SFA.dir/src/db/Bias.cpp.o.provides
+
+CMakeFiles/SFA.dir/src/db/Bias.cpp.o.provides.build: CMakeFiles/SFA.dir/src/db/Bias.cpp.o
+
+
 CMakeFiles/SFA.dir/src/db/MosPair.cpp.o: CMakeFiles/SFA.dir/flags.make
 CMakeFiles/SFA.dir/src/db/MosPair.cpp.o: ../../src/db/MosPair.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unga/jayliu/sfa/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/SFA.dir/src/db/MosPair.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unga/jayliu/sfa/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/SFA.dir/src/db/MosPair.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SFA.dir/src/db/MosPair.cpp.o -c /home/unga/jayliu/sfa/src/db/MosPair.cpp
 
 CMakeFiles/SFA.dir/src/db/MosPair.cpp.i: cmake_force
@@ -134,7 +158,7 @@ CMakeFiles/SFA.dir/src/db/MosPair.cpp.o.provides.build: CMakeFiles/SFA.dir/src/d
 
 CMakeFiles/SFA.dir/src/db/Net.cpp.o: CMakeFiles/SFA.dir/flags.make
 CMakeFiles/SFA.dir/src/db/Net.cpp.o: ../../src/db/Net.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unga/jayliu/sfa/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/SFA.dir/src/db/Net.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unga/jayliu/sfa/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/SFA.dir/src/db/Net.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SFA.dir/src/db/Net.cpp.o -c /home/unga/jayliu/sfa/src/db/Net.cpp
 
 CMakeFiles/SFA.dir/src/db/Net.cpp.i: cmake_force
@@ -158,7 +182,7 @@ CMakeFiles/SFA.dir/src/db/Net.cpp.o.provides.build: CMakeFiles/SFA.dir/src/db/Ne
 
 CMakeFiles/SFA.dir/src/db/Netlist.cpp.o: CMakeFiles/SFA.dir/flags.make
 CMakeFiles/SFA.dir/src/db/Netlist.cpp.o: ../../src/db/Netlist.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unga/jayliu/sfa/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/SFA.dir/src/db/Netlist.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unga/jayliu/sfa/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/SFA.dir/src/db/Netlist.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SFA.dir/src/db/Netlist.cpp.o -c /home/unga/jayliu/sfa/src/db/Netlist.cpp
 
 CMakeFiles/SFA.dir/src/db/Netlist.cpp.i: cmake_force
@@ -182,7 +206,7 @@ CMakeFiles/SFA.dir/src/db/Netlist.cpp.o.provides.build: CMakeFiles/SFA.dir/src/d
 
 CMakeFiles/SFA.dir/src/db/Pin.cpp.o: CMakeFiles/SFA.dir/flags.make
 CMakeFiles/SFA.dir/src/db/Pin.cpp.o: ../../src/db/Pin.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unga/jayliu/sfa/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/SFA.dir/src/db/Pin.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unga/jayliu/sfa/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/SFA.dir/src/db/Pin.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SFA.dir/src/db/Pin.cpp.o -c /home/unga/jayliu/sfa/src/db/Pin.cpp
 
 CMakeFiles/SFA.dir/src/db/Pin.cpp.i: cmake_force
@@ -206,7 +230,7 @@ CMakeFiles/SFA.dir/src/db/Pin.cpp.o.provides.build: CMakeFiles/SFA.dir/src/db/Pi
 
 CMakeFiles/SFA.dir/src/sym_detect/Pattern.cpp.o: CMakeFiles/SFA.dir/flags.make
 CMakeFiles/SFA.dir/src/sym_detect/Pattern.cpp.o: ../../src/sym_detect/Pattern.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unga/jayliu/sfa/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/SFA.dir/src/sym_detect/Pattern.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unga/jayliu/sfa/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/SFA.dir/src/sym_detect/Pattern.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SFA.dir/src/sym_detect/Pattern.cpp.o -c /home/unga/jayliu/sfa/src/sym_detect/Pattern.cpp
 
 CMakeFiles/SFA.dir/src/sym_detect/Pattern.cpp.i: cmake_force
@@ -230,7 +254,7 @@ CMakeFiles/SFA.dir/src/sym_detect/Pattern.cpp.o.provides.build: CMakeFiles/SFA.d
 
 CMakeFiles/SFA.dir/src/sym_detect/SymDetect.cpp.o: CMakeFiles/SFA.dir/flags.make
 CMakeFiles/SFA.dir/src/sym_detect/SymDetect.cpp.o: ../../src/sym_detect/SymDetect.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unga/jayliu/sfa/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/SFA.dir/src/sym_detect/SymDetect.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/unga/jayliu/sfa/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/SFA.dir/src/sym_detect/SymDetect.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SFA.dir/src/sym_detect/SymDetect.cpp.o -c /home/unga/jayliu/sfa/src/sym_detect/SymDetect.cpp
 
 CMakeFiles/SFA.dir/src/sym_detect/SymDetect.cpp.i: cmake_force
@@ -256,6 +280,7 @@ CMakeFiles/SFA.dir/src/sym_detect/SymDetect.cpp.o.provides.build: CMakeFiles/SFA
 SFA_OBJECTS = \
 "CMakeFiles/SFA.dir/src/main/main.cpp.o" \
 "CMakeFiles/SFA.dir/src/parser/InitNetlist.cpp.o" \
+"CMakeFiles/SFA.dir/src/db/Bias.cpp.o" \
 "CMakeFiles/SFA.dir/src/db/MosPair.cpp.o" \
 "CMakeFiles/SFA.dir/src/db/Net.cpp.o" \
 "CMakeFiles/SFA.dir/src/db/Netlist.cpp.o" \
@@ -268,6 +293,7 @@ SFA_EXTERNAL_OBJECTS =
 
 ../../bin/SFA: CMakeFiles/SFA.dir/src/main/main.cpp.o
 ../../bin/SFA: CMakeFiles/SFA.dir/src/parser/InitNetlist.cpp.o
+../../bin/SFA: CMakeFiles/SFA.dir/src/db/Bias.cpp.o
 ../../bin/SFA: CMakeFiles/SFA.dir/src/db/MosPair.cpp.o
 ../../bin/SFA: CMakeFiles/SFA.dir/src/db/Net.cpp.o
 ../../bin/SFA: CMakeFiles/SFA.dir/src/db/Netlist.cpp.o
@@ -276,7 +302,7 @@ SFA_EXTERNAL_OBJECTS =
 ../../bin/SFA: CMakeFiles/SFA.dir/src/sym_detect/SymDetect.cpp.o
 ../../bin/SFA: CMakeFiles/SFA.dir/build.make
 ../../bin/SFA: CMakeFiles/SFA.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/unga/jayliu/sfa/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable ../../bin/SFA"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/unga/jayliu/sfa/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable ../../bin/SFA"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SFA.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -286,6 +312,7 @@ CMakeFiles/SFA.dir/build: ../../bin/SFA
 
 CMakeFiles/SFA.dir/requires: CMakeFiles/SFA.dir/src/main/main.cpp.o.requires
 CMakeFiles/SFA.dir/requires: CMakeFiles/SFA.dir/src/parser/InitNetlist.cpp.o.requires
+CMakeFiles/SFA.dir/requires: CMakeFiles/SFA.dir/src/db/Bias.cpp.o.requires
 CMakeFiles/SFA.dir/requires: CMakeFiles/SFA.dir/src/db/MosPair.cpp.o.requires
 CMakeFiles/SFA.dir/requires: CMakeFiles/SFA.dir/src/db/Net.cpp.o.requires
 CMakeFiles/SFA.dir/requires: CMakeFiles/SFA.dir/src/db/Netlist.cpp.o.requires

@@ -44,7 +44,7 @@ public:
     @param len Length of Inst.
 */
     explicit Inst(const std::string &name, InstType type, IndexType id, RealType wid, RealType len) 
-        : _name(name), _type(type), _id(id), _wid(wid), _len(len) 
+        : _name(name), _type(type), _id(id), _wid(wid), _len(len)
     {}
 
     // Getters

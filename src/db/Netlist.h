@@ -181,14 +181,20 @@ public:
     @see getPinTypeInstNetConn.
 */
     void                            fltrInstNetConnPinType(std::vector<IndexType> & instArray, IndexType netId, PinType connPinType) const;
-/*! @brief Filter instArray. Remove Inst whose type are mosType.
+/*! @brief Filter instArray. Remove Mosfet Inst whose type are not mosType.
 
-    Removed instId if mosType(instId) == mosType. 
+    Removed instId if mosType(instId) != mosType. 
     O(n) complexity. Similar implementation of std::remove().
     
     @see getPinTypeInstNetConn.
 */
     void                            fltrInstMosType(std::vector<IndexType> & instArray, MosType mosType) const;
+/*! @brief Filter instArray. Remove Inst whose type are not type.
+
+    Removed instId if InstType of instance 
+    is different from input type.
+*/
+    void                            fltrInstType(std::vector<IndexType> & instArray, InstType type) const;
    
     // Getters
 /*! @brief Return Pin of Id. */

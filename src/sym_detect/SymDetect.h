@@ -9,6 +9,7 @@
 #include "db/Netlist.h"
 #include "db/MosPair.h"
 #include "db/NetPair.h"
+#include "db/Bias.h"
 #include "sym_detect/Pattern.h"
 #include <vector>
 
@@ -44,7 +45,7 @@ private:
 /*! @brief Symmetry groups of netlist. */
     std::vector<std::vector<MosPair>>   _symGroup;
     std::vector<MosPair>        _flatPair;
-    std::vector<std::vector<IndexType>>   _biasGroup;
+    std::vector<Bias>           _biasGroup;
 
 /*! @brief Return pattern of MosPair. */
     MosPattern                  MosPairPtrn(MosPair & obj) const;
@@ -132,15 +133,17 @@ private:
     void                        pushNextSrchObj(std::vector<MosPair> & dfsVstPair, std::vector<MosPair> & dfsStack, 
                                     MosPair & currObj, std::vector<MosPair> & diffPairSrc) const;
 
-    bool                        comBias(MosPair& currObj) const;
-    void                        addBiasSym(std::vector<MosPair> & dfsVstPair, MosPair & currObj) const;
-    void                        flattenSymGroup(std::vector<std::vector<MosPair>> & symGroup,
-                                    std::vector<MosPair> & flatPair) const;
-    void                        biasGroup(std::vector<MosPair> & flatPair, 
-                                    std::vector<std::vector<IndexType>> & biasGroup) const;
+/*! @brief Return true if currObj have common gate connection.
 
-    void                        biasMatch(std::vector<std::vector<IndexType>> & biasGroup, 
-                                    std::vector<std::vector<MosPair>> & symGroup, std::vector<MosPair> & flatPair) const;
+    This function is used to check if a MosPair needs to search
+    for a bias group. MosPair should have following attributes:
+    (1) MosPattern::LOAD or CASCODE
+    (2) Both mosId are of MosType::DIFF
+    (3) Have common gate connection
+*/
+    bool                        comBias(MosPair& currObj) const;
+/*! @brief A special case where a symmetry pair is formed in the bias group. */
+    void                        addBiasSym(std::vector<MosPair> & dfsVstPair, MosPair & currObj) const;
 /*! @brief Get srchPatrn MosPair connected to netId.
 
     Find MosPair that follow srchPatrn. These
@@ -238,6 +241,33 @@ private:
     @param currObj Current symmetry Inst pair.
 */
     void                        addSymNet(std::vector<NetPair> & netPair, MosPair & currObj) const;
+
+/*! @brief Flatten symmetry group hierarchy into a single vector. */
+    void                        flattenSymGroup(std::vector<std::vector<MosPair>> & symGroup,
+                                    std::vector<MosPair> & flatPair) const;
+
+/*! @brief Find all bias groups.
+    All MosPair in flattened symmetry group are first searched as source.
+    For all valid bias search source that is comBias, bias groups would 
+    be saved to biasGroup. 
+
+    @see comBias
+    @param flatPair Input flattened symmetry group.
+    @param biasGroup Saved bias groups to vector.
+*/
+    void                        biasGroup(std::vector<MosPair> & flatPair, 
+                                    std::vector<Bias> & biasGroup) const;
+
+/*! @brief Search for symmetry pairs in each group.
+
+    New symmetry pairs are searched in the biasGroup.
+    
+    @param biasGroup A vector of bias group.
+    @param symGroup Results appended to symGroup.
+    @param flatPair Used to check for redundancy.
+*/
+    void                        biasMatch(std::vector<Bias> & biasGroup, 
+                                    std::vector<std::vector<MosPair>> & symGroup, std::vector<MosPair> & flatPair) const;
 
 /*! @brief Hierarchy symmetry detection. 
     

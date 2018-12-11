@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/SFA.dir/src/main/main.cpp.o"
   "CMakeFiles/SFA.dir/src/parser/InitNetlist.cpp.o"
+  "CMakeFiles/SFA.dir/src/db/Bias.cpp.o"
   "CMakeFiles/SFA.dir/src/db/MosPair.cpp.o"
   "CMakeFiles/SFA.dir/src/db/Net.cpp.o"
   "CMakeFiles/SFA.dir/src/db/Netlist.cpp.o"

@@ -126,6 +126,33 @@ SFA/fast:
 	$(MAKE) -f CMakeFiles/SFA.dir/build.make CMakeFiles/SFA.dir/build
 .PHONY : SFA/fast
 
+src/db/Bias.o: src/db/Bias.cpp.o
+
+.PHONY : src/db/Bias.o
+
+# target to build an object file
+src/db/Bias.cpp.o:
+	$(MAKE) -f CMakeFiles/SFA.dir/build.make CMakeFiles/SFA.dir/src/db/Bias.cpp.o
+.PHONY : src/db/Bias.cpp.o
+
+src/db/Bias.i: src/db/Bias.cpp.i
+
+.PHONY : src/db/Bias.i
+
+# target to preprocess a source file
+src/db/Bias.cpp.i:
+	$(MAKE) -f CMakeFiles/SFA.dir/build.make CMakeFiles/SFA.dir/src/db/Bias.cpp.i
+.PHONY : src/db/Bias.cpp.i
+
+src/db/Bias.s: src/db/Bias.cpp.s
+
+.PHONY : src/db/Bias.s
+
+# target to generate assembly for a file
+src/db/Bias.cpp.s:
+	$(MAKE) -f CMakeFiles/SFA.dir/build.make CMakeFiles/SFA.dir/src/db/Bias.cpp.s
+.PHONY : src/db/Bias.cpp.s
+
 src/db/MosPair.o: src/db/MosPair.cpp.o
 
 .PHONY : src/db/MosPair.o
@@ -351,6 +378,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... SFA"
+	@echo "... src/db/Bias.o"
+	@echo "... src/db/Bias.i"
+	@echo "... src/db/Bias.s"
 	@echo "... src/db/MosPair.o"
 	@echo "... src/db/MosPair.i"
 	@echo "... src/db/MosPair.s"
