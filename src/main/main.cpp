@@ -27,7 +27,7 @@ int main(int argc, char* argv[])
 //    std::cout << "Done!" << std::endl;
 //    netlist.print_all(); //print netlist
     SymDetect symDetect(netlist); //declare SymDetect
-//    symDetect.print();
+    symDetect.print();
     if (argv[2])
     {
         std::string file = argv[2];

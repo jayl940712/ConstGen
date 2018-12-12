@@ -113,9 +113,9 @@ void SymDetect::getDiffPair(std::vector<MosPair> & diffPair) const
             getPatrnNetConn(diffPair, netId, MosPattern::CROSS_LOAD); 
 }
 
-bool SymDetect::existPair(std::vector<MosPair> & library, IndexType instId1, IndexType instId2) const
+bool SymDetect::existPair(const std::vector<MosPair> & library, IndexType instId1, IndexType instId2) const
 {
-    for (MosPair & currPair : library)
+    for (const MosPair & currPair : library)
     {
         if (currPair.mosId1() == instId1 && currPair.mosId2() == instId2)
             return true;
@@ -379,10 +379,34 @@ void SymDetect::flattenSymGroup(std::vector<std::vector<MosPair>> & symGroup, st
 bool SymDetect::checkNetSym(IndexType netId1, IndexType netId2) const
 {
     // Very naive priliminary approach. Only check pin numbers.
-    if (_netlist.net(netId1).pinIdArray().size() == 
+    if (_netlist.net(netId1).pinIdArray().size() != 
         _netlist.net(netId2).pinIdArray().size())
-        return true;
-    return false;
+        return false;
+    int size = _netlist.net(netId1).pinIdArray().size();
+    bool pinSym1[size] = {false};
+    bool pinSym2[size] = {false};
+    for (int i = 0; i < size; i++)
+    {
+        if (pinSym1[i])
+            continue;
+        for (int j = 0; j < size; j++)
+        {
+            if (pinSym2[j])
+                continue;
+            IndexType instId1, instId2;
+            instId1 = _netlist.pin(_netlist.net(netId1).pinIdArray().at(i)).instId();
+            instId2 = _netlist.pin(_netlist.net(netId2).pinIdArray().at(j)).instId();
+            if (existPair(_flatPair, instId1, instId2))
+            {
+                pinSym1[i] = true;
+                pinSym2[j] = true;
+            }
+        }
+    }
+    for (int i = 0; i < size; i++)
+        if (!pinSym1[i])
+            return false;
+    return true;
 }
 
 bool SymDetect::validNetPair(IndexType netId1, IndexType netId2, std::vector<NetPair> & netPair) const

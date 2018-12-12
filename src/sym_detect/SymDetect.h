@@ -55,7 +55,7 @@ private:
 /*! @brief Return pattern of MosPair. */
     MosPattern                  MosPairPtrn(MosPair & obj) const;
 /*! @brief Check if pair already reached. */
-    bool                        existPair(std::vector<MosPair> & library, IndexType instId1, IndexType instId2) const;
+    bool                        existPair(const std::vector<MosPair> & library, IndexType instId1, IndexType instId2) const;
 /*! @breif Check if self symmetry pair already reached. */
     bool                        existPair(std::vector<MosPair> & library, IndexType instId) const;
 /*! @brief Check if already contains NetPair in library. */
@@ -115,10 +115,14 @@ private:
     and only checks that pin numbers are equal.
 
     @see NetPair
+    @see checkNetSym
     @param netId1 Id of Net1.
     @param netId2 Id of Net2.
+    @param netPair Library for symmetry nets.
 */
     bool                        validNetPair(IndexType netId1, IndexType netId2, std::vector<NetPair> & netPair) const;
+
+/*! @brief Check every pin of nets for symmetry. */
     bool                        checkNetSym(IndexType netId1, IndexType netId2) const;
 
 /*! @brief Push next valid MosPair to dfsStack.
@@ -188,7 +192,6 @@ private:
     @param[out] dfsVstPair Vector to store all visited MosPair
     @param[in] diffPair DFS search source
     @param[in] diffPairSrch Vector of all stored DFS search source
-    @param[out] netPair Symmetry Nets.
 */
     void                        dfsDiffPair(std::vector<MosPair> & dfsVstPair, MosPair & diffPair, 
                                     std::vector<MosPair> & diffPairSrch) const;
@@ -253,13 +256,17 @@ private:
                                     std::vector<MosPair> & flatPair) const;
 
 /*! @brief Find all bias groups.
+
     All MosPair in flattened symmetry group are first searched as source.
     For all valid bias search source that is comBias, bias groups would 
     be saved to biasGroup. 
 
+    Symmetry nets would be appended to netPair vector.
+
     @see comBias
     @param flatPair Input flattened symmetry group.
     @param biasGroup Saved bias groups to vector.
+    @param netPair Saved symmetry nets.
 */
     void                        biasGroup(std::vector<MosPair> & flatPair, 
                                     std::vector<Bias> & biasGroup, std::vector<NetPair> & netPair) const;
@@ -283,8 +290,6 @@ private:
     group. Each MosPair should follow a MosPattern, or 
     it should be of self symmetry. This funtion has been 
     also updated to contain basic passive pair symmetry. 
-
-    Symmetry Nets would be added to vector netPair.
 
     @param symGroup Detected symmetry groups of netlist.
     @see MosPattern
