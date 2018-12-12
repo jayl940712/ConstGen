@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['pattern',['Pattern',['../classPattern.html',1,'']]],
-  ['pin',['Pin',['../classPin.html',1,'']]]
+  ['net',['Net',['../classNet.html',1,'']]],
+  ['netlist',['Netlist',['../classNetlist.html',1,'']]],
+  ['netpair',['NetPair',['../classNetPair.html',1,'']]]
 ];

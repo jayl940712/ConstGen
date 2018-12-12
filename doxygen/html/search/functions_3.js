@@ -1,5 +1,10 @@
 var searchData=
 [
-  ['endsrch',['endSrch',['../classSymDetect.html#ac46824a93f71489b6c9f1aec961a0f8d',1,'SymDetect']]],
-  ['existpair',['existPair',['../classSymDetect.html#a245b48760c705d4ad9b2bad39012030e',1,'SymDetect::existPair(std::vector&lt; MosPair &gt; &amp;library, IndexType instId1, IndexType instId2) const'],['../classSymDetect.html#a72b24ce0ad3992c207f5023250dd1d5a',1,'SymDetect::existPair(std::vector&lt; MosPair &gt; &amp;library, IndexType instId) const']]]
+  ['dfsdiffpair',['dfsDiffPair',['../classSymDetect.html#a423022c08a31ef9361e1dfba843dc389',1,'SymDetect']]],
+  ['diffpaircascode',['diffPairCascode',['../classPattern.html#ad59ebd9a536a170735daf63126d71dea',1,'Pattern']]],
+  ['diffpairinput',['diffPairInput',['../classPattern.html#a8e30aad375e98bbcdeab764705e68045',1,'Pattern']]],
+  ['drainnetid',['drainNetId',['../classNetlist.html#aa7a9014b2e827cec0bf76a584c551157',1,'Netlist']]],
+  ['driver',['driver',['../classBias.html#a1ce69bcc1c78a3a06ba13a3bcb363fb5',1,'Bias']]],
+  ['dumpnet',['dumpNet',['../classSymDetect.html#afe5e834e590ac2e055a17b6c951098d0',1,'SymDetect']]],
+  ['dumpsym',['dumpSym',['../classSymDetect.html#a12ab74214af31ed8fc5608e958e74786',1,'SymDetect']]]
 ];

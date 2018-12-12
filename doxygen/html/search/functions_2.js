@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['dfsdiffpair',['dfsDiffPair',['../classSymDetect.html#acd33a2c834493240fc4e8840819d676c',1,'SymDetect']]],
-  ['diffpaircascode',['diffPairCascode',['../classPattern.html#ad59ebd9a536a170735daf63126d71dea',1,'Pattern']]],
-  ['diffpairinput',['diffPairInput',['../classPattern.html#a8e30aad375e98bbcdeab764705e68045',1,'Pattern']]],
-  ['drainnetid',['drainNetId',['../classNetlist.html#aa7a9014b2e827cec0bf76a584c551157',1,'Netlist']]]
+  ['combias',['comBias',['../classSymDetect.html#a13ddc56c5e937097178352eb00d71cf3',1,'SymDetect']]],
+  ['crosspaircascode',['crossPairCascode',['../classPattern.html#a371cef1fc7d0c4d5b291d80dc5c4b777',1,'Pattern']]],
+  ['crosspairload',['crossPairLoad',['../classPattern.html#afe6e5456a639417112340f5f9d164b32',1,'Pattern']]]
 ];

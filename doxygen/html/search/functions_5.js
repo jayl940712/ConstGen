@@ -1,11 +1,8 @@
 var searchData=
 [
-  ['gatenetid',['gateNetId',['../classNetlist.html#a6c248fed42772e11d054d8dccb720005',1,'Netlist']]],
-  ['getdiffpair',['getDiffPair',['../classSymDetect.html#af04b93dac7e090cef8e741d8d1812485',1,'SymDetect']]],
-  ['getinstnetconn',['getInstNetConn',['../classNetlist.html#a3d210cdd4e0db6c7d4c0cdb5c7da5e4d',1,'Netlist']]],
-  ['getinstpinconn',['getInstPinConn',['../classNetlist.html#a422fb4c4465ac40da6d103e941621119',1,'Netlist']]],
-  ['getpatrnnetconn',['getPatrnNetConn',['../classSymDetect.html#af7d1b22086aa98a27b1eafc9266596d8',1,'SymDetect']]],
-  ['getpintypeinstnetconn',['getPinTypeInstNetConn',['../classNetlist.html#a6bc6f9666ed8c833b967c38f2e164a1e',1,'Netlist']]],
-  ['getpintypeinstpinconn',['getPinTypeInstPinConn',['../classNetlist.html#a27d477f7bd6fffd915015dbd3b3a0649',1,'Netlist']]],
-  ['getvlddrainmos',['getVldDrainMos',['../classSymDetect.html#a48c23173bf5e56c3aa11ac306715cba2',1,'SymDetect']]]
+  ['flattensymgroup',['flattenSymGroup',['../classSymDetect.html#a4c50f078fd01ab52e8f50b0507b69556',1,'SymDetect']]],
+  ['fltrinstmostype',['fltrInstMosType',['../classNetlist.html#a5efc5375bb3c58e71e068278eadb4764',1,'Netlist']]],
+  ['fltrinstnetconnpintype',['fltrInstNetConnPinType',['../classNetlist.html#a525b81a4d2bba3c381c9d76be91acba8',1,'Netlist']]],
+  ['fltrinstpinconnpintype',['fltrInstPinConnPinType',['../classNetlist.html#a1df5b1bb963671f65331c287d4d56b2d',1,'Netlist']]],
+  ['fltrinsttype',['fltrInstType',['../classNetlist.html#a384627c3bc5a55625a47465771361c08',1,'Netlist']]]
 ];

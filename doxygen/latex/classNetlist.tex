@@ -60,7 +60,9 @@ void \hyperlink{classNetlist_a1df5b1bb963671f65331c287d4d56b2d}{fltr\+Inst\+Pin\
 void \hyperlink{classNetlist_a525b81a4d2bba3c381c9d76be91acba8}{fltr\+Inst\+Net\+Conn\+Pin\+Type} (std\+::vector$<$ \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} $>$ \&inst\+Array, \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} net\+Id, \hyperlink{type_8h_afaab50027002ecbb6c8ac27e727d1bb4}{Pin\+Type} conn\+Pin\+Type) const
 \begin{DoxyCompactList}\small\item\em Filter inst\+Array. Remove \hyperlink{classInst}{Inst} that are connected to net\+Id through conn\+Pin\+Type. \end{DoxyCompactList}\item 
 void \hyperlink{classNetlist_a5efc5375bb3c58e71e068278eadb4764}{fltr\+Inst\+Mos\+Type} (std\+::vector$<$ \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} $>$ \&inst\+Array, \hyperlink{type_8h_a34a6a66323cfecf83dfe00bc8fd96333}{Mos\+Type} \hyperlink{classNetlist_a3dba84b8588a528e42b066083744958f}{mos\+Type}) const
-\begin{DoxyCompactList}\small\item\em Filter inst\+Array. Remove \hyperlink{classInst}{Inst} whose type are mos\+Type. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Filter inst\+Array. Remove Mosfet \hyperlink{classInst}{Inst} whose type are not mos\+Type. \end{DoxyCompactList}\item 
+void \hyperlink{classNetlist_a384627c3bc5a55625a47465771361c08}{fltr\+Inst\+Type} (std\+::vector$<$ \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} $>$ \&inst\+Array, \hyperlink{type_8h_a53644c687d6bc203d9d3d3ee70075f61}{Inst\+Type} type) const
+\begin{DoxyCompactList}\small\item\em Filter inst\+Array. Remove \hyperlink{classInst}{Inst} whose type are not type. \end{DoxyCompactList}\item 
 const \hyperlink{classPin}{Pin} \& \hyperlink{classNetlist_a0aac5b79ca1a820f0adc7b79f1b0520d}{pin} (\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} id) const
 \begin{DoxyCompactList}\small\item\em Return \hyperlink{classPin}{Pin} of Id. \end{DoxyCompactList}\item 
 const \hyperlink{classNet}{Net} \& \hyperlink{classNetlist_a066ebef33fd139a25a50af1a144a8361}{net} (\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} id) const
@@ -158,9 +160,9 @@ Return Drain \hyperlink{classNet}{Net} Id of \hyperlink{classInst}{Inst} mos\+Id
 
 
 
-Filter inst\+Array. Remove \hyperlink{classInst}{Inst} whose type are mos\+Type. 
+Filter inst\+Array. Remove Mosfet \hyperlink{classInst}{Inst} whose type are not mos\+Type. 
 
-Removed inst\+Id if mos\+Type(inst\+Id) == mos\+Type. O(n) complexity. Similar implementation of std\+::remove().
+Removed inst\+Id if mos\+Type(inst\+Id) != mos\+Type. O(n) complexity. Similar implementation of std\+::remove().
 
 \begin{DoxySeeAlso}{See also}
 \hyperlink{classNetlist_a6bc6f9666ed8c833b967c38f2e164a1e}{get\+Pin\+Type\+Inst\+Net\+Conn}. 
@@ -195,7 +197,17 @@ Removed inst\+Id if get\+Pin\+Type\+Inst\+Pin\+Conn(inst\+Id, pin\+Id) == conn\+
 \begin{DoxySeeAlso}{See also}
 \hyperlink{classNetlist_a27d477f7bd6fffd915015dbd3b3a0649}{get\+Pin\+Type\+Inst\+Pin\+Conn}. 
 \end{DoxySeeAlso}
-\mbox{\Hypertarget{classNetlist_a6c248fed42772e11d054d8dccb720005}\label{classNetlist_a6c248fed42772e11d054d8dccb720005}} 
+\mbox{\Hypertarget{classNetlist_a384627c3bc5a55625a47465771361c08}\label{classNetlist_a384627c3bc5a55625a47465771361c08}} 
+\index{Netlist@{Netlist}!fltr\+Inst\+Type@{fltr\+Inst\+Type}}
+\index{fltr\+Inst\+Type@{fltr\+Inst\+Type}!Netlist@{Netlist}}
+\subsubsection{\texorpdfstring{fltr\+Inst\+Type()}{fltrInstType()}}
+{\footnotesize\ttfamily void Netlist\+::fltr\+Inst\+Type (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} $>$ \&}]{inst\+Array,  }\item[{\hyperlink{type_8h_a53644c687d6bc203d9d3d3ee70075f61}{Inst\+Type}}]{type }\end{DoxyParamCaption}) const}
+
+
+
+Filter inst\+Array. Remove \hyperlink{classInst}{Inst} whose type are not type. 
+
+Removed inst\+Id if Inst\+Type of instance is different from input type. \mbox{\Hypertarget{classNetlist_a6c248fed42772e11d054d8dccb720005}\label{classNetlist_a6c248fed42772e11d054d8dccb720005}} 
 \index{Netlist@{Netlist}!gate\+Net\+Id@{gate\+Net\+Id}}
 \index{gate\+Net\+Id@{gate\+Net\+Id}!Netlist@{Netlist}}
 \subsubsection{\texorpdfstring{gate\+Net\+Id()}{gateNetId()}}

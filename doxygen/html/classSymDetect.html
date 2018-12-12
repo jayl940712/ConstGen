@@ -89,9 +89,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aaf0ca6563b2168db22cfd313ec773c23"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymDetect.html#aaf0ca6563b2168db22cfd313ec773c23">SymDetect</a> (const <a class="el" href="classNetlist.html">Netlist</a> &amp;netlist)</td></tr>
 <tr class="memdesc:aaf0ca6563b2168db22cfd313ec773c23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor Only needs netlist as input. <a class="el" href="classPattern.html" title="Pattern class. ">Pattern</a> class inherently constructed.  <a href="#aaf0ca6563b2168db22cfd313ec773c23">More...</a><br /></td></tr>
 <tr class="separator:aaf0ca6563b2168db22cfd313ec773c23"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81ec317ab0f508b3e0af483ef8a2c1ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymDetect.html#a81ec317ab0f508b3e0af483ef8a2c1ac">hiSymDetect</a> (std::vector&lt; std::vector&lt; <a class="el" href="classMosPair.html">MosPair</a> &gt;&gt; &amp;symGroup) const</td></tr>
-<tr class="memdesc:a81ec317ab0f508b3e0af483ef8a2c1ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hierarchy symmetry detection.  <a href="#a81ec317ab0f508b3e0af483ef8a2c1ac">More...</a><br /></td></tr>
-<tr class="separator:a81ec317ab0f508b3e0af483ef8a2c1ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e0354c4c11fe698377a4688c52fd533"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymDetect.html#a3e0354c4c11fe698377a4688c52fd533">print</a> () const</td></tr>
+<tr class="memdesc:a3e0354c4c11fe698377a4688c52fd533"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print symGroup for netlist.  <a href="#a3e0354c4c11fe698377a4688c52fd533">More...</a><br /></td></tr>
+<tr class="separator:a3e0354c4c11fe698377a4688c52fd533"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12ab74214af31ed8fc5608e958e74786"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymDetect.html#a12ab74214af31ed8fc5608e958e74786">dumpSym</a> (const std::string file) const</td></tr>
+<tr class="memdesc:a12ab74214af31ed8fc5608e958e74786"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dump symmetry constraint to file.  <a href="#a12ab74214af31ed8fc5608e958e74786">More...</a><br /></td></tr>
+<tr class="separator:a12ab74214af31ed8fc5608e958e74786"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe5e834e590ac2e055a17b6c951098d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymDetect.html#afe5e834e590ac2e055a17b6c951098d0">dumpNet</a> (const std::string file) const</td></tr>
+<tr class="memdesc:afe5e834e590ac2e055a17b6c951098d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dump symmetry net to file.  <a href="#afe5e834e590ac2e055a17b6c951098d0">More...</a><br /></td></tr>
+<tr class="separator:afe5e834e590ac2e055a17b6c951098d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -99,12 +105,18 @@ Private Member Functions</h2></td></tr>
 <tr class="memdesc:aa832e51051f0ed9d3643c72b1d738684"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return pattern of <a class="el" href="classMosPair.html" title="A pair of Mosfet with MosPattern. ">MosPair</a>.  <a href="#aa832e51051f0ed9d3643c72b1d738684">More...</a><br /></td></tr>
 <tr class="separator:aa832e51051f0ed9d3643c72b1d738684"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a245b48760c705d4ad9b2bad39012030e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymDetect.html#a245b48760c705d4ad9b2bad39012030e">existPair</a> (std::vector&lt; <a class="el" href="classMosPair.html">MosPair</a> &gt; &amp;library, <a class="el" href="type_8h.html#a581e8093e28e7362f2b6937296190676">IndexType</a> instId1, <a class="el" href="type_8h.html#a581e8093e28e7362f2b6937296190676">IndexType</a> instId2) const</td></tr>
-<tr class="memdesc:a245b48760c705d4ad9b2bad39012030e"><td class="mdescLeft">&#160;</td><td class="mdescRight">bool endSrch(IndexType mosId, PinType pinType) const;  <a href="#a245b48760c705d4ad9b2bad39012030e">More...</a><br /></td></tr>
+<tr class="memdesc:a245b48760c705d4ad9b2bad39012030e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if pair already reached.  <a href="#a245b48760c705d4ad9b2bad39012030e">More...</a><br /></td></tr>
 <tr class="separator:a245b48760c705d4ad9b2bad39012030e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72b24ce0ad3992c207f5023250dd1d5a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymDetect.html#a72b24ce0ad3992c207f5023250dd1d5a">existPair</a> (std::vector&lt; <a class="el" href="classMosPair.html">MosPair</a> &gt; &amp;library, <a class="el" href="type_8h.html#a581e8093e28e7362f2b6937296190676">IndexType</a> instId) const</td></tr>
 <tr class="separator:a72b24ce0ad3992c207f5023250dd1d5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e73f6d9d0b83b0c42c569fc42f8ecd2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymDetect.html#a0e73f6d9d0b83b0c42c569fc42f8ecd2">existNetPair</a> (std::vector&lt; <a class="el" href="classNetPair.html">NetPair</a> &gt; &amp;library, <a class="el" href="type_8h.html#a581e8093e28e7362f2b6937296190676">IndexType</a> netId1, <a class="el" href="type_8h.html#a581e8093e28e7362f2b6937296190676">IndexType</a> netId2) const</td></tr>
+<tr class="memdesc:a0e73f6d9d0b83b0c42c569fc42f8ecd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if already contains <a class="el" href="classNetPair.html" title="A pair of Net that are symmetric. ">NetPair</a> in library.  <a href="#a0e73f6d9d0b83b0c42c569fc42f8ecd2">More...</a><br /></td></tr>
+<tr class="separator:a0e73f6d9d0b83b0c42c569fc42f8ecd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04b449b545fe7d175e4733b3f602c41c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymDetect.html#a04b449b545fe7d175e4733b3f602c41c">existNetPair</a> (std::vector&lt; <a class="el" href="classNetPair.html">NetPair</a> &gt; &amp;library, <a class="el" href="type_8h.html#a581e8093e28e7362f2b6937296190676">IndexType</a> netId) const</td></tr>
+<tr class="memdesc:a04b449b545fe7d175e4733b3f602c41c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if self symmetry <a class="el" href="classNet.html" title="Net class. ">Net</a> in library.  <a href="#a04b449b545fe7d175e4733b3f602c41c">More...</a><br /></td></tr>
+<tr class="separator:a04b449b545fe7d175e4733b3f602c41c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac46824a93f71489b6c9f1aec961a0f8d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymDetect.html#ac46824a93f71489b6c9f1aec961a0f8d">endSrch</a> (<a class="el" href="classMosPair.html">MosPair</a> &amp;obj) const</td></tr>
-<tr class="memdesc:ac46824a93f71489b6c9f1aec961a0f8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if pair already reached.  <a href="#ac46824a93f71489b6c9f1aec961a0f8d">More...</a><br /></td></tr>
+<tr class="memdesc:ac46824a93f71489b6c9f1aec961a0f8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if end of search path.  <a href="#ac46824a93f71489b6c9f1aec961a0f8d">More...</a><br /></td></tr>
 <tr class="separator:ac46824a93f71489b6c9f1aec961a0f8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4636f69ae0cad2fc23be2472c59ff4c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymDetect.html#ad4636f69ae0cad2fc23be2472c59ff4c">validSrchObj</a> (<a class="el" href="type_8h.html#a581e8093e28e7362f2b6937296190676">IndexType</a> instId1, <a class="el" href="type_8h.html#a581e8093e28e7362f2b6937296190676">IndexType</a> instId2, <a class="el" href="type_8h.html#a581e8093e28e7362f2b6937296190676">IndexType</a> srchPinId1, <a class="el" href="type_8h.html#a581e8093e28e7362f2b6937296190676">IndexType</a> srchPinId2) const</td></tr>
 <tr class="memdesc:ad4636f69ae0cad2fc23be2472c59ff4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if a valid pair.  <a href="#ad4636f69ae0cad2fc23be2472c59ff4c">More...</a><br /></td></tr>
@@ -112,18 +124,27 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a1153c5f98df1f6dde97ed3335367bb66"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymDetect.html#a1153c5f98df1f6dde97ed3335367bb66">validDiffPair</a> (<a class="el" href="type_8h.html#a581e8093e28e7362f2b6937296190676">IndexType</a> instId1, <a class="el" href="type_8h.html#a581e8093e28e7362f2b6937296190676">IndexType</a> instId2, <a class="el" href="type_8h.html#a581e8093e28e7362f2b6937296190676">IndexType</a> srchPinId1, <a class="el" href="type_8h.html#a581e8093e28e7362f2b6937296190676">IndexType</a> srchPinId2) const</td></tr>
 <tr class="memdesc:a1153c5f98df1f6dde97ed3335367bb66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if a valid DIFF_SOURCE gate connected.  <a href="#a1153c5f98df1f6dde97ed3335367bb66">More...</a><br /></td></tr>
 <tr class="separator:a1153c5f98df1f6dde97ed3335367bb66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee09c40b5606443e8aa9f30865dab600"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymDetect.html#aee09c40b5606443e8aa9f30865dab600">validNetPair</a> (<a class="el" href="type_8h.html#a581e8093e28e7362f2b6937296190676">IndexType</a> netId1, <a class="el" href="type_8h.html#a581e8093e28e7362f2b6937296190676">IndexType</a> netId2) const</td></tr>
+<tr class="memdesc:aee09c40b5606443e8aa9f30865dab600"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if a valid symmetry <a class="el" href="classNetPair.html" title="A pair of Net that are symmetric. ">NetPair</a>.  <a href="#aee09c40b5606443e8aa9f30865dab600">More...</a><br /></td></tr>
+<tr class="separator:aee09c40b5606443e8aa9f30865dab600"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f4cd1010a21da88d35abb89c6f33f00"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymDetect.html#a7f4cd1010a21da88d35abb89c6f33f00">pushNextSrchObj</a> (std::vector&lt; <a class="el" href="classMosPair.html">MosPair</a> &gt; &amp;dfsVstPair, std::vector&lt; <a class="el" href="classMosPair.html">MosPair</a> &gt; &amp;dfsStack, <a class="el" href="classMosPair.html">MosPair</a> &amp;currObj, std::vector&lt; <a class="el" href="classMosPair.html">MosPair</a> &gt; &amp;diffPairSrc) const</td></tr>
 <tr class="memdesc:a7f4cd1010a21da88d35abb89c6f33f00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Push next valid <a class="el" href="classMosPair.html" title="A pair of Mosfet with MosPattern. ">MosPair</a> to dfsStack.  <a href="#a7f4cd1010a21da88d35abb89c6f33f00">More...</a><br /></td></tr>
 <tr class="separator:a7f4cd1010a21da88d35abb89c6f33f00"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7d1b22086aa98a27b1eafc9266596d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymDetect.html#af7d1b22086aa98a27b1eafc9266596d8">getPatrnNetConn</a> (std::vector&lt; <a class="el" href="classMosPair.html">MosPair</a> &gt; &amp;diffPair, <a class="el" href="type_8h.html#a581e8093e28e7362f2b6937296190676">IndexType</a> netId, <a class="el" href="type_8h.html#af19eddb079bfea723256710b029c38e8">MosPattern</a> srchPatrn) const</td></tr>
-<tr class="memdesc:af7d1b22086aa98a27b1eafc9266596d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get srchPatrn <a class="el" href="classMosPair.html" title="A pair of Mosfet with MosPattern. ">MosPair</a> connected to netId.  <a href="#af7d1b22086aa98a27b1eafc9266596d8">More...</a><br /></td></tr>
-<tr class="separator:af7d1b22086aa98a27b1eafc9266596d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13ddc56c5e937097178352eb00d71cf3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymDetect.html#a13ddc56c5e937097178352eb00d71cf3">comBias</a> (<a class="el" href="classMosPair.html">MosPair</a> &amp;currObj) const</td></tr>
+<tr class="memdesc:a13ddc56c5e937097178352eb00d71cf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if currObj have common gate connection.  <a href="#a13ddc56c5e937097178352eb00d71cf3">More...</a><br /></td></tr>
+<tr class="separator:a13ddc56c5e937097178352eb00d71cf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79b9b8042087a413df53daf4e5600728"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymDetect.html#a79b9b8042087a413df53daf4e5600728">addBiasSym</a> (std::vector&lt; <a class="el" href="classMosPair.html">MosPair</a> &gt; &amp;dfsVstPair, <a class="el" href="classMosPair.html">MosPair</a> &amp;currObj) const</td></tr>
+<tr class="memdesc:a79b9b8042087a413df53daf4e5600728"><td class="mdescLeft">&#160;</td><td class="mdescRight">A special case where a symmetry pair is formed in the bias group.  <a href="#a79b9b8042087a413df53daf4e5600728">More...</a><br /></td></tr>
+<tr class="separator:a79b9b8042087a413df53daf4e5600728"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6d2ec13048f8f7e18e659bf8ac31dee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymDetect.html#aa6d2ec13048f8f7e18e659bf8ac31dee">getPatrnNetConn</a> (std::vector&lt; <a class="el" href="classMosPair.html">MosPair</a> &gt; &amp;diffPair, <a class="el" href="type_8h.html#a581e8093e28e7362f2b6937296190676">IndexType</a> netId, <a class="el" href="type_8h.html#af19eddb079bfea723256710b029c38e8">MosPattern</a> srchPatrn) const</td></tr>
+<tr class="memdesc:aa6d2ec13048f8f7e18e659bf8ac31dee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get srchPatrn <a class="el" href="classMosPair.html" title="A pair of Mosfet with MosPattern. ">MosPair</a> connected to netId.  <a href="#aa6d2ec13048f8f7e18e659bf8ac31dee">More...</a><br /></td></tr>
+<tr class="separator:aa6d2ec13048f8f7e18e659bf8ac31dee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af04b93dac7e090cef8e741d8d1812485"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymDetect.html#af04b93dac7e090cef8e741d8d1812485">getDiffPair</a> (std::vector&lt; <a class="el" href="classMosPair.html">MosPair</a> &gt; &amp;diffPair) const</td></tr>
 <tr class="memdesc:af04b93dac7e090cef8e741d8d1812485"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get valid DFS source of netlist.  <a href="#af04b93dac7e090cef8e741d8d1812485">More...</a><br /></td></tr>
 <tr class="separator:af04b93dac7e090cef8e741d8d1812485"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd33a2c834493240fc4e8840819d676c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymDetect.html#acd33a2c834493240fc4e8840819d676c">dfsDiffPair</a> (std::vector&lt; <a class="el" href="classMosPair.html">MosPair</a> &gt; &amp;dfsVstPair, <a class="el" href="classMosPair.html">MosPair</a> &amp;diffPair, std::vector&lt; <a class="el" href="classMosPair.html">MosPair</a> &gt; &amp;diffPairSrch) const</td></tr>
-<tr class="memdesc:acd33a2c834493240fc4e8840819d676c"><td class="mdescLeft">&#160;</td><td class="mdescRight">DFS search with given source. Visited <a class="el" href="classMosPair.html" title="A pair of Mosfet with MosPattern. ">MosPair</a> are stored.  <a href="#acd33a2c834493240fc4e8840819d676c">More...</a><br /></td></tr>
-<tr class="separator:acd33a2c834493240fc4e8840819d676c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a423022c08a31ef9361e1dfba843dc389"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymDetect.html#a423022c08a31ef9361e1dfba843dc389">dfsDiffPair</a> (std::vector&lt; <a class="el" href="classMosPair.html">MosPair</a> &gt; &amp;dfsVstPair, <a class="el" href="classMosPair.html">MosPair</a> &amp;diffPair, std::vector&lt; <a class="el" href="classMosPair.html">MosPair</a> &gt; &amp;diffPairSrch, std::vector&lt; <a class="el" href="classNetPair.html">NetPair</a> &gt; &amp;netPair) const</td></tr>
+<tr class="memdesc:a423022c08a31ef9361e1dfba843dc389"><td class="mdescLeft">&#160;</td><td class="mdescRight">DFS search with given source. Visited <a class="el" href="classMosPair.html" title="A pair of Mosfet with MosPattern. ">MosPair</a> are stored.  <a href="#a423022c08a31ef9361e1dfba843dc389">More...</a><br /></td></tr>
+<tr class="separator:a423022c08a31ef9361e1dfba843dc389"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6a1ba27f6768f215cba0623b6e2ce08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymDetect.html#ae6a1ba27f6768f215cba0623b6e2ce08">inVldDiffPairSrch</a> (std::vector&lt; <a class="el" href="classMosPair.html">MosPair</a> &gt; &amp;diffPairSrch, <a class="el" href="classMosPair.html">MosPair</a> &amp;currPair) const</td></tr>
 <tr class="memdesc:ae6a1ba27f6768f215cba0623b6e2ce08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invalidate visited pairs from sources.  <a href="#ae6a1ba27f6768f215cba0623b6e2ce08">More...</a><br /></td></tr>
 <tr class="separator:ae6a1ba27f6768f215cba0623b6e2ce08"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -136,6 +157,21 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:ac3075fde17fa6c33093a683b18f17086"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymDetect.html#ac3075fde17fa6c33093a683b18f17086">addSelfSym</a> (std::vector&lt; <a class="el" href="classMosPair.html">MosPair</a> &gt; &amp;dfsVstPair) const</td></tr>
 <tr class="memdesc:ac3075fde17fa6c33093a683b18f17086"><td class="mdescLeft">&#160;</td><td class="mdescRight">Top function to call to add self symmetry to already searched symmetry group.  <a href="#ac3075fde17fa6c33093a683b18f17086">More...</a><br /></td></tr>
 <tr class="separator:ac3075fde17fa6c33093a683b18f17086"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d47390c92f0bd31d1ab84f1a62d66e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymDetect.html#a3d47390c92f0bd31d1ab84f1a62d66e3">addSymNet</a> (std::vector&lt; <a class="el" href="classNetPair.html">NetPair</a> &gt; &amp;netPair, <a class="el" href="classMosPair.html">MosPair</a> &amp;currObj) const</td></tr>
+<tr class="memdesc:a3d47390c92f0bd31d1ab84f1a62d66e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Based on currObj symmetry <a class="el" href="classInst.html" title="Inst class. ">Inst</a> pair, valid symmetry nets are appended to netPair.  <a href="#a3d47390c92f0bd31d1ab84f1a62d66e3">More...</a><br /></td></tr>
+<tr class="separator:a3d47390c92f0bd31d1ab84f1a62d66e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c50f078fd01ab52e8f50b0507b69556"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymDetect.html#a4c50f078fd01ab52e8f50b0507b69556">flattenSymGroup</a> (std::vector&lt; std::vector&lt; <a class="el" href="classMosPair.html">MosPair</a> &gt;&gt; &amp;symGroup, std::vector&lt; <a class="el" href="classMosPair.html">MosPair</a> &gt; &amp;flatPair) const</td></tr>
+<tr class="memdesc:a4c50f078fd01ab52e8f50b0507b69556"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flatten symmetry group hierarchy into a single vector.  <a href="#a4c50f078fd01ab52e8f50b0507b69556">More...</a><br /></td></tr>
+<tr class="separator:a4c50f078fd01ab52e8f50b0507b69556"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18905625f000221a5d4fe3c7cfdb5e8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymDetect.html#a18905625f000221a5d4fe3c7cfdb5e8f">biasGroup</a> (std::vector&lt; <a class="el" href="classMosPair.html">MosPair</a> &gt; &amp;flatPair, std::vector&lt; <a class="el" href="classBias.html">Bias</a> &gt; &amp;biasGroup) const</td></tr>
+<tr class="memdesc:a18905625f000221a5d4fe3c7cfdb5e8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find all bias groups. All <a class="el" href="classMosPair.html" title="A pair of Mosfet with MosPattern. ">MosPair</a> in flattened symmetry group are first searched as source. For all valid bias search source that is comBias, bias groups would be saved to biasGroup.  <a href="#a18905625f000221a5d4fe3c7cfdb5e8f">More...</a><br /></td></tr>
+<tr class="separator:a18905625f000221a5d4fe3c7cfdb5e8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c7109dd0519c1c11765fe00f4a21fe2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymDetect.html#a4c7109dd0519c1c11765fe00f4a21fe2">biasMatch</a> (std::vector&lt; <a class="el" href="classBias.html">Bias</a> &gt; &amp;<a class="el" href="classSymDetect.html#a18905625f000221a5d4fe3c7cfdb5e8f">biasGroup</a>, std::vector&lt; std::vector&lt; <a class="el" href="classMosPair.html">MosPair</a> &gt;&gt; &amp;symGroup, std::vector&lt; <a class="el" href="classMosPair.html">MosPair</a> &gt; &amp;flatPair) const</td></tr>
+<tr class="memdesc:a4c7109dd0519c1c11765fe00f4a21fe2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search for symmetry pairs in each group.  <a href="#a4c7109dd0519c1c11765fe00f4a21fe2">More...</a><br /></td></tr>
+<tr class="separator:a4c7109dd0519c1c11765fe00f4a21fe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a961c1dec1cb00000c9ed107dedac50ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymDetect.html#a961c1dec1cb00000c9ed107dedac50ec">hiSymDetect</a> (std::vector&lt; std::vector&lt; <a class="el" href="classMosPair.html">MosPair</a> &gt;&gt; &amp;symGroup, std::vector&lt; <a class="el" href="classNetPair.html">NetPair</a> &gt; &amp;netPair) const</td></tr>
+<tr class="memdesc:a961c1dec1cb00000c9ed107dedac50ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hierarchy symmetry detection.  <a href="#a961c1dec1cb00000c9ed107dedac50ec">More...</a><br /></td></tr>
+<tr class="separator:a961c1dec1cb00000c9ed107dedac50ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -143,6 +179,16 @@ Private Attributes</h2></td></tr>
 <tr class="separator:aaa007c5c446ad65879c91e258542c9f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77937a3591871874553ea30e7d78fc2e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPattern.html">Pattern</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymDetect.html#a77937a3591871874553ea30e7d78fc2e">_pattern</a></td></tr>
 <tr class="separator:a77937a3591871874553ea30e7d78fc2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09a99c8eef474364f9fe2e27603ea686"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classNetPair.html">NetPair</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymDetect.html#a09a99c8eef474364f9fe2e27603ea686">_symNet</a></td></tr>
+<tr class="memdesc:a09a99c8eef474364f9fe2e27603ea686"><td class="mdescLeft">&#160;</td><td class="mdescRight">Symmetry nets of netlist.  <a href="#a09a99c8eef474364f9fe2e27603ea686">More...</a><br /></td></tr>
+<tr class="separator:a09a99c8eef474364f9fe2e27603ea686"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40ce15f1c812ec3d3338d82cbbffb029"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; <a class="el" href="classMosPair.html">MosPair</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymDetect.html#a40ce15f1c812ec3d3338d82cbbffb029">_symGroup</a></td></tr>
+<tr class="memdesc:a40ce15f1c812ec3d3338d82cbbffb029"><td class="mdescLeft">&#160;</td><td class="mdescRight">Symmetry groups of netlist.  <a href="#a40ce15f1c812ec3d3338d82cbbffb029">More...</a><br /></td></tr>
+<tr class="separator:a40ce15f1c812ec3d3338d82cbbffb029"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc727357719b1e8c5fbb03007dc88ce9"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classMosPair.html">MosPair</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymDetect.html#acc727357719b1e8c5fbb03007dc88ce9">_flatPair</a></td></tr>
+<tr class="separator:acc727357719b1e8c5fbb03007dc88ce9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6b079274a3c6ec5b1e275c14e319ab6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classBias.html">Bias</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymDetect.html#ad6b079274a3c6ec5b1e275c14e319ab6">_biasGroup</a></td></tr>
+<tr class="separator:ad6b079274a3c6ec5b1e275c14e319ab6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classSymDetect.html" title="SymDetect class. ">SymDetect</a> class. </p>
@@ -182,6 +228,44 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a79b9b8042087a413df53daf4e5600728"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79b9b8042087a413df53daf4e5600728">&#9670;&nbsp;</a></span>addBiasSym()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SymDetect::addBiasSym </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classMosPair.html">MosPair</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>dfsVstPair</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classMosPair.html">MosPair</a> &amp;&#160;</td>
+          <td class="paramname"><em>currObj</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A special case where a symmetry pair is formed in the bias group. </p>
+
+</div>
+</div>
 <a id="ac3075fde17fa6c33093a683b18f17086"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac3075fde17fa6c33093a683b18f17086">&#9670;&nbsp;</a></span>addSelfSym()</h2>
 
@@ -216,12 +300,187 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classSymDetect.html#ab6f286024b013fa257295111016da18b" title="Iteratively search for self symmetry given diffPair. ">selfSymSrch</a> </dd>
 <dd>
-<a class="el" href="classSymDetect.html#a81ec317ab0f508b3e0af483ef8a2c1ac" title="Hierarchy symmetry detection. ">hiSymDetect</a> </dd></dl>
+<a class="el" href="classSymDetect.html#a961c1dec1cb00000c9ed107dedac50ec" title="Hierarchy symmetry detection. ">hiSymDetect</a> </dd></dl>
 
 </div>
 </div>
-<a id="acd33a2c834493240fc4e8840819d676c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acd33a2c834493240fc4e8840819d676c">&#9670;&nbsp;</a></span>dfsDiffPair()</h2>
+<a id="a3d47390c92f0bd31d1ab84f1a62d66e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d47390c92f0bd31d1ab84f1a62d66e3">&#9670;&nbsp;</a></span>addSymNet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SymDetect::addSymNet </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classNetPair.html">NetPair</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>netPair</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classMosPair.html">MosPair</a> &amp;&#160;</td>
+          <td class="paramname"><em>currObj</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Based on currObj symmetry <a class="el" href="classInst.html" title="Inst class. ">Inst</a> pair, valid symmetry nets are appended to netPair. </p>
+<p>Valid symmetry net that are connected to symmetry <a class="el" href="classInst.html" title="Inst class. ">Inst</a> pair currObj would be added to vector.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classSymDetect.html#aee09c40b5606443e8aa9f30865dab600" title="Return true if a valid symmetry NetPair. ">validNetPair</a> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">netPair</td><td>Symmetry <a class="el" href="classNet.html" title="Net class. ">Net</a> appended to this vector. </td></tr>
+    <tr><td class="paramname">currObj</td><td>Current symmetry <a class="el" href="classInst.html" title="Inst class. ">Inst</a> pair. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a18905625f000221a5d4fe3c7cfdb5e8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18905625f000221a5d4fe3c7cfdb5e8f">&#9670;&nbsp;</a></span>biasGroup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SymDetect::biasGroup </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classMosPair.html">MosPair</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>flatPair</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classBias.html">Bias</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>biasGroup</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Find all bias groups. All <a class="el" href="classMosPair.html" title="A pair of Mosfet with MosPattern. ">MosPair</a> in flattened symmetry group are first searched as source. For all valid bias search source that is comBias, bias groups would be saved to biasGroup. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classSymDetect.html#a13ddc56c5e937097178352eb00d71cf3" title="Return true if currObj have common gate connection. ">comBias</a> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">flatPair</td><td>Input flattened symmetry group. </td></tr>
+    <tr><td class="paramname">biasGroup</td><td>Saved bias groups to vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4c7109dd0519c1c11765fe00f4a21fe2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c7109dd0519c1c11765fe00f4a21fe2">&#9670;&nbsp;</a></span>biasMatch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SymDetect::biasMatch </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classBias.html">Bias</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>biasGroup</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::vector&lt; <a class="el" href="classMosPair.html">MosPair</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>symGroup</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classMosPair.html">MosPair</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>flatPair</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Search for symmetry pairs in each group. </p>
+<p>New symmetry pairs are searched in the biasGroup.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">biasGroup</td><td>A vector of bias group. </td></tr>
+    <tr><td class="paramname">symGroup</td><td>Results appended to symGroup. </td></tr>
+    <tr><td class="paramname">flatPair</td><td>Used to check for redundancy. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a13ddc56c5e937097178352eb00d71cf3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13ddc56c5e937097178352eb00d71cf3">&#9670;&nbsp;</a></span>comBias()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SymDetect::comBias </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMosPair.html">MosPair</a> &amp;&#160;</td>
+          <td class="paramname"><em>currObj</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return true if currObj have common gate connection. </p>
+<p>This function is used to check if a <a class="el" href="classMosPair.html" title="A pair of Mosfet with MosPattern. ">MosPair</a> needs to search for a bias group. <a class="el" href="classMosPair.html" title="A pair of Mosfet with MosPattern. ">MosPair</a> should have following attributes: (1) <a class="el" href="type_8h.html#af19eddb079bfea723256710b029c38e8a615d2885ef7576cedd9aafbb2578f028">MosPattern::LOAD</a> or CASCODE (2) Both mosId are of <a class="el" href="type_8h.html#a34a6a66323cfecf83dfe00bc8fd96333aa2e1ec2dd3d8195d238c5494f0ac5578">MosType::DIFF</a> (3) Have common gate connection </p>
+
+</div>
+</div>
+<a id="a423022c08a31ef9361e1dfba843dc389"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a423022c08a31ef9361e1dfba843dc389">&#9670;&nbsp;</a></span>dfsDiffPair()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -245,7 +504,13 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::vector&lt; <a class="el" href="classMosPair.html">MosPair</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>diffPairSrch</em>&#160;</td>
+          <td class="paramname"><em>diffPairSrch</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classNetPair.html">NetPair</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>netPair</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -261,16 +526,57 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>DFS search with given source. Visited <a class="el" href="classMosPair.html" title="A pair of Mosfet with MosPattern. ">MosPair</a> are stored. </p>
-<p>Search for symmetry patterns in DFS manner with search source as diffPair. Store visited valid <a class="el" href="classMosPair.html" title="A pair of Mosfet with MosPattern. ">MosPair</a> at dfsVstPair. diffPairSrch are needed as input to invalidate reached sources. dfsVstPair would be in the same hierarchy symmetry group.</p>
+<p>Search for symmetry patterns in DFS manner with search source as diffPair. Store visited valid <a class="el" href="classMosPair.html" title="A pair of Mosfet with MosPattern. ">MosPair</a> at dfsVstPair. diffPairSrch are needed as input to invalidate reached sources. dfsVstPair would be in the same hierarchy symmetry group. All symmetry nets would be appended to netPair vector.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classSymDetect.html#a7f4cd1010a21da88d35abb89c6f33f00" title="Push next valid MosPair to dfsStack. ">pushNextSrchObj</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">dfsVstPair</td><td>Vector to store all visited <a class="el" href="classMosPair.html" title="A pair of Mosfet with MosPattern. ">MosPair</a> </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">diffPair</td><td>DFS search source </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">diffPairSrch</td><td>Vector of all stored DFS search source </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">netPair</td><td>Symmetry Nets. </td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="afe5e834e590ac2e055a17b6c951098d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe5e834e590ac2e055a17b6c951098d0">&#9670;&nbsp;</a></span>dumpNet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SymDetect::dumpNet </td>
+          <td>(</td>
+          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramname"><em>file</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dump symmetry net to file. </p>
+
+</div>
+</div>
+<a id="a12ab74214af31ed8fc5608e958e74786"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12ab74214af31ed8fc5608e958e74786">&#9670;&nbsp;</a></span>dumpSym()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_8h.html#ae48726a24dab2034454cf6d79e531eb8">PROJECT_NAMESPACE_BEGIN</a> void SymDetect::dumpSym </td>
+          <td>(</td>
+          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramname"><em>file</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dump symmetry constraint to file. </p>
 
 </div>
 </div>
@@ -298,9 +604,90 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Check if pair already reached. </p>
-<p>Return true if end of search path.</p>
+<p>Return true if end of search path. </p>
 <p>Current end search terminations: (1) Connected PASSIVE (2) DIFF_SOURCE reached through DRAIN (3) LOAD, CROSS_LOAD (4) gate connected pairs </p>
+
+</div>
+</div>
+<a id="a0e73f6d9d0b83b0c42c569fc42f8ecd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e73f6d9d0b83b0c42c569fc42f8ecd2">&#9670;&nbsp;</a></span>existNetPair() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SymDetect::existNetPair </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classNetPair.html">NetPair</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>library</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="type_8h.html#a581e8093e28e7362f2b6937296190676">IndexType</a>&#160;</td>
+          <td class="paramname"><em>netId1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="type_8h.html#a581e8093e28e7362f2b6937296190676">IndexType</a>&#160;</td>
+          <td class="paramname"><em>netId2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if already contains <a class="el" href="classNetPair.html" title="A pair of Net that are symmetric. ">NetPair</a> in library. </p>
+
+</div>
+</div>
+<a id="a04b449b545fe7d175e4733b3f602c41c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04b449b545fe7d175e4733b3f602c41c">&#9670;&nbsp;</a></span>existNetPair() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SymDetect::existNetPair </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classNetPair.html">NetPair</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>library</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="type_8h.html#a581e8093e28e7362f2b6937296190676">IndexType</a>&#160;</td>
+          <td class="paramname"><em>netId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if self symmetry <a class="el" href="classNet.html" title="Net class. ">Net</a> in library. </p>
 
 </div>
 </div>
@@ -344,7 +731,6 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>bool endSrch(IndexType mosId, PinType pinType) const; </p>
 <p>Check if pair already reached. </p>
 
 </div>
@@ -386,6 +772,44 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a4c50f078fd01ab52e8f50b0507b69556"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c50f078fd01ab52e8f50b0507b69556">&#9670;&nbsp;</a></span>flattenSymGroup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SymDetect::flattenSymGroup </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; std::vector&lt; <a class="el" href="classMosPair.html">MosPair</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>symGroup</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classMosPair.html">MosPair</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>flatPair</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Flatten symmetry group hierarchy into a single vector. </p>
+
+</div>
+</div>
 <a id="af04b93dac7e090cef8e741d8d1812485"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af04b93dac7e090cef8e741d8d1812485">&#9670;&nbsp;</a></span>getDiffPair()</h2>
 
@@ -422,8 +846,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="af7d1b22086aa98a27b1eafc9266596d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af7d1b22086aa98a27b1eafc9266596d8">&#9670;&nbsp;</a></span>getPatrnNetConn()</h2>
+<a id="aa6d2ec13048f8f7e18e659bf8ac31dee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6d2ec13048f8f7e18e659bf8ac31dee">&#9670;&nbsp;</a></span>getPatrnNetConn()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -432,7 +856,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_8h.html#ae48726a24dab2034454cf6d79e531eb8">PROJECT_NAMESPACE_BEGIN</a> void SymDetect::getPatrnNetConn </td>
+          <td class="memname">void SymDetect::getPatrnNetConn </td>
           <td>(</td>
           <td class="paramtype">std::vector&lt; <a class="el" href="classMosPair.html">MosPair</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>diffPair</em>, </td>
@@ -520,24 +944,43 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a81ec317ab0f508b3e0af483ef8a2c1ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a81ec317ab0f508b3e0af483ef8a2c1ac">&#9670;&nbsp;</a></span>hiSymDetect()</h2>
+<a id="a961c1dec1cb00000c9ed107dedac50ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a961c1dec1cb00000c9ed107dedac50ec">&#9670;&nbsp;</a></span>hiSymDetect()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void SymDetect::hiSymDetect </td>
           <td>(</td>
           <td class="paramtype">std::vector&lt; std::vector&lt; <a class="el" href="classMosPair.html">MosPair</a> &gt;&gt; &amp;&#160;</td>
-          <td class="paramname"><em>symGroup</em></td><td>)</td>
-          <td> const</td>
+          <td class="paramname"><em>symGroup</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classNetPair.html">NetPair</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>netPair</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Hierarchy symmetry detection. </p>
 <p>Output would contain 2 levels of hierarchy. symGroup is a vector of std::vector&lt;MosPair&gt; oneGroup. Where oneGroup is a group of <a class="el" href="classMosPair.html" title="A pair of Mosfet with MosPattern. ">MosPair</a> in the same symmetry group. Each <a class="el" href="classMosPair.html" title="A pair of Mosfet with MosPattern. ">MosPair</a> should follow a MosPattern, or it should be of self symmetry. This funtion has been also updated to contain basic passive pair symmetry.</p>
+<p>Symmetry Nets would be added to vector netPair.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">symGroup</td><td>Detected symmetry groups of netlist. </td></tr>
@@ -621,6 +1064,25 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Return pattern of <a class="el" href="classMosPair.html" title="A pair of Mosfet with MosPattern. ">MosPair</a>. </p>
+
+</div>
+</div>
+<a id="a3e0354c4c11fe698377a4688c52fd533"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e0354c4c11fe698377a4688c52fd533">&#9670;&nbsp;</a></span>print()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SymDetect::print </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Print symGroup for netlist. </p>
 
 </div>
 </div>
@@ -798,6 +1260,53 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="aee09c40b5606443e8aa9f30865dab600"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee09c40b5606443e8aa9f30865dab600">&#9670;&nbsp;</a></span>validNetPair()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SymDetect::validNetPair </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="type_8h.html#a581e8093e28e7362f2b6937296190676">IndexType</a>&#160;</td>
+          <td class="paramname"><em>netId1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="type_8h.html#a581e8093e28e7362f2b6937296190676">IndexType</a>&#160;</td>
+          <td class="paramname"><em>netId2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return true if a valid symmetry <a class="el" href="classNetPair.html" title="A pair of Net that are symmetric. ">NetPair</a>. </p>
+<p>A <a class="el" href="classNetPair.html" title="A pair of Net that are symmetric. ">NetPair</a> is a pair of symmetry nets. Symmetry nets connected <a class="el" href="classInst.html" title="Inst class. ">Inst</a> need to be all grouped into symmetry pairs. The current implementation is very naive and only checks that pin numbers are equal.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classNetPair.html" title="A pair of Net that are symmetric. ">NetPair</a> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">netId1</td><td>Id of Net1. </td></tr>
+    <tr><td class="paramname">netId2</td><td>Id of Net2. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ad4636f69ae0cad2fc23be2472c59ff4c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad4636f69ae0cad2fc23be2472c59ff4c">&#9670;&nbsp;</a></span>validSrchObj()</h2>
 
@@ -859,6 +1368,50 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="ad6b079274a3c6ec5b1e275c14e319ab6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6b079274a3c6ec5b1e275c14e319ab6">&#9670;&nbsp;</a></span>_biasGroup</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="classBias.html">Bias</a>&gt; SymDetect::_biasGroup</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acc727357719b1e8c5fbb03007dc88ce9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc727357719b1e8c5fbb03007dc88ce9">&#9670;&nbsp;</a></span>_flatPair</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="classMosPair.html">MosPair</a>&gt; SymDetect::_flatPair</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="aaa007c5c446ad65879c91e258542c9f3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaa007c5c446ad65879c91e258542c9f3">&#9670;&nbsp;</a></span>_netlist</h2>
 
@@ -900,6 +1453,54 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a40ce15f1c812ec3d3338d82cbbffb029"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40ce15f1c812ec3d3338d82cbbffb029">&#9670;&nbsp;</a></span>_symGroup</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::vector&lt;<a class="el" href="classMosPair.html">MosPair</a>&gt; &gt; SymDetect::_symGroup</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Symmetry groups of netlist. </p>
+
+</div>
+</div>
+<a id="a09a99c8eef474364f9fe2e27603ea686"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09a99c8eef474364f9fe2e27603ea686">&#9670;&nbsp;</a></span>_symNet</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="classNetPair.html">NetPair</a>&gt; SymDetect::_symNet</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Symmetry nets of netlist. </p>
 
 </div>
 </div>

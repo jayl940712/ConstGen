@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['symdetect',['SymDetect',['../classSymDetect.html',1,'']]]
+  ['pattern',['Pattern',['../classPattern.html',1,'']]],
+  ['pin',['Pin',['../classPin.html',1,'']]]
 ];

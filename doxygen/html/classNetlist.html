@@ -146,8 +146,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a525b81a4d2bba3c381c9d76be91acba8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filter instArray. Remove <a class="el" href="classInst.html" title="Inst class. ">Inst</a> that are connected to netId through connPinType.  <a href="#a525b81a4d2bba3c381c9d76be91acba8">More...</a><br /></td></tr>
 <tr class="separator:a525b81a4d2bba3c381c9d76be91acba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5efc5375bb3c58e71e068278eadb4764"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNetlist.html#a5efc5375bb3c58e71e068278eadb4764">fltrInstMosType</a> (std::vector&lt; <a class="el" href="type_8h.html#a581e8093e28e7362f2b6937296190676">IndexType</a> &gt; &amp;instArray, <a class="el" href="type_8h.html#a34a6a66323cfecf83dfe00bc8fd96333">MosType</a> <a class="el" href="classNetlist.html#a3dba84b8588a528e42b066083744958f">mosType</a>) const</td></tr>
-<tr class="memdesc:a5efc5375bb3c58e71e068278eadb4764"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filter instArray. Remove <a class="el" href="classInst.html" title="Inst class. ">Inst</a> whose type are mosType.  <a href="#a5efc5375bb3c58e71e068278eadb4764">More...</a><br /></td></tr>
+<tr class="memdesc:a5efc5375bb3c58e71e068278eadb4764"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filter instArray. Remove Mosfet <a class="el" href="classInst.html" title="Inst class. ">Inst</a> whose type are not mosType.  <a href="#a5efc5375bb3c58e71e068278eadb4764">More...</a><br /></td></tr>
 <tr class="separator:a5efc5375bb3c58e71e068278eadb4764"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a384627c3bc5a55625a47465771361c08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNetlist.html#a384627c3bc5a55625a47465771361c08">fltrInstType</a> (std::vector&lt; <a class="el" href="type_8h.html#a581e8093e28e7362f2b6937296190676">IndexType</a> &gt; &amp;instArray, <a class="el" href="type_8h.html#a53644c687d6bc203d9d3d3ee70075f61">InstType</a> type) const</td></tr>
+<tr class="memdesc:a384627c3bc5a55625a47465771361c08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filter instArray. Remove <a class="el" href="classInst.html" title="Inst class. ">Inst</a> whose type are not type.  <a href="#a384627c3bc5a55625a47465771361c08">More...</a><br /></td></tr>
+<tr class="separator:a384627c3bc5a55625a47465771361c08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0aac5b79ca1a820f0adc7b79f1b0520d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classPin.html">Pin</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNetlist.html#a0aac5b79ca1a820f0adc7b79f1b0520d">pin</a> (<a class="el" href="type_8h.html#a581e8093e28e7362f2b6937296190676">IndexType</a> id) const</td></tr>
 <tr class="memdesc:a0aac5b79ca1a820f0adc7b79f1b0520d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return <a class="el" href="classPin.html" title="Pin class. ">Pin</a> of Id.  <a href="#a0aac5b79ca1a820f0adc7b79f1b0520d">More...</a><br /></td></tr>
 <tr class="separator:a0aac5b79ca1a820f0adc7b79f1b0520d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -355,8 +358,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Filter instArray. Remove <a class="el" href="classInst.html" title="Inst class. ">Inst</a> whose type are mosType. </p>
-<p>Removed instId if mosType(instId) == mosType. O(n) complexity. Similar implementation of std::remove().</p>
+<p>Filter instArray. Remove Mosfet <a class="el" href="classInst.html" title="Inst class. ">Inst</a> whose type are not mosType. </p>
+<p>Removed instId if mosType(instId) != mosType. O(n) complexity. Similar implementation of std::remove().</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classNetlist.html#a6bc6f9666ed8c833b967c38f2e164a1e" title="Get PinType of a pin such that Inst and Net are connected through this pin. ">getPinTypeInstNetConn</a>. </dd></dl>
 
 </div>
@@ -434,6 +437,37 @@ Private Attributes</h2></td></tr>
 <p>Filter instArray. Remove <a class="el" href="classInst.html" title="Inst class. ">Inst</a> that are connected to pinId through connPinType. </p>
 <p>Removed instId if getPinTypeInstPinConn(instId, pinId) == connPinType. O(n) complexity. Similar implementation of std::remove().</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classNetlist.html#a27d477f7bd6fffd915015dbd3b3a0649" title="Get PinType of a pin such that Inst and Pin are connected through this pin. ">getPinTypeInstPinConn</a>. </dd></dl>
+
+</div>
+</div>
+<a id="a384627c3bc5a55625a47465771361c08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a384627c3bc5a55625a47465771361c08">&#9670;&nbsp;</a></span>fltrInstType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Netlist::fltrInstType </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="type_8h.html#a581e8093e28e7362f2b6937296190676">IndexType</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>instArray</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="type_8h.html#a53644c687d6bc203d9d3d3ee70075f61">InstType</a>&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Filter instArray. Remove <a class="el" href="classInst.html" title="Inst class. ">Inst</a> whose type are not type. </p>
+<p>Removed instId if InstType of instance is different from input type. </p>
 
 </div>
 </div>
