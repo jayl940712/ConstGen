@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.21)  11 DEC 2018 21:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.21)  12 DEC 2018 16:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1249,50 +1249,50 @@ Chapter 2.
 (./files.tex [3]) [4]
 Chapter 3.
 (./classBias.tex
-<classBias__coll__graph.pdf, id=1751, 138.5175pt x 167.62625pt>
+<classBias__coll__graph.pdf, id=1756, 138.5175pt x 167.62625pt>
 File: classBias__coll__graph.pdf Graphic file (type pdf)
 
 <use classBias__coll__graph.pdf>
-Package pdftex.def Info: classBias__coll__graph.pdf used on input line 19.
+Package pdftex.def Info: classBias__coll__graph.pdf used on input line 18.
 (pdftex.def)             Requested size: 138.0pt x 167.00172pt.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 22.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 21.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 10.79993pt on input line 22.
+(Font)              scaled to size 10.79993pt on input line 21.
 LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
-(Font)              scaled to size 10.79993pt on input line 22.
-LaTeX Font Info:    Try loading font information for TS1+phv on input line 25.
+(Font)              scaled to size 10.79993pt on input line 21.
+LaTeX Font Info:    Try loading font information for TS1+phv on input line 24.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1phv.fd
 File: ts1phv.fd 2001/06/04 scalable font definitions for TS1/phv.
 )
 LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 25.
+(Font)              scaled to size 8.99994pt on input line 24.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.09995pt on input line 26.
+(Font)              scaled to size 8.09995pt on input line 25.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 26.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 25.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 8.09995pt on input line 26.
+(Font)              scaled to size 8.09995pt on input line 25.
  [5
 
  <./classBias__coll__graph.pdf>]
 LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
-(Font)              scaled to size 8.99994pt on input line 59.
+(Font)              scaled to size 8.99994pt on input line 58.
 LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
-(Font)              scaled to size 7.19995pt on input line 59.
+(Font)              scaled to size 7.19995pt on input line 58.
 
 
 LaTeX Font Warning: Font shape `T1/pcr/bc/n' undefined
-(Font)              using `T1/pcr/m/n' instead on input line 59.
+(Font)              using `T1/pcr/m/n' instead on input line 58.
 
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 70.
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 69.
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <7> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 70.
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 69.
 [6]
 LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
-(Font)              scaled to size 6.29996pt on input line 126.
+(Font)              scaled to size 6.29996pt on input line 125.
 ) (./structNetlist_1_1InitDataObj.tex [7]
 Underfull \hbox (badness 10000) detected at line 24
 [][][]
@@ -1300,7 +1300,7 @@ Underfull \hbox (badness 10000) detected at line 24
 
 ) (./structNetlist_1_1InitInst.tex [8]) (./structNetlist_1_1InitNet.tex
 [9]) (./classInitNetlist.tex
-<classInitNetlist__coll__graph.pdf, id=1887, 159.59625pt x 167.62625pt>
+<classInitNetlist__coll__graph.pdf, id=1892, 159.59625pt x 167.62625pt>
 File: classInitNetlist__coll__graph.pdf Graphic file (type pdf)
 
 <use classInitNetlist__coll__graph.pdf>
@@ -1376,7 +1376,7 @@ Underfull \hbox (badness 10000) detected at line 484
  []
 
 [34]) (./classNetPair.tex [35] [36]) (./classPattern.tex
-<classPattern__coll__graph.pdf, id=2678, 139.52126pt x 167.62625pt>
+<classPattern__coll__graph.pdf, id=2683, 139.52126pt x 167.62625pt>
 File: classPattern__coll__graph.pdf Graphic file (type pdf)
 
 <use classPattern__coll__graph.pdf>
@@ -1404,7 +1404,7 @@ Underfull \hbox (badness 10000) detected at line 151
  []
 
 ) (./classSymDetect.tex
-<classSymDetect__coll__graph.pdf, id=2915, 198.7425pt x 234.8775pt>
+<classSymDetect__coll__graph.pdf, id=2920, 198.7425pt x 234.8775pt>
 File: classSymDetect__coll__graph.pdf Graphic file (type pdf)
 
 <use classSymDetect__coll__graph.pdf>
@@ -1415,136 +1415,140 @@ Package pdftex.def Info: classSymDetect__coll__graph.pdf used on input line 18.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [47]
-Underfull \hbox (badness 10000) detected at line 149
+Underfull \hbox (badness 10000) detected at line 151
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 166
+Underfull \hbox (badness 10000) detected at line 168
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 186
-[][][]
- []
-
-[48]
-Underfull \hbox (badness 10000) detected at line 239
+Underfull \hbox (badness 10000) detected at line 192
 [][][]
  []
 
 
-Overfull \vbox (43.10597pt too high) has occurred while \output is active []
+Overfull \vbox (6.92397pt too high) has occurred while \output is active []
 
 
-[49] [50]
-Underfull \hbox (badness 10000) detected at line 341
+[48] [49]
+Underfull \hbox (badness 10000) detected at line 257
+[][][]
+ []
+
+[50]
+Underfull \hbox (badness 10000) detected at line 357
 [][][]
  []
 
 [51] [52]
-Underfull \hbox (badness 10000) detected at line 406
+Underfull \hbox (badness 10000) detected at line 420
 [][][]
  []
 
 [53]
-Underfull \hbox (badness 10000) detected at line 462
+Underfull \hbox (badness 10000) detected at line 476
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 499
+Underfull \hbox (badness 10000) detected at line 513
 [][][]
  []
 
 [54]
-Underfull \hbox (badness 10000) detected at line 516
+Underfull \hbox (badness 10000) detected at line 530
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 542
+Underfull \hbox (badness 10000) detected at line 556
 [][][]
  []
 
-[55] [56]) [57] [58
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [55]
+[56]) [57] [58
 
 ]
 Chapter 4.
-(./Bias_8cpp.tex <Bias_8cpp__incl.pdf, id=3288, 442.65375pt x 550.055pt>
+(./Bias_8cpp.tex <Bias_8cpp__incl.pdf, id=3299, 442.65375pt x 550.055pt>
 File: Bias_8cpp__incl.pdf Graphic file (type pdf)
 
 <use Bias_8cpp__incl.pdf>
-Package pdftex.def Info: Bias_8cpp__incl.pdf used on input line 14.
+Package pdftex.def Info: Bias_8cpp__incl.pdf used on input line 13.
 (pdftex.def)             Requested size: 350.0pt x 434.94156pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [59]
-Underfull \hbox (badness 10000) detected at line 22
+Underfull \hbox (badness 10000) detected at line 21
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 25
+Underfull \hbox (badness 10000) detected at line 24
 [][][]
  []
 
-) (./Bias_8h.tex <Bias_8h__incl.pdf, id=3296, 442.65375pt x 493.845pt>
+) (./Bias_8h.tex <Bias_8h__incl.pdf, id=3307, 442.65375pt x 493.845pt>
 File: Bias_8h__incl.pdf Graphic file (type pdf)
 
 <use Bias_8h__incl.pdf>
-Package pdftex.def Info: Bias_8h__incl.pdf used on input line 16.
+Package pdftex.def Info: Bias_8h__incl.pdf used on input line 15.
 (pdftex.def)             Requested size: 350.0pt x 390.49496pt.
  [60 <./Bias_8cpp__incl.pdf>]
-<Bias_8h__dep__incl.pdf, id=3308, 406.51875pt x 212.795pt>
+<Bias_8h__dep__incl.pdf, id=3319, 406.51875pt x 212.795pt>
 File: Bias_8h__dep__incl.pdf Graphic file (type pdf)
 
 <use Bias_8h__dep__incl.pdf>
-Package pdftex.def Info: Bias_8h__dep__incl.pdf used on input line 24.
+Package pdftex.def Info: Bias_8h__dep__incl.pdf used on input line 22.
 (pdftex.def)             Requested size: 350.0pt x 183.21767pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [61 <./Bias_8h__incl.pdf>]
-Underfull \hbox (badness 10000) detected at line 37
+Underfull \hbox (badness 10000) detected at line 35
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 40
+Underfull \hbox (badness 10000) detected at line 38
 [][][]
  []
 
-) (./Inst_8h.tex <Inst_8h__incl.pdf, id=3322, 331.2375pt x 269.005pt>
+) (./Inst_8h.tex <Inst_8h__incl.pdf, id=3333, 331.2375pt x 269.005pt>
 File: Inst_8h__incl.pdf Graphic file (type pdf)
 
 <use Inst_8h__incl.pdf>
 Package pdftex.def Info: Inst_8h__incl.pdf used on input line 15.
 (pdftex.def)             Requested size: 330.0pt x 268.01099pt.
  [62 <./Bias_8h__dep__incl.pdf>]
-<Inst_8h__dep__incl.pdf, id=3336, 727.71875pt x 437.635pt>
+<Inst_8h__dep__incl.pdf, id=3347, 727.71875pt x 437.635pt>
 File: Inst_8h__dep__incl.pdf Graphic file (type pdf)
 
 <use Inst_8h__dep__incl.pdf>
-Package pdftex.def Info: Inst_8h__dep__incl.pdf used on input line 23.
+Package pdftex.def Info: Inst_8h__dep__incl.pdf used on input line 22.
 (pdftex.def)             Requested size: 350.0pt x 210.48978pt.
  [63 <./Inst_8h__incl.pdf> <./Inst_8h__dep__incl.pdf
 
 pdfTeX warning: pdflatex (file ./Inst_8h__dep__incl.pdf): PDF inclusion: multip
 le pdfs with page group included in a single page
 >]
-Underfull \hbox (badness 10000) detected at line 36
+Underfull \hbox (badness 10000) detected at line 35
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 39
+Underfull \hbox (badness 10000) detected at line 38
 [][][]
  []
 
-) (./MosPair_8cpp.tex <MosPair_8cpp__incl.pdf, id=3358, 445.665pt x 493.845pt>
+) (./MosPair_8cpp.tex <MosPair_8cpp__incl.pdf, id=3369, 445.665pt x 493.845pt>
 File: MosPair_8cpp__incl.pdf Graphic file (type pdf)
 
 <use MosPair_8cpp__incl.pdf>
@@ -1560,30 +1564,30 @@ Underfull \hbox (badness 10000) detected at line 24
 [][][]
  []
 
-) (./MosPair_8h.tex <MosPair_8h__incl.pdf, id=3371, 440.64626pt x 437.635pt>
+) (./MosPair_8h.tex <MosPair_8h__incl.pdf, id=3382, 440.64626pt x 437.635pt>
 File: MosPair_8h__incl.pdf Graphic file (type pdf)
 
 <use MosPair_8h__incl.pdf>
 Package pdftex.def Info: MosPair_8h__incl.pdf used on input line 14.
 (pdftex.def)             Requested size: 350.0pt x 347.61766pt.
 
-<MosPair_8h__dep__incl.pdf, id=3372, 406.51875pt x 269.005pt>
+<MosPair_8h__dep__incl.pdf, id=3383, 406.51875pt x 269.005pt>
 File: MosPair_8h__dep__incl.pdf Graphic file (type pdf)
 
 <use MosPair_8h__dep__incl.pdf>
-Package pdftex.def Info: MosPair_8h__dep__incl.pdf used on input line 22.
+Package pdftex.def Info: MosPair_8h__dep__incl.pdf used on input line 21.
 (pdftex.def)             Requested size: 350.0pt x 231.61479pt.
  [65 <./MosPair_8h__incl.pdf>]
-Underfull \hbox (badness 10000) detected at line 35
+Underfull \hbox (badness 10000) detected at line 34
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 38
+Underfull \hbox (badness 10000) detected at line 37
 [][][]
  []
 
-) (./Net_8cpp.tex <Net_8cpp__incl.pdf, id=3387, 331.2375pt x 325.215pt>
+) (./Net_8cpp.tex <Net_8cpp__incl.pdf, id=3398, 331.2375pt x 325.215pt>
 File: Net_8cpp__incl.pdf Graphic file (type pdf)
 
 <use Net_8cpp__incl.pdf>
@@ -1614,30 +1618,30 @@ OML/cmm/m/it/8 >$ \T1/pcr/bc/n/8 P[]O[]W[]E[]R[]_[][]N[]E[]T[]_[][]N[]A[]M[]ES
 = {"vdd", "V[]DD", "Vdd",
  []
 
-) (./Net_8h.tex <Net_8h__incl.pdf, id=3420, 331.2375pt x 269.005pt>
+) (./Net_8h.tex <Net_8h__incl.pdf, id=3431, 331.2375pt x 269.005pt>
 File: Net_8h__incl.pdf Graphic file (type pdf)
 
 <use Net_8h__incl.pdf>
 Package pdftex.def Info: Net_8h__incl.pdf used on input line 15.
 (pdftex.def)             Requested size: 330.0pt x 268.01099pt.
 
-<Net_8h__dep__incl.pdf, id=3421, 727.71875pt x 437.635pt>
+<Net_8h__dep__incl.pdf, id=3432, 727.71875pt x 437.635pt>
 File: Net_8h__dep__incl.pdf Graphic file (type pdf)
 
 <use Net_8h__dep__incl.pdf>
-Package pdftex.def Info: Net_8h__dep__incl.pdf used on input line 23.
+Package pdftex.def Info: Net_8h__dep__incl.pdf used on input line 22.
 (pdftex.def)             Requested size: 350.0pt x 210.48978pt.
  [68 <./Net_8h__incl.pdf>]
-Underfull \hbox (badness 10000) detected at line 36
+Underfull \hbox (badness 10000) detected at line 35
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 39
+Underfull \hbox (badness 10000) detected at line 38
 [][][]
  []
 
-) (./Netlist_8cpp.tex <Netlist_8cpp__incl.pdf, id=3437, 389.455pt x 381.425pt>
+) (./Netlist_8cpp.tex <Netlist_8cpp__incl.pdf, id=3449, 389.455pt x 381.425pt>
 File: Netlist_8cpp__incl.pdf Graphic file (type pdf)
 
 <use Netlist_8cpp__incl.pdf>
@@ -1661,57 +1665,57 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--43
 n[]
  []
 
-) (./Netlist_8h.tex <Netlist_8h__incl.pdf, id=3497, 389.455pt x 325.215pt>
+) (./Netlist_8h.tex <Netlist_8h__incl.pdf, id=3508, 389.455pt x 325.215pt>
 File: Netlist_8h__incl.pdf Graphic file (type pdf)
 
 <use Netlist_8h__incl.pdf>
 Package pdftex.def Info: Netlist_8h__incl.pdf used on input line 18.
 (pdftex.def)             Requested size: 350.0pt x 292.27892pt.
 
-<Netlist_8h__dep__incl.pdf, id=3498, 727.71875pt x 381.425pt>
+<Netlist_8h__dep__incl.pdf, id=3509, 727.71875pt x 381.425pt>
 File: Netlist_8h__dep__incl.pdf Graphic file (type pdf)
 
 <use Netlist_8h__dep__incl.pdf>
-Package pdftex.def Info: Netlist_8h__dep__incl.pdf used on input line 26.
+Package pdftex.def Info: Netlist_8h__dep__incl.pdf used on input line 25.
 (pdftex.def)             Requested size: 350.0pt x 183.45439pt.
  [71 <./Netlist_8h__incl.pdf>]
-Underfull \hbox (badness 10000) detected at line 45
+Underfull \hbox (badness 10000) detected at line 44
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 48
+Underfull \hbox (badness 10000) detected at line 47
 [][][]
  []
 
-) (./NetPair_8h.tex <NetPair_8h__incl.pdf, id=3521, 236.885pt x 269.005pt>
+) (./NetPair_8h.tex <NetPair_8h__incl.pdf, id=3532, 236.885pt x 269.005pt>
 File: NetPair_8h__incl.pdf Graphic file (type pdf)
 
 <use NetPair_8h__incl.pdf>
-Package pdftex.def Info: NetPair_8h__incl.pdf used on input line 14.
+Package pdftex.def Info: NetPair_8h__incl.pdf used on input line 13.
 (pdftex.def)             Requested size: 236.0pt x 268.00688pt.
  [72 <./Netlist_8h__dep__incl.pdf>]
-<NetPair_8h__dep__incl.pdf, id=3534, 351.3125pt x 212.795pt>
+<NetPair_8h__dep__incl.pdf, id=3545, 351.3125pt x 212.795pt>
 File: NetPair_8h__dep__incl.pdf Graphic file (type pdf)
 
 <use NetPair_8h__dep__incl.pdf>
-Package pdftex.def Info: NetPair_8h__dep__incl.pdf used on input line 22.
+Package pdftex.def Info: NetPair_8h__dep__incl.pdf used on input line 20.
 (pdftex.def)             Requested size: 350.0pt x 212.01518pt.
  [73 <./NetPair_8h__incl.pdf> <./NetPair_8h__dep__incl.pdf
 
 pdfTeX warning: pdflatex (file ./NetPair_8h__dep__incl.pdf): PDF inclusion: mul
 tiple pdfs with page group included in a single page
 >]
-Underfull \hbox (badness 10000) detected at line 35
+Underfull \hbox (badness 10000) detected at line 33
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 38
+Underfull \hbox (badness 10000) detected at line 36
 [][][]
  []
 
-) (./Pin_8cpp.tex <Pin_8cpp__incl.pdf, id=3557, 270.00874pt x 325.215pt>
+) (./Pin_8cpp.tex <Pin_8cpp__incl.pdf, id=3568, 270.00874pt x 325.215pt>
 File: Pin_8cpp__incl.pdf Graphic file (type pdf)
 
 <use Pin_8cpp__incl.pdf>
@@ -1728,50 +1732,67 @@ Underfull \hbox (badness 10000) detected at line 24
  []
 
 ) (./Pin_8h.tex [74 <./Pin_8cpp__incl.pdf>]
-<Pin_8h__incl.pdf, id=3571, 270.00874pt x 269.005pt>
+<Pin_8h__incl.pdf, id=3582, 270.00874pt x 269.005pt>
 File: Pin_8h__incl.pdf Graphic file (type pdf)
  <use Pin_8h__incl.pdf>
 Package pdftex.def Info: Pin_8h__incl.pdf used on input line 14.
 (pdftex.def)             Requested size: 269.0pt x 268.00688pt.
 
-<Pin_8h__dep__incl.pdf, id=3572, 727.71875pt x 437.635pt>
+<Pin_8h__dep__incl.pdf, id=3583, 727.71875pt x 437.635pt>
 File: Pin_8h__dep__incl.pdf Graphic file (type pdf)
 
 <use Pin_8h__dep__incl.pdf>
-Package pdftex.def Info: Pin_8h__dep__incl.pdf used on input line 22.
+Package pdftex.def Info: Pin_8h__dep__incl.pdf used on input line 21.
 (pdftex.def)             Requested size: 350.0pt x 210.48978pt.
  [75 <./Pin_8h__incl.pdf> <./Pin_8h__dep__incl.pdf
 
 pdfTeX warning: pdflatex (file ./Pin_8h__dep__incl.pdf): PDF inclusion: multipl
 e pdfs with page group included in a single page
 >]
-Underfull \hbox (badness 10000) detected at line 35
+Underfull \hbox (badness 10000) detected at line 34
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 38
+Underfull \hbox (badness 10000) detected at line 37
 [][][]
  []
 
-) (./global_8h.tex <global_8h__incl.pdf, id=3594, 184.69pt x 156.585pt>
+) (./global_8h.tex <global_8h__incl.pdf, id=3605, 184.69pt x 156.585pt>
 File: global_8h__incl.pdf Graphic file (type pdf)
 
 <use global_8h__incl.pdf>
 Package pdftex.def Info: global_8h__incl.pdf used on input line 13.
 (pdftex.def)             Requested size: 184.0pt x 156.00162pt.
 
-<global_8h__dep__incl.pdf, id=3595, 814.04124pt x 550.055pt>
+<global_8h__dep__incl.pdf, id=3606, 814.04124pt x 550.055pt>
 File: global_8h__dep__incl.pdf Graphic file (type pdf)
 
 <use global_8h__dep__incl.pdf>
-Package pdftex.def Info: global_8h__dep__incl.pdf used on input line 21.
+Package pdftex.def Info: global_8h__dep__incl.pdf used on input line 20.
 (pdftex.def)             Requested size: 350.0pt x 236.49385pt.
  [76 <./global_8h__incl.pdf> <./global_8h__dep__incl.pdf
 
 pdfTeX warning: pdflatex (file ./global_8h__dep__incl.pdf): PDF inclusion: mult
 iple pdfs with page group included in a single page
 >]
+Underfull \hbox (badness 10000) detected at line 28
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 31
+[][][]
+ []
+
+) (./namespace_8h.tex
+<namespace_8h__dep__incl.pdf, id=3624, 814.04124pt x 606.265pt>
+File: namespace_8h__dep__incl.pdf Graphic file (type pdf)
+
+<use namespace_8h__dep__incl.pdf>
+Package pdftex.def Info: namespace_8h__dep__incl.pdf used on input line 12.
+(pdftex.def)             Requested size: 350.0pt x 260.66112pt.
+
 Underfull \hbox (badness 10000) detected at line 29
 [][][]
  []
@@ -1781,79 +1802,62 @@ Underfull \hbox (badness 10000) detected at line 32
 [][][]
  []
 
-) (./namespace_8h.tex
-<namespace_8h__dep__incl.pdf, id=3613, 814.04124pt x 606.265pt>
-File: namespace_8h__dep__incl.pdf Graphic file (type pdf)
-
-<use namespace_8h__dep__incl.pdf>
-Package pdftex.def Info: namespace_8h__dep__incl.pdf used on input line 13.
-(pdftex.def)             Requested size: 350.0pt x 260.66112pt.
-
-Underfull \hbox (badness 10000) detected at line 30
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 33
-[][][]
- []
-
 [77 <./namespace_8h__dep__incl.pdf>]) (./type_8h.tex
-<type_8h__incl.pdf, id=3634, 236.885pt x 212.795pt>
+<type_8h__incl.pdf, id=3645, 236.885pt x 212.795pt>
 File: type_8h__incl.pdf Graphic file (type pdf)
  <use type_8h__incl.pdf>
 Package pdftex.def Info: type_8h__incl.pdf used on input line 14.
 (pdftex.def)             Requested size: 236.0pt x 212.00543pt.
 
-[78] <type_8h__dep__incl.pdf, id=3639, 814.04124pt x 493.845pt>
+[78] <type_8h__dep__incl.pdf, id=3650, 814.04124pt x 493.845pt>
 File: type_8h__dep__incl.pdf Graphic file (type pdf)
 
 <use type_8h__dep__incl.pdf>
-Package pdftex.def Info: type_8h__dep__incl.pdf used on input line 22.
+Package pdftex.def Info: type_8h__dep__incl.pdf used on input line 21.
 (pdftex.def)             Requested size: 350.0pt x 212.3266pt.
  [79 <./type_8h__incl.pdf> <./type_8h__dep__incl.pdf
 
 pdfTeX warning: pdflatex (file ./type_8h__dep__incl.pdf): PDF inclusion: multip
 le pdfs with page group included in a single page
 >]
-Underfull \hbox (badness 10000) detected at line 105
+Underfull \hbox (badness 10000) detected at line 104
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 108
+Underfull \hbox (badness 10000) detected at line 107
 [][][]
  []
 
 [80]
-Underfull \hbox (badness 10000) detected at line 185
+Underfull \hbox (badness 10000) detected at line 184
 [][][]
  []
 
 [81]
-Underfull \hbox (badness 10000) detected at line 240
+Underfull \hbox (badness 10000) detected at line 239
 [][][]
  []
 
 [82]) (./main_8cpp.tex [83]
-<main_8cpp__incl.pdf, id=3810, 673.51625pt x 606.265pt>
+<main_8cpp__incl.pdf, id=3821, 673.51625pt x 606.265pt>
 File: main_8cpp__incl.pdf Graphic file (type pdf)
 
 <use main_8cpp__incl.pdf>
-Package pdftex.def Info: main_8cpp__incl.pdf used on input line 17.
+Package pdftex.def Info: main_8cpp__incl.pdf used on input line 16.
 (pdftex.def)             Requested size: 350.0pt x 315.05609pt.
  [84 <./main_8cpp__incl.pdf>]
-Underfull \hbox (badness 10000) detected at line 35
+Underfull \hbox (badness 10000) detected at line 34
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 38
+Underfull \hbox (badness 10000) detected at line 37
 [][][]
  []
 
 ) (./InitNetlist_8cpp.tex
-<InitNetlist_8cpp__incl.pdf, id=3829, 412.54124pt x 437.635pt>
+<InitNetlist_8cpp__incl.pdf, id=3840, 412.54124pt x 437.635pt>
 File: InitNetlist_8cpp__incl.pdf Graphic file (type pdf)
 
 <use InitNetlist_8cpp__incl.pdf>
@@ -1870,14 +1874,14 @@ Underfull \hbox (badness 10000) detected at line 26
  []
 
 ) (./InitNetlist_8h.tex
-<InitNetlist_8h__incl.pdf, id=3839, 389.455pt x 381.425pt>
+<InitNetlist_8h__incl.pdf, id=3850, 389.455pt x 381.425pt>
 File: InitNetlist_8h__incl.pdf Graphic file (type pdf)
 
 <use InitNetlist_8h__incl.pdf>
 Package pdftex.def Info: InitNetlist_8h__incl.pdf used on input line 13.
 (pdftex.def)             Requested size: 350.0pt x 342.79625pt.
  [86 <./InitNetlist_8cpp__incl.pdf>]
-<InitNetlist_8h__dep__incl.pdf, id=3851, 321.2pt x 156.585pt>
+<InitNetlist_8h__dep__incl.pdf, id=3862, 321.2pt x 156.585pt>
 File: InitNetlist_8h__dep__incl.pdf Graphic file (type pdf)
 
 <use InitNetlist_8h__dep__incl.pdf>
@@ -1898,7 +1902,7 @@ Underfull \hbox (badness 10000) detected at line 36
  []
 
 ) (./Pattern_8cpp.tex
-<Pattern_8cpp__incl.pdf, id=3873, 398.48875pt x 437.635pt>
+<Pattern_8cpp__incl.pdf, id=3884, 398.48875pt x 437.635pt>
 File: Pattern_8cpp__incl.pdf Graphic file (type pdf)
 
 <use Pattern_8cpp__incl.pdf>
@@ -1914,71 +1918,71 @@ Underfull \hbox (badness 10000) detected at line 24
 [][][]
  []
 
-) (./Pattern_8h.tex <Pattern_8h__incl.pdf, id=3886, 398.48875pt x 381.425pt>
+) (./Pattern_8h.tex <Pattern_8h__incl.pdf, id=3897, 398.48875pt x 381.425pt>
 File: Pattern_8h__incl.pdf Graphic file (type pdf)
 
 <use Pattern_8h__incl.pdf>
 Package pdftex.def Info: Pattern_8h__incl.pdf used on input line 14.
 (pdftex.def)             Requested size: 350.0pt x 335.02646pt.
 
-<Pattern_8h__dep__incl.pdf, id=3887, 547.04375pt x 325.215pt>
+<Pattern_8h__dep__incl.pdf, id=3898, 547.04375pt x 325.215pt>
 File: Pattern_8h__dep__incl.pdf Graphic file (type pdf)
 
 <use Pattern_8h__dep__incl.pdf>
-Package pdftex.def Info: Pattern_8h__dep__incl.pdf used on input line 22.
+Package pdftex.def Info: Pattern_8h__dep__incl.pdf used on input line 21.
 (pdftex.def)             Requested size: 350.0pt x 208.07733pt.
  [89 <./Pattern_8h__incl.pdf>]
-Underfull \hbox (badness 10000) detected at line 37
+Underfull \hbox (badness 10000) detected at line 36
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 40
+Underfull \hbox (badness 10000) detected at line 39
 [][][]
  []
 
 ) (./SymDetect_8cpp.tex
-<SymDetect_8cpp__incl.pdf, id=3902, 668.4975pt x 606.265pt>
+<SymDetect_8cpp__incl.pdf, id=3913, 668.4975pt x 606.265pt>
 File: SymDetect_8cpp__incl.pdf Graphic file (type pdf)
 
 <use SymDetect_8cpp__incl.pdf>
-Package pdftex.def Info: SymDetect_8cpp__incl.pdf used on input line 17.
+Package pdftex.def Info: SymDetect_8cpp__incl.pdf used on input line 16.
 (pdftex.def)             Requested size: 350.0pt x 317.42432pt.
  [90 <./Pattern_8h__dep__incl.pdf>]
-Underfull \hbox (badness 10000) detected at line 25
+Underfull \hbox (badness 10000) detected at line 24
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 28
+Underfull \hbox (badness 10000) detected at line 27
 [][][]
  []
 
 ) (./SymDetect_8h.tex
-<SymDetect_8h__incl.pdf, id=3915, 644.4075pt x 550.055pt>
+<SymDetect_8h__incl.pdf, id=3926, 644.4075pt x 550.055pt>
 File: SymDetect_8h__incl.pdf Graphic file (type pdf)
 
 <use SymDetect_8h__incl.pdf>
-Package pdftex.def Info: SymDetect_8h__incl.pdf used on input line 20.
+Package pdftex.def Info: SymDetect_8h__incl.pdf used on input line 19.
 (pdftex.def)             Requested size: 350.0pt x 298.76265pt.
  [91 <./SymDetect_8cpp__incl.pdf>]
-<SymDetect_8h__dep__incl.pdf, id=3927, 351.3125pt x 156.585pt>
+<SymDetect_8h__dep__incl.pdf, id=3938, 351.3125pt x 156.585pt>
 File: SymDetect_8h__dep__incl.pdf Graphic file (type pdf)
 
 <use SymDetect_8h__dep__incl.pdf>
-Package pdftex.def Info: SymDetect_8h__dep__incl.pdf used on input line 28.
+Package pdftex.def Info: SymDetect_8h__dep__incl.pdf used on input line 26.
 (pdftex.def)             Requested size: 350.0pt x 156.01117pt.
  [92 <./SymDetect_8h__incl.pdf> <./SymDetect_8h__dep__incl.pdf
 
 pdfTeX warning: pdflatex (file ./SymDetect_8h__dep__incl.pdf): PDF inclusion: m
 ultiple pdfs with page group included in a single page
 >]
-Underfull \hbox (badness 10000) detected at line 41
+Underfull \hbox (badness 10000) detected at line 39
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 44
+Underfull \hbox (badness 10000) detected at line 42
 [][][]
  []
 
@@ -1994,7 +1998,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 192.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 192.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 192.
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: 805F7710E67A599B7F50234F0289C84B;60582.
+(rerunfilecheck)             Checksum: 8E7BB71169479B9CBA32DEC2FCF94CBA;60782.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -2002,10 +2006,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 192.
  ) 
 Here is how much of TeX's memory you used:
- 16514 strings out of 493013
- 253802 string characters out of 6135682
- 338026 words of memory out of 5000000
- 18905 multiletter control sequences out of 15000+600000
+ 16518 strings out of 493013
+ 253948 string characters out of 6135682
+ 339108 words of memory out of 5000000
+ 18907 multiletter control sequences out of 15000+600000
  67356 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  53i,16n,92p,2754b,630s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2021,10 +2025,10 @@ r/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (113 pages, 478073 bytes).
+Output written on refman.pdf (113 pages, 480996 bytes).
 PDF statistics:
- 4583 PDF objects out of 5155 (max. 8388607)
- 4253 compressed objects within 43 object streams
- 790 named destinations out of 1000 (max. 500000)
- 2663 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 4596 PDF objects out of 5155 (max. 8388607)
+ 4266 compressed objects within 43 object streams
+ 792 named destinations out of 1000 (max. 500000)
+ 2671 words of extra memory for PDF output out of 10000 (max. 10000000)
 

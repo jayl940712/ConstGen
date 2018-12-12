@@ -34,7 +34,7 @@ void \hyperlink{classSymDetect_afe5e834e590ac2e055a17b6c951098d0}{dump\+Net} (co
 \item 
 \hyperlink{type_8h_af19eddb079bfea723256710b029c38e8}{Mos\+Pattern} \hyperlink{classSymDetect_aa832e51051f0ed9d3643c72b1d738684}{Mos\+Pair\+Ptrn} (\hyperlink{classMosPair}{Mos\+Pair} \&obj) const
 \begin{DoxyCompactList}\small\item\em Return pattern of \hyperlink{classMosPair}{Mos\+Pair}. \end{DoxyCompactList}\item 
-bool \hyperlink{classSymDetect_a245b48760c705d4ad9b2bad39012030e}{exist\+Pair} (std\+::vector$<$ \hyperlink{classMosPair}{Mos\+Pair} $>$ \&library, \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} inst\+Id1, \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} inst\+Id2) const
+bool \hyperlink{classSymDetect_a58ba284bb8522714804a192b2720cae3}{exist\+Pair} (const std\+::vector$<$ \hyperlink{classMosPair}{Mos\+Pair} $>$ \&library, \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} inst\+Id1, \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} inst\+Id2) const
 \begin{DoxyCompactList}\small\item\em Check if pair already reached. \end{DoxyCompactList}\item 
 bool \hyperlink{classSymDetect_a72b24ce0ad3992c207f5023250dd1d5a}{exist\+Pair} (std\+::vector$<$ \hyperlink{classMosPair}{Mos\+Pair} $>$ \&library, \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} inst\+Id) const
 \item 
@@ -48,8 +48,10 @@ bool \hyperlink{classSymDetect_ad4636f69ae0cad2fc23be2472c59ff4c}{valid\+Srch\+O
 \begin{DoxyCompactList}\small\item\em Return true if a valid pair. \end{DoxyCompactList}\item 
 bool \hyperlink{classSymDetect_a1153c5f98df1f6dde97ed3335367bb66}{valid\+Diff\+Pair} (\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} inst\+Id1, \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} inst\+Id2, \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} srch\+Pin\+Id1, \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} srch\+Pin\+Id2) const
 \begin{DoxyCompactList}\small\item\em Return true if a valid D\+I\+F\+F\+\_\+\+S\+O\+U\+R\+CE gate connected. \end{DoxyCompactList}\item 
-bool \hyperlink{classSymDetect_aee09c40b5606443e8aa9f30865dab600}{valid\+Net\+Pair} (\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} net\+Id1, \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} net\+Id2) const
+bool \hyperlink{classSymDetect_a455e5f585e60c484e2d093a44775faf5}{valid\+Net\+Pair} (\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} net\+Id1, \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} net\+Id2, std\+::vector$<$ \hyperlink{classNetPair}{Net\+Pair} $>$ \&net\+Pair) const
 \begin{DoxyCompactList}\small\item\em Return true if a valid symmetry \hyperlink{classNetPair}{Net\+Pair}. \end{DoxyCompactList}\item 
+bool \hyperlink{classSymDetect_a6672756986d958695756a1fa2c76577d}{check\+Net\+Sym} (\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} net\+Id1, \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} net\+Id2) const
+\begin{DoxyCompactList}\small\item\em Check every pin of nets for symmetry. \end{DoxyCompactList}\item 
 void \hyperlink{classSymDetect_a7f4cd1010a21da88d35abb89c6f33f00}{push\+Next\+Srch\+Obj} (std\+::vector$<$ \hyperlink{classMosPair}{Mos\+Pair} $>$ \&dfs\+Vst\+Pair, std\+::vector$<$ \hyperlink{classMosPair}{Mos\+Pair} $>$ \&dfs\+Stack, \hyperlink{classMosPair}{Mos\+Pair} \&curr\+Obj, std\+::vector$<$ \hyperlink{classMosPair}{Mos\+Pair} $>$ \&diff\+Pair\+Src) const
 \begin{DoxyCompactList}\small\item\em Push next valid \hyperlink{classMosPair}{Mos\+Pair} to dfs\+Stack. \end{DoxyCompactList}\item 
 bool \hyperlink{classSymDetect_a13ddc56c5e937097178352eb00d71cf3}{com\+Bias} (\hyperlink{classMosPair}{Mos\+Pair} \&curr\+Obj) const
@@ -60,7 +62,7 @@ void \hyperlink{classSymDetect_aa6d2ec13048f8f7e18e659bf8ac31dee}{get\+Patrn\+Ne
 \begin{DoxyCompactList}\small\item\em Get srch\+Patrn \hyperlink{classMosPair}{Mos\+Pair} connected to net\+Id. \end{DoxyCompactList}\item 
 void \hyperlink{classSymDetect_af04b93dac7e090cef8e741d8d1812485}{get\+Diff\+Pair} (std\+::vector$<$ \hyperlink{classMosPair}{Mos\+Pair} $>$ \&diff\+Pair) const
 \begin{DoxyCompactList}\small\item\em Get valid D\+FS source of netlist. \end{DoxyCompactList}\item 
-void \hyperlink{classSymDetect_a423022c08a31ef9361e1dfba843dc389}{dfs\+Diff\+Pair} (std\+::vector$<$ \hyperlink{classMosPair}{Mos\+Pair} $>$ \&dfs\+Vst\+Pair, \hyperlink{classMosPair}{Mos\+Pair} \&diff\+Pair, std\+::vector$<$ \hyperlink{classMosPair}{Mos\+Pair} $>$ \&diff\+Pair\+Srch, std\+::vector$<$ \hyperlink{classNetPair}{Net\+Pair} $>$ \&net\+Pair) const
+void \hyperlink{classSymDetect_acd33a2c834493240fc4e8840819d676c}{dfs\+Diff\+Pair} (std\+::vector$<$ \hyperlink{classMosPair}{Mos\+Pair} $>$ \&dfs\+Vst\+Pair, \hyperlink{classMosPair}{Mos\+Pair} \&diff\+Pair, std\+::vector$<$ \hyperlink{classMosPair}{Mos\+Pair} $>$ \&diff\+Pair\+Srch) const
 \begin{DoxyCompactList}\small\item\em D\+FS search with given source. Visited \hyperlink{classMosPair}{Mos\+Pair} are stored. \end{DoxyCompactList}\item 
 void \hyperlink{classSymDetect_ae6a1ba27f6768f215cba0623b6e2ce08}{in\+Vld\+Diff\+Pair\+Srch} (std\+::vector$<$ \hyperlink{classMosPair}{Mos\+Pair} $>$ \&diff\+Pair\+Srch, \hyperlink{classMosPair}{Mos\+Pair} \&curr\+Pair) const
 \begin{DoxyCompactList}\small\item\em Invalidate visited pairs from sources. \end{DoxyCompactList}\item 
@@ -74,11 +76,11 @@ void \hyperlink{classSymDetect_a3d47390c92f0bd31d1ab84f1a62d66e3}{add\+Sym\+Net}
 \begin{DoxyCompactList}\small\item\em Based on curr\+Obj symmetry \hyperlink{classInst}{Inst} pair, valid symmetry nets are appended to net\+Pair. \end{DoxyCompactList}\item 
 void \hyperlink{classSymDetect_a4c50f078fd01ab52e8f50b0507b69556}{flatten\+Sym\+Group} (std\+::vector$<$ std\+::vector$<$ \hyperlink{classMosPair}{Mos\+Pair} $>$$>$ \&sym\+Group, std\+::vector$<$ \hyperlink{classMosPair}{Mos\+Pair} $>$ \&flat\+Pair) const
 \begin{DoxyCompactList}\small\item\em Flatten symmetry group hierarchy into a single vector. \end{DoxyCompactList}\item 
-void \hyperlink{classSymDetect_a18905625f000221a5d4fe3c7cfdb5e8f}{bias\+Group} (std\+::vector$<$ \hyperlink{classMosPair}{Mos\+Pair} $>$ \&flat\+Pair, std\+::vector$<$ \hyperlink{classBias}{Bias} $>$ \&bias\+Group) const
-\begin{DoxyCompactList}\small\item\em Find all bias groups. All \hyperlink{classMosPair}{Mos\+Pair} in flattened symmetry group are first searched as source. For all valid bias search source that is com\+Bias, bias groups would be saved to bias\+Group. \end{DoxyCompactList}\item 
-void \hyperlink{classSymDetect_a4c7109dd0519c1c11765fe00f4a21fe2}{bias\+Match} (std\+::vector$<$ \hyperlink{classBias}{Bias} $>$ \&\hyperlink{classSymDetect_a18905625f000221a5d4fe3c7cfdb5e8f}{bias\+Group}, std\+::vector$<$ std\+::vector$<$ \hyperlink{classMosPair}{Mos\+Pair} $>$$>$ \&sym\+Group, std\+::vector$<$ \hyperlink{classMosPair}{Mos\+Pair} $>$ \&flat\+Pair) const
+void \hyperlink{classSymDetect_a1f9fc68f67c56771e6b9b613b53c821f}{bias\+Group} (std\+::vector$<$ \hyperlink{classMosPair}{Mos\+Pair} $>$ \&flat\+Pair, std\+::vector$<$ \hyperlink{classBias}{Bias} $>$ \&bias\+Group, std\+::vector$<$ \hyperlink{classNetPair}{Net\+Pair} $>$ \&net\+Pair) const
+\begin{DoxyCompactList}\small\item\em Find all bias groups. \end{DoxyCompactList}\item 
+void \hyperlink{classSymDetect_a4c7109dd0519c1c11765fe00f4a21fe2}{bias\+Match} (std\+::vector$<$ \hyperlink{classBias}{Bias} $>$ \&\hyperlink{classSymDetect_a1f9fc68f67c56771e6b9b613b53c821f}{bias\+Group}, std\+::vector$<$ std\+::vector$<$ \hyperlink{classMosPair}{Mos\+Pair} $>$$>$ \&sym\+Group, std\+::vector$<$ \hyperlink{classMosPair}{Mos\+Pair} $>$ \&flat\+Pair) const
 \begin{DoxyCompactList}\small\item\em Search for symmetry pairs in each group. \end{DoxyCompactList}\item 
-void \hyperlink{classSymDetect_a961c1dec1cb00000c9ed107dedac50ec}{hi\+Sym\+Detect} (std\+::vector$<$ std\+::vector$<$ \hyperlink{classMosPair}{Mos\+Pair} $>$$>$ \&sym\+Group, std\+::vector$<$ \hyperlink{classNetPair}{Net\+Pair} $>$ \&net\+Pair) const
+void \hyperlink{classSymDetect_a81ec317ab0f508b3e0af483ef8a2c1ac}{hi\+Sym\+Detect} (std\+::vector$<$ std\+::vector$<$ \hyperlink{classMosPair}{Mos\+Pair} $>$$>$ \&sym\+Group) const
 \begin{DoxyCompactList}\small\item\em Hierarchy symmetry detection. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -149,7 +151,7 @@ Iteratively searches for self symmetry instances for \hyperlink{type_8h_af19eddb
 \begin{DoxySeeAlso}{See also}
 \hyperlink{classSymDetect_ab6f286024b013fa257295111016da18b}{self\+Sym\+Srch} 
 
-\hyperlink{classSymDetect_a961c1dec1cb00000c9ed107dedac50ec}{hi\+Sym\+Detect} 
+\hyperlink{classSymDetect_a81ec317ab0f508b3e0af483ef8a2c1ac}{hi\+Sym\+Detect} 
 \end{DoxySeeAlso}
 \mbox{\Hypertarget{classSymDetect_a3d47390c92f0bd31d1ab84f1a62d66e3}\label{classSymDetect_a3d47390c92f0bd31d1ab84f1a62d66e3}} 
 \index{Sym\+Detect@{Sym\+Detect}!add\+Sym\+Net@{add\+Sym\+Net}}
@@ -164,7 +166,7 @@ Based on curr\+Obj symmetry \hyperlink{classInst}{Inst} pair, valid symmetry net
 Valid symmetry net that are connected to symmetry \hyperlink{classInst}{Inst} pair curr\+Obj would be added to vector.
 
 \begin{DoxySeeAlso}{See also}
-\hyperlink{classSymDetect_aee09c40b5606443e8aa9f30865dab600}{valid\+Net\+Pair} 
+\hyperlink{classSymDetect_a455e5f585e60c484e2d093a44775faf5}{valid\+Net\+Pair} 
 \end{DoxySeeAlso}
 
 \begin{DoxyParams}{Parameters}
@@ -173,15 +175,19 @@ Valid symmetry net that are connected to symmetry \hyperlink{classInst}{Inst} pa
 {\em curr\+Obj} & Current symmetry \hyperlink{classInst}{Inst} pair. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classSymDetect_a18905625f000221a5d4fe3c7cfdb5e8f}\label{classSymDetect_a18905625f000221a5d4fe3c7cfdb5e8f}} 
+\mbox{\Hypertarget{classSymDetect_a1f9fc68f67c56771e6b9b613b53c821f}\label{classSymDetect_a1f9fc68f67c56771e6b9b613b53c821f}} 
 \index{Sym\+Detect@{Sym\+Detect}!bias\+Group@{bias\+Group}}
 \index{bias\+Group@{bias\+Group}!Sym\+Detect@{Sym\+Detect}}
 \subsubsection{\texorpdfstring{bias\+Group()}{biasGroup()}}
-{\footnotesize\ttfamily void Sym\+Detect\+::bias\+Group (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \hyperlink{classMosPair}{Mos\+Pair} $>$ \&}]{flat\+Pair,  }\item[{std\+::vector$<$ \hyperlink{classBias}{Bias} $>$ \&}]{bias\+Group }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily void Sym\+Detect\+::bias\+Group (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \hyperlink{classMosPair}{Mos\+Pair} $>$ \&}]{flat\+Pair,  }\item[{std\+::vector$<$ \hyperlink{classBias}{Bias} $>$ \&}]{bias\+Group,  }\item[{std\+::vector$<$ \hyperlink{classNetPair}{Net\+Pair} $>$ \&}]{net\+Pair }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Find all bias groups. All \hyperlink{classMosPair}{Mos\+Pair} in flattened symmetry group are first searched as source. For all valid bias search source that is com\+Bias, bias groups would be saved to bias\+Group. 
+Find all bias groups. 
+
+All \hyperlink{classMosPair}{Mos\+Pair} in flattened symmetry group are first searched as source. For all valid bias search source that is com\+Bias, bias groups would be saved to bias\+Group.
+
+Symmetry nets would be appended to net\+Pair vector.
 
 \begin{DoxySeeAlso}{See also}
 \hyperlink{classSymDetect_a13ddc56c5e937097178352eb00d71cf3}{com\+Bias} 
@@ -191,6 +197,8 @@ Find all bias groups. All \hyperlink{classMosPair}{Mos\+Pair} in flattened symme
 {\em flat\+Pair} & Input flattened symmetry group. \\
 \hline
 {\em bias\+Group} & Saved bias groups to vector. \\
+\hline
+{\em net\+Pair} & Saved symmetry nets. \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classSymDetect_a4c7109dd0519c1c11765fe00f4a21fe2}\label{classSymDetect_a4c7109dd0519c1c11765fe00f4a21fe2}} 
@@ -214,6 +222,16 @@ New symmetry pairs are searched in the bias\+Group.
 {\em flat\+Pair} & Used to check for redundancy. \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{classSymDetect_a6672756986d958695756a1fa2c76577d}\label{classSymDetect_a6672756986d958695756a1fa2c76577d}} 
+\index{Sym\+Detect@{Sym\+Detect}!check\+Net\+Sym@{check\+Net\+Sym}}
+\index{check\+Net\+Sym@{check\+Net\+Sym}!Sym\+Detect@{Sym\+Detect}}
+\subsubsection{\texorpdfstring{check\+Net\+Sym()}{checkNetSym()}}
+{\footnotesize\ttfamily bool Sym\+Detect\+::check\+Net\+Sym (\begin{DoxyParamCaption}\item[{\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type}}]{net\+Id1,  }\item[{\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type}}]{net\+Id2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Check every pin of nets for symmetry. 
+
 \mbox{\Hypertarget{classSymDetect_a13ddc56c5e937097178352eb00d71cf3}\label{classSymDetect_a13ddc56c5e937097178352eb00d71cf3}} 
 \index{Sym\+Detect@{Sym\+Detect}!com\+Bias@{com\+Bias}}
 \index{com\+Bias@{com\+Bias}!Sym\+Detect@{Sym\+Detect}}
@@ -224,11 +242,11 @@ New symmetry pairs are searched in the bias\+Group.
 
 Return true if curr\+Obj have common gate connection. 
 
-This function is used to check if a \hyperlink{classMosPair}{Mos\+Pair} needs to search for a bias group. \hyperlink{classMosPair}{Mos\+Pair} should have following attributes\+: (1) \hyperlink{type_8h_af19eddb079bfea723256710b029c38e8a615d2885ef7576cedd9aafbb2578f028}{Mos\+Pattern\+::\+L\+O\+AD} or C\+A\+S\+C\+O\+DE (2) Both mos\+Id are of \hyperlink{type_8h_a34a6a66323cfecf83dfe00bc8fd96333aa2e1ec2dd3d8195d238c5494f0ac5578}{Mos\+Type\+::\+D\+I\+FF} (3) Have common gate connection \mbox{\Hypertarget{classSymDetect_a423022c08a31ef9361e1dfba843dc389}\label{classSymDetect_a423022c08a31ef9361e1dfba843dc389}} 
+This function is used to check if a \hyperlink{classMosPair}{Mos\+Pair} needs to search for a bias group. \hyperlink{classMosPair}{Mos\+Pair} should have following attributes\+: (1) \hyperlink{type_8h_af19eddb079bfea723256710b029c38e8a615d2885ef7576cedd9aafbb2578f028}{Mos\+Pattern\+::\+L\+O\+AD} or C\+A\+S\+C\+O\+DE (2) Both mos\+Id are of \hyperlink{type_8h_a34a6a66323cfecf83dfe00bc8fd96333aa2e1ec2dd3d8195d238c5494f0ac5578}{Mos\+Type\+::\+D\+I\+FF} (3) Have common gate connection \mbox{\Hypertarget{classSymDetect_acd33a2c834493240fc4e8840819d676c}\label{classSymDetect_acd33a2c834493240fc4e8840819d676c}} 
 \index{Sym\+Detect@{Sym\+Detect}!dfs\+Diff\+Pair@{dfs\+Diff\+Pair}}
 \index{dfs\+Diff\+Pair@{dfs\+Diff\+Pair}!Sym\+Detect@{Sym\+Detect}}
 \subsubsection{\texorpdfstring{dfs\+Diff\+Pair()}{dfsDiffPair()}}
-{\footnotesize\ttfamily void Sym\+Detect\+::dfs\+Diff\+Pair (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \hyperlink{classMosPair}{Mos\+Pair} $>$ \&}]{dfs\+Vst\+Pair,  }\item[{\hyperlink{classMosPair}{Mos\+Pair} \&}]{diff\+Pair,  }\item[{std\+::vector$<$ \hyperlink{classMosPair}{Mos\+Pair} $>$ \&}]{diff\+Pair\+Srch,  }\item[{std\+::vector$<$ \hyperlink{classNetPair}{Net\+Pair} $>$ \&}]{net\+Pair }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily void Sym\+Detect\+::dfs\+Diff\+Pair (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \hyperlink{classMosPair}{Mos\+Pair} $>$ \&}]{dfs\+Vst\+Pair,  }\item[{\hyperlink{classMosPair}{Mos\+Pair} \&}]{diff\+Pair,  }\item[{std\+::vector$<$ \hyperlink{classMosPair}{Mos\+Pair} $>$ \&}]{diff\+Pair\+Srch }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -246,8 +264,6 @@ Search for symmetry patterns in D\+FS manner with search source as diff\+Pair. S
 \mbox{\tt in}  & {\em diff\+Pair} & D\+FS search source \\
 \hline
 \mbox{\tt in}  & {\em diff\+Pair\+Srch} & Vector of all stored D\+FS search source \\
-\hline
-\mbox{\tt out}  & {\em net\+Pair} & Symmetry Nets. \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classSymDetect_afe5e834e590ac2e055a17b6c951098d0}\label{classSymDetect_afe5e834e590ac2e055a17b6c951098d0}} 
@@ -300,11 +316,11 @@ Check if already contains \hyperlink{classNetPair}{Net\+Pair} in library.
 
 Check if self symmetry \hyperlink{classNet}{Net} in library. 
 
-\mbox{\Hypertarget{classSymDetect_a245b48760c705d4ad9b2bad39012030e}\label{classSymDetect_a245b48760c705d4ad9b2bad39012030e}} 
+\mbox{\Hypertarget{classSymDetect_a58ba284bb8522714804a192b2720cae3}\label{classSymDetect_a58ba284bb8522714804a192b2720cae3}} 
 \index{Sym\+Detect@{Sym\+Detect}!exist\+Pair@{exist\+Pair}}
 \index{exist\+Pair@{exist\+Pair}!Sym\+Detect@{Sym\+Detect}}
 \subsubsection{\texorpdfstring{exist\+Pair()}{existPair()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily bool Sym\+Detect\+::exist\+Pair (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \hyperlink{classMosPair}{Mos\+Pair} $>$ \&}]{library,  }\item[{\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type}}]{inst\+Id1,  }\item[{\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type}}]{inst\+Id2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily bool Sym\+Detect\+::exist\+Pair (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \hyperlink{classMosPair}{Mos\+Pair} $>$ \&}]{library,  }\item[{\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type}}]{inst\+Id1,  }\item[{\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type}}]{inst\+Id2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -384,19 +400,17 @@ Valid Mosfets must be connected to net\+Id through \hyperlink{type_8h_afaab50027
 {\em net\+Id} & Id of connected net. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classSymDetect_a961c1dec1cb00000c9ed107dedac50ec}\label{classSymDetect_a961c1dec1cb00000c9ed107dedac50ec}} 
+\mbox{\Hypertarget{classSymDetect_a81ec317ab0f508b3e0af483ef8a2c1ac}\label{classSymDetect_a81ec317ab0f508b3e0af483ef8a2c1ac}} 
 \index{Sym\+Detect@{Sym\+Detect}!hi\+Sym\+Detect@{hi\+Sym\+Detect}}
 \index{hi\+Sym\+Detect@{hi\+Sym\+Detect}!Sym\+Detect@{Sym\+Detect}}
 \subsubsection{\texorpdfstring{hi\+Sym\+Detect()}{hiSymDetect()}}
-{\footnotesize\ttfamily void Sym\+Detect\+::hi\+Sym\+Detect (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ \hyperlink{classMosPair}{Mos\+Pair} $>$$>$ \&}]{sym\+Group,  }\item[{std\+::vector$<$ \hyperlink{classNetPair}{Net\+Pair} $>$ \&}]{net\+Pair }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily void Sym\+Detect\+::hi\+Sym\+Detect (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ \hyperlink{classMosPair}{Mos\+Pair} $>$$>$ \&}]{sym\+Group }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
 Hierarchy symmetry detection. 
 
 Output would contain 2 levels of hierarchy. sym\+Group is a vector of std\+::vector$<$\+Mos\+Pair$>$ one\+Group. Where one\+Group is a group of \hyperlink{classMosPair}{Mos\+Pair} in the same symmetry group. Each \hyperlink{classMosPair}{Mos\+Pair} should follow a Mos\+Pattern, or it should be of self symmetry. This funtion has been also updated to contain basic passive pair symmetry.
-
-Symmetry Nets would be added to vector net\+Pair.
 
 
 \begin{DoxyParams}{Parameters}
@@ -527,11 +541,11 @@ Valid pairs have following attributes\+: (1) Reached through gate (2) D\+I\+F\+F
 {\em srch\+Pin\+Id2} & inst\+Id2 reached by srch\+Pin\+Id2. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classSymDetect_aee09c40b5606443e8aa9f30865dab600}\label{classSymDetect_aee09c40b5606443e8aa9f30865dab600}} 
+\mbox{\Hypertarget{classSymDetect_a455e5f585e60c484e2d093a44775faf5}\label{classSymDetect_a455e5f585e60c484e2d093a44775faf5}} 
 \index{Sym\+Detect@{Sym\+Detect}!valid\+Net\+Pair@{valid\+Net\+Pair}}
 \index{valid\+Net\+Pair@{valid\+Net\+Pair}!Sym\+Detect@{Sym\+Detect}}
 \subsubsection{\texorpdfstring{valid\+Net\+Pair()}{validNetPair()}}
-{\footnotesize\ttfamily bool Sym\+Detect\+::valid\+Net\+Pair (\begin{DoxyParamCaption}\item[{\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type}}]{net\+Id1,  }\item[{\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type}}]{net\+Id2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily bool Sym\+Detect\+::valid\+Net\+Pair (\begin{DoxyParamCaption}\item[{\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type}}]{net\+Id1,  }\item[{\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type}}]{net\+Id2,  }\item[{std\+::vector$<$ \hyperlink{classNetPair}{Net\+Pair} $>$ \&}]{net\+Pair }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -541,12 +555,16 @@ A \hyperlink{classNetPair}{Net\+Pair} is a pair of symmetry nets. Symmetry nets 
 
 \begin{DoxySeeAlso}{See also}
 \hyperlink{classNetPair}{Net\+Pair} 
+
+\hyperlink{classSymDetect_a6672756986d958695756a1fa2c76577d}{check\+Net\+Sym} 
 \end{DoxySeeAlso}
 
 \begin{DoxyParams}{Parameters}
 {\em net\+Id1} & Id of Net1. \\
 \hline
 {\em net\+Id2} & Id of Net2. \\
+\hline
+{\em net\+Pair} & Library for symmetry nets. \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classSymDetect_ad4636f69ae0cad2fc23be2472c59ff4c}\label{classSymDetect_ad4636f69ae0cad2fc23be2472c59ff4c}} 
