@@ -12,6 +12,7 @@
 #include "db/Bias.h"
 #include "sym_detect/Pattern.h"
 #include <vector>
+#include <string>
 
 PROJECT_NAMESPACE_BEGIN
 /*! @class SymDetect
@@ -36,6 +37,10 @@ public:
 
 /*! @brief Print symGroup for netlist. */
     void                        print() const;                       
+/*! @brief Dump symmetry constraint to file. */
+    void                        dumpSym(const std::string file) const;
+/*! @brief Dump symmetry net to file. */
+    void                        dumpNet(const std::string file) const;
 
 private:
     const Netlist &             _netlist;

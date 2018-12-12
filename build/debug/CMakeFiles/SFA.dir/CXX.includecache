@@ -95,6 +95,8 @@ sym_detect/Pattern.h
 ../../src/sym_detect/sym_detect/Pattern.h
 vector
 -
+string
+-
 
 /home/unga/jayliu/sfa/src/db/Bias.cpp
 db/Bias.h
@@ -150,6 +152,8 @@ sym_detect/Pattern.h
 sym_detect/SymDetect.h
 /home/unga/jayliu/sfa/src/sym_detect/sym_detect/SymDetect.h
 iostream
+-
+fstream
 -
 algorithm
 -

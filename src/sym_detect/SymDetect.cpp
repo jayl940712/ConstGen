@@ -5,9 +5,44 @@
 */
 #include "sym_detect/SymDetect.h"
 #include <iostream>
+#include <fstream>
 #include <algorithm>
 
 PROJECT_NAMESPACE_BEGIN
+
+void SymDetect::dumpSym(const std::string file) const
+{
+    std::ofstream outFile(file);
+    std::cout << "Dumping symmetry constraints..." << std::endl;
+    for (const std::vector<MosPair> & diffPair : _symGroup) //print hiSym Groups
+    {
+        for (const MosPair & pair : diffPair)
+        {
+            if (pair.mosId1() != pair.mosId2())
+                outFile << _netlist.inst(pair.mosId1()).name() << " " 
+                    << _netlist.inst(pair.mosId2()).name() << std::endl;
+            else
+                outFile << _netlist.inst(pair.mosId1()).name() << std::endl; 
+        }
+        outFile << std::endl;
+    }
+    std::cout << "Done..." << std::endl;
+    outFile.close();
+}
+
+void SymDetect::dumpNet(const std::string file) const
+{
+    std::ofstream outFile(file);
+    std::cout << "Dumping symmetry nets..." << std::endl;
+    for (const NetPair & pair : _symNet)
+    {
+        if (pair.netId1() != pair.netId2())
+            outFile << _netlist.net(pair.netId1()).name() << " "
+                << _netlist.net(pair.netId2()).name() << std::endl;
+    }
+    std::cout << "Done..." << std::endl;
+    outFile.close();
+}
 
 void SymDetect::print() const
 {

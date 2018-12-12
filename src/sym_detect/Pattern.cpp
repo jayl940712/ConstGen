@@ -103,6 +103,7 @@ bool Pattern::crossPairLoad(IndexType mosId1, IndexType mosId2) const
 MosPattern Pattern::pattern(IndexType mosId1, IndexType mosId2) const
 {
     if (!matchedSize(mosId1, mosId2) || !matchedType(mosId1, mosId2))
+//    if (!matchedType(mosId1, mosId2))
         return MosPattern::INVALID;
     if (crossPairCascode(mosId1, mosId2))
         return MosPattern::CROSS_CASCODE;

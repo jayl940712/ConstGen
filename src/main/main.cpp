@@ -24,10 +24,16 @@ int main(int argc, char* argv[])
     InitNetlist parser = InitNetlist(netlist);
     std::string inFile(argv[1]);
     parser.read(inFile); //initialize netlist with parser
-    std::cout << "Done!" << std::endl;
+//    std::cout << "Done!" << std::endl;
 //    netlist.print_all(); //print netlist
     SymDetect symDetect(netlist); //declare SymDetect
-    symDetect.print();
+//    symDetect.print();
+    if (argv[2])
+    {
+        std::string file = argv[2];
+        symDetect.dumpSym(file + ".sym");
+        symDetect.dumpNet(file + ".net");
+    }
     return 0; 
 }
 
