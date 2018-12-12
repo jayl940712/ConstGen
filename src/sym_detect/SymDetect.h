@@ -29,9 +29,9 @@ public:
     explicit SymDetect(const Netlist & netlist)
         : _netlist(netlist), _pattern(Pattern(netlist))
     {
-        hiSymDetect(_symGroup, _symNet);
+        hiSymDetect(_symGroup);
         flattenSymGroup(_symGroup, _flatPair);
-        biasGroup(_flatPair, _biasGroup);
+        biasGroup(_flatPair, _biasGroup, _symNet);
         biasMatch(_biasGroup, _symGroup, _flatPair);
     }
 
@@ -118,7 +118,8 @@ private:
     @param netId1 Id of Net1.
     @param netId2 Id of Net2.
 */
-    bool                        validNetPair(IndexType netId1, IndexType netId2) const;
+    bool                        validNetPair(IndexType netId1, IndexType netId2, std::vector<NetPair> & netPair) const;
+    bool                        checkNetSym(IndexType netId1, IndexType netId2) const;
 
 /*! @brief Push next valid MosPair to dfsStack.
 
@@ -190,7 +191,7 @@ private:
     @param[out] netPair Symmetry Nets.
 */
     void                        dfsDiffPair(std::vector<MosPair> & dfsVstPair, MosPair & diffPair, 
-                                    std::vector<MosPair> & diffPairSrch, std::vector<NetPair> & netPair) const;
+                                    std::vector<MosPair> & diffPairSrch) const;
 /*! @brief Invalidate visited pairs from sources.
 
     If a MosPair have already been visited and is 
@@ -261,7 +262,7 @@ private:
     @param biasGroup Saved bias groups to vector.
 */
     void                        biasGroup(std::vector<MosPair> & flatPair, 
-                                    std::vector<Bias> & biasGroup) const;
+                                    std::vector<Bias> & biasGroup, std::vector<NetPair> & netPair) const;
 
 /*! @brief Search for symmetry pairs in each group.
 
@@ -289,8 +290,7 @@ private:
     @see MosPattern
     @see MosPair
 */
-    void                        hiSymDetect(std::vector<std::vector<MosPair>> & symGroup, 
-                                    std::vector<NetPair> & netPair) const;
+    void                        hiSymDetect(std::vector<std::vector<MosPair>> & symGroup) const;
 };
 
 PROJECT_NAMESPACE_END
