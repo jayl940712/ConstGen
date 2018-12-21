@@ -6,5 +6,5 @@ CXX_FLAGS = -std=c++11 -Wall  -g3 -O0 -fno-inline
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/unga/jayliu/sfa/src -I/home/unga/jayliu/sfa/unittest 
+CXX_INCLUDES = -I/home/local/eda10/jayliu/projects/sfa/src -I/home/local/eda10/jayliu/projects/sfa/unittest 
 

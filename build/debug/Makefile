@@ -51,10 +51,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/unga/jayliu/sfa
+CMAKE_SOURCE_DIR = /home/local/eda10/jayliu/projects/sfa
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/unga/jayliu/sfa/build/debug
+CMAKE_BINARY_DIR = /home/local/eda10/jayliu/projects/sfa/build/debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -83,9 +83,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/unga/jayliu/sfa/build/debug/CMakeFiles /home/unga/jayliu/sfa/build/debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/local/eda10/jayliu/projects/sfa/build/debug/CMakeFiles /home/local/eda10/jayliu/projects/sfa/build/debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/unga/jayliu/sfa/build/debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/local/eda10/jayliu/projects/sfa/build/debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

@@ -98,59 +98,59 @@ vector
 string
 -
 
-/home/unga/jayliu/sfa/src/db/Bias.cpp
+/home/local/eda10/jayliu/projects/sfa/src/db/Bias.cpp
 db/Bias.h
-/home/unga/jayliu/sfa/src/db/db/Bias.h
+/home/local/eda10/jayliu/projects/sfa/src/db/db/Bias.h
 
-/home/unga/jayliu/sfa/src/db/MosPair.cpp
+/home/local/eda10/jayliu/projects/sfa/src/db/MosPair.cpp
 db/MosPair.h
-/home/unga/jayliu/sfa/src/db/db/MosPair.h
+/home/local/eda10/jayliu/projects/sfa/src/db/db/MosPair.h
 
-/home/unga/jayliu/sfa/src/db/Net.cpp
+/home/local/eda10/jayliu/projects/sfa/src/db/Net.cpp
 db/Net.h
-/home/unga/jayliu/sfa/src/db/db/Net.h
+/home/local/eda10/jayliu/projects/sfa/src/db/db/Net.h
 set
 -
 
-/home/unga/jayliu/sfa/src/db/Netlist.cpp
+/home/local/eda10/jayliu/projects/sfa/src/db/Netlist.cpp
 db/Netlist.h
-/home/unga/jayliu/sfa/src/db/db/Netlist.h
+/home/local/eda10/jayliu/projects/sfa/src/db/db/Netlist.h
 algorithm
 -
 
-/home/unga/jayliu/sfa/src/db/Pin.cpp
+/home/local/eda10/jayliu/projects/sfa/src/db/Pin.cpp
 db/Pin.h
-/home/unga/jayliu/sfa/src/db/db/Pin.h
+/home/local/eda10/jayliu/projects/sfa/src/db/db/Pin.h
 
-/home/unga/jayliu/sfa/src/main/main.cpp
+/home/local/eda10/jayliu/projects/sfa/src/main/main.cpp
 string
 -
 iostream
 -
 parser/InitNetlist.h
-/home/unga/jayliu/sfa/src/main/parser/InitNetlist.h
+/home/local/eda10/jayliu/projects/sfa/src/main/parser/InitNetlist.h
 sym_detect/SymDetect.h
-/home/unga/jayliu/sfa/src/main/sym_detect/SymDetect.h
+/home/local/eda10/jayliu/projects/sfa/src/main/sym_detect/SymDetect.h
 
-/home/unga/jayliu/sfa/src/parser/InitNetlist.cpp
+/home/local/eda10/jayliu/projects/sfa/src/parser/InitNetlist.cpp
 cstdio
 -
 fstream
 -
 InitNetlist.h
-/home/unga/jayliu/sfa/src/parser/InitNetlist.h
+/home/local/eda10/jayliu/projects/sfa/src/parser/InitNetlist.h
 
-/home/unga/jayliu/sfa/src/parser/InitNetlist.h
+/home/local/eda10/jayliu/projects/sfa/src/parser/InitNetlist.h
 db/Netlist.h
-/home/unga/jayliu/sfa/src/parser/db/Netlist.h
+/home/local/eda10/jayliu/projects/sfa/src/parser/db/Netlist.h
 
-/home/unga/jayliu/sfa/src/sym_detect/Pattern.cpp
+/home/local/eda10/jayliu/projects/sfa/src/sym_detect/Pattern.cpp
 sym_detect/Pattern.h
-/home/unga/jayliu/sfa/src/sym_detect/sym_detect/Pattern.h
+/home/local/eda10/jayliu/projects/sfa/src/sym_detect/sym_detect/Pattern.h
 
-/home/unga/jayliu/sfa/src/sym_detect/SymDetect.cpp
+/home/local/eda10/jayliu/projects/sfa/src/sym_detect/SymDetect.cpp
 sym_detect/SymDetect.h
-/home/unga/jayliu/sfa/src/sym_detect/sym_detect/SymDetect.h
+/home/local/eda10/jayliu/projects/sfa/src/sym_detect/sym_detect/SymDetect.h
 iostream
 -
 fstream

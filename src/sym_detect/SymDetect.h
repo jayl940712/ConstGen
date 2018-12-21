@@ -33,6 +33,7 @@ public:
         flattenSymGroup(_symGroup, _flatPair);
         biasGroup(_flatPair, _biasGroup, _symNet);
         biasMatch(_biasGroup, _symGroup, _flatPair);
+        addSelfSymNet(_symNet);
     }
 
 /*! @brief Print symGroup for netlist. */
@@ -250,6 +251,15 @@ private:
     @param currObj Current symmetry Inst pair.
 */
     void                        addSymNet(std::vector<NetPair> & netPair, MosPair & currObj) const;
+
+/*! @brief Add self Symmetry Net.
+
+    Iteratively search all signal nets and check if self symmetric. If self symmetric
+    result is appended to netPair.
+
+    @see validNetPair
+*/
+    void                        addSelfSymNet(std::vector<NetPair> & netPair) const;
 
 /*! @brief Flatten symmetry group hierarchy into a single vector. */
     void                        flattenSymGroup(std::vector<std::vector<MosPair>> & symGroup,

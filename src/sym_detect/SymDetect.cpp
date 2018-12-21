@@ -441,6 +441,16 @@ void SymDetect::addSymNet(std::vector<NetPair> & netPair, MosPair & currObj) con
         netPair.emplace_back(netId1, netId2);
 }
 
+void SymDetect::addSelfSymNet(std::vector<NetPair> & netPair) const
+{
+    for (IndexType netId = 0; netId < _netlist.numNet(); netId++)
+    {
+        if (_netlist.isSignal(netId) &&
+        validNetPair(netId, netId, netPair))
+        netPair.emplace_back(netId, netId);
+    }
+}
+
 void SymDetect::biasGroup(std::vector<MosPair> & flatPair, std::vector<Bias> & biasGroup,
                             std::vector<NetPair> & netPair) const
 {

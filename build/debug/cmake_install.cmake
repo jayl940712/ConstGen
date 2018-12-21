@@ -1,4 +1,4 @@
-# Install script for directory: /home/unga/jayliu/sfa
+# Install script for directory: /home/local/eda10/jayliu/projects/sfa
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/unga/jayliu/sfa/build/debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/local/eda10/jayliu/projects/sfa/build/debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
