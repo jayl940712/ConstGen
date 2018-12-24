@@ -5,3 +5,4 @@ logs/
 benchmark/
 benchmarks_spectre/
 bin/
+doxygen/

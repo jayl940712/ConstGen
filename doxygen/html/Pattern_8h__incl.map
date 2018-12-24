@@ -1,9 +1,0 @@
-<map id="src/sym_detect/Pattern.h" name="src/sym_detect/Pattern.h">
-<area shape="rect" id="node2" href="$Netlist_8h.html" title="Netlist class. " alt="" coords="186,80,276,107"/>
-<area shape="rect" id="node5" href="$type_8h.html" title="Type header file. " alt="" coords="256,229,352,256"/>
-<area shape="rect" id="node9" href="$Net_8h.html" title="Net class. " alt="" coords="23,155,95,181"/>
-<area shape="rect" id="node10" href="$Pin_8h.html" title="Pin class. " alt="" coords="269,155,340,181"/>
-<area shape="rect" id="node11" href="$Inst_8h.html" title="Instance class. " alt="" coords="120,155,193,181"/>
-<area shape="rect" id="node7" href="$global_8h.html" title="Global header file. " alt="" coords="306,304,412,331"/>
-<area shape="rect" id="node8" href="$namespace_8h.html" title="Namespace header file. " alt="" coords="290,379,428,405"/>
-</map>
