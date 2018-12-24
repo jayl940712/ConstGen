@@ -43,7 +43,9 @@ bool \hyperlink{classPattern_acae638957d000c1a163f949c369d5ef4}{valid\+Pair\+Loa
 bool \hyperlink{classPattern_a371cef1fc7d0c4d5b291d80dc5c4b777}{cross\+Pair\+Cascode} (\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} mos\+Id1, \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} mos\+Id2) const
 \begin{DoxyCompactList}\small\item\em Return true if fits \hyperlink{type_8h_af19eddb079bfea723256710b029c38e8adb952aa3809767bf108688a754ebbf2c}{Mos\+Pattern\+::\+C\+R\+O\+S\+S\+\_\+\+C\+A\+S\+C\+O\+DE}. \end{DoxyCompactList}\item 
 bool \hyperlink{classPattern_afe6e5456a639417112340f5f9d164b32}{cross\+Pair\+Load} (\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} mos\+Id1, \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} mos\+Id2) const
-\begin{DoxyCompactList}\small\item\em Return true if fits \hyperlink{type_8h_af19eddb079bfea723256710b029c38e8a19ddbfeab78ac1a4bbe1a186828c5d8d}{Mos\+Pattern\+::\+C\+R\+O\+S\+S\+\_\+\+L\+O\+AD}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Return true if fits \hyperlink{type_8h_af19eddb079bfea723256710b029c38e8a19ddbfeab78ac1a4bbe1a186828c5d8d}{Mos\+Pattern\+::\+C\+R\+O\+S\+S\+\_\+\+L\+O\+AD}. \end{DoxyCompactList}\item 
+bool \hyperlink{classPattern_acbeabf067e49ed1ea743d647f541a3f4}{cap\+Mos} (\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} mos\+Id1, \hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type} mos\+Id2) const
+\begin{DoxyCompactList}\small\item\em Return true if Mosfets are forming matched cap. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -73,6 +75,16 @@ Constructor.
 
 
 \subsection{Member Function Documentation}
+\mbox{\Hypertarget{classPattern_acbeabf067e49ed1ea743d647f541a3f4}\label{classPattern_acbeabf067e49ed1ea743d647f541a3f4}} 
+\index{Pattern@{Pattern}!cap\+Mos@{cap\+Mos}}
+\index{cap\+Mos@{cap\+Mos}!Pattern@{Pattern}}
+\subsubsection{\texorpdfstring{cap\+Mos()}{capMos()}}
+{\footnotesize\ttfamily bool Pattern\+::cap\+Mos (\begin{DoxyParamCaption}\item[{\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type}}]{mos\+Id1,  }\item[{\hyperlink{type_8h_a581e8093e28e7362f2b6937296190676}{Index\+Type}}]{mos\+Id2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Return true if Mosfets are forming matched cap. 
+
 \mbox{\Hypertarget{classPattern_a371cef1fc7d0c4d5b291d80dc5c4b777}\label{classPattern_a371cef1fc7d0c4d5b291d80dc5c4b777}} 
 \index{Pattern@{Pattern}!cross\+Pair\+Cascode@{cross\+Pair\+Cascode}}
 \index{cross\+Pair\+Cascode@{cross\+Pair\+Cascode}!Pattern@{Pattern}}

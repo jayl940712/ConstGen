@@ -74,6 +74,8 @@ void \hyperlink{classSymDetect_ac3075fde17fa6c33093a683b18f17086}{add\+Self\+Sym
 \begin{DoxyCompactList}\small\item\em Top function to call to add self symmetry to already searched symmetry group. \end{DoxyCompactList}\item 
 void \hyperlink{classSymDetect_a3d47390c92f0bd31d1ab84f1a62d66e3}{add\+Sym\+Net} (std\+::vector$<$ \hyperlink{classNetPair}{Net\+Pair} $>$ \&net\+Pair, \hyperlink{classMosPair}{Mos\+Pair} \&curr\+Obj) const
 \begin{DoxyCompactList}\small\item\em Based on curr\+Obj symmetry \hyperlink{classInst}{Inst} pair, valid symmetry nets are appended to net\+Pair. \end{DoxyCompactList}\item 
+void \hyperlink{classSymDetect_aecaa47ed0a3318167148a46d6458f83a}{add\+Self\+Sym\+Net} (std\+::vector$<$ \hyperlink{classNetPair}{Net\+Pair} $>$ \&net\+Pair) const
+\begin{DoxyCompactList}\small\item\em Add self Symmetry \hyperlink{classNet}{Net}. \end{DoxyCompactList}\item 
 void \hyperlink{classSymDetect_a4c50f078fd01ab52e8f50b0507b69556}{flatten\+Sym\+Group} (std\+::vector$<$ std\+::vector$<$ \hyperlink{classMosPair}{Mos\+Pair} $>$$>$ \&sym\+Group, std\+::vector$<$ \hyperlink{classMosPair}{Mos\+Pair} $>$ \&flat\+Pair) const
 \begin{DoxyCompactList}\small\item\em Flatten symmetry group hierarchy into a single vector. \end{DoxyCompactList}\item 
 void \hyperlink{classSymDetect_a1f9fc68f67c56771e6b9b613b53c821f}{bias\+Group} (std\+::vector$<$ \hyperlink{classMosPair}{Mos\+Pair} $>$ \&flat\+Pair, std\+::vector$<$ \hyperlink{classBias}{Bias} $>$ \&bias\+Group, std\+::vector$<$ \hyperlink{classNetPair}{Net\+Pair} $>$ \&net\+Pair) const
@@ -152,6 +154,21 @@ Iteratively searches for self symmetry instances for \hyperlink{type_8h_af19eddb
 \hyperlink{classSymDetect_ab6f286024b013fa257295111016da18b}{self\+Sym\+Srch} 
 
 \hyperlink{classSymDetect_a81ec317ab0f508b3e0af483ef8a2c1ac}{hi\+Sym\+Detect} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classSymDetect_aecaa47ed0a3318167148a46d6458f83a}\label{classSymDetect_aecaa47ed0a3318167148a46d6458f83a}} 
+\index{Sym\+Detect@{Sym\+Detect}!add\+Self\+Sym\+Net@{add\+Self\+Sym\+Net}}
+\index{add\+Self\+Sym\+Net@{add\+Self\+Sym\+Net}!Sym\+Detect@{Sym\+Detect}}
+\subsubsection{\texorpdfstring{add\+Self\+Sym\+Net()}{addSelfSymNet()}}
+{\footnotesize\ttfamily void Sym\+Detect\+::add\+Self\+Sym\+Net (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \hyperlink{classNetPair}{Net\+Pair} $>$ \&}]{net\+Pair }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Add self Symmetry \hyperlink{classNet}{Net}. 
+
+Iteratively search all signal nets and check if self symmetric. If self symmetric result is appended to net\+Pair.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classSymDetect_a455e5f585e60c484e2d093a44775faf5}{valid\+Net\+Pair} 
 \end{DoxySeeAlso}
 \mbox{\Hypertarget{classSymDetect_a3d47390c92f0bd31d1ab84f1a62d66e3}\label{classSymDetect_a3d47390c92f0bd31d1ab84f1a62d66e3}} 
 \index{Sym\+Detect@{Sym\+Detect}!add\+Sym\+Net@{add\+Sym\+Net}}

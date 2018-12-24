@@ -1,6 +1,7 @@
 var searchData=
 [
   ['cap',['CAP',['../type_8h.html#a53644c687d6bc203d9d3d3ee70075f61adb5ce5cb1b12edacae4584e881e1451f',1,'CAP():&#160;type.h'],['../type_8h.html#a34a6a66323cfecf83dfe00bc8fd96333adb5ce5cb1b12edacae4584e881e1451f',1,'CAP():&#160;type.h']]],
+  ['capmos',['capMos',['../classPattern.html#acbeabf067e49ed1ea743d647f541a3f4',1,'Pattern']]],
   ['cascode',['CASCODE',['../type_8h.html#af19eddb079bfea723256710b029c38e8aac50017227efb09ec529757764e5187c',1,'type.h']]],
   ['checknetsym',['checkNetSym',['../classSymDetect.html#a6672756986d958695756a1fa2c76577d',1,'SymDetect']]],
   ['combias',['comBias',['../classSymDetect.html#a13ddc56c5e937097178352eb00d71cf3',1,'SymDetect']]],

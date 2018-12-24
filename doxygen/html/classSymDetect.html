@@ -163,6 +163,9 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a3d47390c92f0bd31d1ab84f1a62d66e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymDetect.html#a3d47390c92f0bd31d1ab84f1a62d66e3">addSymNet</a> (std::vector&lt; <a class="el" href="classNetPair.html">NetPair</a> &gt; &amp;netPair, <a class="el" href="classMosPair.html">MosPair</a> &amp;currObj) const</td></tr>
 <tr class="memdesc:a3d47390c92f0bd31d1ab84f1a62d66e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Based on currObj symmetry <a class="el" href="classInst.html" title="Inst class. ">Inst</a> pair, valid symmetry nets are appended to netPair.  <a href="#a3d47390c92f0bd31d1ab84f1a62d66e3">More...</a><br /></td></tr>
 <tr class="separator:a3d47390c92f0bd31d1ab84f1a62d66e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecaa47ed0a3318167148a46d6458f83a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymDetect.html#aecaa47ed0a3318167148a46d6458f83a">addSelfSymNet</a> (std::vector&lt; <a class="el" href="classNetPair.html">NetPair</a> &gt; &amp;netPair) const</td></tr>
+<tr class="memdesc:aecaa47ed0a3318167148a46d6458f83a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add self Symmetry <a class="el" href="classNet.html" title="Net class. ">Net</a>.  <a href="#aecaa47ed0a3318167148a46d6458f83a">More...</a><br /></td></tr>
+<tr class="separator:aecaa47ed0a3318167148a46d6458f83a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c50f078fd01ab52e8f50b0507b69556"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymDetect.html#a4c50f078fd01ab52e8f50b0507b69556">flattenSymGroup</a> (std::vector&lt; std::vector&lt; <a class="el" href="classMosPair.html">MosPair</a> &gt;&gt; &amp;symGroup, std::vector&lt; <a class="el" href="classMosPair.html">MosPair</a> &gt; &amp;flatPair) const</td></tr>
 <tr class="memdesc:a4c50f078fd01ab52e8f50b0507b69556"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flatten symmetry group hierarchy into a single vector.  <a href="#a4c50f078fd01ab52e8f50b0507b69556">More...</a><br /></td></tr>
 <tr class="separator:a4c50f078fd01ab52e8f50b0507b69556"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -304,6 +307,36 @@ Private Attributes</h2></td></tr>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classSymDetect.html#ab6f286024b013fa257295111016da18b" title="Iteratively search for self symmetry given diffPair. ">selfSymSrch</a> </dd>
 <dd>
 <a class="el" href="classSymDetect.html#a81ec317ab0f508b3e0af483ef8a2c1ac" title="Hierarchy symmetry detection. ">hiSymDetect</a> </dd></dl>
+
+</div>
+</div>
+<a id="aecaa47ed0a3318167148a46d6458f83a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecaa47ed0a3318167148a46d6458f83a">&#9670;&nbsp;</a></span>addSelfSymNet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SymDetect::addSelfSymNet </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classNetPair.html">NetPair</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>netPair</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add self Symmetry <a class="el" href="classNet.html" title="Net class. ">Net</a>. </p>
+<p>Iteratively search all signal nets and check if self symmetric. If self symmetric result is appended to netPair.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classSymDetect.html#a455e5f585e60c484e2d093a44775faf5" title="Return true if a valid symmetry NetPair. ">validNetPair</a> </dd></dl>
 
 </div>
 </div>
