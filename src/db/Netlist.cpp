@@ -249,11 +249,11 @@ MosType Netlist::mosType(IndexType mosId) const
 {
 // Note the dominance order. 
     if (instNetId(mosId, PinType::SOURCE) == instNetId(mosId, PinType::DRAIN))
-        return MosType::DUMMY;
+        return MosType::CAP;
     else if (instNetId(mosId, PinType::GATE) == instNetId(mosId, PinType::DRAIN))
         return MosType::DIODE;
     else if (instNetId(mosId, PinType::GATE) == instNetId(mosId, PinType::SOURCE))
-        return MosType::CAP;
+        return MosType::DUMMY;
     return MosType::DIFF;
 }
 

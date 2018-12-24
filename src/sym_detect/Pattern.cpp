@@ -100,6 +100,14 @@ bool Pattern::crossPairLoad(IndexType mosId1, IndexType mosId2) const
     return false;
 }
 
+bool Pattern::capMos(IndexType mosId1, IndexType mosId2) const
+{
+    if (_netlist.mosType(mosId1) == MosType::CAP &&
+        _netlist.mosType(mosId2) == MosType::CAP)
+        return true;
+    return false;
+}
+
 MosPattern Pattern::pattern(IndexType mosId1, IndexType mosId2) const
 {
     if (!matchedSize(mosId1, mosId2) || !matchedType(mosId1, mosId2))
@@ -118,6 +126,8 @@ MosPattern Pattern::pattern(IndexType mosId1, IndexType mosId2) const
     if (diffPairCascode(mosId1, mosId2))
         return MosPattern::DIFF_CASCODE;
 // return true if same type passive device
+    if (capMos(mosId1, mosId2))
+        return MosPattern::PASSIVE;
     if (_netlist.isPasvDev(_netlist.inst(mosId1).type()) &&
         _netlist.inst(mosId1).type() == _netlist.inst(mosId2).type())
         return MosPattern::PASSIVE;

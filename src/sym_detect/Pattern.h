@@ -60,6 +60,8 @@ private:
     bool                crossPairCascode(IndexType mosId1, IndexType mosId2) const;
 /*! @brief Return true if fits MosPattern::CROSS_LOAD */
     bool                crossPairLoad(IndexType mosId1, IndexType mosId2) const;
+/*! @brief Return true if Mosfets are forming matched cap. */
+    bool                capMos(IndexType mosId1, IndexType mosId2) const;
 };
 
 PROJECT_NAMESPACE_END
