@@ -40,6 +40,11 @@ void SymDetect::dumpNet(const std::string file) const
             outFile << _netlist.net(pair.netId1()).name() << " "
                 << _netlist.net(pair.netId2()).name() << std::endl;
     }
+    for (const NetPair & pair : _symNet)
+    {
+        if (pair.netId1() == pair.netId2())
+            outFile << _netlist.net(pair.netId1()).name() << std::endl;
+    }
     std::cout << "Done..." << std::endl;
     outFile.close();
 }
