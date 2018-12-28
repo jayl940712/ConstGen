@@ -32,7 +32,7 @@ int main(int argc, char* argv[])
     {
         std::string file = argv[2];
         symDetect.dumpSym(file + ".sym");
-        symDetect.dumpNet(file + ".net");
+        symDetect.dumpNet(file + ".symnet");
     }
     return 0; 
 }
