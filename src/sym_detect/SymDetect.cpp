@@ -16,6 +16,8 @@ void SymDetect::dumpSym(const std::string file) const
     std::cout << "Dumping symmetry constraints..." << std::endl;
     for (const std::vector<MosPair> & diffPair : _symGroup) //print hiSym Groups
     {
+        if (!diffPair[0].valid())
+            continue;
         for (const MosPair & pair : diffPair)
         {
             if (pair.mosId1() != pair.mosId2())
@@ -39,6 +41,11 @@ void SymDetect::dumpNet(const std::string file) const
         if (pair.netId1() != pair.netId2())
             outFile << _netlist.net(pair.netId1()).name() << " "
                 << _netlist.net(pair.netId2()).name() << std::endl;
+    }
+    for (const NetPair & pair : _symNet)
+    {
+        if (pair.netId1() == pair.netId2())
+            outFile << _netlist.net(pair.netId1()).name() << std::endl;
     }
     std::cout << "Done..." << std::endl;
     outFile.close();
