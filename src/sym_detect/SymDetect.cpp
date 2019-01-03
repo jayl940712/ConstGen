@@ -48,6 +48,8 @@ void SymDetect::print() const
 {
     for (const std::vector<MosPair> & diffPair : _symGroup) //print hiSym Groups
     {
+        if (!diffPair[0].valid())
+            continue;
         std::cout << "BEGIN GROUP" << std::endl;
         for (const MosPair & pair : diffPair)
         {
@@ -221,7 +223,7 @@ bool SymDetect::validDiffPair(IndexType instId1, IndexType instId2,
     return false;
 }
 
-void SymDetect::inVldDiffPairSrch(std::vector<MosPair> & diffPairSrch, MosPair & currPair) const
+void SymDetect::inVldDiffPairSrch(std::vector<MosPair> & diffPairSrch, MosPair & currPair) const 
 {
     for (MosPair & pair : diffPairSrch)
         if (pair.isEqual(currPair))
@@ -261,6 +263,7 @@ void SymDetect::pushNextSrchObj(std::vector<MosPair> & dfsVstPair, std::vector<M
                 currPair.setSrchPinType1(_netlist.getPinTypeInstPinConn(instId1, srchPinId1));
                 currPair.setSrchPinType2(_netlist.getPinTypeInstPinConn(instId2, srchPinId2));
                 dfsStack.push_back(currPair);
+                inVldDiffPairSrch(diffPairSrc, currPair);
             }
        }
     }
@@ -322,6 +325,16 @@ void SymDetect::hiSymDetect(std::vector<std::vector<MosPair>> & symGroup) const
             dfsDiffPair(dfsVstPair, pair, diffPairSrc); //search
             addSelfSym(dfsVstPair); //add self symmetry pairs.
             symGroup.push_back(dfsVstPair); //add results to new group
+        }
+    }
+    for (std::vector<MosPair> & group : symGroup)
+    {
+        for (MosPair & pair : diffPairSrc)
+        {
+            if (pair.isEqual(group[0]) && !pair.valid())
+            {
+                group[0].inVld();
+            }
         }
     }
 }
@@ -387,8 +400,6 @@ bool SymDetect::checkNetSym(IndexType netId1, IndexType netId2) const
     bool pinSym2[size] = {false};
     for (int i = 0; i < size; i++)
     {
-        if (pinSym1[i])
-            continue;
         for (int j = 0; j < size; j++)
         {
             if (pinSym2[j])
@@ -400,6 +411,7 @@ bool SymDetect::checkNetSym(IndexType netId1, IndexType netId2) const
             {
                 pinSym1[i] = true;
                 pinSym2[j] = true;
+                break; //fixed bug
             }
         }
     }
