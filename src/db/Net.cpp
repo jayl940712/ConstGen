@@ -9,9 +9,9 @@
 PROJECT_NAMESPACE_BEGIN
 
 /*! A set of possible power net names. */
-static const std::set<std::string> POWER_NET_NAMES = {"vdd", "VDD", "Vdd", "VDDA", "vdda", "Vdda", "vcc", "AVDD"};
+static const std::set<std::string> POWER_NET_NAMES = {"vdd", "VDD", "Vdd", "VDDA", "vdda", "Vdda", "vcc", "AVDD", "vdda1p2"};
 /*! A set of possible ground net names. */
-static const std::set<std::string> GROUND_NET_NAMES = {"vss", "VSS", "Vss", "VSSA", "vssa", "Vssa", "gnd", "Gnd", "GND", "AVSS"};
+static const std::set<std::string> GROUND_NET_NAMES = {"vss", "VSS", "Vss", "VSSA", "vssa", "Vssa", "gnd", "Gnd", "GND", "AVSS", "gnda"};
 
 /*! Return netType of net based on name. 
     Currently supported Power/Ground names 

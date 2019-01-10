@@ -356,7 +356,7 @@ void SymDetect::getVldDrainMos(std::vector<IndexType> & vldMos, IndexType netId)
 
 void SymDetect::selfSymSrch(std::vector<MosPair> & dfsVstPair, MosPair & diffPair) const
 {
-    if (diffPair.pattern() != MosPattern::DIFF_SOURCE)
+    if (diffPair.pattern() != MosPattern::DIFF_SOURCE && diffPair.pattern() != MosPattern::CROSS_LOAD)
         return; //return if not of DIFF_SOURCE pattern.
     if (!_netlist.isSignal(_netlist.srcNetId(diffPair.mosId1())))
         return; //return if already reached ground.
