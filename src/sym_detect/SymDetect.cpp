@@ -116,7 +116,10 @@ void SymDetect::getDiffPair(std::vector<MosPair> & diffPair) const
     diffPair.clear();
     for (IndexType netId = 0; netId < _netlist.numNet(); netId++)
         if (_netlist.isSignal(netId)) //Iterate for all signal nets for DIFF_SOURCE
+        {
             getPatrnNetConn(diffPair, netId, MosPattern::DIFF_SOURCE); 
+            getPatrnNetConn(diffPair, netId, MosPattern::CROSS_LOAD);
+        }
     for (IndexType netId = 0; netId < _netlist.numNet(); netId++)
         if (!_netlist.isSignal(netId)) //Iterate for non signal nets for CROSS_LOAD
             getPatrnNetConn(diffPair, netId, MosPattern::CROSS_LOAD); 
