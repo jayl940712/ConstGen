@@ -60,7 +60,7 @@ void SymDetect::print() const
         std::cout << "BEGIN GROUP" << std::endl;
         for (const MosPair & pair : diffPair)
         {
-            if (pair.mosId1() != pair.mosId2())
+            if (pair.mosId1() != pair.mosId2()) 
                 std::cout << _netlist.inst(pair.mosId1()).name() << " " 
                     << _netlist.inst(pair.mosId2()).name() << std::endl;
             else
@@ -299,7 +299,8 @@ void SymDetect::addBiasSym(std::vector<MosPair> & dfsVstPair, MosPair & currObj)
         _netlist.getInstNetConn(Mos, _netlist.gateNetId(currObj.mosId1()));
         _netlist.fltrInstMosType(Mos, MosType::DIODE);
         if (Mos.size() == 2 &&
-                !existPair(dfsVstPair, Mos[0], Mos[1]))
+                !existPair(dfsVstPair, Mos[0], Mos[1]) && 
+                _pattern.pattern(Mos[0], Mos[1]) != MosPattern::INVALID)
             dfsVstPair.emplace_back(Mos[0], Mos[1], MosPattern::BIAS);
     }
 }
