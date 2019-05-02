@@ -29,6 +29,12 @@ bool Pattern::diffPairInput(IndexType mosId1, IndexType mosId2) const
         _netlist.mosType(mosId1) == MosType::DIFF && 
         _netlist.mosType(mosId2) == MosType::DIFF)
         return true;
+    if (_netlist.srcNetId(mosId1) != _netlist.srcNetId(mosId2) && 
+        _netlist.gateNetId(mosId1) != _netlist.gateNetId(mosId2) && 
+        _netlist.drainNetId(mosId1) == _netlist.drainNetId(mosId2) && 
+        _netlist.mosType(mosId1) == MosType::DIFF && 
+        _netlist.mosType(mosId2) == MosType::DIFF)
+        return true;
     return false;
 }
 
