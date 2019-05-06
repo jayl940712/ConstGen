@@ -18,6 +18,8 @@ bool Pattern::matchedSize(IndexType mosId1, IndexType mosId2) const
         return false;
     if (_netlist.inst(mosId1).len() != _netlist.inst(mosId2).len())
         return false;
+    if (_netlist.inst(mosId1).nf() != _netlist.inst(mosId2).nf())
+        return false;
     return true;
 }
 

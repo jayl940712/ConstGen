@@ -34,7 +34,7 @@ void Netlist::init(InitDataObj & obj)
 // If added Inst is Mosfet 
         if (isMos(inInst.type))
         {
-            Inst inst(inInst.name, inInst.type, _instArray.size(), inInst.wid, inInst.len);
+            Inst inst(inInst.name, inInst.type, _instArray.size(), inInst.wid, inInst.len, inInst.nf);
             for (IndexType i = 0; i < 4; i++)
             {
                 inst.addPinId(_pinArray.size()); // Add pin to Inst 
@@ -47,7 +47,7 @@ void Netlist::init(InitDataObj & obj)
 // If added Inst is Res/Cap 
         else if (isPasvDev(inInst.type))
         {
-            Inst inst(inInst.name, inInst.type, _instArray.size(), inInst.wid, inInst.len);
+            Inst inst(inInst.name, inInst.type, _instArray.size(), inInst.wid, inInst.len, inInst.nf);
             for (IndexType i = 0; i < inInst.netIdArray.size(); i++) //Modified for 2/3 pin passives
             {
                 inst.addPinId(_pinArray.size());

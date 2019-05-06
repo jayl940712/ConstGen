@@ -43,8 +43,8 @@ bool InitNetlist::read(const std::string &fileName)
                     instType = InstType::OTHER;
                 inst.type = instType;
                 inFile >> inst.name; 
-                if (inst.type == InstType::CAP)
-                    inFile >> inst.wid;
+                if (inst.type == InstType::PMOS || inst.type == InstType::NMOS)
+                    inFile >> inst.wid >> inst.len >> inst.nf;
                 else if (inst.type != InstType::OTHER)
                     inFile >> inst.wid >> inst.len;
                 IndexType netId;

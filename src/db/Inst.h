@@ -42,9 +42,10 @@ public:
     @param id Id of INst.
     @param wid Width of Inst.
     @param len Length of Inst.
+    @param nf Number fingers of Inst.
 */
-    explicit Inst(const std::string &name, InstType type, IndexType id, RealType wid, RealType len) 
-        : _name(name), _type(type), _id(id), _wid(wid), _len(len)
+    explicit Inst(const std::string &name, InstType type, IndexType id, RealType wid, RealType len, RealType nf) 
+        : _name(name), _type(type), _id(id), _wid(wid), _len(len), _nf(nf)
     {}
 
     // Getters
@@ -62,6 +63,8 @@ public:
     RealType                        wid() const                         { return _wid; }
 /*! @brief Return length of Inst. */
     RealType                        len() const                         { return _len; }
+/*! @brief Return number fingers of Inst. */
+    RealType                        nf() const                          { return _nf; }
 
     // Setters
 /*! @brief Add pin index to Inst.
@@ -72,6 +75,8 @@ public:
     void                            setWid(RealType wid)                { _wid = wid; }
 /*! @brief Assign length of Inst. */
     void                            setLen(RealType len)                { _len = len; }
+/*! @brief Assign number fingers of Inst. */
+    void                            setNf(RealType nf)                  { _nf = nf; }
 
 private:
     std::string                     _name;
@@ -80,6 +85,7 @@ private:
     std::vector<IndexType>          _pinIdArray;                        
     RealType                        _wid;
     RealType                        _len;
+    RealType                        _nf;
 };
 
 

@@ -36,7 +36,7 @@ public:
         InstType                    type = InstType::OTHER;
         std::vector<IndexType>      netIdArray;
         std::string                 name; 
-        RealType                    wid = 0, len = 0;
+        RealType                    wid = 0, len = 0, nf = 1;
     };
 /*! @struct InitDataObj
     @brief Instantiate Netlist class
