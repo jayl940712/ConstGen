@@ -125,8 +125,10 @@ void SymDetect::getDiffPair(std::vector<MosPair> & diffPair) const
             getPatrnNetConn(diffPair, netId, MosPattern::CROSS_LOAD); 
 }
 
+// FIXME: Currently because placement issues, existPair is broken and only output 1 pair for each instId
 bool SymDetect::existPair(const std::vector<MosPair> & library, IndexType instId1, IndexType instId2) const
 {
+    return existPair(library, instId1) && existPair(library, instId2);
     for (const MosPair & currPair : library)
     {
         if (currPair.mosId1() == instId1 && currPair.mosId2() == instId2)
@@ -161,9 +163,9 @@ bool SymDetect::existNetPair(std::vector<NetPair> & library, IndexType netId) co
     return false;
 }
 
-bool SymDetect::existPair(std::vector<MosPair> & library, IndexType instId) const
+bool SymDetect::existPair(const std::vector<MosPair> & library, IndexType instId) const
 {
-    for (MosPair & currPair : library)
+    for (const MosPair & currPair : library)
     {
         if (currPair.mosId1() == instId)
             return true;

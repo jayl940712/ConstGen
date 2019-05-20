@@ -58,7 +58,7 @@ private:
 /*! @brief Check if pair already reached. */
     bool                        existPair(const std::vector<MosPair> & library, IndexType instId1, IndexType instId2) const;
 /*! @breif Check if self symmetry pair already reached. */
-    bool                        existPair(std::vector<MosPair> & library, IndexType instId) const;
+    bool                        existPair(const std::vector<MosPair> & library, IndexType instId) const;
 /*! @brief Check if already contains NetPair in library. */
     bool                        existNetPair(std::vector<NetPair> & library, IndexType netId1, IndexType netId2) const;
 /*! @brief Check if self symmetry Net in library. */
