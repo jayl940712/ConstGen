@@ -24,7 +24,9 @@ public:
     explicit InitNetlist() = default;
 /*! @brief Constructor with initialization */
     explicit InitNetlist(Netlist & netlist) : _netlistDB(netlist) {}
-    
+
+/*! @brief Set netlistDB */
+    void setNetlist(Netlist & netlist) { _netlistDB = netlist; }
 /*! @brief Parse file and build netlist.
 
     Input files should follow same format generated

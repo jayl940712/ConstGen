@@ -54,6 +54,20 @@ public:
     
 /*! @brief Initialize Netlist class. */
     void                            init(InitDataObj &obj);
+
+/*! @brief Add a net to netlist. */
+    IndexType                       addNet(const std::string name, IndexType netIdx);
+
+/*! @brief Add a instance to netlist. */
+    IndexType                       addInst(const std::string name, InstType type, RealType wid, RealType len, RealType nf);
+
+/*! @brief Add a pin to inst 
+    @param Index of inst in _instArray
+    @param Index of net connected to pin.
+    @param PinType of added pin.
+*/
+    void                            addInstPin(IndexType instIdx, IndexType netIdx, PinType pinType);
+
 /*! Print netlist. */
     void                            print_all() const;
 

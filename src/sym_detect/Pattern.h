@@ -24,10 +24,13 @@ public:
 /*! @brief Constructor 
     @param netlist Netlist for pattern search.
 */
-    explicit Pattern(const Netlist & netlist) 
+    explicit Pattern() = default;
+    explicit Pattern(Netlist & netlist) 
         : _netlist(netlist)
     {}
 
+/*! @brief Set netlist database. */
+    void    setNetlist(const Netlist & netlist) { _netlist = netlist; }
 /*! @brief Return pattern for pair of mosfets.
 
     Valid patterns have same InstType.
@@ -41,7 +44,7 @@ public:
     MosPattern          pattern(IndexType mosId1, IndexType mosId2) const;
 
 private:
-    const Netlist &     _netlist;
+    Netlist &     _netlist;
 
 private:
 /*! @brief Return true if Inst pair have same InstType. */

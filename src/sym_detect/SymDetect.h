@@ -26,7 +26,8 @@ public:
     Pattern class inherently constructed.
     @param netlist Netlist class.
  */
-    explicit SymDetect(const Netlist & netlist)
+    explicit SymDetect() = default;
+    explicit SymDetect(Netlist & netlist)
         : _netlist(netlist), _pattern(Pattern(netlist))
     {
         hiSymDetect(_symGroup);
@@ -36,6 +37,17 @@ public:
         addSelfSymNet(_symNet);
     }
 
+/*! @brief Set netlist database. */
+    void    setNetlist(const Netlist & netlist) 
+    { 
+        _netlist = netlist; 
+        _pattern.setNetlist(netlist); 
+        hiSymDetect(_symGroup);
+        flattenSymGroup(_symGroup, _flatPair);
+        biasGroup(_flatPair, _biasGroup, _symNet);
+        biasMatch(_biasGroup, _symGroup, _flatPair);
+        addSelfSymNet(_symNet);
+    }
 /*! @brief Print symGroup for netlist. */
     void                        print() const;                       
 /*! @brief Dump symmetry constraint to file. */
@@ -44,7 +56,7 @@ public:
     void                        dumpNet(const std::string file) const;
 
 private:
-    const Netlist &             _netlist;
+    Netlist &             _netlist;
     Pattern                     _pattern;
 /*! @brief Symmetry nets of netlist. */
     std::vector<NetPair>        _symNet;

@@ -23,6 +23,25 @@ bool Netlist::isPasvDev(InstType instType) const
     return instType == InstType::CAP || instType == InstType::RES;  
 }
 
+IndexType Netlist::addNet(const std::string name, IndexType netIdx)
+{
+    _netArray.emplace_back(name, netIdx);
+    return _netArray.size()-1;
+}
+
+IndexType Netlist::addInst(const std::string name, InstType type, RealType wid, RealType len, RealType nf)
+{
+    _instArray.emplace_back(name, type, _instArray.size(), wid, len, nf);
+    return _instArray.size()-1;
+}
+
+void Netlist::addInstPin(IndexType instIdx, IndexType netIdx, PinType pinType)
+{
+    _instArray.at(instIdx).addPinId(_pinArray.size());
+    _netArray.at(netIdx).addPinId(_pinArray.size());
+    _pinArray.emplace_back(_pinArray.size(), instIdx, netIdx, pinType);
+}
+
 void Netlist::init(InitDataObj & obj)
 {
 // Add all Net to Netlist 
