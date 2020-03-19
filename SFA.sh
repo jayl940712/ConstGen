@@ -7,7 +7,7 @@ do
 	IFS='/' read -ra f_delim <<< "$f"
     word=${f_delim[1]}
     length=${#word}
-    cname=${word:0:($length-9)}
-    ./bin/SFA $f logs/$cname
-#	./bin/SFA $f > logs/$cname.log
+    cname=${word:0:($length-8)}
+    ./bin/ConstGen $f logs/$cname
+#	./bin/ConstGen $f > logs/$cname.log
 done
