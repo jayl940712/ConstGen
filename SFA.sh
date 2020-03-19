@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FILES=benchmark/*
+FILES=benchmarks_spectre/*
 for f in $FILES
 do
 	echo "Processing $f file..."

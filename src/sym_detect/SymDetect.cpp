@@ -138,7 +138,7 @@ void SymDetect::getDiffPair(std::vector<MosPair> & diffPair) const
 // FIXME: Currently because placement issues, existPair is broken and only output 1 pair for each instId
 bool SymDetect::existPair(const std::vector<MosPair> & library, IndexType instId1, IndexType instId2) const
 {
-//    return existPair(library, instId1) || existPair(library, instId2);
+    // return existPair(library, instId1) || existPair(library, instId2);
     for (const MosPair & currPair : library)
     {
         if (currPair.mosId1() == instId1 && currPair.mosId2() == instId2)
@@ -204,7 +204,7 @@ bool SymDetect::endSrch(MosPair & currObj) const
         return true; // If LOAD pattern.
     if (currObj.srchPinType1() != PinType::SOURCE && 
         currObj.srchPinType1() != PinType::DRAIN)
-        return true; // If reached by gate.
+        return false; // If reached by gate.
     return false;
 }
 

@@ -6,7 +6,7 @@
  */
 
 #include <pybind11/pybind11.h>
-#include "global/global.h"
+#include "global/type.h"
 
 namespace py = pybind11;
 
@@ -15,10 +15,10 @@ void initGlobalAPI(py::module &m)
     // See https://stackoverflow.com/questions/47893832/pybind11-global-level-enum
     py::enum_<PROJECT_NAMESPACE::InstType>(m, "InstType")
         .value("Res", PROJECT_NAMESPACE::InstType::RES)
-        .value("Pch", PROJECT_NAMESPACE::OriType::PMOS)
-        .value("Nch", PROJECT_NAMESPACE::OriType::NMOS)
-        .value("Cap", PROJECT_NAMESPACE::OriType::CAP)
-        .value("OTHER", PROJECT_NAMESPACE::OriType::OTHER)
+        .value("Pch", PROJECT_NAMESPACE::InstType::PMOS)
+        .value("Nch", PROJECT_NAMESPACE::InstType::NMOS)
+        .value("Cap", PROJECT_NAMESPACE::InstType::CAP)
+        .value("OTHER", PROJECT_NAMESPACE::InstType::OTHER)
         .export_values();
 
     py::enum_<PROJECT_NAMESPACE::PinType>(m, "PinType")

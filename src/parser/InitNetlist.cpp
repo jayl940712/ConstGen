@@ -5,6 +5,7 @@
 */
 #include <cstdio>
 #include <fstream>
+#include <iostream>
 #include "InitNetlist.h"
 
 PROJECT_NAMESPACE_BEGIN

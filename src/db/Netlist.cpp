@@ -5,6 +5,7 @@
 */
 #include "db/Netlist.h"
 #include <algorithm>
+#include <iostream>
 
 PROJECT_NAMESPACE_BEGIN
 

@@ -9,9 +9,11 @@
 #define __CONST_GEN__
 
 #include <string>
+#include "parser/InitNetlist.h"
+#include "sym_detect/SymDetect.h"
+#include "db/Netlist.h"
 
 PROJECT_NAMESPACE_BEGIN
-
 /*! @class ConstGen
     @brief ConstGen class
 */
@@ -25,10 +27,10 @@ public:
     void    readNetlistFile(const std::string & fileName) { _parser.read(fileName); }
     
 /*! @brief Add a net to netlist. */
-    IndexType   addNet(const std::string name, IndexType netIdx) { _netlistDB.addNet(name, netIdx); }
+    IndexType   addNet(const std::string name, IndexType netIdx) { return _netlistDB.addNet(name, netIdx); }
 
 /*! @brief Add a instance to netlist. */
-    IndexType   addInst(const std::string name, InstType type, RealType wid, RealType len, RealType nf) { _netlistDB.addInst(name, type, wid, len, nf); }
+    IndexType   addInst(const std::string name, InstType type, RealType wid, RealType len, RealType nf) { return _netlistDB.addInst(name, type, wid, len, nf); }
 
 /*! @brief Add a pin to inst 
     @param Index of inst in _instArray
@@ -38,19 +40,18 @@ public:
     void        addInstPin(IndexType instIdx, IndexType netIdx, PinType pinType) { _netlistDB.addInstPin(instIdx, netIdx, pinType); }
 
  /*! @brief Dump result to file */
-    void    dumpResult(const std::string & cirName) const
+    void    dumpResult(const std::string & fileName) const
     {
-        _symDetect.setNetlist(_netlistDB);
         _symDetect.print();
-        _symDetect.dumpSym(cirName + ".sym");
+        _symDetect.dumpSym(fileName);
         // Symmetry net constraint no longer needed in flow.
         // _symDetect.dumpNet(file + ".symnet"); 
     }
     
 private:
     Netlist     _netlistDB; 
-    InitNetlist _parser(_netlistDB);
-    SymDetect   _symDetect;
+    InitNetlist _parser = InitNetlist(_netlistDB);
+    SymDetect   _symDetect = SymDetect(_netlistDB);
 };
 
 PROJECT_NAMESPACE_END
