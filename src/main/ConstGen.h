@@ -40,8 +40,9 @@ public:
     void        addInstPin(IndexType instIdx, IndexType netIdx, PinType pinType) { _netlistDB.addInstPin(instIdx, netIdx, pinType); }
 
  /*! @brief Dump result to file */
-    void    dumpResult(const std::string & fileName) const
+    void    dumpResult(const std::string & fileName) 
     {
+        SymDetect _symDetect(_netlistDB);
         _symDetect.print();
         _symDetect.dumpSym(fileName);
         // Symmetry net constraint no longer needed in flow.
@@ -51,7 +52,6 @@ public:
 private:
     Netlist     _netlistDB; 
     InitNetlist _parser = InitNetlist(_netlistDB);
-    SymDetect   _symDetect = SymDetect(_netlistDB);
 };
 
 PROJECT_NAMESPACE_END

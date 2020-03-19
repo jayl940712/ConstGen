@@ -63,6 +63,7 @@ setup(
     author_email='jay_liu@utexas.edu',
     description='The python interface to ConstGen',
     long_description='',
+    ext_modules=[CMakeExtension('ConstGenPy')],
     cmdclass=dict(build_ext=CMakeBuild),
     zip_safe=False,
 )

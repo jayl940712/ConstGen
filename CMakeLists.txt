@@ -1,7 +1,10 @@
 cmake_minimum_required (VERSION 2.8.11)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON )
 set (CMAKE_VERBOSE_MAKEFILE ON)
 
-project (ConstGen)
+set(PROJECT_NAME "ConstGen")
+project(${PROJECT_NAME})
+
 set(VERSION_MAJOR   0   CACHE STRING "Project major version number.")
 set(VERSION_MINOR   0   CACHE STRING "Project minor version number.")
 set(VERSION_PATCH   1   CACHE STRING "Project patch version number.")
@@ -18,6 +21,8 @@ else()
 endif()
 unset(CMAKE_INSTALL_PREFIX)
 message(STATUS "Install prefix: ${CMAKE_INSTALL_PREFIX}")
+
+mark_as_advanced(VERSION_MAJOR VERSION_MINOR VERSION_PATCH)
 
 #pybind11
 if (PYBIND11_DIR)
@@ -53,6 +58,7 @@ set(CMAKE_EXE_LINKER_FLAGS "-pthread")
 
 include_directories (
     ${CMAKE_CURRENT_SOURCE_DIR}/src
+    ${PYBIND11_ROOT_DIR}/include
 )
 
 link_libraries (
@@ -64,17 +70,18 @@ file (GLOB SOURCES
     src/global/*.h      src/global/*.cpp
     src/db/*.h          src/db/*.cpp
     src/sym_detect/*.h  src/sym_detect/*.cpp
+    src/main/ConstGen.h 
 )
 
-file (GLOB PROJECT_SOURCES
-    src/main/main.cpp
-    ${SOURCES}
-)
+file (GLOB EXE_SOURCES src/main/main.cpp)
 
 file(GLOB PY_API_SOURCES src/api/*.cpp ${SOURCES})
 
+add_executable(${PROJECT_NAME} ${SOURCES} ${EXE_SOURCES})
+
 # Add modules to pybind
-pybind11_add_module(${PROJECT_NAME} ${PY_API_SOURCES})
+pybind11_add_module(${PROJECT_NAME}Py ${PY_API_SOURCES})
+install (TARGETS ${PROJECT_NAME} DESTINATION ${CMAKE_INSTALL_PREFIX_DIR}/bin)
 
 #add_executable(${PROJECT_NAME} ${PROJECT_SOURCES})
 #set_target_properties (${PROJECT_NAME} PROPERTIES LINK_FLAGS "-static")
