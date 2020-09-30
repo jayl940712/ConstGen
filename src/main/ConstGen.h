@@ -44,9 +44,9 @@ public:
     {
         SymDetect _symDetect(_netlistDB);
         _symDetect.print();
-        _symDetect.dumpSym(cktName + ".sym");
+        _symDetect.dumpSym(cktName + ".sfasym");
         // Symmetry net constraint no longer needed in flow.
-        _symDetect.dumpNet(cktName + ".symnet"); 
+        //_symDetect.dumpNet(cktName + ".symnet"); 
     }
     
 private:

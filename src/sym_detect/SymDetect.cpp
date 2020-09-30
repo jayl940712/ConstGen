@@ -21,22 +21,18 @@ void SymDetect::dumpSym(const std::string file) const
             continue;
         for (const MosPair & pair : diffPair)
         {
-            if (pair.mosId1() != pair.mosId2() &&
-                !existPair(allPair, pair.mosId1()) &&
-                !existPair(allPair, pair.mosId2()))
+            if (pair.mosId1() != pair.mosId2())
             {
                 allPair.push_back(pair);
                 outFile << _netlist.inst(pair.mosId1()).name() << " " 
                     << _netlist.inst(pair.mosId2()).name() << std::endl;
             }
-            else if (pair.mosId1() == pair.mosId2() &&
-                !existPair(allPair, pair.mosId1()))
+            else if (pair.mosId1() == pair.mosId2())
             {
                 allPair.push_back(pair);
                 outFile << _netlist.inst(pair.mosId1()).name() << std::endl; 
             }
         }
-        outFile << std::endl;
     }
     std::cout << "Done..." << std::endl;
     outFile.close();
