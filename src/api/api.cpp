@@ -12,9 +12,11 @@ namespace py = pybind11;
 
 void initConstGenAPI(py::module &);
 void initGlobalAPI(py::module &);
+void initDefParseAPI(py::module &);
 
 PYBIND11_MODULE(ConstGenPy, m)
 {
     initGlobalAPI(m);
     initConstGenAPI(m);
+    initDefParseAPI(m);
 }
