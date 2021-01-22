@@ -27,10 +27,34 @@ struct pins
     {
         name = p.pin_name;
         bbox.push_back((IntType)p.vLayer[0][1] - '0');
-        bbox.push_back((p.vBbox[0][1]+p.origin[0])/2);
-        bbox.push_back((p.vBbox[0][0]+p.origin[1])/2);
-        bbox.push_back((p.vBbox[0][3]+p.origin[0])/2);
-        bbox.push_back((p.vBbox[0][2]+p.origin[1])/2);
+        if(p.orient == "W")
+        {
+            bbox.push_back((p.vBbox[0][1]+p.origin[0])/2);
+            bbox.push_back((p.vBbox[0][0]+p.origin[1])/2);
+            bbox.push_back((p.vBbox[0][3]+p.origin[0])/2);
+            bbox.push_back((p.vBbox[0][2]+p.origin[1])/2);
+        }
+        else if(p.orient == "N")
+        {
+            bbox.push_back((p.vBbox[0][0]+p.origin[0])/2);
+            bbox.push_back((p.vBbox[0][1]+p.origin[1])/2);
+            bbox.push_back((p.vBbox[0][2]+p.origin[0])/2);
+            bbox.push_back((p.vBbox[0][3]+p.origin[1])/2);
+        }
+        else if(p.orient == "S")
+        {
+            bbox.push_back((p.vBbox[0][0]+p.origin[0])/2);
+            bbox.push_back((p.origin[1]-p.vBbox[0][3])/2);
+            bbox.push_back((p.vBbox[0][2]+p.origin[0])/2);
+            bbox.push_back((p.origin[1]-p.vBbox[0][1])/2);
+        }
+        else if(p.orient == "E")
+        {
+            bbox.push_back((p.vBbox[0][1]+p.origin[0])/2);
+            bbox.push_back((p.origin[1]-p.vBbox[0][2])/2);
+            bbox.push_back((p.vBbox[0][3]+p.origin[0])/2);
+            bbox.push_back((p.origin[1]-p.vBbox[0][0])/2);
+        }
     }
     void print()
     {

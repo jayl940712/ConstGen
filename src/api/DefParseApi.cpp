@@ -17,8 +17,8 @@ void initDefParseAPI(py::module &m)
         .def("numPins", &PROJECT_NAMESPACE::DefParse::numPins, "Number of pins.")
         .def("pinName", &PROJECT_NAMESPACE::DefParse::pinName, "Pin name.")
         .def("pinLayer", &PROJECT_NAMESPACE::DefParse::pinLayer, "Pin Layer.")
-        .def("pinXLo", &PROJECT_NAMESPACE::DefParse::pinLayer, "Pin XLo.")
-        .def("pinYLo", &PROJECT_NAMESPACE::DefParse::pinLayer, "Pin YLo.")
-        .def("pinXLo", &PROJECT_NAMESPACE::DefParse::pinLayer, "Pin XHi.")
-        .def("pinYHi", &PROJECT_NAMESPACE::DefParse::pinLayer, "Pin YHi.");
+        .def("pinXLo", &PROJECT_NAMESPACE::DefParse::pinXLo, "Pin XLo.")
+        .def("pinYLo", &PROJECT_NAMESPACE::DefParse::pinYLo, "Pin YLo.")
+        .def("pinXHi", &PROJECT_NAMESPACE::DefParse::pinXHi, "Pin XHi.")
+        .def("pinYHi", &PROJECT_NAMESPACE::DefParse::pinYHi, "Pin YHi.");
 }
