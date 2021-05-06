@@ -7,6 +7,7 @@
 #include <iostream>
 #include <fstream>
 #include <algorithm>
+#include <vector>
 
 PROJECT_NAMESPACE_BEGIN
 
@@ -419,8 +420,8 @@ bool SymDetect::checkNetSym(IndexType netId1, IndexType netId2) const
         _netlist.net(netId2).pinIdArray().size())
         return false;
     int size = _netlist.net(netId1).pinIdArray().size();
-    bool pinSym1[size] = {false};
-    bool pinSym2[size] = {false};
+    std::vector<bool> pinSym1(size, false);
+    std::vector<bool> pinSym2(size, false);
     for (int i = 0; i < size; i++)
     {
         for (int j = 0; j < size; j++)
